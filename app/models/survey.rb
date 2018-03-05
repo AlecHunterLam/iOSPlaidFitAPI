@@ -14,8 +14,8 @@ class Survey < ApplicationRecord
 
     # Validations
     validates_presence_of :type, :response, :completed, :season
-    validates_includsion_of :type, in: SURVEY_TYPES.map{|key, value| value}, message: "is not an option"
-    validates_includsion_of :season, in: SEASONS.map{|key, value| value}, message: "is not an option"
+    validates_inclusion_of :type, in: SURVEY_TYPES.map{|key, value| value}, message: "is not an option"
+    validates_inclusion_of :season, in: SEASONS.map{|key, value| value}, message: "is not an option"
     validates_date :completed, on_or_before: lambda { Date.current }
     validate :response_proper_format
 
