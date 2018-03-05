@@ -1,0 +1,151 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "badges",
+  "apis": [
+    {
+      "path": "/badges.json",
+      "operations": [
+        {
+          "summary": "Fetches all Badges",
+          "notes": "This lists all the Badges",
+          "nickname": "Badges#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/badges.json",
+      "operations": [
+        {
+          "summary": "Creates a new Badge",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "badge_name",
+              "type": "string",
+              "description": "Badge Name",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "requirements",
+              "type": "string",
+              "description": "Requirements",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Badges#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/badges/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Badge",
+          "notes": "This lists details of one badge",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Badge ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Badges#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/badges/{id}.json",
+      "operations": [
+        {
+          "summary": "Updates an existing Badge",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Badge ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "badge_name",
+              "type": "string",
+              "description": "Badge Name",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "requirements",
+              "type": "string",
+              "description": "Requirements",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Badges#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/badges/{id}.json",
+      "operations": [
+        {
+          "summary": "Deletes an existing Badge",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Badge ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Badges#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}
