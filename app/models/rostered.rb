@@ -1,0 +1,2 @@
+class Rostered < ApplicationRecord
+end
