@@ -1,5 +1,41 @@
 class RosteredsController < ApplicationController
 
+    swagger_controller :rostereds, "Rostereds Management"
+
+    swagger_api :index do
+        summary "Fetches all Rostereds"
+        notes "This lists all the Rostereds"
+    end
+
+    swagger_api :show do
+        summary "Shows one Rostered"
+        param :path, :id, :integer, :required, "Rostered ID"
+        notes "This lists details of one rostered"
+        response :not_found
+    end
+
+    swagger_api :create do
+        summary "Creates a new Rostered"
+        param :form, :team_id, :integer, :required, "Team ID"
+        param :form, :user_id, :integer, :required, "User ID"
+        response :not_acceptable
+    end
+
+    swagger_api :update do
+        summary "Updates an existing Rostered"
+        param :path, :id, :integer, :required, "Rostered ID"
+        param :path, :team_id, :integer, :required, "Team ID"
+        param :path, :user_id, :integer, :required, "User ID"
+        response :not_found
+        response :not_acceptable
+    end
+
+    swagger_api :destroy do
+        summary "Deletes an existing Rostered"
+        param :path, :id, :integer, :required, "Rostered ID"
+        response :not_found
+    end
+
     before_action :set_rostered, only: [:show, :update, :destroy]
 
     # GET /rostereds

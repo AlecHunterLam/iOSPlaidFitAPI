@@ -1,5 +1,41 @@
 class TeamCalculationsController < ApplicationController
 
+    swagger_controller :team_calculations, "Team Calculations Management"
+
+    swagger_api :index do
+        summary "Fetches all Team Calculations"
+        notes "This lists all the Team Calculations"
+    end
+
+    swagger_api :show do
+        summary "Shows one Team Calculation"
+        param :path, :id, :integer, :required, "Team Calculation ID"
+        notes "This lists details of one team calculation"
+        response :not_found
+    end
+
+    swagger_api :create do
+        summary "Creates a new Team Calculation"
+        param :form, :team_id, :integer, :required, "Team ID"
+        param :form, :week_of, :date, :required, "Week Of"
+        response :not_acceptable
+    end
+
+    swagger_api :update do
+        summary "Updates an existing Team Calculation"
+        param :path, :id, :integer, :required, "Team Calculation ID"
+        param :path, :team_id, :integer, :required, "Team ID"
+        param :form, :week_of, :date, :optional, "Week Of"
+        response :not_found
+        response :not_acceptable
+    end
+
+    swagger_api :destroy do
+        summary "Deletes an existing Team Calculation"
+        param :path, :id, :integer, :required, "Team Calculation ID"
+        response :not_found
+    end
+
     before_action :set_team_calculation, only: [:show, :update, :destroy]
 
     # GET /team_calculations

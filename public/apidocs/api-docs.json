@@ -6,6 +6,26 @@
     {
       "path": "/apidocs/badges.{format}",
       "description": "Badges Management"
+    },
+    {
+      "path": "/apidocs/practices.{format}",
+      "description": "Practices Management"
+    },
+    {
+      "path": "/apidocs/rostereds.{format}",
+      "description": "Rostereds Management"
+    },
+    {
+      "path": "/apidocs/surveys.{format}",
+      "description": "Surveys Management"
+    },
+    {
+      "path": "/apidocs/team_calculations.{format}",
+      "description": "Team Calculations Management"
+    },
+    {
+      "path": "/apidocs/teams.{format}",
+      "description": "Teams Management"
     }
   ],
   "authorizations": null,

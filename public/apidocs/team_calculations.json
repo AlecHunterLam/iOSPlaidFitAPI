@@ -1,0 +1,144 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "team_calculations",
+  "apis": [
+    {
+      "path": "/team_calculations.json",
+      "operations": [
+        {
+          "summary": "Fetches all Team Calculations",
+          "notes": "This lists all the Team Calculations",
+          "nickname": "TeamCalculations#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/team_calculations.json",
+      "operations": [
+        {
+          "summary": "Creates a new Team Calculation",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "team_id",
+              "type": "integer",
+              "description": "Team ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "week_of",
+              "type": "date",
+              "description": "Week Of",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "TeamCalculations#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/team_calculations/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Team Calculation",
+          "notes": "This lists details of one team calculation",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Team Calculation ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "TeamCalculations#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/team_calculations/{id}.json",
+      "operations": [
+        {
+          "summary": "Updates an existing Team Calculation",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Team Calculation ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "week_of",
+              "type": "date",
+              "description": "Week Of",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "TeamCalculations#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/team_calculations/{id}.json",
+      "operations": [
+        {
+          "summary": "Deletes an existing Team Calculation",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Team Calculation ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "TeamCalculations#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

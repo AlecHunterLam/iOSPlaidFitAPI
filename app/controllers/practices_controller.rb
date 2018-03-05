@@ -1,5 +1,45 @@
 class PracticesController < ApplicationController
 
+    swagger_controller :practices, "Practices Management"
+
+    swagger_api :index do
+        summary "Fetches all Practices"
+        notes "This lists all the Practices"
+    end
+
+    swagger_api :show do
+        summary "Shows one Practice"
+        param :path, :id, :integer, :required, "Practice ID"
+        notes "This lists details of one practice"
+        response :not_found
+    end
+
+    swagger_api :create do
+        summary "Creates a new Practice"
+        param :form, :team_id, :integer, :required, "Team ID"
+        param :form, :duration, :integer, :required, "Duration"
+        param :form, :difficulty, :integer, :required, "Difficulty"
+        param :form, :date, :date, :required, "Date"
+        response :not_acceptable
+    end
+
+    swagger_api :update do
+        summary "Updates an existing Practice"
+        param :path, :id, :integer, :required, "Practice ID"
+        param :path, :team_id, :integer, :required, "Team ID"
+        param :form, :duration, :integer, :optional, "Duration"
+        param :form, :difficulty, :integer, :optional, "Difficulty"
+        param :form, :date, :date, :optional, "Date"
+        response :not_found
+        response :not_acceptable
+    end
+
+    swagger_api :destroy do
+        summary "Deletes an existing Practice"
+        param :path, :id, :integer, :required, "Practice ID"
+        response :not_found
+    end
+
     before_action :set_practice, only: [:show, :update, :destroy]
 
     # GET /practices
