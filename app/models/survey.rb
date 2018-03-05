@@ -19,6 +19,8 @@ class Survey < ApplicationRecord
     validates_date :completed, on_or_before: lambda { Date.current }
     validate :response_proper_format
 
+    # Methods
+
     # For turning the response string to a JSON object
     def parseStringToJSON
         JSON.parse(self.response)
