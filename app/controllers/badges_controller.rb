@@ -1,5 +1,41 @@
 class BadgesController < ApplicationController
 
+    swagger_controller :badges, "Badges Management"
+
+    swagger_api :index do
+        summary "Fetches all Badges"
+        notes "This lists all the Badges"
+    end
+
+    swagger_api :show do
+        summary "Shows one Badge"
+        param :path, :id, :integer, :required, "Badge ID"
+        notes "This lists details of one badge"
+        response :not_found
+    end
+
+    swagger_api :create do
+        summary "Creates a new Badge"
+        param :form, :badge_name, :string, :required, "Badge Name"
+        param :form, :requirements, :string, :required, "Requirements"
+        response :not_acceptable
+    end
+
+    swagger_api :update do
+        summary "Updates an existing Badge"
+        param :path, :id, :integer, :required, "Badge ID"
+        param :form, :badge_name, :string, :optional, "Badge Name"
+        param :form, :requirements, :string, :optional, "Requirements"
+        response :not_found
+        response :not_acceptable
+    end
+
+    swagger_api :destroy do
+        summary "Deletes an existing Badge"
+        param :path, :id, :integer, :required, "Badge ID"
+        response :not_found
+    end
+
     before_action :set_badge, only: [:show, :update, :destroy]
 
     # GET /badges
