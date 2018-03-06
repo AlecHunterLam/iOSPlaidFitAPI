@@ -374,3 +374,28 @@ puma (3.11.2) lib/puma/server.rb:438:in `process_client'
 puma (3.11.2) lib/puma/server.rb:302:in `block in run'
 puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
 puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/teams.json" for 127.0.0.1 at 2018-03-05 22:58:41 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TeamsController#create as JSON
+  Parameters: {"sport"=>"soccer", "gender"=>"men", "season"=>"winter", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "soccer"], ["gender", "men"], ["season", "winter"], ["active", "t"], ["created_at", "2018-03-06 03:58:41.343434"], ["updated_at", "2018-03-06 03:58:41.343434"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.5ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.2ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers]   [1m[36mPractice Load (0.5ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers] Rendered TeamSerializer with ActiveModelSerializers::Adapter::Attributes (50.52ms)
+Completed 201 Created in 120ms (Views: 82.2ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/teams.json" for 127.0.0.1 at 2018-03-05 22:58:49 -0500
+Processing by TeamsController#create as JSON
+  Parameters: {"sport"=>"soccer", "gender"=>"menasdf", "season"=>"winter", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.12ms)
+Completed 422 Unprocessable Entity in 28ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+
+
