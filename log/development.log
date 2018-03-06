@@ -549,3 +549,148 @@ Processing by Api::V1::TeamsController#index as HTML
 Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/v1/teams" for 127.0.0.1 at 2018-03-06 11:33:36 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::TeamsController#index as HTML
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+[active_model_serializers]   [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.2ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers]   [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers]   [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 2]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.2ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 2]]
+[active_model_serializers]   [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (69.87ms)
+Completed 200 OK in 139ms (Views: 118.9ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:33:55 -0500
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"diving", "gender"=>"men", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "diving"], ["gender", "men"], ["season", "fall"], ["active", "t"], ["created_at", "2018-03-06 16:33:55.368284"], ["updated_at", "2018-03-06 16:33:55.368284"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 3]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.2ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 3]]
+[active_model_serializers]   [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 3]]
+[active_model_serializers] Rendered Api::V1::TeamSerializer with ActiveModelSerializers::Adapter::Attributes (9.13ms)
+Completed 201 Created in 18ms (Views: 10.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:33:56 -0500
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"diving", "gender"=>"men", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "diving"], ["gender", "men"], ["season", "fall"], ["active", "t"], ["created_at", "2018-03-06 16:33:56.292870"], ["updated_at", "2018-03-06 16:33:56.292870"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 4]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.1ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 4]]
+[active_model_serializers]   [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 4]]
+[active_model_serializers] Rendered Api::V1::TeamSerializer with ActiveModelSerializers::Adapter::Attributes (3.59ms)
+Completed 201 Created in 9ms (Views: 3.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:33:56 -0500
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"diving", "gender"=>"men", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "diving"], ["gender", "men"], ["season", "fall"], ["active", "t"], ["created_at", "2018-03-06 16:33:56.792038"], ["updated_at", "2018-03-06 16:33:56.792038"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 5]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.1ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 5]]
+[active_model_serializers]   [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 5]]
+[active_model_serializers] Rendered Api::V1::TeamSerializer with ActiveModelSerializers::Adapter::Attributes (3.35ms)
+Completed 201 Created in 9ms (Views: 3.6ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:33:57 -0500
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:34:01 -0500
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"diving", "gender"=>"men", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "diving"], ["gender", "men"], ["season", "fall"], ["active", "t"], ["created_at", "2018-03-06 16:34:01.830641"], ["updated_at", "2018-03-06 16:34:01.830641"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.1ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 6]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.1ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 6]]
+[active_model_serializers]   [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 6]]
+[active_model_serializers] Rendered Api::V1::TeamSerializer with ActiveModelSerializers::Adapter::Attributes (4.39ms)
+Completed 201 Created in 10ms (Views: 4.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:34:02 -0500
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"diving", "gender"=>"men", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "diving"], ["gender", "men"], ["season", "fall"], ["active", "t"], ["created_at", "2018-03-06 16:34:02.207247"], ["updated_at", "2018-03-06 16:34:02.207247"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.1ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 7]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.1ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 7]]
+[active_model_serializers]   [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 7]]
+[active_model_serializers] Rendered Api::V1::TeamSerializer with ActiveModelSerializers::Adapter::Attributes (3.12ms)
+Completed 201 Created in 9ms (Views: 3.3ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:34:02 -0500
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"diving", "gender"=>"men", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "diving"], ["gender", "men"], ["season", "fall"], ["active", "t"], ["created_at", "2018-03-06 16:34:02.497853"], ["updated_at", "2018-03-06 16:34:02.497853"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 8]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.1ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 8]]
+[active_model_serializers]   [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 8]]
+[active_model_serializers] Rendered Api::V1::TeamSerializer with ActiveModelSerializers::Adapter::Attributes (3.93ms)
+Completed 201 Created in 9ms (Views: 4.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:34:02 -0500
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:35:55 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"diving", "gender"=>"men", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "diving"], ["gender", "men"], ["season", "fall"], ["active", "t"], ["created_at", "2018-03-06 16:35:55.345273"], ["updated_at", "2018-03-06 16:35:55.345273"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 9]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.4ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 9]]
+[active_model_serializers]   [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 9]]
+[active_model_serializers] Rendered Api::V1::TeamSerializer with ActiveModelSerializers::Adapter::Attributes (34.47ms)
+Completed 201 Created in 106ms (Views: 70.1ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:35:56 -0500
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"diving", "gender"=>"men", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "diving"], ["gender", "men"], ["season", "fall"], ["active", "t"], ["created_at", "2018-03-06 16:35:56.103609"], ["updated_at", "2018-03-06 16:35:56.103609"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 10]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.2ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 10]]
+[active_model_serializers]   [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 10]]
+[active_model_serializers] Rendered Api::V1::TeamSerializer with ActiveModelSerializers::Adapter::Attributes (6.04ms)
+Completed 201 Created in 11ms (Views: 6.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:35:56 -0500
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"diving", "gender"=>"men", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "diving"], ["gender", "men"], ["season", "fall"], ["active", "t"], ["created_at", "2018-03-06 16:35:56.255703"], ["updated_at", "2018-03-06 16:35:56.255703"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 11]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.1ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 11]]
+[active_model_serializers]   [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 11]]
+[active_model_serializers] Rendered Api::V1::TeamSerializer with ActiveModelSerializers::Adapter::Attributes (4.05ms)
+Completed 201 Created in 10ms (Views: 4.4ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:35:56 -0500
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:35:56 -0500
