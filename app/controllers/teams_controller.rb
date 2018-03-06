@@ -4,6 +4,8 @@ class TeamsController < ApplicationController
 
     swagger_api :index do
         summary "Fetches all Teams"
+        param :query, :active, :boolean, :optional, "Filter on whether or not the team is active"
+        param :query, :fall_teams, :boolean, :optional, "Filter teams by the Fall season"
         notes "This lists all the Teams"
     end
 
@@ -45,6 +47,12 @@ class TeamsController < ApplicationController
     # GET /teams
     def index
         @teams = Team.all
+        if (params[:active].present?)
+            @teams = params[:active] == "true" ? @teams.active : @teams.inactive
+        end
+        if params[:fall_teams].present? && params[:fall_teams] == "true"
+            @teams = @teams.fall_teams
+        end
         render json: @teams
     end
 
