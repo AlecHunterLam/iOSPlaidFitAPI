@@ -58,7 +58,7 @@ module Api::V1
         def create
             @practice = Practice.new(practice_params)
             if @practice.save
-                render json: @practice, status: :created, location: @practice
+                render json: @practice, status: :created, location: [:v1, @practice]
             else
                 render json: @practice.errors, status: :unprocessable_entity
             end

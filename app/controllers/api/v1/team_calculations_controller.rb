@@ -54,7 +54,7 @@ module Api::V1
         def create
             @team_calculation = TeamCalculation.new(team_calculation_params)
             if @team_calculation.save
-                render json: @team_calculation, status: :created, location: @team_calculation
+                render json: @team_calculation, status: :created, location: [:v1, @team_calculation]
             else
                 render json: @team_calculation.errors, status: :unprocessable_entity
             end

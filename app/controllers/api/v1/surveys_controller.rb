@@ -60,7 +60,7 @@ module Api::V1
         def create
             @survey = Survey.new(survey_params)
             if @survey.save
-                render json: @survey, status: :created, location: @survey
+                render json: @survey, status: :created, location: [:v1, @survey]
             else
                 render json: @survey.errors, status: :unprocessable_entity
             end

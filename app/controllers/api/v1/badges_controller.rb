@@ -1,4 +1,4 @@
-module API::V1
+module Api::V1
     class BadgesController < ApplicationController
 
         swagger_controller :badges, "Badges Management"
@@ -54,7 +54,7 @@ module API::V1
         def create
             @badge = Badge.new(badge_params)
             if @badge.save
-                render json: @badge, status: :created, location: @badge
+                render json: @badge, status: :created, location: [:v1, @badge]
             else
                 render json: @badge.errors, status: :unprocessable_entity
             end

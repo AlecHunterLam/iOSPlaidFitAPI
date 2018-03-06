@@ -54,7 +54,7 @@ module Api::V1
         def create
             @rostered = Rostered.new(rostered_params)
             if @rostered.save
-                render json: @rostered, status: :created, location: @rostered
+                render json: @rostered, status: :created, location: [:v1, @rostered]
             else
                 render json: @rostered.errors, status: :unprocessable_entity
             end

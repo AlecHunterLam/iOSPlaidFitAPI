@@ -399,3 +399,153 @@ Unpermitted parameter: :format
 Completed 422 Unprocessable Entity in 28ms (Views: 14.2ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/badges" for 127.0.0.1 at 2018-03-06 11:18:10 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/badges"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-03-06 11:18:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/v1/badges" for 127.0.0.1 at 2018-03-06 11:18:14 -0500
+Processing by Api::V1::BadgesController#index as HTML
+  [1m[36mBadge Load (0.5ms)[0m  [1m[34mSELECT "badges".* FROM "badges"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.07ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 1.7ms)
+
+
+  
+NameError (uninitialized constant Badge::EarnedBadge):
+  
+app/controllers/api/v1/badges_controller.rb:45:in `index'
+Started GET "/v1/teams" for 127.0.0.1 at 2018-03-06 11:18:24 -0500
+Processing by Api::V1::TeamsController#index as HTML
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+[active_model_serializers]   [1m[36mRostered Load (1.0ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.9ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers]   [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (55.62ms)
+Completed 200 OK in 84ms (Views: 72.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/v1/surveys" for 127.0.0.1 at 2018-03-06 11:18:29 -0500
+Processing by Api::V1::SurveysController#index as HTML
+  [1m[36mSurvey Load (0.5ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/v1/badges" for 127.0.0.1 at 2018-03-06 11:18:32 -0500
+Processing by Api::V1::BadgesController#index as HTML
+  [1m[36mBadge Load (0.2ms)[0m  [1m[34mSELECT "badges".* FROM "badges"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.63ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (uninitialized constant Badge::EarnedBadge):
+  
+app/controllers/api/v1/badges_controller.rb:45:in `index'
+Started GET "/v1/practices" for 127.0.0.1 at 2018-03-06 11:22:56 -0500
+Processing by Api::V1::PracticesController#index as HTML
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/v1/team_calculations" for 127.0.0.1 at 2018-03-06 11:23:04 -0500
+Processing by Api::V1::TeamCalculationsController#index as HTML
+  [1m[36mTeamCalculation Load (0.3ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/v1/rostereds" for 127.0.0.1 at 2018-03-06 11:23:09 -0500
+Processing by Api::V1::RosteredsController#index as HTML
+  [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:25:14 -0500
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"men", "gender"=>"soccer", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.17ms)
+Completed 422 Unprocessable Entity in 40ms (Views: 9.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/v1/teams.json" for 127.0.0.1 at 2018-03-06 11:25:23 -0500
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"sport"=>"soccer", "gender"=>"men", "season"=>"fall", "active"=>"true"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "soccer"], ["gender", "men"], ["season", "fall"], ["active", "t"], ["created_at", "2018-03-06 16:25:23.107200"], ["updated_at", "2018-03-06 16:25:23.107200"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRostered Load (0.3ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 2]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.2ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 2]]
+[active_model_serializers]   [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 2]]
+[active_model_serializers] Rendered Api::V1::TeamSerializer with ActiveModelSerializers::Adapter::Attributes (32.14ms)
+Completed 201 Created in 45ms (Views: 33.7ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/v1/teams" for 127.0.0.1 at 2018-03-06 11:25:29 -0500
+Processing by Api::V1::TeamsController#index as HTML
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+[active_model_serializers]   [1m[36mRostered Load (0.2ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.3ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers]   [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 1]]
+[active_model_serializers]   [1m[36mRostered Load (0.1ms)[0m  [1m[34mSELECT "rostereds".* FROM "rostereds" WHERE "rostereds"."team_id" = ?[0m  [["team_id", 2]]
+[active_model_serializers]   [1m[36mTeamCalculation Load (0.1ms)[0m  [1m[34mSELECT "team_calculations".* FROM "team_calculations" WHERE "team_calculations"."team_id" = ?[0m  [["team_id", 2]]
+[active_model_serializers]   [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."team_id" = ?[0m  [["team_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.56ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.7ms)
+
+

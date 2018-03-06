@@ -4,27 +4,27 @@
   "basePath": "http://localhost:3000",
   "apis": [
     {
-      "path": "/apidocs/badges.{format}",
+      "path": "/apidocs/api/v1/badges.{format}",
       "description": "Badges Management"
     },
     {
-      "path": "/apidocs/practices.{format}",
+      "path": "/apidocs/api/v1/practices.{format}",
       "description": "Practices Management"
     },
     {
-      "path": "/apidocs/rostereds.{format}",
+      "path": "/apidocs/api/v1/rostereds.{format}",
       "description": "Rostereds Management"
     },
     {
-      "path": "/apidocs/surveys.{format}",
+      "path": "/apidocs/api/v1/surveys.{format}",
       "description": "Surveys Management"
     },
     {
-      "path": "/apidocs/team_calculations.{format}",
+      "path": "/apidocs/api/v1/team_calculations.{format}",
       "description": "Team Calculations Management"
     },
     {
-      "path": "/apidocs/teams.{format}",
+      "path": "/apidocs/api/v1/teams.{format}",
       "description": "Teams Management"
     }
   ],
