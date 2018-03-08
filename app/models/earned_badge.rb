@@ -10,6 +10,7 @@ class EarnedBadge < ApplicationRecord
   validates_timeliness_of :date_earned, on_or_before: Time.now
 
   # Methods
+  
 
 
 end

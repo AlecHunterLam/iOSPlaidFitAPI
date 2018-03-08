@@ -5,7 +5,7 @@ class PlayerCalculation < ApplicationRecord
   # Relationships
   belongs_to :user
 
-  # Scopes
+  # Scopesg
 
   # Validations
   validates_presence_of :user_id, :week_of, :season
