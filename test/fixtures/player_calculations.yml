@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: 1
+  weak_of: 2018-03-08
+  sleep_average: 1.5
+  hydration_average: 1.5
+  stress_average: 1.5
+  soreness_average: 1.5
+  load_average: 1.5
+  season: MyString
+  season_rank: 1
+
+two:
+  player_id: 1
+  weak_of: 2018-03-08
+  sleep_average: 1.5
+  hydration_average: 1.5
+  stress_average: 1.5
+  soreness_average: 1.5
+  load_average: 1.5
+  season: MyString
+  season_rank: 1

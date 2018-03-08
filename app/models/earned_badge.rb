@@ -1,0 +1,2 @@
+class EarnedBadge < ApplicationRecord
+end
