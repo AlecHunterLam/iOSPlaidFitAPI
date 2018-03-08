@@ -7,7 +7,7 @@ class EarnedBadge < ApplicationRecord
 
   # Validations
   validates_presence_of :user_id, :badge_id, :date_earned
-  validates_date :date_earned, on_or_before: Date.current
+  validates_timeliness_of :date_earned, on_or_before: Time.now
 
   # Methods
 
