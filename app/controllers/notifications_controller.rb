@@ -1,6 +1,5 @@
 class NotificationsController < ApplicationController
   # Controller Code
-
   before_action :set_notification, only: [:show, :update, :destroy]
 
   # get /notifications
