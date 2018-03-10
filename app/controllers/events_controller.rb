@@ -1,6 +1,5 @@
 class EventsController < ApplicationController
   # Controller Code
-
   before_action :set_event, only: [:show, :update, :destroy]
 
   # get /events
@@ -31,7 +30,7 @@ class EventsController < ApplicationController
     if @event.update(event_params)
       render json: @event
     else
-      render json: @child.erros, status: :unprocessable_entity
+      render json: @event.erros, status: :unprocessable_entity
     end
   end
 
@@ -47,7 +46,7 @@ class EventsController < ApplicationController
   end
 
   # white list of parameters
-  def child_params
+  def event_params
     params.permit(:player_id, :description, :event_time)
   end
 
