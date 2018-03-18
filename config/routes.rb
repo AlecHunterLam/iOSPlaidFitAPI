@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :teams
       resources :player_calculations
       resources :events
+      resources :notifications
     end
   end
 end

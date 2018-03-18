@@ -4,7 +4,7 @@ module Api::V1
 
       # GET /events
       def index
-          @events = Events.all
+          @events = Event.all
           render json: @events
       end
 
@@ -15,7 +15,7 @@ module Api::V1
 
       # POST /events
       def create
-        @event = Events.new(event_params)
+        @event = Event.new(event_params)
         if @event.save
           render json: @event, status: :created, location: [:v1, @event]
         else
