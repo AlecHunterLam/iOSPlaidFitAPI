@@ -4,7 +4,7 @@ class Team < ApplicationRecord
     SPORTS = [['Soccer', :soccer], ['Basketball', :bball], ['Tennis', :tennis], ['Volleyball', :vball], ['Swimming & Diving', :s_and_d],
               ['Baseball', :baseball], ['Beach Volleyball', :beach_vball], ['Bowling', :bowling], ['Cross Country', :xc],
               ['Fencing', :fencing], ['Field Hockey', :f_hockey], ['Football', :football], ['Golf', :golf], ['Gymnastics', :gymnastics],
-              ['Ice Hockey', :ice_hockey], ['Lacrosse', :lax], ['Rifle', :rifle], ['Rowing', :rowing], ['Skiing', :skiing], ['Softball', :softball].
+              ['Ice Hockey', :ice_hockey], ['Lacrosse', :lax], ['Rifle', :rifle], ['Rowing', :rowing], ['Skiing', :skiing], ['Softball', :softball],
               ['Track and Field', :t_and_f], ['Water Polo', :w_polo], ['Wrestling', :wrestling]]
     GENDERS = [['Men', :men], ['Women', :women]]
     SEASONS = [['Fall', :fall], ['Winter', :winter], ['Spring', :spring]]
@@ -17,8 +17,8 @@ class Team < ApplicationRecord
     # Scopes
     scope :active,              -> { where(active: true) }
     scope :inactive,            -> { where(active: false) }
-    scope :season_teams, (team) -> { where(seasons: team) }
-    scope :team_of_gender, (g)  -> { where(gender: g) }
+    scope :season_teams,  ->  (team) { where(seasons: team) }
+    scope :team_of_gender,   ->  (g) { where(gender: g) }
 
     # Validations
     validates_presence_of :sport, :gender, :season, :active

@@ -894,3 +894,57 @@ puma (3.11.2) lib/puma/server.rb:438:in `process_client'
 puma (3.11.2) lib/puma/server.rb:302:in `block in run'
 puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
 puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/v1/teams" for 127.0.0.1 at 2018-03-18 16:16:39 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::TeamsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aleclamusr/Desktop/67-373/PlaidFit/app/models/team.rb:8: syntax error, unexpected '[', expecting '('
+              ['Track and Field', :t_and_f],...
+               ^
+/Users/aleclamusr/Desktop/67-373/PlaidFit/app/models/team.rb:8: syntax error, unexpected ',', expecting keyword_end
+...            ['Track and Field', :t_and_f], ['Water Polo', :w...
+...                               ^
+/Users/aleclamusr/Desktop/67-373/PlaidFit/app/models/team.rb:8: syntax error, unexpected ',', expecting keyword_end
+...nd_f], ['Water Polo', :w_polo], ['Wrestling', :wrestling]]
+...                               ^
+/Users/aleclamusr/Desktop/67-373/PlaidFit/app/models/team.rb:8: syntax error, unexpected ']', expecting keyword_end
+/Users/aleclamusr/Desktop/67-373/PlaidFit/app/models/team.rb:20: syntax error, unexpected ->, expecting keyword_end
+    scope :season_teams, (team) -> { where(seasons: team) }
+                                  ^
+/Users/aleclamusr/Desktop/67-373/PlaidFit/app/models/team.rb:21: syntax error, unexpected ->, expecting keyword_end
+    scope :team_of_gender, (g)  -> { where(gender: g) }
+                                  ^):
+  
+app/models/team.rb:8: syntax error, unexpected '[', expecting '('
+app/models/team.rb:8: syntax error, unexpected ',', expecting keyword_end
+app/models/team.rb:8: syntax error, unexpected ',', expecting keyword_end
+app/models/team.rb:8: syntax error, unexpected ']', expecting keyword_end
+app/models/team.rb:20: syntax error, unexpected ->, expecting keyword_end
+app/models/team.rb:21: syntax error, unexpected ->, expecting keyword_end
+app/controllers/api/v1/teams_controller.rb:50:in `index'
+Started GET "/v1/teams" for 127.0.0.1 at 2018-03-18 16:17:18 -0400
+Processing by Api::V1::TeamsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+SyntaxError (/Users/aleclamusr/Desktop/67-373/PlaidFit/app/models/team.rb:20: syntax error, unexpected ->, expecting keyword_end
+    scope :season_teams, (team) -> { where(seasons: team) }
+                                  ^
+/Users/aleclamusr/Desktop/67-373/PlaidFit/app/models/team.rb:21: syntax error, unexpected ->, expecting keyword_end
+    scope :team_of_gender, (g)  -> { where(gender: g) }
+                                  ^):
+  
+app/models/team.rb:20: syntax error, unexpected ->, expecting keyword_end
+app/models/team.rb:21: syntax error, unexpected ->, expecting keyword_end
+app/controllers/api/v1/teams_controller.rb:50:in `index'
+Started GET "/v1/teams" for 127.0.0.1 at 2018-03-18 16:17:45 -0400
+Processing by Api::V1::TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 22ms (Views: 12.7ms | ActiveRecord: 0.7ms)
+
+
