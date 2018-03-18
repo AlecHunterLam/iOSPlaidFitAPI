@@ -1,0 +1,36 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "apis": [
+    {
+      "path": "/apidocs/api/v1/badges.{format}",
+      "description": "Badges Management"
+    },
+    {
+      "path": "/apidocs/api/v1/practices.{format}",
+      "description": "Practices Management"
+    },
+    {
+      "path": "/apidocs/api/v1/rostereds.{format}",
+      "description": "Rostereds Management"
+    },
+    {
+      "path": "/apidocs/api/v1/surveys.{format}",
+      "description": "Surveys Management"
+    },
+    {
+      "path": "/apidocs/api/v1/team_calculations.{format}",
+      "description": "Team Calculations Management"
+    },
+    {
+      "path": "/apidocs/api/v1/teams.{format}",
+      "description": "Teams Management"
+    }
+  ],
+  "authorizations": null,
+  "info": {
+    "title": "PlaidFit API",
+    "description": "Uses swagger ui and docs to document the PlaidFit API"
+  }
+}

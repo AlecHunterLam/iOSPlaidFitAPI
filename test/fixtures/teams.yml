@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sport: MyString
+  gender: MyString
+  season: MyString
+  active: false
+
+two:
+  sport: MyString
+  gender: MyString
+  season: MyString
+  active: false
