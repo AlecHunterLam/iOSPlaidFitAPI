@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  week_of: 2018-03-04
+  sleep: 1
+  hydration: 1
+  stress: 1
+  load: 1
+  team_id: 1
+  season: MyString
+  rank: MyString
+
+two:
+  week_of: 2018-03-04
+  sleep: 1
+  hydration: 1
+  stress: 1
+  load: 1
+  team_id: 1
+  season: MyString
+  rank: MyString
