@@ -20,12 +20,35 @@ module Api::V1
       params :form, :andrew_id, :string, :required, "Andrew ID"
       params :form, :email, :string, :required, "Email"
       params :form, :major, :string, :required, "Major"
-      parmas :form,
+      params :form, :role, :string, :required, "User Role"
+      params :form, :first_name, :string, :optional, "First Name"
+      params :form, :last_name, :string, :optional,"Last Name"
+      params :form, :phone, :string, :optional,"Phone"
+      notes "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'."
+      repsonse :not_acceptable
+    end
 
+    swagger_api :update do
+      summary "Updates an existing User"
+      params :path, :id, :integer, :required, "User ID"
+      params :form, :andrew_id, :string, :optional, "Andrew ID"
+      params :form, :email, :string, :optional, "Email"
+      params :form, :major, :string, :optional, "Major"
+      params :form, :role, :string, :optional, "User Role"
+      params :form, :first_name, :string, :optional,"First Name"
+      params :form, :last_name, :string, :optional,"Last Name"
+      params :form, :phone, :string, :optional,"Phone"
+      notes "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'."
+      response :not_found
+      repsonse :not_acceptable
+    end
 
+    swagger_api :destroy do
+      summary "Deletes an existing User"
+      params :path, :id, :integer, :required, "User ID"
+      response :not_found
+    end
 
-      params.permit(:first_name, :last_name, :team_id, :andrew_id, :email, :major, :phone, :role)
-      validates_presence_of :andrew_id, :email, :major, :role, :active
 
 
     # callbacks
