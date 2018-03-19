@@ -25,7 +25,7 @@ module Api::V1
       param :form, :last_name, :string, :optional,"Last Name"
       param :form, :phone, :string, :optional,"Phone"
       notes "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'."
-      repsonse :not_acceptable
+      response :not_acceptable
     end
 
     swagger_api :update do
@@ -40,7 +40,7 @@ module Api::V1
       param :form, :phone, :string, :optional,"Phone"
       notes "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'."
       response :not_found
-      repsonse :not_acceptable
+      response :not_acceptable
     end
 
     swagger_api :destroy do

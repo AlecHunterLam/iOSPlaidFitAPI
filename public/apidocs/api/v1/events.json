@@ -1,0 +1,165 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "events",
+  "apis": [
+    {
+      "path": "/v1/events.json",
+      "operations": [
+        {
+          "summary": "Fetches all Events",
+          "notes": "This lists all of the events",
+          "nickname": "Api::V1::Events#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/v1/events.json",
+      "operations": [
+        {
+          "summary": "Creates a new Event",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "player_id",
+              "type": "integer",
+              "description": "Player ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "event_time",
+              "type": "datetime",
+              "description": "Event Time",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "description",
+              "type": "string",
+              "description": "Event Description",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Api::V1::Events#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/v1/events/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Event",
+          "notes": "This lists details of one event",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Event ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Api::V1::Events#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/v1/events/{id}.json",
+      "operations": [
+        {
+          "summary": "Updates an existing Event",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Event ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "player_id",
+              "type": "integer",
+              "description": "Player ID",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "event_time",
+              "type": "datetime",
+              "description": "Event Time",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "description",
+              "type": "string",
+              "description": "Event Description",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Api::V1::Events#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/v1/events/{id}.json",
+      "operations": [
+        {
+          "summary": "Deletes an existing Event",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Event ID",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Api::V1::Events#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}
