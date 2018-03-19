@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :player_calculations
       resources :events
       resources :notifications
+      resources :earned_badges
     end
   end
 end

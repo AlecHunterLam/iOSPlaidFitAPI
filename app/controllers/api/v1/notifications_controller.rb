@@ -17,7 +17,7 @@ module Api::V1
     def create
       @notification = Notification.new(notification_params)
       if @notification.save
-        render json: @notification, status: :created, location: [:v1, @event]
+        render json: @notification, status: :created, location: [:v1, @notification]
       else
         render json: @notification.errors, status: :unprocessable_entity
       end
