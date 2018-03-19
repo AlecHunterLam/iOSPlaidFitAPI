@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :events
       resources :notifications
       resources :earned_badges
+      resources :users
     end
   end
 end
