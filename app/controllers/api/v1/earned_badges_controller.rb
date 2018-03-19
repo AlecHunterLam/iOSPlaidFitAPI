@@ -1,5 +1,42 @@
 module Api::V1
   class EarnedBadgesController < ApplicationController
+    # documentation
+    swagger_controller :earned_badges, "Earned Badges Management"
+
+    swagger_api :index do
+      summary "Fetches all Earned Badges"
+      notes "This lists all the earned badges"
+    end
+
+    swagger_api :show do
+      summary "Shows one Earned Badge"
+      param :path, :id, :integer, :required, "Earned Badge ID"
+      notes "This lists details of one earned badge"
+      response :not_found
+    end
+
+    swagger_api :create do
+      summary "Creates a new Earned Badge"
+      param :form, :user_id, :integer, :required, "User ID"
+      param :form, :badge_id, :integer, :required, "Badge ID"
+      response :not_acceptable
+    end
+
+    swagger_api :update do
+      param :path, :id, :integer, :required, "Earned Badge ID"
+      param :form, :user_id, :integer, :required, "User ID"
+      param :form, :badge_id, :integer, :required, "Badge ID"
+      response :not_found
+      response :not_acceptable
+    end
+
+    swagger_api :destroy do
+      summary "Deletes an existing Earned Badge"
+      param :path, :id, :integer, :required, "Earned Badge ID"
+      response :not_found
+    end
+
+    
     # callbacks
     before_action :set_earned_badges, only: [:show, :update, :destroy]
 
@@ -17,6 +54,7 @@ module Api::V1
     # POST /earned_badges
     def create
       @earned_badge = EarnedBadge.new(earned_badge_params)
+      @earned_badge.date_earned = Time.now
       if @earned_badge.save
         render json: @earned_badge, status: :created, location: [:v1, @earned_badge]
       else
