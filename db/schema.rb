@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180308213114) do
+ActiveRecord::Schema.define(version: 20180319133348) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -111,7 +111,6 @@ ActiveRecord::Schema.define(version: 20180308213114) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.integer "team_id"
     t.string "andrew_id"
     t.string "email"
     t.string "major"
