@@ -29,13 +29,14 @@ class User < ApplicationRecord
   # Methods
   private
   def validate_andrew_id
-    input_andrew_id = self.andrew_id
-    all_andrew_ids = User.all.map{ |u| u.andrew_id }
-    all_andrew_ids.each do |current_id|
-      if current == input_andrew_id
-        return false
-      end
-    return true
+      input_andrew_id = self.andrew_id
+      all_andrew_ids = User.all.map{ |u| u.andrew_id }
+      all_andrew_ids.each do |current_id|
+        if current == input_andrew_id
+          return false
+        end
+      return true
+     end
    end
 
 end

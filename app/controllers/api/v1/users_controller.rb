@@ -101,8 +101,5 @@ module Api::V1
       params.permit(:first_name, :last_name, :andrew_id, :email, :major, :phone, :role)
     end
 
-
-
-
   end
 end
