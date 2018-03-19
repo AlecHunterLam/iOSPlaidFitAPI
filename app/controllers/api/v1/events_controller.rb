@@ -10,32 +10,32 @@ module Api::V1
 
       swagger_api :show do
         summary "Shows one Event"
-        params :path, :id, :integer, :required, "Event ID"
+        param :path, :id, :integer, :required, "Event ID"
         notes "This lists details of one event"
         response :not_found
       end
 
       swagger_api :create do
         summary "Creates a new Event"
-        params :form, :player_id, :integer, :required, "Player ID"
-        params :form, :event_time, :datetime, :required, "Event Time"
-        params :form, :description, :string, :required, "Event Description"
+        param :form, :player_id, :integer, :required, "Player ID"
+        param :form, :event_time, :datetime, :required, "Event Time"
+        param :form, :description, :string, :required, "Event Description"
         response :not_acceptable
       end
 
       swagger_api :update do
         summary "Updates an existing Event"
-        params :path, :id, :integer, :required, "Event ID"
-        params :form, :player_id, :integer, :required, "Player ID"
-        params :form, :event_time, :datetime, :required, "Event Time"
-        params :form, :description, :string, :required, "Event Description"
+        param :path, :id, :integer, :required, "Event ID"
+        param :form, :player_id, :integer, :optional, "Player ID"
+        param :form, :event_time, :datetime, :optional, "Event Time"
+        param :form, :description, :string, :optional, "Event Description"
         response :not_found
         response :not_acceptable
       end
 
       swagger_api :destroy do
         summary "Deletes an existing Event"
-        params :path, :id, :integer, :require, "Event ID"
+        param :path, :id, :integer, :require, "Event ID"
         response :not_found
       end
 

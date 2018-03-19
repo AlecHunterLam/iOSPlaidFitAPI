@@ -25,7 +25,7 @@ module Api::V1
         swagger_api :update do
             summary "Updates an existing Player Calculation"
             param :path, :id, :integer, :required, "Player Calculation ID"
-            param :path, :player_id, :integer, :required, "Player ID"
+            param :form, :player_id, :integer, :required, "Player ID"
             param :form, :week_of, :date, :optional, "Week Of"
             response :not_found
             response :not_acceptable

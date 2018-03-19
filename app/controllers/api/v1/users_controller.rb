@@ -11,33 +11,33 @@ module Api::V1
 
     swagger_api :show do
       summary "Shows one User"
-      params :path, :id, :integer, :required, "User ID"
+      param :path, :id, :integer, :required, "User ID"
       notes "This lists details of one user"
     end
 
     swagger_api :create do
       summary "Creates a new User"
-      params :form, :andrew_id, :string, :required, "Andrew ID"
-      params :form, :email, :string, :required, "Email"
-      params :form, :major, :string, :required, "Major"
-      params :form, :role, :string, :required, "User Role"
-      params :form, :first_name, :string, :optional, "First Name"
-      params :form, :last_name, :string, :optional,"Last Name"
-      params :form, :phone, :string, :optional,"Phone"
+      param :form, :andrew_id, :string, :required, "Andrew ID"
+      param :form, :email, :string, :required, "Email"
+      param :form, :major, :string, :required, "Major"
+      param :form, :role, :string, :required, "User Role"
+      param :form, :first_name, :string, :optional, "First Name"
+      param :form, :last_name, :string, :optional,"Last Name"
+      param :form, :phone, :string, :optional,"Phone"
       notes "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'."
       repsonse :not_acceptable
     end
 
     swagger_api :update do
       summary "Updates an existing User"
-      params :path, :id, :integer, :required, "User ID"
-      params :form, :andrew_id, :string, :optional, "Andrew ID"
-      params :form, :email, :string, :optional, "Email"
-      params :form, :major, :string, :optional, "Major"
-      params :form, :role, :string, :optional, "User Role"
-      params :form, :first_name, :string, :optional,"First Name"
-      params :form, :last_name, :string, :optional,"Last Name"
-      params :form, :phone, :string, :optional,"Phone"
+      param :path, :id, :integer, :required, "User ID"
+      param :form, :andrew_id, :string, :optional, "Andrew ID"
+      param :form, :email, :string, :optional, "Email"
+      param :form, :major, :string, :optional, "Major"
+      param :form, :role, :string, :optional, "User Role"
+      param :form, :first_name, :string, :optional,"First Name"
+      param :form, :last_name, :string, :optional,"Last Name"
+      param :form, :phone, :string, :optional,"Phone"
       notes "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'."
       response :not_found
       repsonse :not_acceptable
@@ -45,7 +45,7 @@ module Api::V1
 
     swagger_api :destroy do
       summary "Deletes an existing User"
-      params :path, :id, :integer, :required, "User ID"
+      param :path, :id, :integer, :required, "User ID"
       response :not_found
     end
 

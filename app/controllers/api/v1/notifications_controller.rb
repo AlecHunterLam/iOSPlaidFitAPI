@@ -10,34 +10,34 @@ module Api::V1
 
     swagger_api :show do
       summary "Shows one Notification"
-      params :path, :id, :integer, :required, "Notification ID"
+      param :path, :id, :integer, :required, "Notification ID"
       notes "This lists details of one notification"
       response :not_found
     end
 
     swagger_api :create do
       summary "Creates a new Notification"
-      params :form, :sender_id, :integer, :required, "Sender ID"
-      params :form, :receiver_id, :integer, :required, "Receiver ID"
-      params :form, :message, :string, :required, "Message"
-      params :form, :priority, :string, "Priority"
+      param :form, :sender_id, :integer, :required, "Sender ID"
+      param :form, :receiver_id, :integer, :required, "Receiver ID"
+      param :form, :message, :string, :required, "Message"
+      param :form, :priority, :string, "Priority"
       response :not_acceptable
     end
 
     swagger_api :update do
       summary "Updates an existing Notification"
-      params :path, :id, :integer, :required, "Notification ID"
-      params :form, :sender_id, :integer, :required, "Sender ID"
-      params :form, :receiver_id, :integer, :required, "Receiver ID"
-      params :form, :message, :string, :required, "Message"
-      params :form, :priority, :string, "Priority"
+      param :path, :id, :integer, :required, "Notification ID"
+      param :form, :sender_id, :integer, :optional, "Sender ID"
+      param :form, :receiver_id, :integer, :optional, "Receiver ID"
+      param :form, :message, :string, :optional, "Message"
+      param :form, :priority, :string, :optional, "Priority"
       response :not_found
       response :not_acceptable
     end
 
     swagger_api :destroy do
       summary "Deletes an existing Notification"
-      params :path, :id, :integer, :required, "Notification ID"
+      param :path, :id, :integer, :required, "Notification ID"
       response :not_found
     end
 

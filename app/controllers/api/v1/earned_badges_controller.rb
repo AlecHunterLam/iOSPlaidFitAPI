@@ -25,8 +25,8 @@ module Api::V1
     swagger_api :update do
       summary "Updates an existing Earned Badge"
       param :path, :id, :integer, :required, "Earned Badge ID"
-      param :form, :user_id, :integer, :required, "User ID"
-      param :form, :badge_id, :integer, :required, "Badge ID"
+      param :form, :user_id, :integer, :optional, "User ID"
+      param :form, :badge_id, :integer, :optional, "Badge ID"
       response :not_found
       response :not_acceptable
     end
