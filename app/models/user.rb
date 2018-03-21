@@ -32,7 +32,7 @@ class User < ApplicationRecord
       input_andrew_id = self.andrew_id
       all_andrew_ids = User.all.map{ |u| u.andrew_id }
       all_andrew_ids.each do |current_id|
-        if current == input_andrew_id
+        if current_id == input_andrew_id
           return false
         end
       return true
