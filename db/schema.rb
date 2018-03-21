@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180321161531) do
+ActiveRecord::Schema.define(version: 20180321163410) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20180321161531) do
     t.integer "season_rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "weekly_load"
   end
 
   create_table "practices", force: :cascade do |t|
@@ -86,6 +87,9 @@ ActiveRecord::Schema.define(version: 20180321161531) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "session_load"
+    t.float "daily_load"
+    t.float "daily_strain"
+    t.float "monotony"
   end
 
   create_table "team_calculations", force: :cascade do |t|
@@ -99,6 +103,7 @@ ActiveRecord::Schema.define(version: 20180321161531) do
     t.string "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "weekly_load"
   end
 
   create_table "teams", force: :cascade do |t|
