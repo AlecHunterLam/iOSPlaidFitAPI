@@ -11,7 +11,7 @@ class PlayerCalculation < ApplicationRecord
   validates_presence_of :user_id, :week_of, :season
   validate :validate_season
   validate :validate_week_of
-  validate_numericality_of :sleep_average, :hydration_average, :stress_average, :load_average, greater_than_or_equal_to: 0, only_integer: false
+  validates_numericality_of :sleep_average, :hydration_average, :stress_average, :load_average, greater_than_or_equal_to: 0, only_integer: false
 
   # Methods
   private

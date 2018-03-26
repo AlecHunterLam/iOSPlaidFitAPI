@@ -8,6 +8,11 @@ Rails.application.routes.draw do
       resources :surveys
       resources :team_calculations
       resources :teams
+      resources :player_calculations
+      resources :events
+      resources :notifications
+      resources :earned_badges
+      resources :users
     end
   end
 end

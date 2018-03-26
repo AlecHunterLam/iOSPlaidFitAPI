@@ -26,6 +26,26 @@
     {
       "path": "/apidocs/api/v1/teams.{format}",
       "description": "Teams Management"
+    },
+    {
+      "path": "/apidocs/api/v1/player_calculations.{format}",
+      "description": "Player Calculations Management"
+    },
+    {
+      "path": "/apidocs/api/v1/events.{format}",
+      "description": "Events Management"
+    },
+    {
+      "path": "/apidocs/api/v1/notifications.{format}",
+      "description": "Notification Management"
+    },
+    {
+      "path": "/apidocs/api/v1/earned_badges.{format}",
+      "description": "Earned Badges Management"
+    },
+    {
+      "path": "/apidocs/api/v1/users.{format}",
+      "description": "User Management"
     }
   ],
   "authorizations": null,

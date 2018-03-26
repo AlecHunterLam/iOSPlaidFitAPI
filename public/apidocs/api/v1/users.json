@@ -1,0 +1,216 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "users",
+  "apis": [
+    {
+      "path": "/v1/users.json",
+      "operations": [
+        {
+          "summary": "Fetches all Users",
+          "notes": "Lists all of the users",
+          "nickname": "Api::V1::Users#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/v1/users.json",
+      "operations": [
+        {
+          "summary": "Creates a new User",
+          "notes": "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'.",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "andrew_id",
+              "type": "string",
+              "description": "Andrew ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "email",
+              "type": "string",
+              "description": "Email",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "major",
+              "type": "string",
+              "description": "Major",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "role",
+              "type": "string",
+              "description": "User Role",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "first_name",
+              "type": "string",
+              "description": "First Name",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "last_name",
+              "type": "string",
+              "description": "Last Name",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "phone",
+              "type": "string",
+              "description": "Phone",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Api::V1::Users#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/v1/users/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one User",
+          "notes": "This lists details of one user",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "User ID",
+              "required": true
+            }
+          ],
+          "nickname": "Api::V1::Users#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/v1/users/{id}.json",
+      "operations": [
+        {
+          "summary": "Updates an existing User",
+          "notes": "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'.",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "User ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "andrew_id",
+              "type": "string",
+              "description": "Andrew ID",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "email",
+              "type": "string",
+              "description": "Email",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "major",
+              "type": "string",
+              "description": "Major",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "role",
+              "type": "string",
+              "description": "User Role",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "first_name",
+              "type": "string",
+              "description": "First Name",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "last_name",
+              "type": "string",
+              "description": "Last Name",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "phone",
+              "type": "string",
+              "description": "Phone",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Api::V1::Users#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/v1/users/{id}.json",
+      "operations": [
+        {
+          "summary": "Deletes an existing User",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "User ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Api::V1::Users#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

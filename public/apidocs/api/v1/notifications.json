@@ -1,0 +1,179 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "notifications",
+  "apis": [
+    {
+      "path": "/v1/notifications.json",
+      "operations": [
+        {
+          "summary": "Fetches all Notifications",
+          "notes": "This lists all of the notifications",
+          "nickname": "Api::V1::Notifications#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/v1/notifications.json",
+      "operations": [
+        {
+          "summary": "Creates a new Notification",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "sender_id",
+              "type": "integer",
+              "description": "Sender ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "receiver_id",
+              "type": "integer",
+              "description": "Receiver ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "message",
+              "type": "string",
+              "description": "Message",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "priority",
+              "type": "string",
+              "description": null,
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Api::V1::Notifications#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/v1/notifications/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Notification",
+          "notes": "This lists details of one notification",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Notification ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Api::V1::Notifications#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/v1/notifications/{id}.json",
+      "operations": [
+        {
+          "summary": "Updates an existing Notification",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Notification ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "sender_id",
+              "type": "integer",
+              "description": "Sender ID",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "receiver_id",
+              "type": "integer",
+              "description": "Receiver ID",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "message",
+              "type": "string",
+              "description": "Message",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "priority",
+              "type": "string",
+              "description": "Priority",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Api::V1::Notifications#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/v1/notifications/{id}.json",
+      "operations": [
+        {
+          "summary": "Deletes an existing Notification",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Notification ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Api::V1::Notifications#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

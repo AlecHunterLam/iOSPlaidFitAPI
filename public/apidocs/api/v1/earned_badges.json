@@ -1,0 +1,151 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "earned_badges",
+  "apis": [
+    {
+      "path": "/v1/earned_badges.json",
+      "operations": [
+        {
+          "summary": "Fetches all Earned Badges",
+          "notes": "This lists all the earned badges",
+          "nickname": "Api::V1::EarnedBadges#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/v1/earned_badges.json",
+      "operations": [
+        {
+          "summary": "Creates a new Earned Badge",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "user_id",
+              "type": "integer",
+              "description": "User ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "badge_id",
+              "type": "integer",
+              "description": "Badge ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Api::V1::EarnedBadges#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/v1/earned_badges/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Earned Badge",
+          "notes": "This lists details of one earned badge",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Earned Badge ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Api::V1::EarnedBadges#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/v1/earned_badges/{id}.json",
+      "operations": [
+        {
+          "summary": "Updates an existing Earned Badge",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Earned Badge ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "user_id",
+              "type": "integer",
+              "description": "User ID",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "badge_id",
+              "type": "integer",
+              "description": "Badge ID",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Api::V1::EarnedBadges#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/v1/earned_badges/{id}.json",
+      "operations": [
+        {
+          "summary": "Deletes an existing Earned Badge",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Earned Badge ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Api::V1::EarnedBadges#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

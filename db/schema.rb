@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180308213114) do
+ActiveRecord::Schema.define(version: 20180321163947) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 20180308213114) do
     t.integer "season_rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "weekly_load"
+    t.float "weekly_strain"
   end
 
   create_table "practices", force: :cascade do |t|
@@ -67,6 +69,7 @@ ActiveRecord::Schema.define(version: 20180308213114) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "session_load"
   end
 
   create_table "rostereds", force: :cascade do |t|
@@ -84,6 +87,10 @@ ActiveRecord::Schema.define(version: 20180308213114) do
     t.string "season"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "session_load"
+    t.float "daily_load"
+    t.float "daily_strain"
+    t.float "monotony"
   end
 
   create_table "team_calculations", force: :cascade do |t|
@@ -97,6 +104,7 @@ ActiveRecord::Schema.define(version: 20180308213114) do
     t.string "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "weekly_load"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -111,7 +119,6 @@ ActiveRecord::Schema.define(version: 20180308213114) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.integer "team_id"
     t.string "andrew_id"
     t.string "email"
     t.string "major"
