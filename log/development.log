@@ -1187,3 +1187,148 @@ Migrating to AddWeeklyStrainToPlayerCalculations (20180321163947)
   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeTypeOfSleep (20180326025908)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "sleep_average" float[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180326025908"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveFieldsForTeamCalculations (20180330193639)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateam_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "sleep" integer DEFAULT NULL, "hydration" integer DEFAULT NULL, "stress" integer DEFAULT NULL, "load" integer DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "rank" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "ateam_calculations" ("id","week_of","sleep","hydration","stress","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average")
+                     SELECT "id","week_of","sleep","hydration","stress","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average" FROM "team_calculations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "team_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "team_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "hydration" integer DEFAULT NULL, "stress" integer DEFAULT NULL, "load" integer DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "rank" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "team_calculations" ("id","week_of","hydration","stress","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average")
+                     SELECT "id","week_of","hydration","stress","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average" FROM "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateam_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "hydration" integer DEFAULT NULL, "stress" integer DEFAULT NULL, "load" integer DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "rank" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ateam_calculations" ("id","week_of","hydration","stress","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average")
+                     SELECT "id","week_of","hydration","stress","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average" FROM "team_calculations"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "team_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "team_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "stress" integer DEFAULT NULL, "load" integer DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "rank" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "team_calculations" ("id","week_of","stress","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average")
+                     SELECT "id","week_of","stress","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average" FROM "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateam_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "stress" integer DEFAULT NULL, "load" integer DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "rank" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ateam_calculations" ("id","week_of","stress","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average")
+                     SELECT "id","week_of","stress","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average" FROM "team_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "team_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "team_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "load" integer DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "rank" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "team_calculations" ("id","week_of","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average")
+                     SELECT "id","week_of","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average" FROM "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateam_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "load" integer DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "rank" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ateam_calculations" ("id","week_of","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average")
+                     SELECT "id","week_of","load","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average" FROM "team_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "team_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "team_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "rank" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "team_calculations" ("id","week_of","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average")
+                     SELECT "id","week_of","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average" FROM "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateam_calculations"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180330193639"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCalculationFieldsForTeamCalculations (20180330193957)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "hydration_average" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "stress_average" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "soreness_average" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "load_average" float[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "weekly_strain" float[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180330193957"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixSeasonRankInTeamCalculations (20180330194644)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateam_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "rank" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL, "hydration_average" float DEFAULT NULL, "stress_average" float DEFAULT NULL, "soreness_average" float DEFAULT NULL, "load_average" float DEFAULT NULL, "weekly_strain" float DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "ateam_calculations" ("id","week_of","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average","hydration_average","stress_average","soreness_average","load_average","weekly_strain")
+                     SELECT "id","week_of","team_id","season","rank","created_at","updated_at","weekly_load","sleep_average","hydration_average","stress_average","soreness_average","load_average","weekly_strain" FROM "team_calculations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "team_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "team_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL, "hydration_average" float DEFAULT NULL, "stress_average" float DEFAULT NULL, "soreness_average" float DEFAULT NULL, "load_average" float DEFAULT NULL, "weekly_strain" float DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "team_calculations" ("id","week_of","team_id","season","created_at","updated_at","weekly_load","sleep_average","hydration_average","stress_average","soreness_average","load_average","weekly_strain")
+                     SELECT "id","week_of","team_id","season","created_at","updated_at","weekly_load","sleep_average","hydration_average","stress_average","soreness_average","load_average","weekly_strain" FROM "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "season_rank" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180330194644"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixStressFieldsForPlayerAndTeamCalculations (20180330194833)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aplayer_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer DEFAULT NULL, "weak_of" date DEFAULT NULL, "sleep_average" float DEFAULT NULL, "hydration_average" float DEFAULT NULL, "stress_average" float DEFAULT NULL, "soreness_average" float DEFAULT NULL, "load_average" float DEFAULT NULL, "season" varchar DEFAULT NULL, "season_rank" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "weekly_strain" float DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aplayer_calculations" ("id","player_id","weak_of","sleep_average","hydration_average","stress_average","soreness_average","load_average","season","season_rank","created_at","updated_at","weekly_load","weekly_strain")
+                     SELECT "id","player_id","weak_of","sleep_average","hydration_average","stress_average","soreness_average","load_average","season","season_rank","created_at","updated_at","weekly_load","weekly_strain" FROM "player_calculations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "player_calculations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "player_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer DEFAULT NULL, "weak_of" date DEFAULT NULL, "sleep_average" float DEFAULT NULL, "hydration_average" float DEFAULT NULL, "soreness_average" float DEFAULT NULL, "load_average" float DEFAULT NULL, "season" varchar DEFAULT NULL, "season_rank" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "weekly_strain" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "player_calculations" ("id","player_id","weak_of","sleep_average","hydration_average","soreness_average","load_average","season","season_rank","created_at","updated_at","weekly_load","weekly_strain")
+                     SELECT "id","player_id","weak_of","sleep_average","hydration_average","soreness_average","load_average","season","season_rank","created_at","updated_at","weekly_load","weekly_strain" FROM "aplayer_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aplayer_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateam_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL, "hydration_average" float DEFAULT NULL, "stress_average" float DEFAULT NULL, "soreness_average" float DEFAULT NULL, "load_average" float DEFAULT NULL, "weekly_strain" float DEFAULT NULL, "season_rank" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ateam_calculations" ("id","week_of","team_id","season","created_at","updated_at","weekly_load","sleep_average","hydration_average","stress_average","soreness_average","load_average","weekly_strain","season_rank")
+                     SELECT "id","week_of","team_id","season","created_at","updated_at","weekly_load","sleep_average","hydration_average","stress_average","soreness_average","load_average","weekly_strain","season_rank" FROM "team_calculations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "team_calculations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "team_calculations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "week_of" date DEFAULT NULL, "team_id" integer DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "weekly_load" float DEFAULT NULL, "sleep_average" float DEFAULT NULL, "hydration_average" float DEFAULT NULL, "soreness_average" float DEFAULT NULL, "load_average" float DEFAULT NULL, "weekly_strain" float DEFAULT NULL, "season_rank" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "team_calculations" ("id","week_of","team_id","season","created_at","updated_at","weekly_load","sleep_average","hydration_average","soreness_average","load_average","weekly_strain","season_rank")
+                     SELECT "id","week_of","team_id","season","created_at","updated_at","weekly_load","sleep_average","hydration_average","soreness_average","load_average","weekly_strain","season_rank" FROM "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateam_calculations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "player_calculations" ADD "life_stress_average" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "player_calculations" ADD "academic_stress_average" float[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "life_stress_average" float[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "academic_stress_average" float[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180330194833"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddQualityOfSleepAndHydrationQualityFields (20180330195202)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "player_calculations" ADD "sleep_quality_average" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "player_calculations" ADD "hydration_quality_average" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "sleep_quality_average" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "hydration_quality_average" float[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180330195202"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPostPractiveAverageFields (20180330195424)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "player_calculations" ADD "personal_performance_average" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "player_calculations" ADD "practice_difficulty_average" float[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "team_calculations" ADD "practice_difficulty_average" float[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180330195424"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
