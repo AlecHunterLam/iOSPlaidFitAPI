@@ -17,7 +17,7 @@ class Survey < ApplicationRecord
     # Scopes
 
     # Validations
-    validates_presence_of :type, :response, :completed, :session_load, :daily_strain, :daily_load, :monotony
+    validates_presence_of :type, :response, :completed
     validates_presence_of :season, message: "is not a valid season for this survey"
     validates_inclusion_of :type, in: SURVEY_TYPES.map{|key, value| value}, message: "is not a valid survey type"
     validates_date :completed, on_or_before: lambda { Date.current }
@@ -55,7 +55,7 @@ class Survey < ApplicationRecord
 
     # build up current season strings
     # Season formatted as the following:
-    #   => Fall-20** 
+    #   => Fall-20**
     #   => Winter-20**
     #   => Spring-20**
     #   => Other-20** if our of range
