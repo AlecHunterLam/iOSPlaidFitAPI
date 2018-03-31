@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330195424) do
+ActiveRecord::Schema.define(version: 20180331154032) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 20180330195424) do
 
   create_table "player_calculations", force: :cascade do |t|
     t.integer "player_id"
-    t.date "weak_of"
     t.float "sleep_average"
     t.float "hydration_average"
     t.float "soreness_average"
@@ -65,13 +64,14 @@ ActiveRecord::Schema.define(version: 20180330195424) do
     t.float "hydration_quality_average"
     t.float "personal_performance_average"
     t.float "practice_difficulty_average"
+    t.datetime "week_of"
   end
 
   create_table "practices", force: :cascade do |t|
     t.integer "team_id"
     t.integer "duration"
     t.integer "difficulty"
-    t.date "date"
+    t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "session_load"
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 20180330195424) do
     t.integer "user_id"
     t.string "type"
     t.string "response"
-    t.date "completed"
+    t.datetime "completed"
     t.string "season"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -99,7 +99,7 @@ ActiveRecord::Schema.define(version: 20180330195424) do
   end
 
   create_table "team_calculations", force: :cascade do |t|
-    t.date "week_of"
+    t.datetime "week_of"
     t.integer "team_id"
     t.string "season"
     t.datetime "created_at", null: false
