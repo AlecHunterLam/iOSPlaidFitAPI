@@ -6,6 +6,6 @@ module Api::V1
     has_many :events
     has_many :earned_badges
     has_many :notifications
-    has_many :rostereds
+    has_many :team_assignments
   end
 end
