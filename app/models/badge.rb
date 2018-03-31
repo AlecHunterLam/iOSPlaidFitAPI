@@ -6,8 +6,7 @@ class Badge < ApplicationRecord
     scope :alphabetical,              -> { order(:badge_name) }
 
     # Validations
-    validates_presence_of :badge_name, :requirements
-
-    # Methods
+    validates_presence_of :badge_name, :requirements, :badge_description
+    validates_uniqueness_of :badge_name, :requirements
 
 end
