@@ -9,7 +9,7 @@ class TeamAssignment < ApplicationRecord
     scope :inactive,     -> { where(active: false) }
 
     # Validations
-    validates_presence_of :team_id, :user_id, :active
+    validates_presence_of :team_id, :user_id, :active, :date_added
 
     # Methods
 
