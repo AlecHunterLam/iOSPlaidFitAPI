@@ -9,8 +9,7 @@ class Team < ApplicationRecord
     GENDERS = [['Men', :men], ['Women', :women]]
     SEASONS = [['Fall', :fall], ['Winter', :winter], ['Spring', :spring]]
 
-    # Class Variables
-    @@current_seasons = self.calculate_current_seasons
+
 
     # Relationships
     has_many :team_assignments
@@ -33,32 +32,7 @@ class Team < ApplicationRecord
 
     # Methods
 
-    # build up current season strings
-    # Season formatted as the following:
-    #   => Fall-20**
-    #   => Winter-20**
-    #   => Spring-20**
-    #   => Other-20** if our of range
-    def calculate_current_seasons
-      current_seasons = []
-      current_month = Time.now.month
-      current_year = Time.now.year
-      current_year = current_year.to_s
-      # Fall Season
-      if 8 <= current_month && current_month <= 12
-        current_seasons << ("Fall-" + current_year)
-      end
-      if 11 <= current_month || current_month <= 3
-        current_seasons << ("Winter-" + current_year)
-      end
-      if 2 <= current_month && current_month <= 6
-        current_seasons << ("Spring-" + current_year)
-      end
-      if current_seasons == []
-        current_seasons << ("Other-" + current_year)
-      end
-      return current_seasons
-    end
+
 
 
 end
