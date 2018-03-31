@@ -5,9 +5,11 @@ class TeamAssignment < ApplicationRecord
     belongs_to :team
 
     # Scopes
+    scope :active,     -> { where(active: true) }
+    scope :inactive,     -> { where(active: false) }
 
     # Validations
-    validates_presence_of :team_id, :user_id
+    validates_presence_of :team_id, :user_id, :active
 
     # Methods
 
