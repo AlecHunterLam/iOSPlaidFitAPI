@@ -10,9 +10,10 @@ class Team < ApplicationRecord
     SEASONS = [['Fall', :fall], ['Winter', :winter], ['Spring', :spring]]
 
     # Relationships
-    has_many :rostereds
+    has_many :team_assignments
     has_many :team_calculations
     has_many :practices
+    has_many :users, through: :team_assignments
 
     # Scopes
     scope :active,              -> { where(active: true) }

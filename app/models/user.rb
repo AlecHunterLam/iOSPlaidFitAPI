@@ -4,8 +4,8 @@ class User < ApplicationRecord
   MAJORS = [['Information Systems', :is], ['Computer Science', :cs], ['Other', :other]]
 
   # Relationships
-  has_many :rostered
-  has_many :teams, through: :rostered
+  has_many :team_assignments
+  has_many :teams, through: :team_assignments
   has_many :surveys
   has_many :events
   has_many :earned_badges

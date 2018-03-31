@@ -1,4 +1,4 @@
-class Rostered < ApplicationRecord
+class TeamAssignment < ApplicationRecord
 
     # Relationships
     belongs_to :user
