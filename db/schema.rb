@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180331171856) do
+ActiveRecord::Schema.define(version: 20180331172315) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 20180331171856) do
   end
 
   create_table "surveys", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "player_id"
     t.string "type"
     t.string "response"
     t.datetime "completed"

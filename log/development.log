@@ -1631,3 +1631,21 @@ Migrating to RenamePracticeDateToPracticeTime (20180331171856)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameUseridInSurveysToPlayerId (20180331172315)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer DEFAULT NULL, "type" varchar DEFAULT NULL, "response" varchar DEFAULT NULL, "completed" datetime DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "session_load" float DEFAULT NULL, "daily_load" float DEFAULT NULL, "daily_strain" float DEFAULT NULL, "monotony" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","player_id","type","response","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony")
+                     SELECT "id","user_id","type","response","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony" FROM "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer DEFAULT NULL, "type" varchar DEFAULT NULL, "response" varchar DEFAULT NULL, "completed" datetime DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "session_load" float DEFAULT NULL, "daily_load" float DEFAULT NULL, "daily_strain" float DEFAULT NULL, "monotony" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","player_id","type","response","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony")
+                     SELECT "id","player_id","type","response","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180331172315"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
