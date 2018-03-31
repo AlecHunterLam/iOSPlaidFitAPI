@@ -1,11 +1,11 @@
 class Team < ApplicationRecord
 
     # Array constants
-    SPORTS = [['Soccer', :soccer], ['Basketball', :bball], ['Tennis', :tennis], ['Volleyball', :vball], ['Swimming & Diving', :s_and_d],
-              ['Baseball', :baseball], ['Beach Volleyball', :beach_vball], ['Bowling', :bowling], ['Cross Country', :xc],
-              ['Fencing', :fencing], ['Field Hockey', :f_hockey], ['Football', :football], ['Golf', :golf], ['Gymnastics', :gymnastics],
-              ['Ice Hockey', :ice_hockey], ['Lacrosse', :lax], ['Rifle', :rifle], ['Rowing', :rowing], ['Skiing', :skiing], ['Softball', :softball],
-              ['Track and Field', :t_and_f], ['Water Polo', :w_polo], ['Wrestling', :wrestling]]
+    SPORTS = [['Soccer', :soccer], ['Basketball', :basketball], ['Tennis', :tennis], ['Volleyball', :volleyball], ['Swimming & Diving', :swimming_and_diving],
+              ['Baseball', :baseball], ['Beach Volleyball', :beach_volleyball], ['Bowling', :bowling], ['Cross Country', :cross_country],
+              ['Fencing', :fencing], ['Field Hockey', :field_hockey], ['Football', :football], ['Golf', :golf], ['Gymnastics', :gymnastics],
+              ['Ice Hockey', :ice_hockey], ['Lacrosse', :lacrosse], ['Rifle', :rifle], ['Rowing', :rowing], ['Skiing', :skiing], ['Softball', :softball],
+              ['Indoor Track and Field', :indoor_track_and_field],['Outdoor Track and Field', :outdoor_track_and_field], ['Water Polo', :water_polo], ['Wrestling', :wrestling]]
     GENDERS = [['Men', :men], ['Women', :women]]
     SEASONS = [['Fall', :fall], ['Winter', :winter], ['Spring', :spring]]
 
@@ -19,10 +19,11 @@ class Team < ApplicationRecord
     has_many :users, through: :team_assignments
 
     # Scopes
-    scope :active,              -> { where(active: true) }
-    scope :inactive,            -> { where(active: false) }
-    scope :for_season,  ->  (season) { where("season == ?", season) }
-    scope :for_gender,   ->  (gender) { where("gender == ?", gender) }
+    scope :active,              ->           { where(active: true) }
+    scope :inactive,            ->           { where(active: false) }
+    scope :for_season,          ->  (season) { where("season == ?", season) }
+    scope :for_gender,          ->  (gender) { where("gender == ?", gender) }
+    scope :for_sport,           ->  (sport)  { where("sport == ?", sport) }
 
     # Validations
     validates_presence_of :sport, :gender, :season, :active
