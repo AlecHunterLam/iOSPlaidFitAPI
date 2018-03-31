@@ -55,7 +55,7 @@ class Survey < ApplicationRecord
 
     # build up current season strings
     # Season formatted as the following:
-    #   => Fall-20**
+    #   => Fall-20** 
     #   => Winter-20**
     #   => Spring-20**
     #   => Other-20** if our of range
