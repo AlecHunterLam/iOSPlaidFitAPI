@@ -12,5 +12,5 @@ class TeamAssignment < ApplicationRecord
     validates_presence_of :team_id, :user_id, :active, :date_added
 
     # Methods
-
+ 
 end
