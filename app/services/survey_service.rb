@@ -36,9 +36,20 @@ class SurveyService
     current_year = (Time.now.year).to_s
     current_month = (Time.now.month).to_s
 
-    Time.parse(current_year + '-' + current_month + '-' + current_day + ' 00:00:00') # => Fri, 31 Dec 1999 14:00:00 HST -10:00
+    # daylights saving case
+    if Time.now.dst?
+      start_day_time = Time.new(current_year, current_month, current_day, 0, 0, 0, "-04:00")
+      end_day_time = Time.new(current_year, current_month, current_day, 23, 59, 59, "-04:00")
+    # not-daylights saving case
+    else
+      start_day_time = Time.new(current_year, current_month, current_day, 0, 0, 0, "-05:00")
+      end_day_time = Time.new(current_year, current_month, current_day, 23, 59, 59, "-05:00")
+    end
 
-    practice_duration = Practice.
+    # can yield multiple practices if multiple practices on a current day
+    practices_today = Practice.practice_on_date(start_day_time, end_day_time)
+
+    # session load =
 
   end
 
