@@ -18,6 +18,7 @@ class Notification < ApplicationRecord
   validates_presence_of :sender_id, :receiver_id, :message, :active
   validates_timeliness_of :notified_time, on_or_before: Date.current
   validates_inclusion_of :type, in: PRIORITIES.map{|key, value| value}, message: "is not a valid priority setting"
+  
   # Methods
 
 end
