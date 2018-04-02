@@ -11,11 +11,11 @@ class Survey < ApplicationRecord
     belongs_to :practice, optional: true
 
     # Scopes
-    scope :surveys_on_date,  (startTime,endTime)          -> { where("completed_time BETWEEN startTime AND endTime") }
-    scope :for_user,         (user_id)                    -> { where("player_id == ?", user_id) }
-    scope :daily_wellness,                                -> { where("survey_type == daily_wellness") }
+    scope :surveys_on_date,  -> (startTime,endTime)         { where("completed_time BETWEEN startTime AND endTime") }
+    scope :for_user,         -> (user_id)                   { where("player_id == ?", user_id) }
+    scope :daily_wellness,                               -> { where("survey_type == daily_wellness") }
     scope :post_practice,                                -> { where("survey_type == post_practice") }
-    scope :surveys_for_week,  (startWeek,endWeek)        -> { where("completed_time BETWEEN startTime AND endTime") }
+    scope :surveys_for_week,  -> (startWeek,endWeek)        { where("completed_time BETWEEN startTime AND endTime") }
 
     # Validations
     validates_presence_of :survey_type, :completed
