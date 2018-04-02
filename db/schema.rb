@@ -148,12 +148,12 @@ ActiveRecord::Schema.define(version: 20180402071836) do
     t.string "andrew_id"
     t.string "email"
     t.string "major"
-    t.integer "phone"
+    t.string "phone"
     t.string "role"
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "class"
+    t.string "year"
   end
 
 end
