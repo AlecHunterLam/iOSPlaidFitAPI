@@ -8,6 +8,7 @@ class Survey < ApplicationRecord
 
     # Relationships
     belongs_to :user
+    belongs_to :practice, optional: true
 
     # Scopes
     scope :surveys_on_date,  (startTime,endTime)          -> { where("completed_time BETWEEN startTime AND endTime") }

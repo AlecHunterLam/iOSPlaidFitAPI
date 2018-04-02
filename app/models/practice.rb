@@ -2,6 +2,7 @@ class Practice < ApplicationRecord
 
     # Relationships
     belongs_to :team
+    has_many :surveys
 
     # Scopes
     # select all practices for given week, startDate and endDate should both be Mondays
