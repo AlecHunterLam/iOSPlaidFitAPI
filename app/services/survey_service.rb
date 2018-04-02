@@ -7,7 +7,7 @@ class SurveyService
     @response = params[:response]
     @team_id = params[:team_id]
     @completed = Time.now
-    @season = # # # # # # # # # # # #
+    @season = (Team.find(@team_id).season).to_s + (Time.now.year).to_s
     @session_load = nil
     @daily_load = nil
     @monotony = nil
@@ -49,6 +49,9 @@ class SurveyService
     # can yield multiple practices if multiple practices on a current day
     practices_today = Practice.practice_on_date(start_day_time, end_day_time)
 
+    # need to calculate session load based on how much the player played, and the difficulty
+    @survey.session_load = @
+
     # session load =
 
   end
@@ -66,9 +69,6 @@ class SurveyService
     t.float "daily_strain"
     t.float "monotony"
   end
-
-
-
 
   private
 
