@@ -11,7 +11,7 @@ class Notification < ApplicationRecord
   scope :for_priority,     -> (priority) { where(priority: priority) }
   scope :active,           -> { where(active: true) }
   scope :inactive,         -> { where(active: false)}
-  scope :for_time_in_range,  (startTime, endTime) -> { where("notified_time BETWEEN startTime AND endTime") }
+  scope :for_time_in_range, -> (startTime, endTime) { where("notified_time BETWEEN startTime AND endTime") }
   scope :chronological,          -> { order(:notified_time)}
 
   # Validations
