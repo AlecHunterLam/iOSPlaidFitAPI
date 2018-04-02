@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402071836) do
+ActiveRecord::Schema.define(version: 20180402213954) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 20180402071836) do
 
   create_table "earned_badges", force: :cascade do |t|
     t.integer "badge_id"
-    t.integer "player_id"
+    t.integer "user_id"
     t.datetime "date_earned"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
-    t.integer "player_id"
+    t.integer "user_id"
     t.string "description"
     t.datetime "event_time"
     t.datetime "created_at", null: false
@@ -45,10 +45,11 @@ ActiveRecord::Schema.define(version: 20180402071836) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "active"
+    t.integer "user_id"
   end
 
   create_table "player_calculations", force: :cascade do |t|
-    t.integer "player_id"
+    t.integer "user_id"
     t.float "sleep_average"
     t.float "hydration_average"
     t.float "soreness_average"
@@ -79,7 +80,7 @@ ActiveRecord::Schema.define(version: 20180402071836) do
   end
 
   create_table "surveys", force: :cascade do |t|
-    t.integer "player_id"
+    t.integer "user_id"
     t.string "survey_type"
     t.datetime "completed_time"
     t.string "season"

@@ -2,10 +2,10 @@
 
 one:
   badge_id: 1
-  player_id: 1
+  user_id: 1
   date_earned: 2018-03-08 15:59:50
 
 two:
   badge_id: 1
-  player_id: 1
+  user_id: 1
   date_earned: 2018-03-08 15:59:50

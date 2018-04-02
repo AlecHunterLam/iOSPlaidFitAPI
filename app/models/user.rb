@@ -13,6 +13,7 @@ class User < ApplicationRecord
   # Relationships
   has_many :team_assignments
   has_many :teams, through: :team_assignments
+  has_many :player_calculations
   has_many :surveys
   has_many :events
   has_many :earned_badges
