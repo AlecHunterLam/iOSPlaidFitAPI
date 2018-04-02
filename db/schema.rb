@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402024151) do
+ActiveRecord::Schema.define(version: 20180402041228) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20180402024151) do
   create_table "surveys", force: :cascade do |t|
     t.integer "player_id"
     t.string "survey_type"
-    t.datetime "completed"
+    t.datetime "completed_time"
     t.string "season"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1721,3 +1721,41 @@ Migrating to AddSurveyFieldsInsteadOfJsonResponse (20180402024151)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeCompletedInSurveysToCompletedTime (20180402041228)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer DEFAULT NULL, "survey_type" varchar DEFAULT NULL, "completed_time" datetime DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "session_load" float DEFAULT NULL, "daily_load" float DEFAULT NULL, "daily_strain" float DEFAULT NULL, "monotony" float DEFAULT NULL, "hours_of_sleep" float DEFAULT NULL, "quality_of_sleep" integer DEFAULT NULL, "academic_stress" integer DEFAULT NULL, "life_stress" integer DEFAULT NULL, "soreness" integer DEFAULT NULL, "ounces_of_water_consumed" float DEFAULT NULL, "hydration_quality" boolean DEFAULT NULL, "player_rpe_rating" integer DEFAULT NULL, "player_personal_performance" integer DEFAULT NULL, "participated_in_full_practice" boolean DEFAULT NULL, "minutes_participated" integer DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","player_id","survey_type","completed_time","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony","hours_of_sleep","quality_of_sleep","academic_stress","life_stress","soreness","ounces_of_water_consumed","hydration_quality","player_rpe_rating","player_personal_performance","participated_in_full_practice","minutes_participated")
+                     SELECT "id","player_id","survey_type","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony","hours_of_sleep","quality_of_sleep","academic_stress","life_stress","soreness","ounces_of_water_consumed","hydration_quality","player_rpe_rating","player_personal_performance","participated_in_full_practice","minutes_participated" FROM "surveys"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer DEFAULT NULL, "survey_type" varchar DEFAULT NULL, "completed_time" datetime DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "session_load" float DEFAULT NULL, "daily_load" float DEFAULT NULL, "daily_strain" float DEFAULT NULL, "monotony" float DEFAULT NULL, "hours_of_sleep" float DEFAULT NULL, "quality_of_sleep" integer DEFAULT NULL, "academic_stress" integer DEFAULT NULL, "life_stress" integer DEFAULT NULL, "soreness" integer DEFAULT NULL, "ounces_of_water_consumed" float DEFAULT NULL, "hydration_quality" boolean DEFAULT NULL, "player_rpe_rating" integer DEFAULT NULL, "player_personal_performance" integer DEFAULT NULL, "participated_in_full_practice" boolean DEFAULT NULL, "minutes_participated" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","player_id","survey_type","completed_time","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony","hours_of_sleep","quality_of_sleep","academic_stress","life_stress","soreness","ounces_of_water_consumed","hydration_quality","player_rpe_rating","player_personal_performance","participated_in_full_practice","minutes_participated")
+                     SELECT "id","player_id","survey_type","completed_time","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony","hours_of_sleep","quality_of_sleep","academic_stress","life_stress","soreness","ounces_of_water_consumed","hydration_quality","player_rpe_rating","player_personal_performance","participated_in_full_practice","minutes_participated" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180402041228"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
