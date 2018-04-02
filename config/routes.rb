@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :badges
       resources :practices
-      resources :rostereds
+      resources :team_assignments
       resources :surveys
       resources :team_calculations
       resources :teams

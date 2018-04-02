@@ -11,24 +11,28 @@ class TeamCalculation < ApplicationRecord
     # Validations
     validates_presence_of :team_id, :week_of
     validates_date :week_of
-    validates :sleep, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 24 }
-    validates :hydration, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 200 }
-    # need to change these ranges maybe, ask adam about ranges
-    validates :stress, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 10 }
-    validates :load, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 10 }
-    validates_inclusion_of :season, in: SEASONS.map{|key, value| value}, message: "is not a valid sports season"
-    validate :week_of_on_monday
+    validate :validate_season
+    validate :validate_week_of
+    # Need stats validations
 
     # Methods
 
     private
 
     # Makes sure that the week_of variable starts on a Monday
-    def week_of_on_monday
-        if self.week_of.strftime("%A") == "Monday"
-            return true
-        end
-        false
+    def validate_week_of
+      input_week_of = self.week_of
+      # correct day, assuming input week is a Time object
+      # http://ruby-doc.org/core-2.2.0/Time.html#method-i-sunday-3F
+      return input_week_of.monday?
+    end
+
+
+    def validate_season
+      input_season = self.season
+      # correct format
+      test_regex = /^(Fall|Winter|Spring)-20([0-9]{2})$/
+      return test_regex.match(input_season)
     end
 
 end

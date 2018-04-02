@@ -11,12 +11,14 @@ class Notification < ApplicationRecord
   scope :for_priority,     -> (priority) { where(priority: priority) }
   scope :active,           -> { where(active: true) }
   scope :inactive,         -> { where(active: false)}
-  scope :by_time,          -> { order(:notified_time)}
+  scope :for_time_in_range, -> (startTime, endTime) { where("notified_time BETWEEN startTime AND endTime") }
+  scope :chronological,          -> { order(:notified_time)}
 
   # Validations
-  validates_presence_of :sender_id, :receiver_id, :message, :notified_time, :active
+  validates_presence_of :sender_id, :receiver_id, :message, :active
   validates_timeliness_of :notified_time, on_or_before: Date.current
-
-  # Methods
+  validates_inclusion_of :type, in: PRIORITIES.map{|key, value| value}, message: "is not a valid priority setting"
   
+  # Methods
+
 end

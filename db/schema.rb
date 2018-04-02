@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180321163947) do
+ActiveRecord::Schema.define(version: 20180402071836) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
     t.string "requirements"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "badge_description"
   end
 
   create_table "earned_badges", force: :cascade do |t|
@@ -48,10 +49,8 @@ ActiveRecord::Schema.define(version: 20180321163947) do
 
   create_table "player_calculations", force: :cascade do |t|
     t.integer "player_id"
-    t.date "weak_of"
     t.float "sleep_average"
     t.float "hydration_average"
-    t.float "stress_average"
     t.float "soreness_average"
     t.float "load_average"
     t.string "season"
@@ -60,30 +59,29 @@ ActiveRecord::Schema.define(version: 20180321163947) do
     t.datetime "updated_at", null: false
     t.float "weekly_load"
     t.float "weekly_strain"
+    t.float "life_stress_average"
+    t.float "academic_stress_average"
+    t.float "sleep_quality_average"
+    t.float "hydration_quality_average"
+    t.float "personal_performance_average"
+    t.float "practice_difficulty_average"
+    t.datetime "week_of"
   end
 
   create_table "practices", force: :cascade do |t|
     t.integer "team_id"
     t.integer "duration"
     t.integer "difficulty"
-    t.date "date"
+    t.datetime "practice_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "session_load"
   end
 
-  create_table "rostereds", force: :cascade do |t|
-    t.integer "team_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "surveys", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "type"
-    t.string "response"
-    t.date "completed"
+    t.integer "player_id"
+    t.string "survey_type"
+    t.datetime "completed_time"
     t.string "season"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -91,20 +89,48 @@ ActiveRecord::Schema.define(version: 20180321163947) do
     t.float "daily_load"
     t.float "daily_strain"
     t.float "monotony"
+    t.float "hours_of_sleep"
+    t.integer "quality_of_sleep"
+    t.integer "academic_stress"
+    t.integer "life_stress"
+    t.integer "soreness"
+    t.float "ounces_of_water_consumed"
+    t.boolean "hydration_quality"
+    t.integer "player_rpe_rating"
+    t.integer "player_personal_performance"
+    t.boolean "participated_in_full_practice"
+    t.integer "minutes_participated"
+    t.float "expected_session_load"
+    t.integer "practice_id"
+  end
+
+  create_table "team_assignments", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "active"
+    t.datetime "date_added"
   end
 
   create_table "team_calculations", force: :cascade do |t|
-    t.date "week_of"
-    t.integer "sleep"
-    t.integer "hydration"
-    t.integer "stress"
-    t.integer "load"
+    t.datetime "week_of"
     t.integer "team_id"
     t.string "season"
-    t.string "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "weekly_load"
+    t.float "sleep_average"
+    t.float "hydration_average"
+    t.float "soreness_average"
+    t.float "load_average"
+    t.float "weekly_strain"
+    t.integer "season_rank"
+    t.float "life_stress_average"
+    t.float "academic_stress_average"
+    t.float "sleep_quality_average"
+    t.float "hydration_quality_average"
+    t.float "practice_difficulty_average"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -127,6 +153,7 @@ ActiveRecord::Schema.define(version: 20180321163947) do
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "class"
   end
 
 end
