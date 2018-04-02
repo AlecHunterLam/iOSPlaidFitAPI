@@ -20,10 +20,10 @@ class User < ApplicationRecord
   has_many :notifications
 
   # Scopes
-  scope :by_role,               (role)        ->  { where("role == ?", role) }
-  scope :by_email,              (email)       ->  { where("email == ?", email) }
-  scope :by_andrew_id,          (andrew_id)   ->  { where("andrew_id == ?", andrew_id) }
-  scope :by_major,              (major)       ->  { where("major == ?", major) }
+  scope :by_role,       ->  (role)         { where("role == ?", role) }
+  scope :by_email,      ->  (email)        { where("email == ?", email) }
+  scope :by_andrew_id,  ->  (andrew_id)    { where("andrew_id == ?", andrew_id) }
+  scope :by_major,      ->  (major)        { where("major == ?", major) }
 
 
 
@@ -36,7 +36,7 @@ class User < ApplicationRecord
   validates_inclusion_of :class, in: CLASSES.map{|key, value| value}, message: "is not a valid class"
   validates :phone, format: { with: /\A\(?\d{3}\)?[-. ]?\d{3}[-.]?\d{4}\z/, message: "should be 10 digits (area code needed) and delimited with dashes only", allow_blank: true }
   validates :email, format: { with: /\A[\w]([^@\s,;]+)@(([\w-]+\.)+(com|edu|org|net|gov|mil|biz|info))\z/i, message: "is not a valid format email" }
-  validates :andrew_id, format: { with: /^[a-z0-9]+$/, message: "is not a valid format for an Andrew ID" }
+  validates :andrew_id, format: { with: /\A[a-z0-9]+\z/, message: "is not a valid format for an Andrew ID" }
   validates_uniqueness_of :andrew_id
 
 

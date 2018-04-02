@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180331221734) do
+ActiveRecord::Schema.define(version: 20180402071836) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -80,9 +80,8 @@ ActiveRecord::Schema.define(version: 20180331221734) do
 
   create_table "surveys", force: :cascade do |t|
     t.integer "player_id"
-    t.string "type"
-    t.string "response"
-    t.datetime "completed"
+    t.string "survey_type"
+    t.datetime "completed_time"
     t.string "season"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -90,6 +89,19 @@ ActiveRecord::Schema.define(version: 20180331221734) do
     t.float "daily_load"
     t.float "daily_strain"
     t.float "monotony"
+    t.float "hours_of_sleep"
+    t.integer "quality_of_sleep"
+    t.integer "academic_stress"
+    t.integer "life_stress"
+    t.integer "soreness"
+    t.float "ounces_of_water_consumed"
+    t.boolean "hydration_quality"
+    t.integer "player_rpe_rating"
+    t.integer "player_personal_performance"
+    t.boolean "participated_in_full_practice"
+    t.integer "minutes_participated"
+    t.float "expected_session_load"
+    t.integer "practice_id"
   end
 
   create_table "team_assignments", force: :cascade do |t|
