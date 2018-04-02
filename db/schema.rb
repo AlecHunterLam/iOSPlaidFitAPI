@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402054006) do
+ActiveRecord::Schema.define(version: 20180402071836) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20180402054006) do
     t.boolean "participated_in_full_practice"
     t.integer "minutes_participated"
     t.float "expected_session_load"
+    t.integer "practice_id"
   end
 
   create_table "team_assignments", force: :cascade do |t|
