@@ -13,8 +13,9 @@ class Practice < ApplicationRecord
     # get all the practices in the range of an arbitrary set of dates
     scope :practice_in_range, (startDate, endDate) -> { where("practice_time BETWEEN startDate AND endDate") }
     # get all the practices for a specific difficulty
-    scope :for_difficulty,    (difficulty)         -> { where("difficulty == ?", difficulty)}
-
+    scope :for_difficulty,    (difficulty)         -> { where("difficulty == ?", difficulty) }
+    # order the practices by time
+    scope :chronological,                          -> { order(:practice_time) }
 
     # Validations
     validates_presence_of :team_id, :duration, :difficulty, :practice_time
