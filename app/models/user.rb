@@ -20,10 +20,10 @@ class User < ApplicationRecord
   has_many :notifications
 
   # Scopes
-  scope :by_role,               (role)        ->  { where("role == ?", role) }
-  scope :by_email,              (email)       ->  { where("email == ?", email) }
-  scope :by_andrew_id,          (andrew_id)   ->  { where("andrew_id == ?", andrew_id) }
-  scope :by_major,              (major)       ->  { where("major == ?", major) }
+  scope :by_role,       ->  (role)         { where("role == ?", role) }
+  scope :by_email,      ->  (email)        { where("email == ?", email) }
+  scope :by_andrew_id,  ->  (andrew_id)    { where("andrew_id == ?", andrew_id) }
+  scope :by_major,      ->  (major)        { where("major == ?", major) }
 
 
 
