@@ -138,8 +138,8 @@ class SurveyService
     # 1: calculate the mean up to this point
     surveys_for_this_week = Survey.surveys_for_week(start_of_week,end_of_week)
     # need to filter out multiple practices for one day => take the latest submitted survey, take the most recent
-    
 
+    # ... still continuing
   end
 
   def get_day_of_week_offset
@@ -163,30 +163,30 @@ class SurveyService
     end
   end
 
-  create_table "surveys", force: :cascade do |t|
-    t.integer "player_id"        done
-    t.string "survey_type"       done
-    t.datetime "completed_time"  done
-
-    t.string "season"            done
-    t.float "session_load"       done
-    t.float "expected_session_load"  done
-    t.float "daily_load"             done
-    t.float "daily_strain"
-    t.float "monotony"
-
-    t.float "hours_of_sleep"    done
-    t.integer "quality_of_sleep"done
-    t.integer "academic_stress" done
-    t.integer "life_stress"     done
-    t.integer "soreness"        done
-    t.float "ounces_of_water_consumed"  done
-    t.boolean "hydration_quality"       done
-    t.integer "player_rpe_rating"       done
-    t.integer "player_personal_performance"   done
-    t.boolean "participated_in_full_practice" done
-    t.integer "minutes_participated"          done
-  end
+  # create_table "surveys", force: :cascade do |t|
+  #   t.integer "player_id"        done
+  #   t.string "survey_type"       done
+  #   t.datetime "completed_time"  done
+  #
+  #   t.string "season"            done
+  #   t.float "session_load"       done
+  #   t.float "expected_session_load"  done
+  #   t.float "daily_load"             done
+  #   t.float "daily_strain"
+  #   t.float "monotony"
+  #
+  #   t.float "hours_of_sleep"    done
+  #   t.integer "quality_of_sleep"done
+  #   t.integer "academic_stress" done
+  #   t.integer "life_stress"     done
+  #   t.integer "soreness"        done
+  #   t.float "ounces_of_water_consumed"  done
+  #   t.boolean "hydration_quality"       done
+  #   t.integer "player_rpe_rating"       done
+  #   t.integer "player_personal_performance"   done
+  #   t.boolean "participated_in_full_practice" done
+  #   t.integer "minutes_participated"          done
+  # end
 
   private
 
