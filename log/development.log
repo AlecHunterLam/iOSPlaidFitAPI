@@ -1684,3 +1684,40 @@ Migrating to AddUsersClassToUserForStudents (20180331221734)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSurveyFieldsInsteadOfJsonResponse (20180402024151)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer DEFAULT NULL, "type" varchar DEFAULT NULL, "response" varchar DEFAULT NULL, "completed" datetime DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "session_load" float DEFAULT NULL, "daily_load" float DEFAULT NULL, "daily_strain" float DEFAULT NULL, "monotony" float DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","player_id","type","response","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony")
+                     SELECT "id","player_id","type","response","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony" FROM "surveys"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer DEFAULT NULL, "type" varchar DEFAULT NULL, "completed" datetime DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "session_load" float DEFAULT NULL, "daily_load" float DEFAULT NULL, "daily_strain" float DEFAULT NULL, "monotony" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","player_id","type","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony")
+                     SELECT "id","player_id","type","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer DEFAULT NULL, "survey_type" varchar DEFAULT NULL, "completed" datetime DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "session_load" float DEFAULT NULL, "daily_load" float DEFAULT NULL, "daily_strain" float DEFAULT NULL, "monotony" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","player_id","survey_type","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony")
+                     SELECT "id","player_id","type","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer DEFAULT NULL, "survey_type" varchar DEFAULT NULL, "completed" datetime DEFAULT NULL, "season" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "session_load" float DEFAULT NULL, "daily_load" float DEFAULT NULL, "daily_strain" float DEFAULT NULL, "monotony" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","player_id","survey_type","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony")
+                     SELECT "id","player_id","survey_type","completed","season","created_at","updated_at","session_load","daily_load","daily_strain","monotony" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "surveys" ADD "hours_of_sleep" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "surveys" ADD "quality_of_sleep" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "surveys" ADD "academic_stress" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "surveys" ADD "life_stress" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "surveys" ADD "soreness" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "surveys" ADD "ounces_of_water_consumed" float[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "surveys" ADD "hydration_quality" boolean[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "surveys" ADD "player_rpe_rating" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "surveys" ADD "player_personal_performance" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "surveys" ADD "participated_in_full_practice" boolean[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "surveys" ADD "minutes_participated" integer[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180402024151"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

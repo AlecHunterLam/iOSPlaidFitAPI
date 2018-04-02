@@ -28,7 +28,7 @@ class SurveyResponseService
   def initialize(response,type)
     @type = type
     raw_response = JSON.parse(response)
-    
+
 
     # set the fields
     if @type == :daily_wellness || @type == "Daily Wellness"
