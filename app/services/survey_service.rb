@@ -143,7 +143,10 @@ class SurveyService
     # get a count for the
     day_hash = { "Monday":0, "Tuesday":0, "Wednesday":0, "Thursday":0, "Friday":0, "Saturday":0, "Sunday":0 }
     surveys_for_this_week.each do |s|
-      if s.practice.practice_tim
+      if s.practice.practice_time.monday?
+
+
+
     end
     # ... still continuing
 

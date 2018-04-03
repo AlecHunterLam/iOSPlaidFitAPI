@@ -23,7 +23,7 @@
           "parameters": [
             {
               "paramType": "form",
-              "name": "player_id",
+              "name": "user_id",
               "type": "integer",
               "description": "Player ID",
               "required": true
@@ -97,7 +97,7 @@
             },
             {
               "paramType": "form",
-              "name": "player_id",
+              "name": "user_id",
               "type": "integer",
               "description": "Player ID",
               "required": false

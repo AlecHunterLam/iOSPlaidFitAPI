@@ -1,7 +1,7 @@
 class CreatePlayerCalculations < ActiveRecord::Migration[5.1]
   def change
     create_table :player_calculations do |t|
-      t.integer :player_id
+      t.integer :user_id
       t.date :weak_of
       t.float :sleep_average
       t.float :hydration_average
