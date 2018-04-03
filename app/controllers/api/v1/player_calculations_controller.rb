@@ -17,7 +17,7 @@ module Api::V1
 
         swagger_api :create do
             summary "Creates a new Player Calculation"
-            param :form, :player_id, :integer, :required, "Player ID"
+            param :form, :user_id, :integer, :required, "Player ID"
             param :form, :week_of, :date, :required, "Week Of"
             response :not_acceptable
         end
@@ -25,7 +25,7 @@ module Api::V1
         swagger_api :update do
             summary "Updates an existing Player Calculation"
             param :path, :id, :integer, :required, "Player Calculation ID"
-            param :form, :player_id, :integer, :required, "Player ID"
+            param :form, :user_id, :integer, :required, "Player ID"
             param :form, :week_of, :date, :optional, "Week Of"
             response :not_found
             response :not_acceptable
@@ -83,7 +83,7 @@ module Api::V1
 
         # Only allow a trusted parameter "white list" through.
         def player_calculation_params
-            params.permit(:player_id, :week_of)
+            params.permit(:user_id, :week_of)
         end
 
     end

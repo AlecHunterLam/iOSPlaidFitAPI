@@ -85,7 +85,7 @@ module Api::V1
 
     # whitelist allowed values for an earned badge
     def earned_badge_params
-      params.permit(:badge_id, :player_id)
+      params.permit(:badge_id, :user_id)
     end
 
   end

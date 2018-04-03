@@ -6,7 +6,7 @@ class PlayerCalculationService
     @player_calculation = PlayerCalculation.new
 
     # set the fields
-    @player_calculation.player_id = @user_id
+    @player_calculation.user_id = @user_id
   end
 
 
@@ -29,7 +29,7 @@ class PlayerCalculationService
   def self.get_sleep_average
   end
   create_table "player_calculations", force: :cascade do |t|
-    t.integer "player_id"
+    t.integer "user_id"
     t.float "sleep_average"
     t.float "hydration_average"
     t.float "soreness_average"

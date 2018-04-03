@@ -5,7 +5,7 @@ SECONDS_IN_ONE_DAY = 86400
 
 class SurveyService
   def initialize(params)
-    @player_id = params[:player_id]
+    @user_id = params[:user_id]
     @survey_type = params[:survey_type]
     @team_id = params[:team_id]
     @practice_id = params[:practice_id]
@@ -33,7 +33,7 @@ class SurveyService
 
 
     # set the fields
-    @player_calculation.player_id = @user_id
+    @player_calculation.user_id = @user_id
   end
 
   def get_survey_from_reponse
@@ -43,7 +43,7 @@ class SurveyService
 
 
   def set_provided_survey_params
-    @survey.player_id = @player_id
+    @survey.user_id = @user_id
     @survey.type = @survey_type
     @survey.completed_time = @completed_time
 
@@ -164,7 +164,7 @@ class SurveyService
   end
 
   # create_table "surveys", force: :cascade do |t|
-  #   t.integer "player_id"        done
+  #   t.integer "user_id"        done
   #   t.string "survey_type"       done
   #   t.datetime "completed_time"  done
   #
