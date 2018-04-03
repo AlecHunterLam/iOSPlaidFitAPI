@@ -7,7 +7,7 @@ one:
   andrew_id: MyString
   email: MyString
   major: MyString
-  phone: 
+  phone: MyString
   role: MyString
   active: false
 
@@ -18,6 +18,6 @@ two:
   andrew_id: MyString
   email: MyString
   major: MyString
-  phone: 
+  phone: MyString
   role: MyString
   active: false

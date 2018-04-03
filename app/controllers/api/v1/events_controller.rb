@@ -17,7 +17,7 @@ module Api::V1
 
       swagger_api :create do
         summary "Creates a new Event"
-        param :form, :player_id, :integer, :required, "Player ID"
+        param :form, :user_id, :integer, :required, "Player ID"
         param :form, :event_time, :datetime, :required, "Event Time"
         param :form, :description, :string, :required, "Event Description"
         response :not_acceptable
@@ -26,7 +26,7 @@ module Api::V1
       swagger_api :update do
         summary "Updates an existing Event"
         param :path, :id, :integer, :required, "Event ID"
-        param :form, :player_id, :integer, :optional, "Player ID"
+        param :form, :user_id, :integer, :optional, "Player ID"
         param :form, :event_time, :datetime, :optional, "Event Time"
         param :form, :description, :string, :optional, "Event Description"
         response :not_found
@@ -87,7 +87,7 @@ module Api::V1
 
       # Only allow a trusted parameter "white list" through.
       def event_params
-        params.permit(:player_id, :event_time, :description)
+        params.permit(:user_id, :event_time, :description)
       end
 
 

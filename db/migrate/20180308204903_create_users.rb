@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :andrew_id
       t.string :email
       t.string :major
-      t.integer :phone
+      t.string :phone
       t.string :role
       t.boolean :active
 
