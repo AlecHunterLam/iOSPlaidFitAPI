@@ -40,7 +40,9 @@ class User < ApplicationRecord
   validates :andrew_id, format: { with: /\A[a-z0-9]+\z/, message: "is not a valid format for an Andrew ID" }
   validates_uniqueness_of :andrew_id
 
-
+  def name
+    first_name + " " + last_name
+  end
 
   # Methods
   private
