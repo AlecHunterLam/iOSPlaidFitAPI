@@ -31,7 +31,6 @@ class SurveyService
     @monotony = nil
     @daily_strain = nil
 
-
     # set the fields
     @player_calculation.player_id = @user_id
   end
@@ -41,9 +40,11 @@ class SurveyService
     set_provided_survey_params
   end
 
-
   def set_provided_survey_params
     @survey.player_id = @player_id
+    @survey.team_id = @team_id
+    @survey.practice_id = @practice_id
+
     @survey.type = @survey_type
     @survey.completed_time = @completed_time
 
@@ -59,7 +60,6 @@ class SurveyService
     @survey.minutes_participated = @minutes_participated
 
     perform_survey_calculations
-
   end
 
   def perform_survey_calculations
@@ -78,6 +78,7 @@ class SurveyService
 
     # Expected Session Load => need to calculate based on practice for that day
     current_practice = Practice.find(@practice_id)
+
     @survey.expected_session_load = current_practice.duration * current_practice.difficulty
 
     # get the practices for the current day
@@ -139,7 +140,13 @@ class SurveyService
     surveys_for_this_week = Survey.surveys_for_week(start_of_week,end_of_week)
     # need to filter out multiple practices for one day => take the latest submitted survey, take the most recent
 
+    # get a count for the
+    day_hash = { "Monday":0, "Tuesday":0, "Wednesday":0, "Thursday":0, "Friday":0, "Saturday":0, "Sunday":0 }
+    surveys_for_this_week.each do |s|
+      if s.practice.practice_tim
+    end
     # ... still continuing
+
   end
 
   def get_day_of_week_offset
