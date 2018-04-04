@@ -3,7 +3,7 @@
 require 'descriptive_statistics'
 
 SECONDS_IN_ONE_DAY = 86400
-
+# load './app/services/survey_service.rb'
 class SurveyService
   def initialize(params)
     @user_id = params[:user_id]
@@ -25,16 +25,13 @@ class SurveyService
 
     @completed_time = Time.now
 
-    @season = (Team.find(@team_id).season).to_s + (Time.now.year).to_s
+    @season = (Team.find(@team_id).season).to_s.capitalize + '-' + (Time.now.year).to_s
 
     @session_load = nil
     @daily_load = nil
     @monotony = nil
     @daily_strain = nil
 
-
-    # set the fields
-    @player_calculation.user_id = @user_id
   end
 
   def get_survey_from_reponse
@@ -45,7 +42,7 @@ class SurveyService
 
   def set_provided_survey_params
     @survey.user_id = @user_id
-    @survey.type = @survey_type
+    @survey.survey_type = @survey_type
     @survey.completed_time = @completed_time
 
     @survey.hours_of_sleep = @hours_of_sleep
@@ -58,6 +55,8 @@ class SurveyService
     @survey.player_rpe_rating = @player_rpe_rating
     @survey.player_personal_performance = @player_personal_performance
     @survey.minutes_participated = @minutes_participated
+
+    @survey.practice_id = @practice_id
 
     perform_survey_calculations
 
@@ -78,7 +77,7 @@ class SurveyService
     @survey.session_load = @minutes_participated * @player_rpe_rating
 
     # Expected Session Load => need to calculate based on practice for that day
-    @survey.expected_session_load = Practice.find(@practice_id).session_load
+    @survey.expected_session_load = Practice.find(@practice_id).difficulty * Practice.find(@practice_id).duration#Practice.find(@practice_id).session_load
 
     # get the practices for the current day
     current_day = (Time.now.day).to_s
@@ -108,18 +107,28 @@ class SurveyService
       end
     end
 
-    @survey.daily_load = sum_of_loads_for_today
+    @daily_load = sum_of_loads_for_today
+    @survey.daily_load = @daily_load
 
 
     # Monotony =>
     #  user daily_load as the sample
 
+    day_of_week_offset = get_day_of_week_offset
+
+
+    default_start = Time.new(current_year, current_month, current_day, 0, 0, 0, "-05:00")
+    default_end   = Time.new(current_year, current_month, current_day, 23, 59, 59, "-05:00")
+
+    start_of_week = default_start - (day_of_week_offset * SECONDS_IN_ONE_DAY)
+    end_of_week = default_end + ((6 - day_of_week_offset) * SECONDS_IN_ONE_DAY)
+
     # sum all daily loads up until this point, if there are two, take the latest daily load
-    post_surveys_up_until_now = Survey.for_user(@user_id).post_practice.surveys_for_week(start_of_week)
+    post_surveys_up_until_now = Survey.for_user(@user_id).post_practice.surveys_for_week(start_of_week,end_of_week)
 
 
     day_hash = {"Monday":0, "Tuesday":0, "Wednesday":0, "Thursday":0, "Friday":0, "Saturday":0, "Sunday":0}
-    single_practice_per_day = post_surveys_up_until_now.filter{ |survey|
+    single_practice_per_day = post_surveys_up_until_now.to_a.select{ |survey|
                                                 if survey.practice.practice_time.monday?
                                                   if day_hash["Monday"] != 0
                                                     day_hash["Monday"] += 1
@@ -177,16 +186,25 @@ class SurveyService
 
 
 
+
     sum_of_loads_all_days = 0 + @daily_load
     single_practice_per_day.each { |survey| sum_of_loads_all_days += survey.daily_load }
 
-    single_practice_per_day.map! { |survey| survey.daily_load }
+    single_practice_per_day.map {|survey| survey.daily_load}
 
     # sum up until this point, including today (mean)
-    result_numerator = single_practice_per_day.sum  / (denominator_for_day)
+    puts single_practice_per_day
+
+    result_numerator = sum_of_loads_all_days  / (denominator_for_day)
 
     # standard deviation
     result_denominator = single_practice_per_day.standard_deviation
+
+    # only one practice or stddev == 0
+    # only one element, make monotony 1
+    if result_denominator.nil? || result_denominator == 0
+      result_denominator = result_numerator
+    end
 
     @monotony = (result_numerator / result_denominator)
 
@@ -234,13 +252,7 @@ class SurveyService
     current_year = (Time.now.year).to_s
     current_month = (Time.now.month).to_s
 
-    default_start = Time.new(current_year, current_month, current_day, 0, 0, 0, "-05:00")
-    default_end   = Time.new(current_year, current_month, current_day, 23, 59, 59, "-05:00")
 
-    day_of_week_offset = get_day_of_week_offset
-
-    start_of_week = default_start - (day_of_week_offset * SECONDS_IN_ONE_DAY)
-    end_of_week = default_end + ((6 - day_of_week_offset) * SECONDS_IN_ONE_DAY)
 
     # 1: calculate the mean up to this point
     surveys_for_this_week = Survey.surveys_for_week(start_of_week,end_of_week)
@@ -299,7 +311,28 @@ class SurveyService
 
   private
 
-Teams.new(sport: 'soccer', gender: 'Men', season: 'Fall', active: true)
+# Teams.new(sport: 'soccer', gender: 'Men', season: 'Fall', active: true)
 
 
 end
+
+
+
+
+
+# SurveyService.new({
+#      'user_id':2,
+#     'survey_type': 'Post-Practice',
+#      'team_id':1,
+#      'practice_id':1,
+#      'hours_of_sleep':5,
+#      'quality_of_sleep': 3,
+#      'academic_stress':3,
+#      'life_stress':3,
+#      'soreness':3,
+#      'ounces_of_water_consumed':3,
+#     'hydration_quality':true,
+#      'player_rpe_rating':5,
+#       'player_personal_performance':5,
+#      'participated_in_full_practice':true,
+#     'minutes_participated':120 });
