@@ -12,8 +12,8 @@
       "description": "Practices Management"
     },
     {
-      "path": "/apidocs/api/v1/rostereds.{format}",
-      "description": "Rostereds Management"
+      "path": "/apidocs/api/v1/team_assignments.{format}",
+      "description": "Team Assignments Management"
     },
     {
       "path": "/apidocs/api/v1/surveys.{format}",

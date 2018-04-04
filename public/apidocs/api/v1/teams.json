@@ -10,22 +10,6 @@
         {
           "summary": "Fetches all Teams",
           "notes": "This lists all the Teams",
-          "parameters": [
-            {
-              "paramType": "query",
-              "name": "active",
-              "type": "boolean",
-              "description": "Filter on whether or not the team is active",
-              "required": false
-            },
-            {
-              "paramType": "query",
-              "name": "fall_teams",
-              "type": "boolean",
-              "description": "Filter teams by the Fall season",
-              "required": false
-            }
-          ],
           "nickname": "Api::V1::Teams#index",
           "method": "get"
         }

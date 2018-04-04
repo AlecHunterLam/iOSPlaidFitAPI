@@ -22,14 +22,14 @@ class Practice < ApplicationRecord
     validates_presence_of :team_id, :duration, :difficulty, :practice_time
     validates :duration, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 180 }
     validates :difficulty, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 10 }
-    validates_date :date
+    validates_date :practice_time
     # practice must be on the same day as today, or in the future
     validate :practice_day_validation
 
     # Methods
 
     # check that the date of the practice is today or in the future
-    def practice_day_validation?
+    def practice_day_validation
       practice_day = self.practice_time.day
       practice_month = self.practice_time.month
       practice_year = self.practice_time.year
