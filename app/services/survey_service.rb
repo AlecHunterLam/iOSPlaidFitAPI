@@ -77,8 +77,7 @@ class SurveyService
     @survey.session_load = @minutes_participated * @player_rpe_rating
 
     # Expected Session Load => need to calculate based on practice for that day
-    current_practice = Practice.find(@practice_id)
-    @survey.expected_session_load = current_practice.duration * current_practice.difficulty
+    @survey.expected_session_load = Practice.find(@practice_id).session_load
 
     # get the practices for the current day
     current_day = (Time.now.day).to_s
@@ -94,26 +93,127 @@ class SurveyService
       end_day_time = Time.new(current_year, current_month, current_day, 23, 59, 59, "-05:00")
     end
 
-    # Daily Load =>
+    # Daily Load => ASSUMPTION THAT WE CAN ONLY SUBMIT SURVEYS FOR THE CURRENT DAY
 
     # can yield multiple practices if multiple practices on a current day
     post_surveys_for_today = Survey.for_user(@user_id).post_practice.surveys_on_date(start_day_time,end_day_time)
 
-    sum_of_loads = 0
-    sum_of_loads += @survey.session_load
+    sum_of_loads_for_today = 0
+    sum_of_loads_for_today += @survey.session_load
 
     if !(post_surveys_for_today.nil?)
       post_surveys_for_today.each do |p|
-        sum_of_loads += p.session_load
+        sum_of_loads_for_today += p.session_load
       end
     end
 
-    @survey.daily_load = sum_of_loads
+    @survey.daily_load = sum_of_loads_for_today
 
 
     # Monotony =>
+    #  user daily_load as the sample
+
+    # sum all daily loads up until this point, if there are two, take the latest daily load
+    post_surveys_up_until_now = Survey.for_user(@user_id).post_practice.surveys_for_week(start_of_week)
+
+
+    day_hash = {"Monday":0, "Tuesday":0, "Wednesday":0, "Thursday":0, "Friday":0, "Saturday":0, "Sunday":0}
+    single_practice_per_day = post_surveys_up_until_now.filter{ |survey|
+                                                if survey.practice.practice_time.monday?
+                                                  if day_hash["Monday"] != 0
+                                                    day_hash["Monday"] += 1
+                                                    return true
+                                                  else
+                                                    return false
+                                                  end
+                                                elsif survey.practice.practice_time.tuesday?
+                                                  if day_hash["Tuesday"] != 0
+                                                    day_hash["Tuesday"] += 1
+                                                    return true
+                                                  else
+                                                    return false
+                                                  end
+                                                elsif survey.practice.practice_time.wednesday?
+                                                  if day_hash["Wednesday"] != 0
+                                                    day_hash["Wednesday"] += 1
+                                                    return true
+                                                  else
+                                                    return false
+                                                  end
+                                                elsif survey.practice.practice_time.thursday?
+                                                  if day_hash["Thursday"] != 0
+                                                    day_hash["Thursday"] += 1
+                                                    return true
+                                                  else
+                                                    return false
+                                                  end
+                                                elsif survey.practice.practice_time.friday?
+                                                  if day_hash["Friday"] != 0
+                                                    day_hash["Friday"] += 1
+                                                    return true
+                                                  else
+                                                    return false
+                                                  end
+                                                elsif survey.practice.practice_time.saturday?
+                                                  if day_hash["Saturday"] != 0
+                                                    day_hash["Saturday"] += 1
+                                                    return true
+                                                  else
+                                                    return false
+                                                  end
+                                                # elsif survey.practice.practice_time.sunday?
+                                                else
+                                                  if day_hash["Sunday"] != 0
+                                                    day_hash["Sunday"] += 1
+                                                    return true
+                                                  else
+                                                    return false
+                                                  end
+                                                end
+
+                                              }
+
+    sum_of_loads_all_days = 0 + @daily_load
+    single_practice_per_day.each {|survey| sum_of_loads_all_days += survey.daily_load }
+
+    # sum up until this point, including today (mean)
+    result_numerator = sum_of_loads_all_days / (denominator_for_day)
+
+    # standard deviation
+    result_denominator = calculate_standard_deviation_of_loads_in_week
+
 
   end
+
+
+  def denominator_for_day
+    today = Time.now
+    if today.monday?
+      return 1
+    elsif today.tuesday?
+      return 2
+    elsif today.wednesday?
+      return 3
+    elsif today.thursday?
+      return 4
+    elsif today.friday?
+      return 5
+    elsif today.saturday?
+      return 6
+    # elsif current_day.sunday?
+    else
+      return 7
+    end
+  end
+
+
+
+
+  def calculate_mean_of_daily_loads_per_week
+
+  end
+
+
 
   # Step 1: Find the mean.
   # Step 2: For each data point, find the square of its distance to the mean.
@@ -163,30 +263,30 @@ class SurveyService
     end
   end
 
-  # create_table "surveys", force: :cascade do |t|
-  #   t.integer "user_id"        done
-  #   t.string "survey_type"       done
-  #   t.datetime "completed_time"  done
-  #
-  #   t.string "season"            done
-  #   t.float "session_load"       done
-  #   t.float "expected_session_load"  done
-  #   t.float "daily_load"             done
-  #   t.float "daily_strain"
-  #   t.float "monotony"
-  #
-  #   t.float "hours_of_sleep"    done
-  #   t.integer "quality_of_sleep"done
-  #   t.integer "academic_stress" done
-  #   t.integer "life_stress"     done
-  #   t.integer "soreness"        done
-  #   t.float "ounces_of_water_consumed"  done
-  #   t.boolean "hydration_quality"       done
-  #   t.integer "player_rpe_rating"       done
-  #   t.integer "player_personal_performance"   done
-  #   t.boolean "participated_in_full_practice" done
-  #   t.integer "minutes_participated"          done
-  # end
+  create_table "surveys", force: :cascade do |t|
+    t.integer "user_id"        done
+    t.string "survey_type"       done
+    t.datetime "completed_time"  done
+
+    t.string "season"            done
+    t.float "session_load"       done
+    t.float "expected_session_load"  done
+    t.float "daily_load"             done
+    t.float "daily_strain"
+    t.float "monotony"
+
+    t.float "hours_of_sleep"    done
+    t.integer "quality_of_sleep"done
+    t.integer "academic_stress" done
+    t.integer "life_stress"     done
+    t.integer "soreness"        done
+    t.float "ounces_of_water_consumed"  done
+    t.boolean "hydration_quality"       done
+    t.integer "player_rpe_rating"       done
+    t.integer "player_personal_performance"   done
+    t.boolean "participated_in_full_practice" done
+    t.integer "minutes_participated"          done
+  end
 
   private
 
