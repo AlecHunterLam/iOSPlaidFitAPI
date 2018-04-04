@@ -1,5 +1,6 @@
 # calculated at the end of each week (monday-monday) for each player
 # run the cron job sunday night
+require 'descriptive_statistics'
 
 SECONDS_IN_ONE_DAY = 86400
 
@@ -173,16 +174,28 @@ class SurveyService
 
                                               }
 
+
+
+
     sum_of_loads_all_days = 0 + @daily_load
-    single_practice_per_day.each {|survey| sum_of_loads_all_days += survey.daily_load }
+    single_practice_per_day.each { |survey| sum_of_loads_all_days += survey.daily_load }
+
+    single_practice_per_day.map! { |survey| survey.daily_load }
 
     # sum up until this point, including today (mean)
-    result_numerator = sum_of_loads_all_days / (denominator_for_day)
+    result_numerator = single_practice_per_day.sum  / (denominator_for_day)
 
     # standard deviation
-    result_denominator = calculate_standard_deviation_of_loads_in_week
+    result_denominator = single_practice_per_day.standard_deviation
 
+    @monotony = (result_numerator / result_denominator)
 
+    @survey.monotony = @monotony
+
+    # Daily strain (daily load * monotony)
+    @survey.daily_strain = @monotony * @daily_load
+
+    return @survey
   end
 
 
@@ -206,12 +219,6 @@ class SurveyService
     end
   end
 
-
-
-
-  def calculate_mean_of_daily_loads_per_week
-
-  end
 
 
 
@@ -241,6 +248,8 @@ class SurveyService
 
     # ... still continuing
   end
+
+
 
   def get_day_of_week_offset
     current_day = Time.now
@@ -273,7 +282,7 @@ class SurveyService
     t.float "expected_session_load"  done
     t.float "daily_load"             done
     t.float "daily_strain"
-    t.float "monotony"
+    t.float "monotony"               done
 
     t.float "hours_of_sleep"    done
     t.integer "quality_of_sleep"done
