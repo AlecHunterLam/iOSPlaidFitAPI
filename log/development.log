@@ -8326,3 +8326,252 @@ Completed 200 OK in 28ms (Views: 16.3ms)
   [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-09 00:59:59')[0m
+Started GET "/" for 127.0.0.1 at 2018-04-04 15:56:38 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (8.3ms)
+Completed 200 OK in 16ms (Views: 10.9ms)
+
+
+Started GET "/v1/practices.json" for 127.0.0.1 at 2018-04-04 15:56:46 -0400
+Processing by Api::V1::PracticesController#index as JSON
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.4ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 1]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 2]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (56.71ms)
+Completed 200 OK in 87ms (Views: 79.3ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/v1/practices.json" for 127.0.0.1 at 2018-04-04 15:57:15 -0400
+Processing by Api::V1::PracticesController#create as JSON
+  Parameters: {"team_id"=>"1", "duration"=>"100", "difficulty"=>"3", "practice_time"=>"2018-04-03 22:00:00 -0400"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 1], ["duration", 100], ["difficulty", 3], ["practice_time", "2018-04-03 22:00:00"], ["created_at", "2018-04-04 15:57:15.847010"], ["updated_at", "2018-04-04 15:57:15.847010"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 4]]
+[active_model_serializers] Rendered Api::V1::PracticeSerializer with ActiveModelSerializers::Adapter::Attributes (1.29ms)
+Completed 201 Created in 9ms (Views: 2.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/v1/practices.json" for 127.0.0.1 at 2018-04-04 15:57:27 -0400
+Processing by Api::V1::PracticesController#index as JSON
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+[active_model_serializers]   [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.0ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 1]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.0ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 2]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.0ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 3]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.95ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/v1/practices.json" for 127.0.0.1 at 2018-04-04 15:57:32 -0400
+Processing by Api::V1::PracticesController#index as JSON
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+[active_model_serializers]   [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 1]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.0ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 2]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.0ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 3]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.0ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.6ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/v1/practices.json" for 127.0.0.1 at 2018-04-04 15:57:32 -0400
+Processing by Api::V1::PracticesController#index as JSON
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+[active_model_serializers]   [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 1]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 2]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 3]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.0ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.19ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/v1/practices.json" for 127.0.0.1 at 2018-04-04 15:57:32 -0400
+Processing by Api::V1::PracticesController#index as JSON
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+[active_model_serializers]   [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 1]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.0ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 2]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 3]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.0ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.92ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/v1/practices.json" for 127.0.0.1 at 2018-04-04 15:57:38 -0400
+Started GET "/v1/practices.json" for 127.0.0.1 at 2018-04-04 15:58:05 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PracticesController#index as JSON
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+[active_model_serializers]   [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 1]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 2]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 3]]
+[active_model_serializers]   [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSurvey Load (0.0ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."practice_id" = ?[0m  [["practice_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (50.36ms)
+Completed 200 OK in 93ms (Views: 79.9ms | ActiveRecord: 1.9ms)
+
+
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.8ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-09 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-09 00:59:59')[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-09 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-09 00:59:59')[0m
+  [1m[36mTeam Load (2.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-09 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-09 00:59:59')[0m
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-09 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-09 00:59:59')[0m
+  [1m[36mTeam Load (2.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 2) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-09 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "monotony", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-04 17:21:42.513236"], ["season", "Fall-2018"], ["created_at", "2018-04-04 17:21:47.804864"], ["updated_at", "2018-04-04 17:21:47.804864"], ["session_load", 600.0], ["daily_load", 600.0], ["daily_strain", 600.0], ["monotony", 1.0], ["player_rpe_rating", 5], ["player_personal_performance", 5], ["participated_in_full_practice", "t"], ["minutes_participated", 120], ["expected_session_load", 840.0], ["practice_id", 1]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "monotony", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-04 17:21:43.679640"], ["season", "Fall-2018"], ["created_at", "2018-04-04 17:23:16.647063"], ["updated_at", "2018-04-04 17:23:16.647063"], ["session_load", 320.0], ["daily_load", 320.0], ["daily_strain", 320.0], ["monotony", 1.0], ["player_rpe_rating", 4], ["player_personal_performance", 8], ["participated_in_full_practice", "t"], ["minutes_participated", 80], ["expected_session_load", 300.0], ["practice_id", 4]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+Started GET "/" for 128.2.13.84 at 2018-04-04 23:13:49 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 10ms (Views: 7.9ms)
+
+
+Started OPTIONS "/" for 128.2.13.84 at 2018-04-04 23:13:49 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PROPFIND "/" for 128.2.13.84 at 2018-04-04 23:13:49 -0400
+  
+ActionController::RoutingError (No route matches [PROPFIND] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started OPTIONS "*" for 128.2.13.84 at 2018-04-04 23:13:49 -0400

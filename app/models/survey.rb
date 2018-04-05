@@ -3,7 +3,7 @@ class Survey < ApplicationRecord
     before_save :type_survey_fields_nil
 
     # Array constants
-    SURVEY_TYPES = [['Daily Wellness', :daily_wellness], ['Post-Practice', :post_practice]]
+    SURVEY_TYPES = [['Daily Wellness', :Daily_Wellness], ['Post-Practice', :Post_Practice]]
 
 
     # Relationships
@@ -18,10 +18,11 @@ class Survey < ApplicationRecord
     scope :surveys_for_week,  -> (startWeek,endWeek)        { where("completed_time BETWEEN ? AND ?",startWeek,endWeek) }
 
     # Validations
-    validates_presence_of :survey_type, :completed
+    validates_presence_of :survey_type, :completed_time
     validates_presence_of :season, message: "is not a valid season for this survey"
-    validates_inclusion_of :type, in: SURVEY_TYPES.map{|key, value| value}, message: "is not a valid survey type"
-    validates_date :completed, on_or_before: Time.now
+    # check this validation below
+    validates_inclusion_of :survey_type, in: SURVEY_TYPES.map{|key, value| key}, message: "is not a valid survey type"
+    validates_date :completed_time, on_or_before: Time.now
 
     validate :validate_season
 

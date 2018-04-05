@@ -54,6 +54,7 @@ class SurveyService
     @survey.hydration_quality = @hydration_quality
     @survey.player_rpe_rating = @player_rpe_rating
     @survey.player_personal_performance = @player_personal_performance
+    @survey.participated_in_full_practice = @participated_in_full_practice
     @survey.minutes_participated = @minutes_participated
 
     @survey.practice_id = @practice_id
@@ -319,8 +320,7 @@ end
 
 
 
-
-# SurveyService.new({
+# @ss1 = SurveyService.new({
 #      'user_id':2,
 #     'survey_type': 'Post-Practice',
 #      'team_id':1,
@@ -336,3 +336,23 @@ end
 #       'player_personal_performance':5,
 #      'participated_in_full_practice':true,
 #     'minutes_participated':120 });
+# @survey1 = @ss1.get_survey_from_reponse
+#
+#
+# @ss2 = SurveyService.new({
+#      'user_id':2,
+#     'survey_type': 'Post-Practice',
+#      'team_id':1,
+#      'practice_id':4,
+#      'hours_of_sleep':nil,
+#      'quality_of_sleep': nil,
+#      'academic_stress':nil,
+#      'life_stress':nil,
+#      'soreness':nil,
+#      'ounces_of_water_consumed':nil,
+#     'hydration_quality':nil,
+#      'player_rpe_rating':4,
+#       'player_personal_performance':8,
+#      'participated_in_full_practice':true,
+#     'minutes_participated':80 });
+# @survey2 = @ss2.get_survey_from_reponse

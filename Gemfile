@@ -27,6 +27,7 @@ gem 'rack-cors'
 
 gem  'descriptive_statistics'
 gem 'validates_timeliness', '~> 4.0'
+gem 'hirb'
 # API stuff
 gem 'swagger-docs'
 gem 'active_model_serializers'
