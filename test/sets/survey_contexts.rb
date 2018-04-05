@@ -18,3 +18,26 @@ module Contexts
       @post6 = Survey.create(user_id: 1, survey_type: "Post-Practice", season: "fall", session_load: 5.4, daily_load: 5.4, daily_strain: 8.0, hours_of_sleep: nil, quality_of_sleep: nil, academic_stress: nil, life_stress: nil, soreness: nil, ounces_of_water_consumed: nil, hydration_quality: nil, player_rpe_rating: 6, player_personal_performance: 7, participated_in_full_practice: true, minutes_participated: 140, expected_session_load: 6.0, practice_id: 6, weekly_strain: 21.0, weekly_load: 40, acute_load: 50.0, chronic_load: 200.0, a_c_ratio: 4.0)
       @post7 = Survey.create(user_id: 1, survey_type: "Post-Practice", season: "fall", session_load: 7.0, daily_load: 7.0, daily_strain: 3.0, hours_of_sleep: nil, quality_of_sleep: nil, academic_stress: nil, life_stress: nil, soreness: nil, ounces_of_water_consumed: nil, hydration_quality: nil, player_rpe_rating: 5, player_personal_performance: 7, participated_in_full_practice: true, minutes_participated: 100, expected_session_load: 6.0, practice_id: 7, weekly_strain: 25.6, weekly_load: 40, acute_load: 50.0, chronic_load: 200.0, a_c_ratio: 4.0)
       @post8 = Survey.create(user_id: 1, survey_type: "Post-Practice", season: "fall", session_load: 8.0, daily_load: 8.0, daily_strain: 4.5, hours_of_sleep: nil, quality_of_sleep: nil, academic_stress: nil, life_stress: nil, soreness: nil, ounces_of_water_consumed: nil, hydration_quality: nil, player_rpe_rating: 7, player_personal_performance: 5, participated_in_full_practice: true, minutes_participated: 80, expected_session_load: 4.8, practice_id: 8, weekly_strain: 20.7, weekly_load: 40, acute_load: 50.0, chronic_load: 200.0, a_c_ratio: 4.0)
+    end
+
+    def delete_surveys
+      @daily1.delete
+      @daily2.delete
+      @daily3.delete
+      @daily4.delete
+      @daily5.delete
+      @daily6.delete
+      @daily7.delete
+      @daily8.delete
+
+      @post1.delete
+      @post2.delete
+      @post3.delete
+      @post4.delete
+      @post5.delete
+      @post6.delete
+      @post7.delete
+      @post8.delete
+    end
+  end
+end 

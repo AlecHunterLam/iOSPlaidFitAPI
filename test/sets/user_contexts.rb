@@ -56,3 +56,4 @@ module Contexts
       @patrick.delete
     end
   end
+end
