@@ -22,3 +22,10 @@ module Contexts
       @nick = User.create(first_name: "Nick", last_name: "Ishim", andrew_id: "nishim", email: "nishim@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "player", active: true, year: "Junior")
       @ben = User.create(first_name: "Ben", last_name: "Neyer", andrew_id: "bneyer", email: "bneyer@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "player", active: true, year: "Junior")
       @bencapeloto = User.create(first_name: "Ben", last_name: "Capeloto", andrew_id: "bcapeloto", email: "bcapeloto@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "player", active: true, year: "Junior")
+      @jordi = User.create(first_name: "Jordi", last_name: "Long", andrew_id: "jlong", email: "jlong@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "player", active: true, year: "Junior")
+      @reed = User.create(first_name: "Reed", last_name: "Peterson", andrew_id: "rpeterson", email: "rpeterson@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "player", active: true, year: "Junior")
+      @sam = User.create(first_name: "Sam", last_name: "Adida", andrew_id: "sadida", email: "sadida@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "player", active: true, year: "Junior")
+      @patrick = User.create(first_name: "Patrick", last_name: "Kollman", andrew_id: "pkollman", email: "pkollman@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "player", active: true, year: "Junior")
+    end
+
+    
