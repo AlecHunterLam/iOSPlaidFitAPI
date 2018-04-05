@@ -1,4 +1,4 @@
-module Teams
+module Contexts
   module TeamContexts
     def create_teams
       @team1 = @msoccer = Team.create(sport: “soccer”, gender: “Men”, season: "fall", active: true)
@@ -8,4 +8,4 @@ module Teams
       @team1.delete
     end
   end
-end   
+end
