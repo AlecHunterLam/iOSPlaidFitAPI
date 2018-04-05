@@ -28,4 +28,31 @@ module Contexts
       @patrick = User.create(first_name: "Patrick", last_name: "Kollman", andrew_id: "pkollman", email: "pkollman@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "player", active: true, year: "Junior")
     end
 
-    
+    def delete_users
+      @alec.delete
+      @greg.delete
+      @zack.delete
+      @sam.delete
+      @jack.delete
+      @phil.delete
+      @jamie.delete
+      @mike.delete
+      @anthony.delete
+      @jacob.delete
+      @jack.delete
+      @alex.delete
+      @chris.delete
+      @cooper.delete
+      @elliot.delete
+      @nicolas.delete
+      @charlie.delete
+      @alex.delete
+      @nick.delete
+      @ben.delete
+      @bencapeloto.delete
+      @jordi.delete
+      @reed.delete
+      @sam.delete
+      @patrick.delete
+    end
+  end
