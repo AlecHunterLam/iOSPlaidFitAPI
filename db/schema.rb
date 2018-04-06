@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406013354) do
+ActiveRecord::Schema.define(version: 20180406021333) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(version: 20180406013354) do
     t.float "a_c_ratio"
     t.float "week_to_week_weekly_load_percent_change"
     t.float "freshness_index"
+    t.float "monotony"
   end
 
   create_table "team_assignments", force: :cascade do |t|

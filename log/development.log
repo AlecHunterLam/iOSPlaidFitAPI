@@ -39633,3 +39633,815 @@ Started HEAD "/index.php" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
 Started GET "/" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
 Started GET "/portal/diag/index.jsp" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
 Started POST "/cgi-bin/webcgi/login" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started GET "/r7nosuchpage.html" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/r7nosuchpage.html"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/manager/" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+  
+Started GET "/server/statistics.html" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+ActionController::RoutingError (No route matches [GET] "/manager"):
+  
+Started GET "/users/" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/server/statistics.html"):
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/manager/html" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/userweb/" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/login.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/users/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/userweb/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/exchange/default.asp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/exchange/logon.asp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/exchweb/bin/auth/owalogon.asp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/exchange/default.asp%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/exchange/logon.asp%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/exchweb/bin/auth/owalogon.asp%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/iisstart.asp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/localstart.asp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/login.asp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/iisstart.asp%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/localstart.asp%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/login.asp%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/test.asp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/Citrix/MetaFrame/auth/auth/login.aspx" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/test.aspx" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/test.asp%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/Citrix/MetaFrame/auth/auth/login.aspx%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/test.aspx%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/cfdocs/search.cfm" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/cfide/Main/ide.cfm" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/login.cfm" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:35 -0400
+Started GET "/login.php" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/login.php3" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/info2www.pl" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/info2www.cgi" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/login.shtml" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/%23iisstart.asp%23" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/%23localstart.asp%23" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/%23login.cfm%23" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/%23login.asp%23" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/%23login.cgi%23" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/%23login.jsp%23" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/%23login.php%23" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/%23test.asp%23" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/%23test.aspx%23" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/.cobalt/web.config" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/Archive/" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/Archives/" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/Archive/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/Archives/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:36 -0400
+Started GET "/AdminScripts/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/AdminScripts/web.config" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/web.config" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archive/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:37 -0400
+Started GET "/Archives/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/Archives/web.config" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/CVS/" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/CVS/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:38 -0400
+Started GET "/BOAdmin/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/BOAdmin/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/BOAdmin/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/BOAdmin/web.config" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/web.config" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CVS/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:39 -0400
+Started GET "/CertControl/" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+  
+Started GET "/Citrix/MetaFrame/auth/auth/" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+ActionController::RoutingError (No route matches [GET] "/CertControl"):
+Started GET "/CertSrv/" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+  
+  
+  
+ActionController::RoutingError (No route matches [GET] "/Citrix/MetaFrame/auth/auth"):
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/CertSrv"):
+  
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/Citrix/MetaFrame/auth/auth/%23login.aspx%23" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+Started GET "/Citrix/MetaFrame/auth/auth/login.aspx+htr" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+Started GET "/Citrix/MetaFrame/auth/auth/login.aspx.bak" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+Started GET "/Citrix/MetaFrame/auth/auth/login.aspx.tmp" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+Started GET "/Citrix/MetaFrame/auth/auth/login.aspx.old" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+Started GET "/Citrix/MetaFrame/auth/auth/login.aspx~" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+Started GET "/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+Started GET "/IISSamples/" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+Started GET "/DEADJOE/" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+Started GET "/IISSamples/homepage/" for 128.2.13.84 at 2018-04-05 22:07:40 -0400
+Started GET "/IISSamples/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/journal/" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/journal/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:41 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/web.config" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/journal/web.config" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/web.config" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/web.config" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/web.config" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/asp/" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/asp/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:42 -0400
+Started GET "/IISSamples/sdk/admin/web.config" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/.svn/entries" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/?P=+ADw-script+AD4-alert(42)+ADw-/script+AD4-" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/ADw-script%20AD4-alert(42)%20ADw-/script%20AD4-" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/CVS/Root" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/CVS/Entries" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/DEADJOE" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/Trace.axd" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/WS_FTP.LOG" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/Web.sitemap" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/adojavas.inc" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/adovbs.inc" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/applications/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/componenets/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/database/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/applications/%3f.jsp" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/database/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/sdk/asp/database/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/sdk/asp/componenets/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/componenets/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/applications/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/sdk/asp/applications/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/asp/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/sdk/asp/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/sdk/admin/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/admin/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/sdk/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/sdk/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/homepage/themes/looseleaf/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/homepage/themes/journal/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/homepage/themes/journal/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/homepage/themes/gunmetal/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/homepage/themes/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/homepage/themes/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/homepage/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/homepage/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/IISSamples/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/IISSamples/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/DEADJOE/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/DEADJOE/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/CVS/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/CVS/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/BOAdmin/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/BOAdmin/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/Archives/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/Archives/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/Archive/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/Archive/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started GET "/AdminScripts/" for 128.2.13.84 at 2018-04-05 22:07:43 -0400
+Started PROPFIND "/AdminScripts/" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started PROPFIND "/.cobalt/" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/.cobalt/" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started PROPFIND "/" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.php" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:44 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:45 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/CVE-2014-6271" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/userweb/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started PROPFIND "/userweb/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/users/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started PROPFIND "/users/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/r7nosuchpage.html" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/r7nosuchpage.html" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/manager/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/server/statistics.html" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/users/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/userweb/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/manager/html" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.jsp" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/exchange/default.asp" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/exchange/logon.asp" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/exchweb/bin/auth/owalogon.asp" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/iisstart.asp" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/localstart.asp" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.asp" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/test.asp" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/Citrix/MetaFrame/auth/auth/login.aspx" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/test.aspx" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/cfdocs/search.cfm" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/cfide/Main/ide.cfm" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.cfm" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.cgi" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.php" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.php3" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/login.shtml" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/.cobalt/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/AdminScripts/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/Archive/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/Archives/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/BOAdmin/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/CVS/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/CertControl/" for 128.2.13.84 at 2018-04-05 22:07:46 -0400
+Started GET "/CertSrv/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/Citrix/MetaFrame/auth/auth/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/homepage/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/homepage/themes/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/homepage/themes/gunmetal/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/homepage/themes/journal/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/homepage/themes/looseleaf/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/sdk/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/sdk/admin/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/sdk/asp/applications/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/sdk/asp/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/sdk/asp/componenets/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/sdk/asp/database/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/sdk/asp/docs/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/sdk/asp/interaction/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/sdk/asp/transactional/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/IISSamples/sdk/asp/simple/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/InetKit/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/Logs/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/Phone%20Book%20Service" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/Phone%20Book%20Service/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/ScriptResource.axd?d=test" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/Stats/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/Usage/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/WebResource.axd?d=test" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/_ScriptLibrary/" for 128.2.13.84 at 2018-04-05 22:07:47 -0400
+Started GET "/_images/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/_pages/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/_private/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/adm-bin/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/admin/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/archive/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/archives/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/art/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/asp/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/aspnet_client/system_web" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/backoffice/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/backup/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/backups" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/aspnet_client/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/beta/" for 128.2.13.84 at 2018-04-05 22:07:48 -0400
+Started GET "/backups/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/bin/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/bitrix/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cacti/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cfdocs/index.htm" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cfdocs/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cfide/classes/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cfide/Administrator/index.htm" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cfide/Main/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cfide/scripts/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cgi-bin/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cfide/Administrator/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cgi-bin/printenv" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cgi-bin/test-cgi" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cgi-local/" for 128.2.13.84 at 2018-04-05 22:07:49 -0400
+Started GET "/cgi-shl-prot/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+Started GET "/cgi-shl/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+  
+  
+Started GET "/cgi/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+ActionController::RoutingError (No route matches [GET] "/cgi-shl-prot"):
+ActionController::RoutingError (No route matches [GET] "/cgi-shl"):
+  
+  
+  
+ActionController::RoutingError (No route matches [GET] "/cgi"):
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/comments.txt" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+Started GET "/common/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+Started GET "/css/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+Started GET "/demo/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+Started GET "/data/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+Started GET "/dev/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+Started GET "/doc/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+Started GET "/development/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+Started GET "/docs/" for 128.2.13.84 at 2018-04-05 22:07:50 -0400
+Started GET "/domcfg.nsf" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/error/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/domjava/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/error_log/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/errors/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/examples/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/exchange/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/exchweb/bin/auth/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/flash/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/forms/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/global.asa" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/global/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/graphics/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/htbin/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/home/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/html/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/icon/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/icons/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/images/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/image/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/img/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/include/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/includes/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/isapi/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/isqlplus/dba.uix" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/isqlplus/login.uix" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/isqlplus/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/java/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/javascript/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/js/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/jsp/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/log/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/login.htm" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/login.html" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/logs/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/mail/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/manage/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/manual/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/manual/howto/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/manual/images/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/manual/misc/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/manual/mod/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/manual/programs/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/manual/vhosts/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/manual/search/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/media/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/ntadmin/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/new/" for 128.2.13.84 at 2018-04-05 22:07:51 -0400
+Started GET "/old/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/oldsite/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/opencms/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/original/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/owa/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/perl/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/php/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/plesk/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/pivotx/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/pls/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/priv/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/private/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/public/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/samples/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/save/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/scripts/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/search/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/security/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/server/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/servlets/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/shockwave/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/site/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/sitemap.xml" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/source/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/src/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/stat/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/static/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/statistic/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/statistics/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/stats/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/styles/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/stylesheets/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/temp/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/templates/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/test/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/testing/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/tmp/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/tomcat-docs/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/transfer/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/tst/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/usage/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/web/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/webalizer/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/weblogic/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/webmail/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/xampp/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+Started GET "/xml/" for 128.2.13.84 at 2018-04-05 22:07:52 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddMonotonyToSurveys (20180406021333)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "surveys" ADD "monotony" float[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180406021333"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

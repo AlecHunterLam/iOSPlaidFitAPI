@@ -130,8 +130,8 @@ class SurveyService
     @acute_load = set_acute_load
     @chronic_load = set_chronic_load
     @a_c_ratio = set_a_c_ratio
-
-    @freshness_index = params[:freshness_index]
+    @freshness_index = set_freshness_index
+    
     @week_to_week_weekly_load_percent_change = params[:week_to_week_weekly_load_percent_change]
 
     @daily_strain = params[:daily_strain]
@@ -236,7 +236,7 @@ class SurveyService
     return chronic_load
   end
 
-  # set Acute:Chronic Worload Ratio (ACWR), Acute / Chronic
+  # set the Acute:Chronic Worload Ratio (ACWR), Acute / Chronic
   def set_a_c_ratio
     # divide by zero possibility => must check what to do with this edge case
     if @chronic_load == 0
@@ -245,6 +245,12 @@ class SurveyService
       a_c_ratio = @acute_load / @chronic_load
       return a_c_ratio
     end
+  end
+
+  # set the freshness index, chronic load - acute load (difference in fitness + fatigue)
+  def set_freshness_index
+    freshness_index = @chronic_load - @acute_load
+    return freshness_index
   end
 
 
