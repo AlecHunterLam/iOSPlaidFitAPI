@@ -13,13 +13,25 @@ module Contexts
 
       # team assignments
       @alecsoccer = TeamAssignment.create(team: @msoccer, user: @alec, active: true, date_added: Time.now)
-      @gregsoccer = TeamAssignment.create(team: @msoccer, user_id: @greg, active: true, date_added: Time.now)
-      @zacksoccer = TeamAssignment.create(team: @msoccer, user_id: @zack, active: true, date_added: Time.now)
-      @samsoccer = TeamAssignment.create(team: @msoccer, user_id: @sam, active: true, date_added: Time.now)
+      @gregsoccer = TeamAssignment.create(team: @msoccer, user: @greg, active: true, date_added: Time.now)
+      @zacksoccer = TeamAssignment.create(team: @msoccer, user: @zack, active: true, date_added: Time.now)
+      @samsoccer = TeamAssignment.create(team: @msoccer, user: @sam, active: true, date_added: Time.now)
     end
 
 
     def delete_stuff
+      @alecsoccer.delete
+      @gregsoccer.delete
+      @zacksoccer.delete
+      @samsoccer.delete
 
+      @alec.delete
+      @greg.delete
+      @zack.delete
+      @sam.delete
 
+      @msoccer.delete
     end
+
+  end
+end

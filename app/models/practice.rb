@@ -1,4 +1,6 @@
 class Practice < ApplicationRecord
+    # callback to set the session load
+    before_save :calculate_session_load
 
     # Relationships
     belongs_to :team
@@ -44,5 +46,9 @@ class Practice < ApplicationRecord
       else
         return true
       end
+    end
+
+    def calculate_session_load
+      self.session_load = self.duration * self.difficulty
     end
 end

@@ -40632,3 +40632,95 @@ Migrating to AddMonotonyToSurveys (20180406021333)
   [1m[36mTeamAssignment Load (0.2ms)[0m  [1m[34mSELECT "team_assignments".* FROM "team_assignments"[0m
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeamAssignment Load (0.2ms)[0m  [1m[34mSELECT "team_assignments".* FROM "team_assignments"[0m
+  [1m[36mTeamAssignment Load (4.3ms)[0m  [1m[34mSELECT "team_assignments".* FROM "team_assignments"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 3]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (1.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "ahlam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Alec"], ["last_name", "Lam"], ["andrew_id", "ahlam"], ["email", "ahlam@andrew.cmu.edu"], ["major", "Information Systems"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:13:41.686640"], ["updated_at", "2018-04-06 00:13:41.686640"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "gbellwoa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Greg"], ["last_name", "Bellwoar"], ["andrew_id", "gbellwoa"], ["email", "gbellwoa@andrew.cmu.edu"], ["major", "Business"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:13:41.690231"], ["updated_at", "2018-04-06 00:13:41.690231"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "zpm"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Zack"], ["last_name", "Masciopinto"], ["andrew_id", "zpm"], ["email", "zpm@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:13:41.692858"], ["updated_at", "2018-04-06 00:13:41.692858"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "sfazelsa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sam"], ["last_name", "Fazel"], ["andrew_id", "sfazelsa"], ["email", "sfazelsa@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:13:41.696390"], ["updated_at", "2018-04-06 00:13:41.696390"], ["year", "Junior"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "Soccer"], ["gender", "Men"], ["season", "Fall"], ["active", "t"], ["created_at", "2018-04-06 00:13:41.704202"], ["updated_at", "2018-04-06 00:13:41.704202"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 4], ["user_id", 8], ["created_at", "2018-04-06 00:13:41.708784"], ["updated_at", "2018-04-06 00:13:41.708784"], ["active", "t"], ["date_added", "2018-04-06 00:13:41.698076"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35mSQL (8.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 4]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 9]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 10]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 11]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 4]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeamAssignment Load (0.2ms)[0m  [1m[34mSELECT "team_assignments".* FROM "team_assignments"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "ahlam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Alec"], ["last_name", "Lam"], ["andrew_id", "ahlam"], ["email", "ahlam@andrew.cmu.edu"], ["major", "Information Systems"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:14:46.673037"], ["updated_at", "2018-04-06 00:14:46.673037"], ["year", "Junior"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "gbellwoa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Greg"], ["last_name", "Bellwoar"], ["andrew_id", "gbellwoa"], ["email", "gbellwoa@andrew.cmu.edu"], ["major", "Business"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:14:46.676880"], ["updated_at", "2018-04-06 00:14:46.676880"], ["year", "Junior"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "zpm"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Zack"], ["last_name", "Masciopinto"], ["andrew_id", "zpm"], ["email", "zpm@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:14:46.680201"], ["updated_at", "2018-04-06 00:14:46.680201"], ["year", "Junior"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "sfazelsa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sam"], ["last_name", "Fazel"], ["andrew_id", "sfazelsa"], ["email", "sfazelsa@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:14:46.683124"], ["updated_at", "2018-04-06 00:14:46.683124"], ["year", "Junior"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "Soccer"], ["gender", "Men"], ["season", "Fall"], ["active", "t"], ["created_at", "2018-04-06 00:14:46.686221"], ["updated_at", "2018-04-06 00:14:46.686221"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 5], ["user_id", 12], ["created_at", "2018-04-06 00:14:46.687601"], ["updated_at", "2018-04-06 00:14:46.687601"], ["active", "t"], ["date_added", "2018-04-06 00:14:46.685049"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 5], ["user_id", 13], ["created_at", "2018-04-06 00:14:46.690683"], ["updated_at", "2018-04-06 00:14:46.690683"], ["active", "t"], ["date_added", "2018-04-06 00:14:46.689939"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 5], ["user_id", 14], ["created_at", "2018-04-06 00:14:46.692821"], ["updated_at", "2018-04-06 00:14:46.692821"], ["active", "t"], ["date_added", "2018-04-06 00:14:46.692147"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 5], ["user_id", 15], ["created_at", "2018-04-06 00:14:46.694993"], ["updated_at", "2018-04-06 00:14:46.694993"], ["active", "t"], ["date_added", "2018-04-06 00:14:46.694363"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mTeamAssignment Load (0.2ms)[0m  [1m[34mSELECT "team_assignments".* FROM "team_assignments"[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 5]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 6]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 7]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 8]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 14]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 15]]
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 5]]
