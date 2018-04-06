@@ -1,17 +1,8 @@
-
-
-
 require 'descriptive_statistics'
 
 SECONDS_IN_ONE_DAY = 86400
 
-
-
-
 class SurveyService
-
-
-
   def initialize(params)
     # set  universal parameters
     @user_id = params[:user_id]
@@ -29,11 +20,9 @@ class SurveyService
     @current_day = @current_datetime.day
     @current_month = @current_datetime.month
     @current_year = @current_datetime.year
-    # day_of_the_week: Mon:0, Tues:1, Wed:2, Thurs:3, Fri:4, Sat:5, Sun:6
-    @day_of_the_week = get_day_of_week
+
     # set today datetime objects (set @start_of_today, @end_of_today)
     set_today_start_end_datetime_objects
-
 
     if @team.nil? || @user.nil? || @survey_type != 'Daily Wellness' || @survey_type != 'Post-Practice'
       return nil
@@ -56,27 +45,7 @@ class SurveyService
   end
 
   private
-
-  def validate_fields_for_calculations(params)
-    rpe = params[:player_rpe_rating]
-    performance = params[:player_personal_performance]
-    full_practice = params[:participated_in_full_practice]
-    minutes = params[:minutes_participated]
-    # nill checks
-    if rpe.nil? || performance.nil? || full_practice.nil?
-      return false
-    # type checks
-    elsif (!validate_integer_type(rpe) || !validate_integer_type(performance) || !validate_boolean_type(full_practice) || !validate_integer_type(minutes))
-      return false
-    # practice + minutes check
-    elsif (full_practice == false && minutes.nil?)
-      return false
-    # pass preliminary checks
-    else
-      return true
-    end
-
-  end
+  # set survey fields
 
   def set_daily_wellness_survey(params)
     # set proper fields
@@ -129,13 +98,14 @@ class SurveyService
     @weekly_load = set_weekly_load
     @acute_load = set_acute_load
     @chronic_load = set_chronic_load
-    @a_c_ratio = set_a_c_ratio
     @freshness_index = set_freshness_index
-    
     @week_to_week_weekly_load_percent_change = params[:week_to_week_weekly_load_percent_change]
 
-    @daily_strain = params[:daily_strain]
-    @weekly_strain = params[:weekly_strain]
+    @a_c_ratio = set_a_c_ratio
+    @monotony = set_monotony
+
+    @daily_strain = set_daily_strain
+    @weekly_strain = set_weekly_strain
 
     # set all other fields to nil
     @hours_of_sleep = nil
@@ -236,6 +206,12 @@ class SurveyService
     return chronic_load
   end
 
+  # set the freshness index, chronic load - acute load (difference in fitness + fatigue)
+  def set_freshness_index
+    freshness_index = @chronic_load - @acute_load
+    return freshness_index
+  end
+
   # set the Acute:Chronic Worload Ratio (ACWR), Acute / Chronic
   def set_a_c_ratio
     # divide by zero possibility => must check what to do with this edge case
@@ -247,17 +223,68 @@ class SurveyService
     end
   end
 
-  # set the freshness index, chronic load - acute load (difference in fitness + fatigue)
-  def set_freshness_index
-    freshness_index = @chronic_load - @acute_load
-    return freshness_index
+  # set the monotony for the past week (6 days ago thru today) (mean / std. dev.)
+  def set_monotony
+    # get the beginning of the week
+    one_week_ago_start = @start_of_today - (6 * SECONDS_IN_ONE_DAY)
+    # get all of the daily loads from the past 6 days + today
+    weeks_daily_loads = Survey.for_user(@user_id).post_practice.surveys_for_week(one_week_ago_start, @end_of_today)
+
+    # create an array of all the daily loads
+    week_daily_loads = get_week_daily_loads(weeks_daily_loads)
+
+    # get mean of the daily loads from the last week
+    mean_daily_loads = week_daily_loads.mean
+
+    # get standard deviation of daily loads from last week
+    standard_deviation_daily_loads = week_daily_loads.standard_deviation
+
+    # divide by zero possibility => must check what to do with this edge case
+    if standard_deviation_daily_loads == 0
+      monotony = 0
+    else
+      # monotony = mean of daily lodas / standard deviation
+      monotony = mean_daily_loads / standard_deviation_daily_loads
+    end
+
+    return monotony
   end
 
+  # set the daily strain for today, daily_load * monotony
+  def set_daily_strain
+    daily_strain = @daily_load * @monotony
+    return daily_strain
+  end
 
+  # set the weekly strain for this week, weekly_load * monotony
+  def set_weekly_strain
+    weekly_strain = @weekly_load * @monotony
+    return weekly_strain
+  end
 
+  # Validations
 
+  # validate fields for post practice calcualtions
+  def validate_fields_for_calculations(params)
+    rpe = params[:player_rpe_rating]
+    performance = params[:player_personal_performance]
+    full_practice = params[:participated_in_full_practice]
+    minutes = params[:minutes_participated]
+    # nill checks
+    if rpe.nil? || performance.nil? || full_practice.nil?
+      return false
+    # type checks
+    elsif (!validate_integer_type(rpe) || !validate_integer_type(performance) || !validate_boolean_type(full_practice) || !validate_integer_type(minutes))
+      return false
+    # practice + minutes check
+    elsif (full_practice == false && minutes.nil?)
+      return false
+    # pass preliminary checks
+    else
+      return true
+    end
 
-  # VALIDATIONS
+  end
 
   # validate whether a provided field is a boolean type
   def validate_boolean_type(field)
@@ -278,24 +305,6 @@ class SurveyService
   end
 
   # Miscellaneous functions
-  def get_day_of_week
-    if @current_datetime.monday?
-      day_of_week = 0
-    elsif @current_datetime.tuesday?
-      day_of_week = 1
-    elsif @current_datetime.wednesday?
-      day_of_week = 2
-    elsif @current_datetime.thursday?
-      day_of_week = 3
-    elsif @current_datetime.friday?
-      day_of_week = 4
-    elsif @current_datetime.saturday?
-      day_of_week = 5
-    # elsif current_day.sunday?
-    else
-      day_of_week = 6
-    end
-  end
 
   def set_today_start_end_datetime_objects
     if @current_datetime.dst?
@@ -322,5 +331,38 @@ class SurveyService
     # return the totaled
     return sum_weekly_load
   end
+
+  # get array of daily loads of every day (no repeats)
+  def get_week_daily_loads(weeks_surveys)
+    daily_hash = {"Monday":0, "Tuesday":0, "Wednesday":0, "Thursday":0, "Friday":0, "Saturday":0, "Sunday":0}
+    weeks_surveys.each do |survey|
+      survey_day_key = get_day_of_week(survey.completed_time)
+      daily_hash[survey_day_key] += survey.session_load
+    end
+    return daily_hash.values
+  end
+
+  # return the day of the week, given the datetime
+  def get_day_of_week(survey_datetime)
+    if survey_datetime.monday?
+      day_of_week = "Monday"
+    elsif survey_datetime.tuesday?
+      day_of_week = "Tuesday"
+    elsif survey_datetime.wednesday?
+      day_of_week = "Wednesday"
+    elsif survey_datetime.thursday?
+      day_of_week = "Thursday"
+    elsif survey_datetime.friday?
+      day_of_week = "Friday"
+    elsif survey_datetime.saturday?
+      day_of_week = "Saturday"
+    # elsif current_day.sunday?
+    else
+      day_of_week = "Sunday"
+    end
+
+    return day_of_week
+  end
+
 
 end
