@@ -11,7 +11,6 @@ class SurveyService
     @practice_id = params[:practice_id]
 
     @survey_type = params[:survey_type]
-    puts @survey_type
     @completed_time = Time.now
 
     # set user object
@@ -41,12 +40,13 @@ class SurveyService
     else
 
       if Practice.find(@practice_id).nil? || !validate_fields_for_calculations(params)
-        puts("- - - - - - - no ")
         return nil
       end
       set_post_practice_survey(params)
+
     end
   end
+
 
   def get_survey_object
     @survey = Survey.new
@@ -59,6 +59,7 @@ class SurveyService
     @survey.daily_strain = @daily_strain
     @survey.hours_of_sleep = @hours_of_sleep
     @survey.quality_of_sleep = @quality_of_sleep
+
     @survey.academic_stress = @academic_stress
     @survey.life_stress = @life_stress
     @survey.soreness = @soreness
@@ -81,8 +82,6 @@ class SurveyService
 
     @survey.freshness_index = @freshness_index
     @survey.monotony = @monotony
-
-
     @survey.save!
     return @survey
   end

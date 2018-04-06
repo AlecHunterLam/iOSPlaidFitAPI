@@ -31,9 +31,9 @@ class Survey < ApplicationRecord
 
     # if daily wellness survey, need to have all answers for the wellness portion
     def validate_daily_wellness
-      if self.survey_type == :post_practice
+      if self.survey_type == "Post-Practice"
         return true
-      elsif self.survey_type == :daily_wellness
+      elsif self.survey_type == "Daily Wellness"
         # check that all fields are not nil, since we are in daily wellness
         if !(self.hours_of_sleep.nil?) && (self.quality_of_sleep.nil?) && !(self.academic_stress.nil?) && !(self.life_stress.nil?) && !(self.soreness.nil?) && !(self.ounces_of_water_consumed.nil?) && !(self.hydration_quality.nil?)
           # validate the types of all of the fields, and that all are above 0
@@ -52,9 +52,9 @@ class Survey < ApplicationRecord
 
     # if post practice survey, need to have all answers for the wellness portion
     def validate_post_practice
-      if self.survey_type == :daily_wellness
+      if self.survey_type == "Daily Wellness"
         return true
-      elsif self.survey_type == :post_practice
+      elsif self.survey_type == "Post-Practice"
         # check that all fields are not nil, since we are in post practice
         if !(self.player_rpe_rating.nil?) && (self.player_personal_performance.nil?) && !(self.player_personal_performance.nil?) && !(self.participated_in_full_practice.nil?) && !(self.minutes_participated.nil?)
           # validate the types of all of the fields, and that all are above 0
@@ -73,7 +73,7 @@ class Survey < ApplicationRecord
 
     # after validating, set all inactive fields to false based on the type of the survey
     def type_survey_fields_nil
-      if self.survey_type == :daily_wellness
+      if self.survey_type == "Daily Wellness"
         self.player_rpe_rating = nil
         self.player_personal_performance = nil
         self.participated_in_full_practice = nil
@@ -89,8 +89,6 @@ class Survey < ApplicationRecord
         self.hydration_quality = nil
       end
     end
-
-
 
     # Methods
     private
