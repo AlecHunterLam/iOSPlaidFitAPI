@@ -102,6 +102,7 @@ class SurveyService
     @acute_load = nil
     @chronic_load = nil
     @a_c_ratio = nil
+    @freshness_index = nil
     @week_to_week_weekly_load_percent_change = nil
 
     @practice_id = nil
@@ -127,9 +128,10 @@ class SurveyService
     @daily_load = set_daily_load
     @weekly_load = set_weekly_load
     @acute_load = set_acute_load
-
     @chronic_load = set_chronic_load
-    @a_c_ratio = params[:a_c_ratio]
+    @a_c_ratio = set_a_c_ratio
+
+    @freshness_index = params[:freshness_index]
     @week_to_week_weekly_load_percent_change = params[:week_to_week_weekly_load_percent_change]
 
     @daily_strain = params[:daily_strain]
@@ -234,21 +236,20 @@ class SurveyService
     return chronic_load
   end
 
-  # calculate weekly load given the start and end of the week
-  def calculate_weekly_load_with_dates(startTime,endTime)
-    sum_weekly_load = 0
-    surveys_this_week = Survey.for_user(@user_id).post_practice.surveys_for_week(startTime, endTime)
-    # sum all surveys
-    surveys_this_week.each do |survey|
-      if survey.session_load.nil?
-        return
-      else
-        sum_weekly_load += survey.session_load
-      end
+  # set Acute:Chronic Worload Ratio (ACWR), Acute / Chronic
+  def set_a_c_ratio
+    # divide by zero possibility => must check what to do with this edge case
+    if @chronic_load == 0
+      return 0
+    else
+      a_c_ratio = @acute_load / @chronic_load
+      return a_c_ratio
     end
-    # return the totaled
-    return sum_weekly_load
   end
+
+
+
+
 
   # VALIDATIONS
 
@@ -300,5 +301,20 @@ class SurveyService
     end
   end
 
+  # calculate weekly load given the start and end of the week
+  def calculate_weekly_load_with_dates(startTime,endTime)
+    sum_weekly_load = 0
+    surveys_this_week = Survey.for_user(@user_id).post_practice.surveys_for_week(startTime, endTime)
+    # sum all surveys
+    surveys_this_week.each do |survey|
+      if survey.session_load.nil?
+        return
+      else
+        sum_weekly_load += survey.session_load
+      end
+    end
+    # return the totaled
+    return sum_weekly_load
+  end
 
 end

@@ -39057,3 +39057,579 @@ Migrating to AddWeeklyFieldsToSurvey (20180405165623)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFreshnessIndexToSurveys (20180406013354)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "surveys" ADD "freshness_index" float[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180406013354"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:48:42 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (6.0ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started OPTIONS "/" for 128.2.13.84 at 2018-04-05 21:48:42 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PROPFIND "/" for 128.2.13.84 at 2018-04-05 21:48:42 -0400
+  
+ActionController::RoutingError (No route matches [PROPFIND] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started OPTIONS "*" for 128.2.13.84 at 2018-04-05 21:48:42 -0400
+Started GET "/Rapid7/JBoss/version-check-HFTOfa.html" for 128.2.13.84 at 2018-04-05 21:51:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/Rapid7/JBoss/version-check-HFTOfa.html"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/console/login/LoginForm.jsp" for 128.2.13.84 at 2018-04-05 21:51:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/console/login/LoginForm.jsp"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/igsponsor" for 128.2.13.84 at 2018-04-05 21:51:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/igsponsor"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:51:51 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spiffymcgee.jsp" for 128.2.13.84 at 2018-04-05 21:51:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/spiffymcgee.jsp"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/administrator/manifests/files/joomla.xml" for 128.2.13.84 at 2018-04-05 21:51:57 -0400
+Started GET "/administrator/language/en-GB/en-GB.xml" for 128.2.13.84 at 2018-04-05 21:51:57 -0400
+Started GET "/language/en-GB/en-GB.xml" for 128.2.13.84 at 2018-04-05 21:51:57 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/xmldata?item=All" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/servlet/" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/reviews" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/login" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/login" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/login.action" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/login" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/login" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/owa/auth/logon.aspx" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/owa/auth/logon.aspx" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/owa/auth/logon.aspx" for 128.2.13.84 at 2018-04-05 21:51:58 -0400
+Started GET "/console/App.html" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/php/login.php" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/CHANGELOG.txt" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/wordpress/readme.html" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/wordpress" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/wordpress/wp-login.php" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/index.php/login" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/index.php?title=Main_Page" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/index.php" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/owa/auth/logon.aspx" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/js/loginEx.js" for 128.2.13.84 at 2018-04-05 21:51:59 -0400
+Started GET "/play.html" for 128.2.13.84 at 2018-04-05 21:52:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/play.html"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/install.php" for 128.2.13.84 at 2018-04-05 21:52:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/install.php"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/spiffymcgee.nsf" for 128.2.13.84 at 2018-04-05 21:52:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/spiffymcgee.nsf"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/spiffymcgee.cfm" for 128.2.13.84 at 2018-04-05 21:52:00 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:52:00 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:52:00 -0400
+Started GET "/jbossws/" for 128.2.13.84 at 2018-04-05 21:52:00 -0400
+Started GET "/invoker/" for 128.2.13.84 at 2018-04-05 21:52:00 -0400
+Started GET "/jbossmq-httpil/" for 128.2.13.84 at 2018-04-05 21:52:00 -0400
+Started GET "/status/" for 128.2.13.84 at 2018-04-05 21:52:01 -0400
+Started GET "/jira/secure/Dashboard.jspa" for 128.2.13.84 at 2018-04-05 21:52:01 -0400
+Started GET "/secure/Dashboard.jspa" for 128.2.13.84 at 2018-04-05 21:52:01 -0400
+Started GET "/login.jsp" for 128.2.13.84 at 2018-04-05 21:52:01 -0400
+Started POST "/.jsp" for 128.2.13.84 at 2018-04-05 21:52:01 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:52:01 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:52:01 -0400
+Started GET "/phpmyadmin/" for 128.2.13.84 at 2018-04-05 21:52:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/phpmyadmin"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/console/faces/com_sun_web_ui/jsp/version/version_30.jsp" for 128.2.13.84 at 2018-04-05 21:52:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/console/faces/com_sun_web_ui/jsp/version/version_30.jsp"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/console/faces/com_sun_web_ui/jsp/version/version_4.jsp" for 128.2.13.84 at 2018-04-05 21:52:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/console/faces/com_sun_web_ui/jsp/version/version_4.jsp"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:53:47 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 128.2.13.84 at 2018-04-05 21:53:47 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 128.2.13.84 at 2018-04-05 22:00:44 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aleclamusr/.rvm/gems/ruby-2.2.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cgi-bin/htsearch?Exclude=%60/etc/passwd%60" for 128.2.13.84 at 2018-04-05 22:00:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/htsearch"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/c99.php" for 128.2.13.84 at 2018-04-05 22:00:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/c99.php"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/cgi/login" for 128.2.13.84 at 2018-04-05 22:00:44 -0400
+Started POST "/data/login" for 128.2.13.84 at 2018-04-05 22:00:44 -0400
+Started POST "/xmlrpc.php" for 128.2.13.84 at 2018-04-05 22:00:44 -0400
+Started POST "/serendipity/serendipity_xmlrpc.php" for 128.2.13.84 at 2018-04-05 22:00:44 -0400
+Started POST "/serendipity/xmlrpc.php" for 128.2.13.84 at 2018-04-05 22:00:44 -0400
+Started POST "/drupal/xmlrpc.php" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started POST "/bblog/xmlrpc.php" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/jkstatus/" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started POST "/blogs/xmlsrv/xmlrpc.php" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/conf/ssl/apache/integrity.key" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/conf/ssl/apache/integrity-smartcenter.key" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started POST "/xmlsrv/xmlrpc.php" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/scheduler/" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started POST "/xmlrpc/xmlrpc.php" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/servermanager/" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/web/guest/en/websys/webArch/mainFrame.cgi" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/web/guest/en/webdocbox/docListPage.cgi" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started POST "/script/xmlrpc.php" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/componentutils/cfcexplorer.cfc?method=getcfcinhtml&name=CFIDE.componentutils.cfcexplorer&path=../../../license.txt" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started POST "/CFIDE/adminapi/administrator.cfc" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/componentutils/cfcexplorer.cfc?method=getcfcinhtml&name=CFIDE.componentutils.cfcexplorer&path=../../../../license.html" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/adminapi/customtags/soft404validationcheck.cfm" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/soft404validationcheck.cfm" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/AIR/" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started HEAD "/" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/wizards/common/" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/adminapi/customtags/fusebox.cfm" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/adminapi/customtags/adss.cfm" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/administrator/enter.cfm?locale=../../../../../../../lib/password.properties%00en" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/cgi-bin/php.ini" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/phpmyadmin/" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/h.cfm" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started POST "/cgi-bin/home.tcl" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/~bin/true" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started POST "/cgi-bin/test-cgi" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/h9.cfm" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/componentutils/" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/scripts/tools/newdsn.exe?driver=Microsoft%2BAccess%2BDriver%2B%28*.mdb%29&dsn=Web%20SQL&dbq=c:%5Ctemp%5Cxyz.mdb&newdb=CREATE_DB&attr=" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/AdvWorks/equipment/catalog_type.asp?ProductType=|shell(%22c:cmd.exe%22)|" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/help.cfm" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/ASPSamp/AdvWorks/equipment/catalog_type.asp?ProductType=|shell(%22c:cmd.exe%22)|" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/i.cfm" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/orm/" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/r.cfm" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/CFIDE/adminapi/base.cfc?wsdl" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started GET "/ControlActiveAlarms.htm" for 128.2.13.84 at 2018-04-05 22:00:45 -0400
+Started POST "/" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/cgi-bin/view-source?../../../../../../../etc/passwd" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/cgi-bin/awstats.pl?debug=1" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/crossdomain.xml" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/cgi-bin/awstats/awstats.pl?debug=1" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started POST "/" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started POST "/struts2-rest-showcase" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/cgi-bin/faxsurvey?/bin/cat%20/etc/passwd" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/cgi-bin/faxquery?/bin/cat%20/etc/passwd" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/README.txt" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/_vti_bin/_vti_aut/author.dll" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/CFIDE/adminapi/customtags/l10n.cfm?attributes.id=test&attributes.file=../../administrator/mail/download.cfm&filename=../../lib/password.properties&attributes.locale=it&attributes.var=it&attributes.jscript=false&attributes.type=text/html&attributes.charset=UTF-8&thisTag.executionmode=end&thisTag.generatedContent=test" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/CFIDE/adminapi/customtags/l10n.cfm?attributes.id=test&attributes.file=../../administrator/mail/download.cfm&filename=../lib/password.properties&attributes.locale=it&attributes.var=it&attributes.jscript=false&attributes.type=text/html&attributes.charset=UTF-8&thisTag.executionmode=end&thisTag.generatedContent=test" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started POST "/index.htm" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started TRACE "/" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/bb/" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/manager/html" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/?Class.classLoader.resources.cacheObjectMaxSize=foo" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/CFIDE/appdeployment/" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started HEAD "/" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/cgi-bin/htgrep/file=index.html&hdr=/etc/passwd" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/CFIDE/websocket/" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/ControlActiveAlarms.htm" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/struts2-showcase/employee/save.action" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/manager/html" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/CFIDE/portlets/" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/common/index.jsf" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/CFIDE/wizards/common/utils.cfc?method=verifyldapserver&vserver=localhost&vport=22&vstart=&vusername=&vpassword=&returnformat=json" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/CFIDE/adminiapi/" for 128.2.13.84 at 2018-04-05 22:00:46 -0400
+Started GET "/CFIDE/services/" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started GET "/CFIDE/administrator/" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started GET "/CFIDE/administrator/enter.cfm" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started GET "/cgi-bin/awstats.pl?PluginMode=:print+%22x%22%2e(1042+%2b+1099)%2e%22x%22;" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started GET "/cgi-bin/awstats/awstats.pl?PluginMode=:print+%22x%22%2e(1042+%2b+1099)%2e%22x%22;" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started GET "/struts2-blank/example/HelloWorld.action" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started GET "/?class.classLoader.resources.cacheObjectMaxSize=foo" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started GET "/cgi-bin/htmlscript?../../../../../../../etc/passwd" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/flex2gateway/http" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/flex2gateway/httpsecure" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/messagebroker/http" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/messagebroker/httpsecure" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/blazeds/messagebroker/http" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/blazeds/messagebroker/httpsecure" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/samples/messagebroker/http" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/samples/messagebroker/httpsecure" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/lcds/messagebroker/http" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/lcds/messagebroker/httpsecure" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/lcds-samples/messagebroker/http" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/lcds-samples/messagebroker/httpsecure" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started HEAD "/index.php" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started GET "/" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started GET "/portal/diag/index.jsp" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
+Started POST "/cgi-bin/webcgi/login" for 128.2.13.84 at 2018-04-05 22:00:47 -0400
