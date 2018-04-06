@@ -1222,6 +1222,42 @@ module Contexts
       @survey_dw_april_5_greg.delete
       @survey_dw_april_6_greg.delete
 
+      @survey_post_1_march_30_zack.delete
+      @survey_post_1_march_31_zack.delete
+      @survey_post_2_april_1_zack.delete
+      @survey_post_1_april_2_zack.delete
+      @survey_post_1_april_3_zack.delete
+      @survey_post_1_april_4_zack.delete
+      @survey_post_1_april_5_zack.delete
+      @survey_post_1_april_6_zack.delete
+
+      @survey_dw_march_30_zack.delete
+      @survey_dw_march_31_zack.delete
+      @survey_dw_april_1_zack.delete
+      @survey_dw_april_2_zack.delete
+      @survey_dw_april_3_zack.delete
+      @survey_dw_april_4_zack.delete
+      @survey_dw_april_5_zack.delete
+      @survey_dw_april_6_zack.delete
+
+      @survey_post_1_march_30_sam.delete
+      @survey_post_1_march_31_sam.delete
+      @survey_post_2_april_1_sam.delete
+      @survey_post_1_april_2_sam.delete
+      @survey_post_1_april_3_sam.delete
+      @survey_post_1_april_4_sam.delete
+      @survey_post_1_april_5_sam.delete
+      @survey_post_1_april_6_sam.delete
+
+      @survey_dw_march_30_sam.delete
+      @survey_dw_march_31_sam.delete
+      @survey_dw_april_1_sam.delete
+      @survey_dw_april_2_sam.delete
+      @survey_dw_april_3_sam.delete
+      @survey_dw_april_4_sam.delete
+      @survey_dw_april_5_sam.delete
+      @survey_dw_april_6_sam.delete
+
       # @survey_post_1_march_30
       # @survey_post_1_march_31
       # @survey_post_2_april_1
