@@ -41071,3 +41071,1021 @@ Migrating to AddMonotonyToSurveys (20180406021333)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 20], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 02:13:31.191257"], ["season", "Fall-2018"], ["created_at", "2018-04-06 02:15:46.954924"], ["updated_at", "2018-04-06 02:15:46.954924"], ["session_load", 600.0], ["daily_load", 600.0], ["daily_strain", 0.0], ["player_rpe_rating", 5], ["player_personal_performance", 1], ["participated_in_full_practice", "t"], ["minutes_participated", 120], ["expected_session_load", 720.0], ["practice_id", 24], ["weekly_strain", 0.0], ["weekly_load", 600.0], ["acute_load", 600.0], ["chronic_load", 150.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -450.0], ["monotony", 0.0]]
   [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[36mSurvey Load (0.8ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeamAssignment Load (0.2ms)[0m  [1m[34mSELECT  "team_assignments".* FROM "team_assignments" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT  "surveys".* FROM "surveys" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 20]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 22]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 23]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeamAssignment Load (0.2ms)[0m  [1m[34mSELECT "team_assignments".* FROM "team_assignments"[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 9]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 6]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT  "surveys".* FROM "surveys" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeamAssignment Load (0.2ms)[0m  [1m[34mSELECT "team_assignments".* FROM "team_assignments"[0m
+  [1m[35m (1.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "ahlam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Alec"], ["last_name", "Lam"], ["andrew_id", "ahlam"], ["email", "ahlam@andrew.cmu.edu"], ["major", "Information Systems"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:46:04.652569"], ["updated_at", "2018-04-06 02:46:04.652569"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "gbellwoa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Greg"], ["last_name", "Bellwoar"], ["andrew_id", "gbellwoa"], ["email", "gbellwoa@andrew.cmu.edu"], ["major", "Business"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:46:04.655933"], ["updated_at", "2018-04-06 02:46:04.655933"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "zpm"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Zack"], ["last_name", "Masciopinto"], ["andrew_id", "zpm"], ["email", "zpm@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:46:04.658532"], ["updated_at", "2018-04-06 02:46:04.658532"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "sfazelsa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sam"], ["last_name", "Fazel"], ["andrew_id", "sfazelsa"], ["email", "sfazelsa@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:46:04.662043"], ["updated_at", "2018-04-06 02:46:04.662043"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "Soccer"], ["gender", "Men"], ["season", "Fall"], ["active", "t"], ["created_at", "2018-04-06 02:46:04.669490"], ["updated_at", "2018-04-06 02:46:04.669490"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["user_id", 24], ["created_at", "2018-04-06 02:46:04.674399"], ["updated_at", "2018-04-06 02:46:04.674399"], ["active", "t"], ["date_added", "2018-04-06 02:46:04.663823"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["user_id", 25], ["created_at", "2018-04-06 02:46:04.681684"], ["updated_at", "2018-04-06 02:46:04.681684"], ["active", "t"], ["date_added", "2018-04-06 02:46:04.680489"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["user_id", 26], ["created_at", "2018-04-06 02:46:04.685008"], ["updated_at", "2018-04-06 02:46:04.685008"], ["active", "t"], ["date_added", "2018-04-06 02:46:04.684052"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["user_id", 27], ["created_at", "2018-04-06 02:46:04.687630"], ["updated_at", "2018-04-06 02:46:04.687630"], ["active", "t"], ["date_added", "2018-04-06 02:46:04.686817"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["duration", 120], ["difficulty", 6], ["practice_time", "2018-04-06 08:30:00"], ["created_at", "2018-04-06 02:46:04.705097"], ["updated_at", "2018-04-06 02:46:04.705097"], ["session_load", 720.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["duration", 0], ["difficulty", 0], ["practice_time", "2018-04-05 11:00:00"], ["created_at", "2018-04-06 02:46:04.707941"], ["updated_at", "2018-04-06 02:46:04.707941"], ["session_load", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["duration", 30], ["difficulty", 2], ["practice_time", "2018-04-04 13:00:00"], ["created_at", "2018-04-06 02:46:04.710406"], ["updated_at", "2018-04-06 02:46:04.710406"], ["session_load", 60.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["duration", 90], ["difficulty", 4], ["practice_time", "2018-04-03 12:00:00"], ["created_at", "2018-04-06 02:46:04.712832"], ["updated_at", "2018-04-06 02:46:04.712832"], ["session_load", 360.0]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["duration", 180], ["difficulty", 9], ["practice_time", "2018-04-02 19:00:00"], ["created_at", "2018-04-06 02:46:04.718051"], ["updated_at", "2018-04-06 02:46:04.718051"], ["session_load", 1620.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["duration", 120], ["difficulty", 7], ["practice_time", "2018-04-01 16:00:00"], ["created_at", "2018-04-06 02:46:04.720610"], ["updated_at", "2018-04-06 02:46:04.720610"], ["session_load", 840.0]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["duration", 120], ["difficulty", 1], ["practice_time", "2018-04-01 06:00:00"], ["created_at", "2018-04-06 02:46:04.726827"], ["updated_at", "2018-04-06 02:46:04.726827"], ["session_load", 120.0]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["duration", 60], ["difficulty", 5], ["practice_time", "2018-03-31 16:30:00"], ["created_at", "2018-04-06 02:46:04.731578"], ["updated_at", "2018-04-06 02:46:04.731578"], ["session_load", 300.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 9], ["duration", 120], ["difficulty", 8], ["practice_time", "2018-03-30 16:00:00"], ["created_at", "2018-04-06 02:46:04.735304"], ["updated_at", "2018-04-06 02:46:04.735304"], ["session_load", 960.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35mSQL (2.6ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 21]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 22]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 23]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 24]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 33]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 34]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 35]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 36]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 37]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 38]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 39]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 40]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 41]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 24]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 25]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 26]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 27]]
+  [1m[35mSQL (3.8ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 15]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 22]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 23]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 24]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 25]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 26]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 27]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 28]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 29]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 30]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 31]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 32]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "ahlam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Alec"], ["last_name", "Lam"], ["andrew_id", "ahlam"], ["email", "ahlam@andrew.cmu.edu"], ["major", "Information Systems"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:48:26.888552"], ["updated_at", "2018-04-06 02:48:26.888552"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "gbellwoa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Greg"], ["last_name", "Bellwoar"], ["andrew_id", "gbellwoa"], ["email", "gbellwoa@andrew.cmu.edu"], ["major", "Business"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:48:26.891763"], ["updated_at", "2018-04-06 02:48:26.891763"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "zpm"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Zack"], ["last_name", "Masciopinto"], ["andrew_id", "zpm"], ["email", "zpm@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:48:26.894582"], ["updated_at", "2018-04-06 02:48:26.894582"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "sfazelsa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sam"], ["last_name", "Fazel"], ["andrew_id", "sfazelsa"], ["email", "sfazelsa@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:48:26.897800"], ["updated_at", "2018-04-06 02:48:26.897800"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "Soccer"], ["gender", "Men"], ["season", "Fall"], ["active", "t"], ["created_at", "2018-04-06 02:48:26.901723"], ["updated_at", "2018-04-06 02:48:26.901723"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["user_id", 28], ["created_at", "2018-04-06 02:48:26.903071"], ["updated_at", "2018-04-06 02:48:26.903071"], ["active", "t"], ["date_added", "2018-04-06 02:48:26.899436"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["user_id", 29], ["created_at", "2018-04-06 02:48:26.905770"], ["updated_at", "2018-04-06 02:48:26.905770"], ["active", "t"], ["date_added", "2018-04-06 02:48:26.904843"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["user_id", 30], ["created_at", "2018-04-06 02:48:26.908661"], ["updated_at", "2018-04-06 02:48:26.908661"], ["active", "t"], ["date_added", "2018-04-06 02:48:26.907680"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["user_id", 31], ["created_at", "2018-04-06 02:48:26.911247"], ["updated_at", "2018-04-06 02:48:26.911247"], ["active", "t"], ["date_added", "2018-04-06 02:48:26.910481"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["duration", 120], ["difficulty", 6], ["practice_time", "2018-04-06 08:30:00"], ["created_at", "2018-04-06 02:48:26.915601"], ["updated_at", "2018-04-06 02:48:26.915601"], ["session_load", 720.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["duration", 0], ["difficulty", 0], ["practice_time", "2018-04-05 11:00:00"], ["created_at", "2018-04-06 02:48:26.919681"], ["updated_at", "2018-04-06 02:48:26.919681"], ["session_load", 0.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["duration", 30], ["difficulty", 2], ["practice_time", "2018-04-04 13:00:00"], ["created_at", "2018-04-06 02:48:26.923921"], ["updated_at", "2018-04-06 02:48:26.923921"], ["session_load", 60.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["duration", 90], ["difficulty", 4], ["practice_time", "2018-04-03 12:00:00"], ["created_at", "2018-04-06 02:48:26.928705"], ["updated_at", "2018-04-06 02:48:26.928705"], ["session_load", 360.0]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["duration", 180], ["difficulty", 9], ["practice_time", "2018-04-02 19:00:00"], ["created_at", "2018-04-06 02:48:26.935377"], ["updated_at", "2018-04-06 02:48:26.935377"], ["session_load", 1620.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["duration", 120], ["difficulty", 7], ["practice_time", "2018-04-01 16:00:00"], ["created_at", "2018-04-06 02:48:26.938579"], ["updated_at", "2018-04-06 02:48:26.938579"], ["session_load", 840.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["duration", 120], ["difficulty", 1], ["practice_time", "2018-04-01 06:00:00"], ["created_at", "2018-04-06 02:48:26.941151"], ["updated_at", "2018-04-06 02:48:26.941151"], ["session_load", 120.0]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["duration", 60], ["difficulty", 5], ["practice_time", "2018-03-31 16:30:00"], ["created_at", "2018-04-06 02:48:26.943637"], ["updated_at", "2018-04-06 02:48:26.943637"], ["session_load", 300.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 10], ["duration", 120], ["difficulty", 8], ["practice_time", "2018-03-30 16:00:00"], ["created_at", "2018-04-06 02:48:26.947543"], ["updated_at", "2018-04-06 02:48:26.947543"], ["session_load", 960.0]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-10 00:00:00' AND '2018-03-17 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-03 00:00:00' AND '2018-03-09 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-25 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-18 01:00:00' AND '2018-03-25 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-11 00:00:00' AND '2018-03-18 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-04 00:00:00' AND '2018-03-10 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-18 01:00:00' AND '2018-03-25 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-25 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-01 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-12 01:00:00' AND '2018-03-19 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-05 00:00:00' AND '2018-03-12 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-01 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-12 01:00:00' AND '2018-03-19 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-05 00:00:00' AND '2018-03-12 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-27 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-20 01:00:00' AND '2018-03-27 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-13 01:00:00' AND '2018-03-20 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-06 00:00:00' AND '2018-03-13 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-20 01:00:00' AND '2018-03-27 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-27 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-03 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-28 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-21 01:00:00' AND '2018-03-28 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-14 01:00:00' AND '2018-03-21 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-07 00:00:00' AND '2018-03-14 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-21 01:00:00' AND '2018-03-28 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-28 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-29 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-22 01:00:00' AND '2018-03-29 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-15 01:00:00' AND '2018-03-22 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-08 00:00:00' AND '2018-03-15 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-22 01:00:00' AND '2018-03-29 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-29 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-05 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-23 01:00:00' AND '2018-03-30 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-16 01:00:00' AND '2018-03-23 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-09 00:00:00' AND '2018-03-16 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-23 01:00:00' AND '2018-03-30 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-06 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-10 00:00:00' AND '2018-03-17 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 28) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+  [1m[36mTeamAssignment Load (0.1ms)[0m  [1m[34mSELECT "team_assignments".* FROM "team_assignments"[0m
+  [1m[36mSurvey Load (0.4ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  [1m[36mSurvey Load (2.4ms)[0m  [1m[34mSELECT  "surveys".* FROM "surveys" ORDER BY "surveys"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35mSQL (6.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 25]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 26]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 27]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 28]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 42]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 43]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 44]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 45]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 46]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 47]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 48]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 49]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 50]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 28]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 29]]
+  [1m[35mSQL (1.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 30]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 31]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 10]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mTeamAssignment Load (0.2ms)[0m  [1m[34mSELECT "team_assignments".* FROM "team_assignments"[0m
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  [1m[35m (2.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "ahlam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Alec"], ["last_name", "Lam"], ["andrew_id", "ahlam"], ["email", "ahlam@andrew.cmu.edu"], ["major", "Information Systems"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:52:45.605079"], ["updated_at", "2018-04-06 02:52:45.605079"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "gbellwoa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Greg"], ["last_name", "Bellwoar"], ["andrew_id", "gbellwoa"], ["email", "gbellwoa@andrew.cmu.edu"], ["major", "Business"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:52:45.608149"], ["updated_at", "2018-04-06 02:52:45.608149"], ["year", "Junior"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "zpm"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Zack"], ["last_name", "Masciopinto"], ["andrew_id", "zpm"], ["email", "zpm@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:52:45.611008"], ["updated_at", "2018-04-06 02:52:45.611008"], ["year", "Junior"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "sfazelsa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sam"], ["last_name", "Fazel"], ["andrew_id", "sfazelsa"], ["email", "sfazelsa@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:52:45.614302"], ["updated_at", "2018-04-06 02:52:45.614302"], ["year", "Junior"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "Soccer"], ["gender", "Men"], ["season", "Fall"], ["active", "t"], ["created_at", "2018-04-06 02:52:45.620600"], ["updated_at", "2018-04-06 02:52:45.620600"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["user_id", 32], ["created_at", "2018-04-06 02:52:45.624603"], ["updated_at", "2018-04-06 02:52:45.624603"], ["active", "t"], ["date_added", "2018-04-06 02:52:45.617456"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["user_id", 33], ["created_at", "2018-04-06 02:52:45.633302"], ["updated_at", "2018-04-06 02:52:45.633302"], ["active", "t"], ["date_added", "2018-04-06 02:52:45.631957"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["user_id", 34], ["created_at", "2018-04-06 02:52:45.637354"], ["updated_at", "2018-04-06 02:52:45.637354"], ["active", "t"], ["date_added", "2018-04-06 02:52:45.636318"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["user_id", 35], ["created_at", "2018-04-06 02:52:45.640398"], ["updated_at", "2018-04-06 02:52:45.640398"], ["active", "t"], ["date_added", "2018-04-06 02:52:45.639564"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["duration", 120], ["difficulty", 6], ["practice_time", "2018-04-06 08:30:00"], ["created_at", "2018-04-06 02:52:45.643813"], ["updated_at", "2018-04-06 02:52:45.643813"], ["session_load", 720.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["duration", 0], ["difficulty", 0], ["practice_time", "2018-04-05 11:00:00"], ["created_at", "2018-04-06 02:52:45.646617"], ["updated_at", "2018-04-06 02:52:45.646617"], ["session_load", 0.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["duration", 30], ["difficulty", 2], ["practice_time", "2018-04-04 13:00:00"], ["created_at", "2018-04-06 02:52:45.649848"], ["updated_at", "2018-04-06 02:52:45.649848"], ["session_load", 60.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["duration", 90], ["difficulty", 4], ["practice_time", "2018-04-03 12:00:00"], ["created_at", "2018-04-06 02:52:45.653548"], ["updated_at", "2018-04-06 02:52:45.653548"], ["session_load", 360.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["duration", 180], ["difficulty", 9], ["practice_time", "2018-04-02 19:00:00"], ["created_at", "2018-04-06 02:52:45.657887"], ["updated_at", "2018-04-06 02:52:45.657887"], ["session_load", 1620.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["duration", 120], ["difficulty", 7], ["practice_time", "2018-04-01 16:00:00"], ["created_at", "2018-04-06 02:52:45.660811"], ["updated_at", "2018-04-06 02:52:45.660811"], ["session_load", 840.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["duration", 120], ["difficulty", 1], ["practice_time", "2018-04-01 06:00:00"], ["created_at", "2018-04-06 02:52:45.664185"], ["updated_at", "2018-04-06 02:52:45.664185"], ["session_load", 120.0]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["duration", 60], ["difficulty", 5], ["practice_time", "2018-03-31 16:30:00"], ["created_at", "2018-04-06 02:52:45.669813"], ["updated_at", "2018-04-06 02:52:45.669813"], ["session_load", 300.0]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["duration", 120], ["difficulty", 8], ["practice_time", "2018-03-30 16:00:00"], ["created_at", "2018-04-06 02:52:45.676409"], ["updated_at", "2018-04-06 02:52:45.676409"], ["session_load", 960.0]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 59], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 59], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-10 00:00:00' AND '2018-03-17 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-03 00:00:00' AND '2018-03-09 23:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-25 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-18 01:00:00' AND '2018-03-25 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-11 00:00:00' AND '2018-03-18 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-04 00:00:00' AND '2018-03-10 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-18 01:00:00' AND '2018-03-25 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-25 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-01 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-12 01:00:00' AND '2018-03-19 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-05 00:00:00' AND '2018-03-12 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-01 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-12 01:00:00' AND '2018-03-19 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-05 00:00:00' AND '2018-03-12 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-27 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-20 01:00:00' AND '2018-03-27 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-13 01:00:00' AND '2018-03-20 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-06 00:00:00' AND '2018-03-13 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-20 01:00:00' AND '2018-03-27 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-27 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-03 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-28 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-21 01:00:00' AND '2018-03-28 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-14 01:00:00' AND '2018-03-21 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-07 00:00:00' AND '2018-03-14 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-21 01:00:00' AND '2018-03-28 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-28 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-29 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-22 01:00:00' AND '2018-03-29 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-15 01:00:00' AND '2018-03-22 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-08 00:00:00' AND '2018-03-15 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-22 01:00:00' AND '2018-03-29 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-29 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-05 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-23 01:00:00' AND '2018-03-30 00:59:59')[0m
+  [1m[36mSurvey Load (0.4ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-16 01:00:00' AND '2018-03-23 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-09 00:00:00' AND '2018-03-16 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-23 01:00:00' AND '2018-03-30 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-06 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-10 00:00:00' AND '2018-03-17 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 32) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 32]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 33]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 34]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 35]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  [1m[36mTeamAssignment Load (0.1ms)[0m  [1m[34mSELECT "team_assignments".* FROM "team_assignments"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 29]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 30]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 31]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 32]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 51]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 52]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 53]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 54]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 55]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 56]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 57]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 58]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 59]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (1.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 11]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (2.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "ahlam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Alec"], ["last_name", "Lam"], ["andrew_id", "ahlam"], ["email", "ahlam@andrew.cmu.edu"], ["major", "Information Systems"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:55:34.634266"], ["updated_at", "2018-04-06 02:55:34.634266"], ["year", "Junior"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "gbellwoa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Greg"], ["last_name", "Bellwoar"], ["andrew_id", "gbellwoa"], ["email", "gbellwoa@andrew.cmu.edu"], ["major", "Business"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:55:34.637526"], ["updated_at", "2018-04-06 02:55:34.637526"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "zpm"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Zack"], ["last_name", "Masciopinto"], ["andrew_id", "zpm"], ["email", "zpm@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:55:34.640238"], ["updated_at", "2018-04-06 02:55:34.640238"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "sfazelsa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sam"], ["last_name", "Fazel"], ["andrew_id", "sfazelsa"], ["email", "sfazelsa@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 02:55:34.643580"], ["updated_at", "2018-04-06 02:55:34.643580"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "Soccer"], ["gender", "Men"], ["season", "Fall"], ["active", "t"], ["created_at", "2018-04-06 02:55:34.646671"], ["updated_at", "2018-04-06 02:55:34.646671"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["user_id", 36], ["created_at", "2018-04-06 02:55:34.647849"], ["updated_at", "2018-04-06 02:55:34.647849"], ["active", "t"], ["date_added", "2018-04-06 02:55:34.645291"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["user_id", 37], ["created_at", "2018-04-06 02:55:34.650372"], ["updated_at", "2018-04-06 02:55:34.650372"], ["active", "t"], ["date_added", "2018-04-06 02:55:34.649600"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["user_id", 38], ["created_at", "2018-04-06 02:55:34.654655"], ["updated_at", "2018-04-06 02:55:34.654655"], ["active", "t"], ["date_added", "2018-04-06 02:55:34.653383"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["user_id", 39], ["created_at", "2018-04-06 02:55:34.660972"], ["updated_at", "2018-04-06 02:55:34.660972"], ["active", "t"], ["date_added", "2018-04-06 02:55:34.659177"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["duration", 120], ["difficulty", 6], ["practice_time", "2018-04-06 08:30:00"], ["created_at", "2018-04-06 02:55:34.664355"], ["updated_at", "2018-04-06 02:55:34.664355"], ["session_load", 720.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["duration", 0], ["difficulty", 0], ["practice_time", "2018-04-05 11:00:00"], ["created_at", "2018-04-06 02:55:34.667098"], ["updated_at", "2018-04-06 02:55:34.667098"], ["session_load", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["duration", 30], ["difficulty", 2], ["practice_time", "2018-04-04 13:00:00"], ["created_at", "2018-04-06 02:55:34.669833"], ["updated_at", "2018-04-06 02:55:34.669833"], ["session_load", 60.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["duration", 90], ["difficulty", 4], ["practice_time", "2018-04-03 12:00:00"], ["created_at", "2018-04-06 02:55:34.672290"], ["updated_at", "2018-04-06 02:55:34.672290"], ["session_load", 360.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["duration", 180], ["difficulty", 9], ["practice_time", "2018-04-02 19:00:00"], ["created_at", "2018-04-06 02:55:34.674728"], ["updated_at", "2018-04-06 02:55:34.674728"], ["session_load", 1620.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["duration", 120], ["difficulty", 7], ["practice_time", "2018-04-01 16:00:00"], ["created_at", "2018-04-06 02:55:34.677544"], ["updated_at", "2018-04-06 02:55:34.677544"], ["session_load", 840.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["duration", 120], ["difficulty", 1], ["practice_time", "2018-04-01 06:00:00"], ["created_at", "2018-04-06 02:55:34.680289"], ["updated_at", "2018-04-06 02:55:34.680289"], ["session_load", 120.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["duration", 60], ["difficulty", 5], ["practice_time", "2018-03-31 16:30:00"], ["created_at", "2018-04-06 02:55:34.682826"], ["updated_at", "2018-04-06 02:55:34.682826"], ["session_load", 300.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 12], ["duration", 120], ["difficulty", 8], ["practice_time", "2018-03-30 16:00:00"], ["created_at", "2018-04-06 02:55:34.686288"], ["updated_at", "2018-04-06 02:55:34.686288"], ["session_load", 960.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-10 00:00:00' AND '2018-03-17 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-03 00:00:00' AND '2018-03-09 23:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 36], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 02:55:34.688029"], ["season", "Fall-2018"], ["created_at", "2018-04-06 02:55:34.695330"], ["updated_at", "2018-04-06 02:55:34.695330"], ["session_load", 960.0], ["daily_load", 960.0], ["daily_strain", 0.0], ["player_rpe_rating", 8], ["player_personal_performance", 8], ["participated_in_full_practice", "t"], ["minutes_participated", 120], ["expected_session_load", 960.0], ["practice_id", 68], ["weekly_strain", 0.0], ["weekly_load", 960.0], ["acute_load", 960.0], ["chronic_load", 240.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -720.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-25 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[36mSurvey Load (0.6ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-18 01:00:00' AND '2018-03-25 00:59:59')[0m
+  [1m[36mSurvey Load (0.4ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-11 00:00:00' AND '2018-03-18 00:59:59')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-04 00:00:00' AND '2018-03-10 23:59:59')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-18 01:00:00' AND '2018-03-25 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-25 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 36], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 02:55:34.697661"], ["season", "Fall-2018"], ["created_at", "2018-04-06 02:55:34.711261"], ["updated_at", "2018-04-06 02:55:34.711261"], ["session_load", 360.0], ["daily_load", 360.0], ["daily_strain", 0.0], ["player_rpe_rating", 6], ["player_personal_performance", 9], ["participated_in_full_practice", "t"], ["minutes_participated", 60], ["expected_session_load", 300.0], ["practice_id", 67], ["weekly_strain", 0.0], ["weekly_load", 360.0], ["acute_load", 360.0], ["chronic_load", 90.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -270.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-01 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-12 01:00:00' AND '2018-03-19 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-05 00:00:00' AND '2018-03-12 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 36], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 02:55:34.714056"], ["season", "Fall-2018"], ["created_at", "2018-04-06 02:55:34.721913"], ["updated_at", "2018-04-06 02:55:34.721913"], ["session_load", 0.0], ["daily_load", 0.0], ["daily_strain", 0.0], ["player_rpe_rating", 0], ["player_personal_performance", 4], ["participated_in_full_practice", "t"], ["minutes_participated", 120], ["expected_session_load", 120.0], ["practice_id", 66], ["weekly_strain", 0.0], ["weekly_load", 0.0], ["acute_load", 0.0], ["chronic_load", 0.0], ["a_c_ratio", 0.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", 0.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-01 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-12 01:00:00' AND '2018-03-19 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-05 00:00:00' AND '2018-03-12 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 36], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 02:55:34.724165"], ["season", "Fall-2018"], ["created_at", "2018-04-06 02:55:34.731978"], ["updated_at", "2018-04-06 02:55:34.731978"], ["session_load", 300.0], ["daily_load", 300.0], ["daily_strain", 0.0], ["player_rpe_rating", 5], ["player_personal_performance", 9], ["participated_in_full_practice", "f"], ["minutes_participated", 60], ["expected_session_load", 840.0], ["practice_id", 65], ["weekly_strain", 0.0], ["weekly_load", 300.0], ["acute_load", 300.0], ["chronic_load", 75.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -225.0], ["monotony", 0.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-27 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-20 01:00:00' AND '2018-03-27 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-13 01:00:00' AND '2018-03-20 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-06 00:00:00' AND '2018-03-13 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-20 01:00:00' AND '2018-03-27 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-27 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 36], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 02:55:34.734352"], ["season", "Fall-2018"], ["created_at", "2018-04-06 02:55:34.744901"], ["updated_at", "2018-04-06 02:55:34.744901"], ["session_load", 300.0], ["daily_load", 300.0], ["daily_strain", 0.0], ["player_rpe_rating", 5], ["player_personal_performance", 9], ["participated_in_full_practice", "f"], ["minutes_participated", 60], ["expected_session_load", 1620.0], ["practice_id", 64], ["weekly_strain", 0.0], ["weekly_load", 300.0], ["acute_load", 300.0], ["chronic_load", 75.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -225.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-03 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-28 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-21 01:00:00' AND '2018-03-28 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-14 01:00:00' AND '2018-03-21 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-07 00:00:00' AND '2018-03-14 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-21 01:00:00' AND '2018-03-28 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-28 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 36], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 02:55:34.747303"], ["season", "Fall-2018"], ["created_at", "2018-04-06 02:55:34.753615"], ["updated_at", "2018-04-06 02:55:34.753615"], ["session_load", 90.0], ["daily_load", 90.0], ["daily_strain", 0.0], ["player_rpe_rating", 3], ["player_personal_performance", 7], ["participated_in_full_practice", "f"], ["minutes_participated", 30], ["expected_session_load", 360.0], ["practice_id", 63], ["weekly_strain", 0.0], ["weekly_load", 90.0], ["acute_load", 90.0], ["chronic_load", 22.5], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -67.5], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-29 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-22 01:00:00' AND '2018-03-29 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-15 01:00:00' AND '2018-03-22 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-08 00:00:00' AND '2018-03-15 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-22 01:00:00' AND '2018-03-29 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-29 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 36], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 02:55:34.755838"], ["season", "Fall-2018"], ["created_at", "2018-04-06 02:55:34.762229"], ["updated_at", "2018-04-06 02:55:34.762229"], ["session_load", 90.0], ["daily_load", 90.0], ["daily_strain", 0.0], ["player_rpe_rating", 3], ["player_personal_performance", 8], ["participated_in_full_practice", "t"], ["minutes_participated", 30], ["expected_session_load", 60.0], ["practice_id", 62], ["weekly_strain", 0.0], ["weekly_load", 90.0], ["acute_load", 90.0], ["chronic_load", 22.5], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -67.5], ["monotony", 0.0]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-05 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-23 01:00:00' AND '2018-03-30 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-16 01:00:00' AND '2018-03-23 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-09 00:00:00' AND '2018-03-16 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-23 01:00:00' AND '2018-03-30 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 36], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 02:55:34.764361"], ["season", "Fall-2018"], ["created_at", "2018-04-06 02:55:34.771256"], ["updated_at", "2018-04-06 02:55:34.771256"], ["session_load", 0.0], ["daily_load", 0.0], ["daily_strain", 0.0], ["player_rpe_rating", 0], ["player_personal_performance", 0], ["participated_in_full_practice", "t"], ["minutes_participated", 0], ["expected_session_load", 0.0], ["practice_id", 61], ["weekly_strain", 0.0], ["weekly_load", 0.0], ["acute_load", 0.0], ["chronic_load", 0.0], ["a_c_ratio", 0.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", 0.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-06 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-10 00:00:00' AND '2018-03-17 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 36) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 36], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 02:55:34.773361"], ["season", "Fall-2018"], ["created_at", "2018-04-06 02:55:34.780105"], ["updated_at", "2018-04-06 02:55:34.780105"], ["session_load", 600.0], ["daily_load", 600.0], ["daily_strain", 0.0], ["player_rpe_rating", 5], ["player_personal_performance", 1], ["participated_in_full_practice", "t"], ["minutes_participated", 120], ["expected_session_load", 720.0], ["practice_id", 60], ["weekly_strain", 0.0], ["weekly_load", 600.0], ["acute_load", 600.0], ["chronic_load", 150.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -450.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  [1m[35mSQL (6.4ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 4]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 6]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 7]]
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 8]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 9]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 10]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 11]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 33]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 34]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 35]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "team_assignments" WHERE "team_assignments"."id" = ?[0m  [["id", 36]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 60]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 61]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 62]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 63]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 64]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 65]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 66]]
+  [1m[35mSQL (2.8ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 67]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 68]]
+  [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 36]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 37]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 38]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 39]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 12]]
+  [1m[35m (2.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "ahlam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Alec"], ["last_name", "Lam"], ["andrew_id", "ahlam"], ["email", "ahlam@andrew.cmu.edu"], ["major", "Information Systems"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 03:02:36.547611"], ["updated_at", "2018-04-06 03:02:36.547611"], ["year", "Junior"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "gbellwoa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Greg"], ["last_name", "Bellwoar"], ["andrew_id", "gbellwoa"], ["email", "gbellwoa@andrew.cmu.edu"], ["major", "Business"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 03:02:36.552421"], ["updated_at", "2018-04-06 03:02:36.552421"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "zpm"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Zack"], ["last_name", "Masciopinto"], ["andrew_id", "zpm"], ["email", "zpm@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 03:02:36.555332"], ["updated_at", "2018-04-06 03:02:36.555332"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "sfazelsa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sam"], ["last_name", "Fazel"], ["andrew_id", "sfazelsa"], ["email", "sfazelsa@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 03:02:36.558011"], ["updated_at", "2018-04-06 03:02:36.558011"], ["year", "Junior"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "Soccer"], ["gender", "Men"], ["season", "Fall"], ["active", "t"], ["created_at", "2018-04-06 03:02:36.564584"], ["updated_at", "2018-04-06 03:02:36.564584"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["user_id", 40], ["created_at", "2018-04-06 03:02:36.565698"], ["updated_at", "2018-04-06 03:02:36.565698"], ["active", "t"], ["date_added", "2018-04-06 03:02:36.559761"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["user_id", 41], ["created_at", "2018-04-06 03:02:36.568099"], ["updated_at", "2018-04-06 03:02:36.568099"], ["active", "t"], ["date_added", "2018-04-06 03:02:36.567303"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["user_id", 42], ["created_at", "2018-04-06 03:02:36.570291"], ["updated_at", "2018-04-06 03:02:36.570291"], ["active", "t"], ["date_added", "2018-04-06 03:02:36.569574"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["user_id", 43], ["created_at", "2018-04-06 03:02:36.575639"], ["updated_at", "2018-04-06 03:02:36.575639"], ["active", "t"], ["date_added", "2018-04-06 03:02:36.574896"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["duration", 120], ["difficulty", 6], ["practice_time", "2018-04-06 08:30:00"], ["created_at", "2018-04-06 03:02:36.578317"], ["updated_at", "2018-04-06 03:02:36.578317"], ["session_load", 720.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["duration", 0], ["difficulty", 0], ["practice_time", "2018-04-05 11:00:00"], ["created_at", "2018-04-06 03:02:36.580915"], ["updated_at", "2018-04-06 03:02:36.580915"], ["session_load", 0.0]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["duration", 30], ["difficulty", 2], ["practice_time", "2018-04-04 13:00:00"], ["created_at", "2018-04-06 03:02:36.586612"], ["updated_at", "2018-04-06 03:02:36.586612"], ["session_load", 60.0]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["duration", 90], ["difficulty", 4], ["practice_time", "2018-04-03 12:00:00"], ["created_at", "2018-04-06 03:02:36.592082"], ["updated_at", "2018-04-06 03:02:36.592082"], ["session_load", 360.0]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["duration", 180], ["difficulty", 9], ["practice_time", "2018-04-02 19:00:00"], ["created_at", "2018-04-06 03:02:36.595680"], ["updated_at", "2018-04-06 03:02:36.595680"], ["session_load", 1620.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["duration", 120], ["difficulty", 7], ["practice_time", "2018-04-01 16:00:00"], ["created_at", "2018-04-06 03:02:36.598409"], ["updated_at", "2018-04-06 03:02:36.598409"], ["session_load", 840.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["duration", 120], ["difficulty", 1], ["practice_time", "2018-04-01 06:00:00"], ["created_at", "2018-04-06 03:02:36.600823"], ["updated_at", "2018-04-06 03:02:36.600823"], ["session_load", 120.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["duration", 60], ["difficulty", 5], ["practice_time", "2018-03-31 16:30:00"], ["created_at", "2018-04-06 03:02:36.603258"], ["updated_at", "2018-04-06 03:02:36.603258"], ["session_load", 300.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 13], ["duration", 120], ["difficulty", 8], ["practice_time", "2018-03-30 16:00:00"], ["created_at", "2018-04-06 03:02:36.608246"], ["updated_at", "2018-04-06 03:02:36.608246"], ["session_load", 960.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-10 00:00:00' AND '2018-03-17 00:59:59')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-03 00:00:00' AND '2018-03-09 23:59:59')[0m
+  [1m[36mSurvey Load (0.4ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 40], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 03:02:36.610517"], ["season", "Fall-2018"], ["created_at", "2018-04-06 03:02:36.621629"], ["updated_at", "2018-04-06 03:02:36.621629"], ["session_load", 960.0], ["daily_load", 960.0], ["daily_strain", 0.0], ["player_rpe_rating", 8], ["player_personal_performance", 8], ["participated_in_full_practice", "t"], ["minutes_participated", 120], ["expected_session_load", 960.0], ["practice_id", 77], ["weekly_strain", 0.0], ["weekly_load", 960.0], ["acute_load", 960.0], ["chronic_load", 240.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -720.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-25 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-18 01:00:00' AND '2018-03-25 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-11 00:00:00' AND '2018-03-18 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-04 00:00:00' AND '2018-03-10 23:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-18 01:00:00' AND '2018-03-25 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-25 01:00:00' AND '2018-04-01 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 40], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 03:02:36.625362"], ["season", "Fall-2018"], ["created_at", "2018-04-06 03:02:36.631569"], ["updated_at", "2018-04-06 03:02:36.631569"], ["session_load", 360.0], ["daily_load", 360.0], ["daily_strain", 0.0], ["player_rpe_rating", 6], ["player_personal_performance", 9], ["participated_in_full_practice", "t"], ["minutes_participated", 60], ["expected_session_load", 300.0], ["practice_id", 76], ["weekly_strain", 0.0], ["weekly_load", 360.0], ["acute_load", 360.0], ["chronic_load", 90.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -270.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-01 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-12 01:00:00' AND '2018-03-19 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-05 00:00:00' AND '2018-03-12 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 40], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 03:02:36.633785"], ["season", "Fall-2018"], ["created_at", "2018-04-06 03:02:36.640378"], ["updated_at", "2018-04-06 03:02:36.640378"], ["session_load", 0.0], ["daily_load", 0.0], ["daily_strain", 0.0], ["player_rpe_rating", 0], ["player_personal_performance", 4], ["participated_in_full_practice", "t"], ["minutes_participated", 120], ["expected_session_load", 120.0], ["practice_id", 75], ["weekly_strain", 0.0], ["weekly_load", 0.0], ["acute_load", 0.0], ["chronic_load", 0.0], ["a_c_ratio", 0.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", 0.0], ["monotony", 0.0]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-01 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-12 01:00:00' AND '2018-03-19 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-05 00:00:00' AND '2018-03-12 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-19 01:00:00' AND '2018-03-26 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-26 01:00:00' AND '2018-04-02 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 40], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 03:02:36.642429"], ["season", "Fall-2018"], ["created_at", "2018-04-06 03:02:36.649660"], ["updated_at", "2018-04-06 03:02:36.649660"], ["session_load", 300.0], ["daily_load", 300.0], ["daily_strain", 0.0], ["player_rpe_rating", 5], ["player_personal_performance", 9], ["participated_in_full_practice", "f"], ["minutes_participated", 60], ["expected_session_load", 840.0], ["practice_id", 74], ["weekly_strain", 0.0], ["weekly_load", 300.0], ["acute_load", 300.0], ["chronic_load", 75.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -225.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-02 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-27 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-20 01:00:00' AND '2018-03-27 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-13 01:00:00' AND '2018-03-20 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-06 00:00:00' AND '2018-03-13 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-20 01:00:00' AND '2018-03-27 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-27 01:00:00' AND '2018-04-03 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 40], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 03:02:36.652112"], ["season", "Fall-2018"], ["created_at", "2018-04-06 03:02:36.659319"], ["updated_at", "2018-04-06 03:02:36.659319"], ["session_load", 300.0], ["daily_load", 300.0], ["daily_strain", 0.0], ["player_rpe_rating", 5], ["player_personal_performance", 9], ["participated_in_full_practice", "f"], ["minutes_participated", 60], ["expected_session_load", 1620.0], ["practice_id", 73], ["weekly_strain", 0.0], ["weekly_load", 300.0], ["acute_load", 300.0], ["chronic_load", 75.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -225.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-03 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-28 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-21 01:00:00' AND '2018-03-28 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-14 01:00:00' AND '2018-03-21 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-07 00:00:00' AND '2018-03-14 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-21 01:00:00' AND '2018-03-28 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-28 01:00:00' AND '2018-04-04 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 40], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 03:02:36.661468"], ["season", "Fall-2018"], ["created_at", "2018-04-06 03:02:36.668648"], ["updated_at", "2018-04-06 03:02:36.668648"], ["session_load", 90.0], ["daily_load", 90.0], ["daily_strain", 0.0], ["player_rpe_rating", 3], ["player_personal_performance", 7], ["participated_in_full_practice", "f"], ["minutes_participated", 30], ["expected_session_load", 360.0], ["practice_id", 72], ["weekly_strain", 0.0], ["weekly_load", 90.0], ["acute_load", 90.0], ["chronic_load", 22.5], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -67.5], ["monotony", 0.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-04 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-29 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-22 01:00:00' AND '2018-03-29 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-15 01:00:00' AND '2018-03-22 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-08 00:00:00' AND '2018-03-15 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-22 01:00:00' AND '2018-03-29 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-29 01:00:00' AND '2018-04-05 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 40], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 03:02:36.671258"], ["season", "Fall-2018"], ["created_at", "2018-04-06 03:02:36.679796"], ["updated_at", "2018-04-06 03:02:36.679796"], ["session_load", 90.0], ["daily_load", 90.0], ["daily_strain", 0.0], ["player_rpe_rating", 3], ["player_personal_performance", 8], ["participated_in_full_practice", "t"], ["minutes_participated", 30], ["expected_session_load", 60.0], ["practice_id", 71], ["weekly_strain", 0.0], ["weekly_load", 90.0], ["acute_load", 90.0], ["chronic_load", 22.5], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -67.5], ["monotony", 0.0]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-05 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-23 01:00:00' AND '2018-03-30 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-16 01:00:00' AND '2018-03-23 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-09 00:00:00' AND '2018-03-16 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-23 01:00:00' AND '2018-03-30 00:59:59')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-30 01:00:00' AND '2018-04-06 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 40], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 03:02:36.683217"], ["season", "Fall-2018"], ["created_at", "2018-04-06 03:02:36.692480"], ["updated_at", "2018-04-06 03:02:36.692480"], ["session_load", 0.0], ["daily_load", 0.0], ["daily_strain", 0.0], ["player_rpe_rating", 0], ["player_personal_performance", 0], ["participated_in_full_practice", "t"], ["minutes_participated", 0], ["expected_session_load", 0.0], ["practice_id", 70], ["weekly_strain", 0.0], ["weekly_load", 0.0], ["acute_load", 0.0], ["chronic_load", 0.0], ["a_c_ratio", 0.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", 0.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-04-06 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-17 01:00:00' AND '2018-03-24 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-10 00:00:00' AND '2018-03-17 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-24 01:00:00' AND '2018-03-31 00:59:59')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_id == 40) AND (survey_type == 'post_practice') AND (completed_time BETWEEN '2018-03-31 01:00:00' AND '2018-04-07 00:59:59')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "survey_type", "completed_time", "season", "created_at", "updated_at", "session_load", "daily_load", "daily_strain", "player_rpe_rating", "player_personal_performance", "participated_in_full_practice", "minutes_participated", "expected_session_load", "practice_id", "weekly_strain", "weekly_load", "acute_load", "chronic_load", "a_c_ratio", "week_to_week_weekly_load_percent_change", "freshness_index", "monotony") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 40], ["survey_type", "Post-Practice"], ["completed_time", "2018-04-06 03:02:36.694837"], ["season", "Fall-2018"], ["created_at", "2018-04-06 03:02:36.701590"], ["updated_at", "2018-04-06 03:02:36.701590"], ["session_load", 600.0], ["daily_load", 600.0], ["daily_strain", 0.0], ["player_rpe_rating", 5], ["player_personal_performance", 1], ["participated_in_full_practice", "t"], ["minutes_participated", 120], ["expected_session_load", 720.0], ["practice_id", 69], ["weekly_strain", 0.0], ["weekly_load", 600.0], ["acute_load", 600.0], ["chronic_load", 150.0], ["a_c_ratio", 4.0], ["week_to_week_weekly_load_percent_change", 100.0], ["freshness_index", -450.0], ["monotony", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSurvey Load (5.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (completed_time BETWEEN '2018-04-06 03:04:30.769716' AND '2018-03-30 03:04:30.769720')[0m
+  [1m[36mSurvey Load (0.4ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (completed_time BETWEEN '2018-04-06 03:04:43.953194' AND '2018-04-05 03:04:43.953197')[0m
+  [1m[36mSurvey Load (3.3ms)[0m  [1m[34mSELECT  "surveys".* FROM "surveys" ORDER BY "surveys"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]

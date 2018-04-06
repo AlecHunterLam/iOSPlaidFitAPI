@@ -82,6 +82,8 @@ class SurveyService
     @survey.freshness_index = @freshness_index
     @survey.monotony = @monotony
 
+
+    @survey.save!
     return @survey
   end
 
