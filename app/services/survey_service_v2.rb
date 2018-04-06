@@ -4,19 +4,21 @@ SECONDS_IN_ONE_DAY = 86400
 
 class SurveyService
   def initialize(params)
+
     # set  universal parameters
     @user_id = params[:user_id]
     @team_id = params[:team_id]
     @practice_id = params[:practice_id]
 
     @survey_type = params[:survey_type]
+    puts @survey_type
     @completed_time = Time.now
 
     # set user object
     @user = User.find(@user_id)
     @team = Team.find(@team_id)
     # date fields for further calculation
-    @current_datetime = parmas[:datetime_today] # Time.now  ==> FOR TESTING REASONS, SUPPLY THE CURRENT DATE
+    @current_datetime = params[:datetime_today] # Time.now  ==> FOR TESTING REASONS, SUPPLY THE CURRENT DATE
     @current_day = @current_datetime.day
     @current_month = @current_datetime.month
     @current_year = @current_datetime.year
@@ -24,7 +26,7 @@ class SurveyService
     # set today datetime objects (set @start_of_today, @end_of_today)
     set_today_start_end_datetime_objects
 
-    if @team.nil? || @user.nil? || @survey_type != 'Daily Wellness' || @survey_type != 'Post-Practice'
+    if @team.nil? || @user.nil? || (@survey_type != 'Daily Wellness' && @survey_type != 'Post-Practice')
       return nil
     end
 
@@ -37,7 +39,9 @@ class SurveyService
     # if a post-practice, set appropriate fields to nil, and set data fields
     # elsif (@survey_type == 'Post-Practice')
     else
+
       if Practice.find(@practice_id).nil? || !validate_fields_for_calculations(params)
+        puts("- - - - - - - no ")
         return nil
       end
       set_post_practice_survey(params)
@@ -45,6 +49,7 @@ class SurveyService
   end
 
   def get_survey_object
+    @survey = Survey.new
     @survey.user = @user
     @survey.survey_type = @survey_type
     @survey.completed_time = @completed_time
@@ -68,12 +73,16 @@ class SurveyService
     @survey.weekly_strain = @weekly_strain
     @survey.weekly_load = @weekly_load
     @survey.acute_load = @acute_load
-    @survey.chronic_load = @a_c_ratio
+    @survey.chronic_load = @chronic_load
+
+    @survey.a_c_ratio = @a_c_ratio
 
     @survey.week_to_week_weekly_load_percent_change = @week_to_week_weekly_load_percent_change
 
     @survey.freshness_index = @freshness_index
     @survey.monotony = @monotony
+
+    return @survey
   end
 
   # set survey fields
@@ -154,7 +163,7 @@ class SurveyService
 
   # get the player session load based on current survey's rpe and duration practiced
   def set_player_session_load
-    player_session_load = @player_rpe_rating * @participated_in_full_practice
+    player_session_load = @player_rpe_rating * @minutes_participated
     return player_session_load
   end
 
@@ -177,6 +186,7 @@ class SurveyService
       else
         sum_daily_load += survey.session_load
       end
+    end
     return sum_daily_load
   end
 
@@ -308,7 +318,7 @@ class SurveyService
       percent_change = 100
     else
       # percent change = ((y2 - y1) / y1)*100, y1=original-last & y2=new value-this
-      percent_change = (last_weeks_weekly_load - this_weeks_weekly_load) / last_weeks_weekly_load) * 100
+      percent_change = ((last_weeks_weekly_load - this_weeks_weekly_load) / last_weeks_weekly_load) * 100
     end
 
     return percent_change
@@ -324,9 +334,17 @@ class SurveyService
     minutes = params[:minutes_participated]
     # nill checks
     if rpe.nil? || performance.nil? || full_practice.nil?
+      puts 1
       return false
+
+    elsif minutes.nil? && validate_boolean_type(full_practice) && full_practice == false
+      puts 2.5
+      return false
+
     # type checks
-    elsif (!validate_integer_type(rpe) || !validate_integer_type(performance) || !validate_boolean_type(full_practice) || !validate_integer_type(minutes))
+    elsif (!validate_integer_type(rpe) || !validate_integer_type(performance) || !validate_boolean_type(full_practice))
+      puts 2
+
       return false
     # practice + minutes check
     elsif (full_practice == false && minutes.nil?)

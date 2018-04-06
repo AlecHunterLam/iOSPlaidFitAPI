@@ -3,7 +3,7 @@ module Contexts
 
     def create_stuff
       # soccer team
-      @msoccer = Team.new(sport: "Soccer", gender: "Men", season: "Fall", active: true)
+      @m_soccer = Team.new(sport: "Soccer", gender: "Men", season: "Fall", active: true)
 
       # players
       @alec = User.create(first_name: "Alec", last_name: "Lam", andrew_id: "ahlam", email: "ahlam@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "Player", active: true, year: "Junior")
@@ -31,9 +31,46 @@ module Contexts
       @practice_1_march_31 = Practice.create(team: @m_soccer, duration: 60, difficulty: 5, practice_time: Time.new(2018,3,31,16,30,0,'-04:00'))
       @practice_1_march_30 = Practice.create(team: @m_soccer, duration: 120, difficulty: 8, practice_time: Time.new(2018,3,30,16,0,0,'-04:00'))
 
-
       # Alec's post-practice surveys
-      @
+
+      survey_post_april_1_march_30 = SurveyService.new({
+                                      user_id: @alec.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_1_april_6.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,3,30,23,59,59,'-04:00'),
+                                      player_rpe_rating: 5,
+                                      player_personal_performance: 1,
+                                      participated_in_full_practice: true,
+                                      minutes_participated: nil
+                                     })
+      @survey_post_1_april_6 = survey_post_april_6_service.get_survey_object
+
+
+
+
+
+
+
+
+
+
+
+      survey_post_april_6_service = SurveyService.new({
+                                      user_id: @alec.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_1_april_6.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,6,23,59,59,'-04:00'),
+                                      player_rpe_rating: 5,
+                                      player_personal_performance: 1,
+                                      participated_in_full_practice: true,
+                                      minutes_participated: nil
+                                     })
+      @survey_post_april_6 = survey_post_april_6_service.get_survey_object
+
     end
 
 
@@ -63,3 +100,9 @@ module Contexts
 
   end
 end
+
+
+
+
+
+# get_survey_object
