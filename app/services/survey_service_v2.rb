@@ -44,7 +44,38 @@ class SurveyService
     end
   end
 
-  private
+  def get_survey_object
+    @survey.user = @user
+    @survey.survey_type = @survey_type
+    @survey.completed_time = @completed_time
+    @survey.season = @season
+    @survey.session_load = @session_load
+    @survey.daily_load = @daily_load
+    @survey.daily_strain = @daily_strain
+    @survey.hours_of_sleep = @hours_of_sleep
+    @survey.quality_of_sleep = @quality_of_sleep
+    @survey.academic_stress = @academic_stress
+    @survey.life_stress = @life_stress
+    @survey.soreness = @soreness
+    @survey.ounces_of_water_consumed = @ounces_of_water_consumed
+    @survey.hydration_quality = @hydration_quality
+    @survey.player_rpe_rating = @player_rpe_rating
+    @survey.player_personal_performance = @player_personal_performance
+    @survey.participated_in_full_practice = @participated_in_full_practice
+    @survey.minutes_participated = @minutes_participated
+    @survey.expected_session_load = @expected_session_load
+    @survey.practice = @practice
+    @survey.weekly_strain = @weekly_strain
+    @survey.weekly_load = @weekly_load
+    @survey.acute_load = @acute_load
+    @survey.chronic_load = @a_c_ratio
+
+    @survey.week_to_week_weekly_load_percent_change = @week_to_week_weekly_load_percent_change
+
+    @survey.freshness_index = @freshness_index
+    @survey.monotony = @monotony
+  end
+
   # set survey fields
 
   def set_daily_wellness_survey(params)
@@ -99,7 +130,8 @@ class SurveyService
     @acute_load = set_acute_load
     @chronic_load = set_chronic_load
     @freshness_index = set_freshness_index
-    @week_to_week_weekly_load_percent_change = params[:week_to_week_weekly_load_percent_change]
+
+    @week_to_week_weekly_load_percent_change = set_week_to_week_weekly_load_percent_change
 
     @a_c_ratio = set_a_c_ratio
     @monotony = set_monotony
@@ -260,6 +292,26 @@ class SurveyService
   def set_weekly_strain
     weekly_strain = @weekly_load * @monotony
     return weekly_strain
+  end
+
+  # set the week to week percent change in weekly load, get last week + this week's weekly load, compare percent change
+  def set_week_to_week_weekly_load_percent_change
+    # weekly load this week
+    this_weeks_weekly_load = @weekly_load
+    # weekly load last week
+    last_week_end = @end_of_today.ago(86400 * 7)
+    last_week_start = @start_of_today.ago(86400 * 13)
+    last_weeks_weekly_load = calculate_weekly_load_with_dates(last_week_start, last_week_end)
+
+    # divide by zero possibility => must check what to do with this edge case
+    if last_weeks_weekly_load == 0
+      percent_change = 100
+    else
+      # percent change = ((y2 - y1) / y1)*100, y1=original-last & y2=new value-this
+      percent_change = (last_weeks_weekly_load - this_weeks_weekly_load) / last_weeks_weekly_load) * 100
+    end
+
+    return percent_change
   end
 
   # Validations
