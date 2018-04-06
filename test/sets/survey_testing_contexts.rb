@@ -34,7 +34,7 @@ module Contexts
       # Alec's post-practice surveys
 
       # March 30, 2018
-      survey_post_1_march_30_service  = SurveyService.new({
+      survey_post_1_march_30_service_alec  = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       practice_id: @practice_1_march_30.id,
@@ -46,10 +46,10 @@ module Contexts
                                       participated_in_full_practice: true,
                                       minutes_participated: nil
                                      })
-      @survey_post_1_march_30 = survey_post_1_march_30_service.get_survey_object
+      @survey_post_1_march_30_alec = survey_post_1_march_30_service_alec.get_survey_object
 
       # March 31, 2018
-      survey_post_1_march_31_service = SurveyService.new({
+      survey_post_1_march_31_service_alec = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       practice_id: @practice_1_march_31.id,
@@ -61,10 +61,10 @@ module Contexts
                                       participated_in_full_practice: true,
                                       minutes_participated: nil
                                      })
-      @survey_post_1_march_31 = survey_post_1_march_31_service.get_survey_object
+      @survey_post_1_march_31_alec = survey_post_1_march_31_service_alec.get_survey_object
 
       # April 1, 2018 SESSION 1
-      survey_post_1_april_1_service  = SurveyService.new({
+      survey_post_1_april_1_service_alec  = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       practice_id: @practice_1_april_1.id,
@@ -76,10 +76,10 @@ module Contexts
                                       participated_in_full_practice: true,
                                       minutes_participated: nil
                                      })
-      @survey_post_1_april_1 = survey_post_1_april_1_service.get_survey_object
+      @survey_post_1_april_1_alec = survey_post_1_april_1_service_alec.get_survey_object
 
       # April 1, 2018 SESSION 2
-      survey_post_2_april_1_service  = SurveyService.new({
+      survey_post_2_april_1_service_alec  = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       practice_id: @practice_2_april_1.id,
@@ -91,10 +91,10 @@ module Contexts
                                       participated_in_full_practice: false,
                                       minutes_participated: 60
                                      })
-      @survey_post_2_april_1 = survey_post_2_april_1_service.get_survey_object
+      @survey_post_2_april_1_alec = survey_post_2_april_1_service_alec.get_survey_object
 
       # April 2, 2018
-      survey_post_1_april_2_service  = SurveyService.new({
+      survey_post_1_april_2_service_alec  = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       practice_id: @practice_1_april_2.id,
@@ -106,10 +106,10 @@ module Contexts
                                       participated_in_full_practice: false,
                                       minutes_participated: 60
                                      })
-      @survey_post_1_april_2 = survey_post_1_april_2_service.get_survey_object
+      @survey_post_1_april_2_alec = survey_post_1_april_2_service_alec.get_survey_object
 
       # April 3, 2018
-      survey_post_1_april_3_service  = SurveyService.new({
+      survey_post_1_april_3_service_alec  = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       practice_id: @practice_1_april_3.id,
@@ -121,10 +121,10 @@ module Contexts
                                       participated_in_full_practice: false,
                                       minutes_participated: 30
                                      })
-      @survey_post_1_april_3 = survey_post_1_april_3_service.get_survey_object
+      @survey_post_1_april_3_alec = survey_post_1_april_3_service_alec.get_survey_object
 
       # April 4, 2018
-      survey_post_1_april_4_service  = SurveyService.new({
+      survey_post_1_april_4_service_alec  = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       practice_id: @practice_1_april_4.id,
@@ -136,10 +136,10 @@ module Contexts
                                       participated_in_full_practice: true,
                                       minutes_participated: nil
                                      })
-      @survey_post_1_april_4 = survey_post_1_april_4_service.get_survey_object
+      @survey_post_1_april_4_alec = survey_post_1_april_4_service_alec.get_survey_object
 
       # April 5, 2018 OFF DAY
-      survey_post_1_april_5_service  = SurveyService.new({
+      survey_post_1_april_5_service_alec  = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       practice_id: @practice_1_april_5.id,
@@ -151,10 +151,10 @@ module Contexts
                                       participated_in_full_practice: true,
                                       minutes_participated: nil
                                      })
-      @survey_post_1_april_5 = survey_post_1_april_5_service.get_survey_object
+      @survey_post_1_april_5_alec = survey_post_1_april_5_service_alec.get_survey_object
 
       # April 6, 2018
-      survey_post_1_april_6_service = SurveyService.new({
+      survey_post_1_april_6_service_alec = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       practice_id: @practice_1_april_6.id,
@@ -166,13 +166,13 @@ module Contexts
                                       participated_in_full_practice: true,
                                       minutes_participated: nil
                                      })
-      @survey_post_1_april_6 = survey_post_1_april_6_service.get_survey_object
+      @survey_post_1_april_6_alec = survey_post_1_april_6_service_alec.get_survey_object
 
 
       # Daily Wellness Surveys
 
       # March 30, 2018
-      survey_dw_march_30_service = SurveyService.new({
+      survey_dw_march_30_service_alec = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       survey_type: 'Daily Wellness',
@@ -187,10 +187,10 @@ module Contexts
                                       ounces_of_water_consumed: 40,
                                       hydration_quality: false
                                      })
-      @survey_dw_march_30 = survey_dw_march_30_service.get_survey_object
+      @survey_dw_march_30_alec = survey_dw_march_30_service_alec.get_survey_object
 
       # March 31, 2018
-      survey_dw_march_31_service = SurveyService.new({
+      survey_dw_march_31_service_alec = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       survey_type: 'Daily Wellness',
@@ -205,10 +205,10 @@ module Contexts
                                       ounces_of_water_consumed: 50,
                                       hydration_quality: true
                                      })
-      @survey_dw_march_31 = survey_dw_march_31_service.get_survey_object
+      @survey_dw_march_31_alec = survey_dw_march_31_service_alec.get_survey_object
 
       # April 1, 2018
-      survey_dw_april_1_service = SurveyService.new({
+      survey_dw_april_1_service_alec = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       survey_type: 'Daily Wellness',
@@ -223,10 +223,10 @@ module Contexts
                                       ounces_of_water_consumed: 0,
                                       hydration_quality: false
                                      })
-      @survey_dw_april_1 = survey_dw_april_1_service.get_survey_object
+      @survey_dw_april_1_alec = survey_dw_april_1_service_alec.get_survey_object
 
       # April 2, 2018
-      survey_dw_april_2_service = SurveyService.new({
+      survey_dw_april_2_service_alec = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       survey_type: 'Daily Wellness',
@@ -241,10 +241,10 @@ module Contexts
                                       ounces_of_water_consumed: 20,
                                       hydration_quality: true
                                      })
-      @survey_dw_april_2 = survey_dw_april_2_service.get_survey_object
+      @survey_dw_april_2_alec = survey_dw_april_2_service_alec.get_survey_object
 
       # April 3, 2018
-      survey_dw_april_3_service = SurveyService.new({
+      survey_dw_april_3_service_alec = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       survey_type: 'Daily Wellness',
@@ -259,10 +259,10 @@ module Contexts
                                       ounces_of_water_consumed: 50,
                                       hydration_quality: false
                                      })
-      @survey_dw_april_3 = survey_dw_april_3_service.get_survey_object
+      @survey_dw_april_3_alec = survey_dw_april_3_service_alec.get_survey_object
 
       # April 4, 2018
-      survey_dw_april_4_service = SurveyService.new({
+      survey_dw_april_4_service_alec = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       survey_type: 'Daily Wellness',
@@ -277,11 +277,11 @@ module Contexts
                                       ounces_of_water_consumed: 90,
                                       hydration_quality: true
                                      })
-      @survey_dw_april_4 = survey_dw_april_4_service.get_survey_object
+      @survey_dw_april_4_alec = survey_dw_april_4_service_alec.get_survey_object
 
 
       # April 5, 2018
-      survey_dw_april_5_service = SurveyService.new({
+      survey_dw_april_5_service_alec = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       survey_type: 'Daily Wellness',
@@ -296,10 +296,10 @@ module Contexts
                                       ounces_of_water_consumed: 100,
                                       hydration_quality: true
                                      })
-      @survey_dw_april_5 = survey_dw_april_5_service.get_survey_object
+      @survey_dw_april_5_alec = survey_dw_april_5_service_alec.get_survey_object
 
       # April 6, 2018
-      survey_dw_april_6_service = SurveyService.new({
+      survey_dw_april_6_service_alec = SurveyService.new({
                                       user_id: @alec.id,
                                       team_id: @m_soccer.id,
                                       survey_type: 'Daily Wellness',
@@ -314,28 +314,336 @@ module Contexts
                                       ounces_of_water_consumed: 12,
                                       hydration_quality: true
                                      })
-      @survey_dw_april_6 = survey_dw_april_6_service.get_survey_object
+      @survey_dw_april_6_alec = survey_dw_april_6_service_alec.get_survey_object
+
+
+
+      # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+      # Greg's post-practice surveys
+
+      # March 30, 2018
+      survey_post_1_march_30_service_greg  = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_1_march_30.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,3,30,23,59,59,'-04:00'),
+                                      player_rpe_rating: 7,
+                                      player_personal_performance: 9,
+                                      participated_in_full_practice: true,
+                                      minutes_participated: nil
+                                     })
+      @survey_post_1_march_30_greg = survey_post_1_march_30_service_greg.get_survey_object
+
+      # March 31, 2018
+      survey_post_1_march_31_service_greg = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_1_march_31.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,3,31,23,59,59,'-04:00'),
+                                      player_rpe_rating: 5,
+                                      player_personal_performance: 8,
+                                      participated_in_full_practice: true,
+                                      minutes_participated: nil
+                                     })
+      @survey_post_1_march_31_greg = survey_post_1_march_31_service_greg.get_survey_object
+
+      # April 1, 2018 SESSION 1
+      survey_post_1_april_1_service_greg  = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_1_april_1.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,1,23,59,59,'-04:00'),
+                                      player_rpe_rating: 1,
+                                      player_personal_performance: 6,
+                                      participated_in_full_practice: true,
+                                      minutes_participated: nil
+                                     })
+      @survey_post_1_april_1_greg = survey_post_1_april_1_service_greg.get_survey_object
+
+      # April 1, 2018 SESSION 2
+      survey_post_2_april_1_service_greg  = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_2_april_1.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,1,23,59,59,'-04:00'),
+                                      player_rpe_rating: 5,
+                                      player_personal_performance: 9,
+                                      participated_in_full_practice: false,
+                                      minutes_participated: 70
+                                     })
+      @survey_post_2_april_1_greg = survey_post_2_april_1_service_greg.get_survey_object
+
+      # April 2, 2018
+      survey_post_1_april_2_service_greg  = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_1_april_2.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,2,23,59,59,'-04:00'),
+                                      player_rpe_rating: 6,
+                                      player_personal_performance: 8,
+                                      participated_in_full_practice: false,
+                                      minutes_participated: 50
+                                     })
+      @survey_post_1_april_2_greg = survey_post_1_april_2_service_greg.get_survey_object
+
+      # April 3, 2018
+      survey_post_1_april_3_service_greg  = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_1_april_3.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,3,23,59,59,'-04:00'),
+                                      player_rpe_rating: 3,
+                                      player_personal_performance: 9,
+                                      participated_in_full_practice: false,
+                                      minutes_participated: 30
+                                     })
+      @survey_post_1_april_3_greg = survey_post_1_april_3_service_greg.get_survey_object
+
+      # April 4, 2018
+      survey_post_1_april_4_service_greg  = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_1_april_4.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,4,23,59,59,'-04:00'),
+                                      player_rpe_rating: 3,
+                                      player_personal_performance: 7,
+                                      participated_in_full_practice: true,
+                                      minutes_participated: nil
+                                     })
+      @survey_post_1_april_4_greg = survey_post_1_april_4_service_greg.get_survey_object
+
+      # April 5, 2018 OFF DAY
+      survey_post_1_april_5_service_greg  = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_1_april_5.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,5,23,59,59,'-04:00'),
+                                      player_rpe_rating: 0,
+                                      player_personal_performance: 0,
+                                      participated_in_full_practice: true,
+                                      minutes_participated: nil
+                                     })
+      @survey_post_1_april_5_greg = survey_post_1_april_5_service_greg.get_survey_object
+
+      # April 6, 2018
+      survey_post_1_april_6_service_greg = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      practice_id: @practice_1_april_6.id,
+                                      survey_type: 'Post-Practice',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,6,23,59,59,'-04:00'),
+                                      player_rpe_rating: 5,
+                                      player_personal_performance: 3,
+                                      participated_in_full_practice: true,
+                                      minutes_participated: nil
+                                     })
+      @survey_post_1_april_6_greg = survey_post_1_april_6_service_greg.get_survey_object
+
+
+      # Daily Wellness Surveys
+
+      # March 30, 2018
+      survey_dw_march_30_service_greg = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      survey_type: 'Daily Wellness',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,3,30,23,59,59,'-04:00'),
+
+                                      hours_of_sleep: 7,
+                                      quality_of_sleep: 4,
+                                      academic_stress: 2,
+                                      life_stress: 3,
+                                      soreness: 3,
+                                      ounces_of_water_consumed: 40,
+                                      hydration_quality: false
+                                     })
+      @survey_dw_march_30_greg = survey_dw_march_30_service_greg.get_survey_object
+
+      # March 31, 2018
+      survey_dw_march_31_service_greg = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      survey_type: 'Daily Wellness',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,3,31,23,59,59,'-04:00'),
+
+                                      hours_of_sleep: 6,
+                                      quality_of_sleep: 3,
+                                      academic_stress: 4,
+                                      life_stress: 2,
+                                      soreness: 2,
+                                      ounces_of_water_consumed: 50,
+                                      hydration_quality: true
+                                     })
+      @survey_dw_march_31_greg = survey_dw_march_31_service_greg.get_survey_object
+
+      # April 1, 2018
+      survey_dw_april_1_service_greg = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      survey_type: 'Daily Wellness',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,1,23,59,59,'-04:00'),
+
+                                      hours_of_sleep: 9,
+                                      quality_of_sleep: 5,
+                                      academic_stress: 4,
+                                      life_stress: 4,
+                                      soreness: 4,
+                                      ounces_of_water_consumed: 120,
+                                      hydration_quality: false
+                                     })
+      @survey_dw_april_1_greg = survey_dw_april_1_service_greg.get_survey_object
+
+      # April 2, 2018
+      survey_dw_april_2_service_greg = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      survey_type: 'Daily Wellness',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,2,23,59,59,'-04:00'),
+
+                                      hours_of_sleep: 8,
+                                      quality_of_sleep: 3,
+                                      academic_stress: 4,
+                                      life_stress: 3,
+                                      soreness: 4,
+                                      ounces_of_water_consumed: 30,
+                                      hydration_quality: false
+                                     })
+      @survey_dw_april_2_greg = survey_dw_april_2_service_greg.get_survey_object
+
+      # April 3, 2018
+      survey_dw_april_3_service_greg = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      survey_type: 'Daily Wellness',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,3,23,59,59,'-04:00'),
+
+                                      hours_of_sleep: 7,
+                                      quality_of_sleep: 3,
+                                      academic_stress: 2,
+                                      life_stress: 1,
+                                      soreness: 3,
+                                      ounces_of_water_consumed: 20,
+                                      hydration_quality: false
+                                     })
+      @survey_dw_april_3_greg = survey_dw_april_3_service_greg.get_survey_object
+
+      # April 4, 2018
+      survey_dw_april_4_service_greg = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      survey_type: 'Daily Wellness',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,4,23,59,59,'-04:00'),
+
+                                      hours_of_sleep: 7,
+                                      quality_of_sleep: 2,
+                                      academic_stress: 3,
+                                      life_stress: 4,
+                                      soreness: 2,
+                                      ounces_of_water_consumed: 90,
+                                      hydration_quality: true
+                                     })
+      @survey_dw_april_4_greg = survey_dw_april_4_service_greg.get_survey_object
+
+
+      # April 5, 2018
+      survey_dw_april_5_service_greg = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      survey_type: 'Daily Wellness',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,5,23,59,59,'-04:00'),
+
+                                      hours_of_sleep: 5,
+                                      quality_of_sleep: 1,
+                                      academic_stress: 1,
+                                      life_stress: 2,
+                                      soreness: 3,
+                                      ounces_of_water_consumed: 100,
+                                      hydration_quality: true
+                                     })
+      @survey_dw_april_5_greg = survey_dw_april_5_service_greg.get_survey_object
+
+      # April 6, 2018
+      survey_dw_april_6_service_greg = SurveyService.new({
+                                      user_id: @greg.id,
+                                      team_id: @m_soccer.id,
+                                      survey_type: 'Daily Wellness',
+                                      # for testing dates and stuff
+                                      datetime_today: Time.new(2018,4,6,23,59,59,'-04:00'),
+
+                                      hours_of_sleep: 7,
+                                      quality_of_sleep: 3,
+                                      academic_stress: 1,
+                                      life_stress: 1,
+                                      soreness: 3,
+                                      ounces_of_water_consumed: 90,
+                                      hydration_quality: true
+                                     })
+      @survey_dw_april_6_greg = survey_dw_april_6_service_greg.get_survey_object
+
     end
 
 
     def delete_stuff
-      @survey_post_1_march_30.delete
-      @survey_post_1_march_31.delete
-      @survey_post_2_april_1.delete
-      @survey_post_1_april_2.delete
-      @survey_post_1_april_3.delete
-      @survey_post_1_april_4.delete
-      @survey_post_1_april_5.delete
-      @survey_post_1_april_6.delete
+      @survey_post_1_march_30_alec.delete
+      @survey_post_1_march_31_alec.delete
+      @survey_post_2_april_1_alec.delete
+      @survey_post_1_april_2_alec.delete
+      @survey_post_1_april_3_alec.delete
+      @survey_post_1_april_4_alec.delete
+      @survey_post_1_april_5_alec.delete
+      @survey_post_1_april_6_alec.delete
 
-      @survey_dw_march_30.delete
-      @survey_dw_march_31.delete
-      @survey_dw_april_1.delete
-      @survey_dw_april_2.delete
-      @survey_dw_april_3.delete
-      @survey_dw_april_4.delete
-      @survey_dw_april_5.delete
-      @survey_dw_april_6.delete
+      @survey_dw_march_30_alec.delete
+      @survey_dw_march_31_alec.delete
+      @survey_dw_april_1_alec.delete
+      @survey_dw_april_2_alec.delete
+      @survey_dw_april_3_alec.delete
+      @survey_dw_april_4_alec.delete
+      @survey_dw_april_5_alec.delete
+      @survey_dw_april_6_alec.delete
+
+      @survey_post_1_march_30_greg.delete
+      @survey_post_1_march_31_greg.delete
+      @survey_post_2_april_1_greg.delete
+      @survey_post_1_april_2_greg.delete
+      @survey_post_1_april_3_greg.delete
+      @survey_post_1_april_4_greg.delete
+      @survey_post_1_april_5_greg.delete
+      @survey_post_1_april_6_greg.delete
+
+      @survey_dw_march_30_greg.delete
+      @survey_dw_march_31_greg.delete
+      @survey_dw_april_1_greg.delete
+      @survey_dw_april_2_greg.delete
+      @survey_dw_april_3_greg.delete
+      @survey_dw_april_4_greg.delete
+      @survey_dw_april_5_greg.delete
+      @survey_dw_april_6_greg.delete
 
       # @survey_post_1_march_30
       # @survey_post_1_march_31
