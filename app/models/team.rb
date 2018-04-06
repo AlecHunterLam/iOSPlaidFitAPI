@@ -26,9 +26,10 @@ class Team < ApplicationRecord
 
     # Validations
     validates_presence_of :sport, :gender, :season, :active
-    validates_inclusion_of :sport, in: SPORTS.map{|key, value| value.to_s}, message: "is not a valid sport at Carnegie Mellon"
-    validates_inclusion_of :gender, in: GENDERS.map{|key, value| value.to_s}, message: "is not an option"
-    validates_inclusion_of :season, in: SEASONS.map{|key, value| value.to_s}, message: "is not a valid sports season"
+    # set to key for now, set to value later
+    validates_inclusion_of :sport, in: SPORTS.map{|key, value| key}, message: "is not a valid sport at Carnegie Mellon"
+    validates_inclusion_of :gender, in: GENDERS.map{|key, value| key}, message: "is not an option"
+    validates_inclusion_of :season, in: SEASONS.map{|key, value| key}, message: "is not a valid sports season"
 
     # Methods
 

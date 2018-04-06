@@ -44,8 +44,8 @@
             },
             {
               "paramType": "form",
-              "name": "date",
-              "type": "date",
+              "name": "practice_time",
+              "type": "datetime",
               "description": "Date",
               "required": true
             }
@@ -118,8 +118,8 @@
             },
             {
               "paramType": "form",
-              "name": "date",
-              "type": "date",
+              "name": "practice_time",
+              "type": "datetime",
               "description": "Date",
               "required": false
             }

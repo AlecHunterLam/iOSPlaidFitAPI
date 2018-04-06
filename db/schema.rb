@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402213954) do
+ActiveRecord::Schema.define(version: 20180406021333) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -67,6 +67,8 @@ ActiveRecord::Schema.define(version: 20180402213954) do
     t.float "personal_performance_average"
     t.float "practice_difficulty_average"
     t.datetime "week_of"
+    t.float "monotony"
+    t.float "week_to_week_weekly_load_percent_change"
   end
 
   create_table "practices", force: :cascade do |t|
@@ -89,7 +91,6 @@ ActiveRecord::Schema.define(version: 20180402213954) do
     t.float "session_load"
     t.float "daily_load"
     t.float "daily_strain"
-    t.float "monotony"
     t.float "hours_of_sleep"
     t.integer "quality_of_sleep"
     t.integer "academic_stress"
@@ -103,6 +104,14 @@ ActiveRecord::Schema.define(version: 20180402213954) do
     t.integer "minutes_participated"
     t.float "expected_session_load"
     t.integer "practice_id"
+    t.float "weekly_strain"
+    t.float "weekly_load"
+    t.float "acute_load"
+    t.float "chronic_load"
+    t.float "a_c_ratio"
+    t.float "week_to_week_weekly_load_percent_change"
+    t.float "freshness_index"
+    t.float "monotony"
   end
 
   create_table "team_assignments", force: :cascade do |t|
@@ -132,6 +141,8 @@ ActiveRecord::Schema.define(version: 20180402213954) do
     t.float "sleep_quality_average"
     t.float "hydration_quality_average"
     t.float "practice_difficulty_average"
+    t.float "team_monotony"
+    t.float "week_to_week_weekly_load_percent_change"
   end
 
   create_table "teams", force: :cascade do |t|

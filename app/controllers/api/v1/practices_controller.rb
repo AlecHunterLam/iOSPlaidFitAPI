@@ -20,7 +20,7 @@ module Api::V1
             param :form, :team_id, :integer, :required, "Team ID"
             param :form, :duration, :integer, :required, "Duration"
             param :form, :difficulty, :integer, :required, "Difficulty"
-            param :form, :date, :date, :required, "Date"
+            param :form, :practice_time, :datetime, :required, "Date"
             response :not_acceptable
         end
 
@@ -30,7 +30,7 @@ module Api::V1
             param :path, :team_id, :integer, :required, "Team ID"
             param :form, :duration, :integer, :optional, "Duration"
             param :form, :difficulty, :integer, :optional, "Difficulty"
-            param :form, :date, :date, :optional, "Date"
+            param :form, :practice_time, :datetime, :optional, "Date"
             response :not_found
             response :not_acceptable
         end
@@ -87,7 +87,7 @@ module Api::V1
 
         # Only allow a trusted parameter "white list" through.
         def practice_params
-            params.permit(:team_id, :duration, :difficulty, :date)
+            params.permit(:team_id, :duration, :difficulty, :practice_time)
         end
 
     end

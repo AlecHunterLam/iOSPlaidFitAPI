@@ -3,7 +3,7 @@ class Survey < ApplicationRecord
     before_save :type_survey_fields_nil
 
     # Array constants
-    SURVEY_TYPES = [['Daily Wellness', :daily_wellness], ['Post-Practice', :post_practice]]
+    SURVEY_TYPES = [['Daily Wellness', :Daily_Wellness], ['Post-Practice', :Post_Practice]]
 
 
     # Relationships
@@ -11,17 +11,18 @@ class Survey < ApplicationRecord
     belongs_to :practice, optional: true
 
     # Scopes
-    scope :surveys_on_date,  -> (startTime,endTime)         { where("completed_time BETWEEN startTime AND endTime") }
+    scope :surveys_on_date,  -> (startTime,endTime)         { where("completed_time BETWEEN ? AND ?",startTime,endTime) }
     scope :for_user,         -> (user_id)                   { where("user_id == ?", user_id) }
-    scope :daily_wellness,                               -> { where("survey_type == daily_wellness") }
-    scope :post_practice,                                -> { where("survey_type == post_practice") }
-    scope :surveys_for_week,  -> (startWeek,endWeek)        { where("completed_time BETWEEN startTime AND endTime") }
+    scope :daily_wellness,                               -> { where("survey_type == ?", :daily_wellness) }
+    scope :post_practice,                                -> { where("survey_type == ?", :post_practice) }
+    scope :surveys_for_week,  -> (startWeek,endWeek)        { joins(:practice).where("practice_time BETWEEN ? AND ?",startWeek,endWeek) }
 
     # Validations
-    validates_presence_of :survey_type, :completed
+    validates_presence_of :survey_type, :completed_time
     validates_presence_of :season, message: "is not a valid season for this survey"
-    validates_inclusion_of :type, in: SURVEY_TYPES.map{|key, value| value}, message: "is not a valid survey type"
-    validates_date :completed, on_or_before: Time.now
+    # check this validation below
+    validates_inclusion_of :survey_type, in: SURVEY_TYPES.map{|key, value| key}, message: "is not a valid survey type"
+    validates_date :completed_time, on_or_before: Time.now
 
     validate :validate_season
 
@@ -30,9 +31,9 @@ class Survey < ApplicationRecord
 
     # if daily wellness survey, need to have all answers for the wellness portion
     def validate_daily_wellness
-      if self.survey_type == :post_practice
+      if self.survey_type == "Post-Practice"
         return true
-      elsif self.survey_type == :daily_wellness
+      elsif self.survey_type == "Daily Wellness"
         # check that all fields are not nil, since we are in daily wellness
         if !(self.hours_of_sleep.nil?) && (self.quality_of_sleep.nil?) && !(self.academic_stress.nil?) && !(self.life_stress.nil?) && !(self.soreness.nil?) && !(self.ounces_of_water_consumed.nil?) && !(self.hydration_quality.nil?)
           # validate the types of all of the fields, and that all are above 0
@@ -51,9 +52,9 @@ class Survey < ApplicationRecord
 
     # if post practice survey, need to have all answers for the wellness portion
     def validate_post_practice
-      if self.survey_type == :daily_wellness
+      if self.survey_type == "Daily Wellness"
         return true
-      elsif self.survey_type == :post_practice
+      elsif self.survey_type == "Post-Practice"
         # check that all fields are not nil, since we are in post practice
         if !(self.player_rpe_rating.nil?) && (self.player_personal_performance.nil?) && !(self.player_personal_performance.nil?) && !(self.participated_in_full_practice.nil?) && !(self.minutes_participated.nil?)
           # validate the types of all of the fields, and that all are above 0
@@ -72,7 +73,7 @@ class Survey < ApplicationRecord
 
     # after validating, set all inactive fields to false based on the type of the survey
     def type_survey_fields_nil
-      if self.survey_type == :daily_wellness
+      if self.survey_type == "Daily Wellness"
         self.player_rpe_rating = nil
         self.player_personal_performance = nil
         self.participated_in_full_practice = nil
@@ -88,8 +89,6 @@ class Survey < ApplicationRecord
         self.hydration_quality = nil
       end
     end
-
-
 
     # Methods
     private

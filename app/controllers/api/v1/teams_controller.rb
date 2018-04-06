@@ -5,8 +5,6 @@ module Api::V1
 
         swagger_api :index do
             summary "Fetches all Teams"
-            param :query, :active, :boolean, :optional, "Filter on whether or not the team is active"
-            param :query, :fall_teams, :boolean, :optional, "Filter teams by the Fall season"
             notes "This lists all the Teams"
         end
 
