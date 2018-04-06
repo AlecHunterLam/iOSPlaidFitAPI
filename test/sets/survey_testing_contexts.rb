@@ -1,5 +1,5 @@
 module Contexts
-  module TeamAssignmentContexts
+  module SurveyTestingContexts
 
     def create_stuff
       # soccer team
