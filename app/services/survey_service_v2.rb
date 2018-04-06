@@ -11,7 +11,7 @@ class SurveyService
     @practice_id = params[:practice_id]
 
     @survey_type = params[:survey_type]
-    @completed_time = Time.now
+    @completed_time = params[:datetime_today].ago(1000) # Time.now  ==> FOR TESTING REASONS, SUPPLY THE CURRENT DATE
 
     # set user object
     @user = User.find(@user_id)

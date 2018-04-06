@@ -3,7 +3,7 @@ module Contexts
 
     def create_stuff
       # soccer team
-      @m_soccer = Team.new(sport: "Soccer", gender: "Men", season: "Fall", active: true)
+      @m_soccer = Team.create(sport: "Soccer", gender: "Men", season: "Fall", active: true)
 
       # players
       @alec = User.create(first_name: "Alec", last_name: "Lam", andrew_id: "ahlam", email: "ahlam@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "Player", active: true, year: "Junior")
