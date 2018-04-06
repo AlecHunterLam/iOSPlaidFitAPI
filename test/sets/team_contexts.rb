@@ -1,7 +1,7 @@
 module Contexts
   module TeamContexts
     def create_teams
-      @msoccer = Team.create(sport: “soccer”, gender: “Men”, season: "fall", active: true)
+      @msoccer = Team.new(sport: "Soccer", gender: "Men", season: "Fall", active: true)
     end
 
     def delete_teams

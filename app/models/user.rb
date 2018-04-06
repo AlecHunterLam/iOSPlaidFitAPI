@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   # Constants
   ROLES = [['Player', :player], ['Athletic Trainer', :athletic_trainer], ['Coach',:coach], ['Guest', :guest]]
-  MAJORS = [['Information Systems', :is], ['Computer Science', :cs], ['Other', :other]]
+  MAJORS = [['Information Systems', :is], ['Computer Science', :cs], ['Other', :other], ['Engineering',:engineering], ['Business', :business]]
   CLASSES = [['Freshman', :freshman], ['Sophomore', :sophomore], ['Junior', :junior], ['Senior', :senior], ['Other', :other]]
 
   # Relationships
@@ -26,15 +26,12 @@ class User < ApplicationRecord
   scope :by_andrew_id,  ->  (andrew_id)    { where("andrew_id == ?", andrew_id) }
   scope :by_major,      ->  (major)        { where("major == ?", major) }
 
-
-
-
   # Validations
   validates_presence_of :andrew_id, :email, :major, :role, :active
   # need to know format of andrew id's to write regex for it
-  validates_inclusion_of :major, in: MAJORS.map{|key, value| value.to_s}, message: "is not a major in the system"
-  validates_inclusion_of :role, in: ROLES.map{|key, value| value.to_s}, message: "is not a valid role"
-  validates_inclusion_of :year, in: CLASSES.map{|key, value| value.to_s}, message: "is not a valid year"
+  validates_inclusion_of :major, in: MAJORS.map{|key, value| key}, message: "is not a major in the system"
+  validates_inclusion_of :role, in: ROLES.map{|key, value| key}, message: "is not a valid role"
+  validates_inclusion_of :year, in: CLASSES.map{|key, value| key}, message: "is not a valid year"
   validates :phone, format: { with: /\A\(?\d{3}\)?[-. ]?\d{3}[-.]?\d{4}\z/, message: "should be 10 digits (area code needed) and delimited with dashes only", allow_blank: true }
   validates :email, format: { with: /\A[\w]([^@\s,;]+)@(([\w-]+\.)+(com|edu|org|net|gov|mil|biz|info))\z/i, message: "is not a valid format email" }
   validates :andrew_id, format: { with: /\A[a-z0-9]+\z/, message: "is not a valid format for an Andrew ID" }
