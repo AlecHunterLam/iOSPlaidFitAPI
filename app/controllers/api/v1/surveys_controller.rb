@@ -18,7 +18,7 @@ module Api::V1
         swagger_api :create do
             summary "Creates a new Survey"
             param :form, :user_id, :integer, :required, "User ID"
-            param :form, :type, :string, :required, "Type"
+            param :form, :survey_type, :string, :required, "survey_type"
             param :form, :response, :string, :required, "Response"
             param :form, :season, :string, :required, "Season"
             param :form, :completed, :date, :required, "Completed Date"
@@ -29,7 +29,7 @@ module Api::V1
             summary "Updates an existing Survey"
             param :path, :id, :integer, :required, "Survey ID"
             param :path, :user_id, :integer, :required, "User ID"
-            param :form, :type, :string, :optional, "Type"
+            param :form, :survey_type, :string, :optional, "survey_type"
             param :form, :response, :string, :optional, "Response"
             param :form, :season, :string, :optional, "Season"
             param :form, :completed, :date, :optional, "Completed Date"
@@ -89,7 +89,7 @@ module Api::V1
 
         # Only allow a trusted parameter "white list" through.
         def survey_params
-            params.permit(:type, :user_id, :response, :completed, :season)
+            params.permit(:survey_type, :user_id, :response, :completed, :season)
         end
 
     end
