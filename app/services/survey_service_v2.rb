@@ -16,7 +16,7 @@ class SurveyService
     @user = User.find(@user_id)
     @team = Team.find(@team_id)
     # date fields for further calculation
-    @current_datetime = Time.now
+    @current_datetime = parmas[:datetime_today] # Time.now  ==> FOR TESTING REASONS, SUPPLY THE CURRENT DATE
     @current_day = @current_datetime.day
     @current_month = @current_datetime.month
     @current_year = @current_datetime.year

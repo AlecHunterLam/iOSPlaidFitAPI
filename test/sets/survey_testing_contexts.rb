@@ -12,25 +12,53 @@ module Contexts
       @sam = User.create(first_name: "Sam", last_name: "Fazel", andrew_id: "sfazelsa", email: "sfazelsa@andrew.cmu.edu", major: "Engineering", phone: "1111111111", role: "Player", active: true, year: "Junior")
 
       # team assignments
-      @alecsoccer = TeamAssignment.create(team: @msoccer, user: @alec, active: true, date_added: Time.now)
-      @gregsoccer = TeamAssignment.create(team: @msoccer, user: @greg, active: true, date_added: Time.now)
-      @zacksoccer = TeamAssignment.create(team: @msoccer, user: @zack, active: true, date_added: Time.now)
-      @samsoccer = TeamAssignment.create(team: @msoccer, user: @sam, active: true, date_added: Time.now)
+      @alec_soccer = TeamAssignment.create(team: @m_soccer, user: @alec, active: true, date_added: Time.now)
+      @greg_soccer = TeamAssignment.create(team: @m_soccer, user: @greg, active: true, date_added: Time.now)
+      @zack_soccer = TeamAssignment.create(team: @m_soccer, user: @zack, active: true, date_added: Time.now)
+      @sam_soccer = TeamAssignment.create(team: @m_soccer, user: @sam, active: true, date_added: Time.now)
+
+      # Practices from today (April 6, 2018) back to March 30, 2018
+      # with a double session on April 1st, 2018 ==> 8 day spread
+
+      # 4/6/2018
+      @practice_1_april_6 = Practice.create(team: @m_soccer, duration: 120, difficulty: 6, practice_time: Time.new(2018,4,6,8,30,0,'-04:00'))
+      @practice_1_april_5 = Practice.create(team: @m_soccer, duration: 0, difficulty: 0, practice_time: Time.new(2018,4,5,11,0,0,'-04:00'))
+      @practice_1_april_4 = Practice.create(team: @m_soccer, duration: 30, difficulty: 2, practice_time: Time.new(2018,4,4,13,0,0,'-04:00'))
+      @practice_1_april_3 = Practice.create(team: @m_soccer, duration: 90, difficulty: 4, practice_time: Time.new(2018,4,3,12,0,0,'-04:00'))
+      @practice_1_april_2 = Practice.create(team: @m_soccer, duration: 180, difficulty: 9, practice_time: Time.new(2018,4,2,19,0,0,'-04:00'))
+      @practice_2_april_1 = Practice.create(team: @m_soccer, duration: 120, difficulty: 7, practice_time: Time.new(2018,4,1,16,0,0,'-04:00'))
+      @practice_1_april_1 = Practice.create(team: @m_soccer, duration: 120, difficulty: 1, practice_time: Time.new(2018,4,1,6,0,0,'-04:00'))
+      @practice_1_march_31 = Practice.create(team: @m_soccer, duration: 60, difficulty: 5, practice_time: Time.new(2018,3,31,16,30,0,'-04:00'))
+      @practice_1_march_30 = Practice.create(team: @m_soccer, duration: 120, difficulty: 8, practice_time: Time.new(2018,3,30,16,0,0,'-04:00'))
+
+
+      # Alec's post-practice surveys
+      @
     end
 
 
     def delete_stuff
-      @alecsoccer.delete
-      @gregsoccer.delete
-      @zacksoccer.delete
-      @samsoccer.delete
+      @alec_soccer.delete
+      @greg_soccer.delete
+      @zack_soccer.delete
+      @sam_soccer.delete
+
+      @practice_1_april_6.delete
+      @practice_1_april_5.delete
+      @practice_1_april_4.delete
+      @practice_1_april_3.delete
+      @practice_1_april_2.delete
+      @practice_2_april_1.delete
+      @practice_1_april_1.delete
+      @practice_1_march_31.delete
+      @practice_1_march_30.delete
 
       @alec.delete
       @greg.delete
       @zack.delete
       @sam.delete
 
-      @msoccer.delete
+      @m_soccer.delete
     end
 
   end

@@ -22,31 +22,14 @@ class Practice < ApplicationRecord
 
     # Validations
     validates_presence_of :team_id, :duration, :difficulty, :practice_time
-    validates :duration, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 180 }
-    validates :difficulty, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 10 }
+    validates :duration, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 180 }
+    validates :difficulty, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 10 }
     validates_date :practice_time
-    # practice must be on the same day as today, or in the future
-    validate :practice_day_validation
+    # practice must be on the same day as today, or in the future => removed for development
+    # validates_date :practice_time, on_or_after: Time.now
 
     # Methods
 
-    # check that the date of the practice is today or in the future
-    def practice_day_validation
-      practice_day = self.practice_time.day
-      practice_month = self.practice_time.month
-      practice_year = self.practice_time.year
-      current_day = Time.now.day
-      current_month = Time.now.day
-      current_year = Time.now.year
-      # practice in the past
-      if (practice_day < current_day && (practice_month <= current_month || practice_year <= current_year))
-        return false
-      elsif practice_day < current_day || practice_month < current_month || practice_year < current_year
-        return false
-      else
-        return true
-      end
-    end
 
     def calculate_session_load
       self.session_load = self.duration * self.difficulty

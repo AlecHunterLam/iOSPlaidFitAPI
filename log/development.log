@@ -40724,3 +40724,161 @@ Migrating to AddMonotonyToSurveys (20180406021333)
   [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 14]]
   [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 15]]
   [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "ahlam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Alec"], ["last_name", "Lam"], ["andrew_id", "ahlam"], ["email", "ahlam@andrew.cmu.edu"], ["major", "Information Systems"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:56:44.790544"], ["updated_at", "2018-04-06 00:56:44.790544"], ["year", "Junior"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "gbellwoa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Greg"], ["last_name", "Bellwoar"], ["andrew_id", "gbellwoa"], ["email", "gbellwoa@andrew.cmu.edu"], ["major", "Business"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:56:44.795309"], ["updated_at", "2018-04-06 00:56:44.795309"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "zpm"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Zack"], ["last_name", "Masciopinto"], ["andrew_id", "zpm"], ["email", "zpm@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:56:44.798293"], ["updated_at", "2018-04-06 00:56:44.798293"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "sfazelsa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "andrew_id", "email", "major", "phone", "role", "active", "created_at", "updated_at", "year") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sam"], ["last_name", "Fazel"], ["andrew_id", "sfazelsa"], ["email", "sfazelsa@andrew.cmu.edu"], ["major", "Engineering"], ["phone", "1111111111"], ["role", "Player"], ["active", "t"], ["created_at", "2018-04-06 00:56:44.801331"], ["updated_at", "2018-04-06 00:56:44.801331"], ["year", "Junior"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "Soccer"], ["gender", "Men"], ["season", "Fall"], ["active", "t"], ["created_at", "2018-04-06 00:56:44.822500"], ["updated_at", "2018-04-06 00:56:44.822500"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 6], ["user_id", 16], ["created_at", "2018-04-06 00:56:44.824305"], ["updated_at", "2018-04-06 00:56:44.824305"], ["active", "t"], ["date_added", "2018-04-06 00:56:44.806698"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 6], ["user_id", 17], ["created_at", "2018-04-06 00:56:44.826901"], ["updated_at", "2018-04-06 00:56:44.826901"], ["active", "t"], ["date_added", "2018-04-06 00:56:44.826060"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 6], ["user_id", 18], ["created_at", "2018-04-06 00:56:44.829263"], ["updated_at", "2018-04-06 00:56:44.829263"], ["active", "t"], ["date_added", "2018-04-06 00:56:44.828560"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "user_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?, ?)[0m  [["team_id", 6], ["user_id", 19], ["created_at", "2018-04-06 00:56:44.832191"], ["updated_at", "2018-04-06 00:56:44.832191"], ["active", "t"], ["date_added", "2018-04-06 00:56:44.831046"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 6], ["duration", 120], ["difficulty", 6], ["practice_time", "2018-04-06 08:30:00"], ["created_at", "2018-04-06 00:56:48.554116"], ["updated_at", "2018-04-06 00:56:48.554116"], ["session_load", 720.0]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPractice Load (0.8ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "ahlam"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "gbellwoa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "zpm"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "sfazelsa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "ahlam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "teams" ("sport", "gender", "season", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["sport", "Soccer"], ["gender", "Men"], ["season", "Fall"], ["active", "t"], ["created_at", "2018-04-06 00:58:39.629877"], ["updated_at", "2018-04-06 00:58:39.629877"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 7], ["created_at", "2018-04-06 00:58:39.631983"], ["updated_at", "2018-04-06 00:58:39.631983"], ["active", "t"], ["date_added", "2018-04-06 00:58:39.610988"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "gbellwoa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 7], ["created_at", "2018-04-06 00:58:39.636405"], ["updated_at", "2018-04-06 00:58:39.636405"], ["active", "t"], ["date_added", "2018-04-06 00:58:39.634097"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "zpm"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 7], ["created_at", "2018-04-06 00:58:39.640511"], ["updated_at", "2018-04-06 00:58:39.640511"], ["active", "t"], ["date_added", "2018-04-06 00:58:39.638205"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."andrew_id" = ? LIMIT ?[0m  [["andrew_id", "sfazelsa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "team_assignments" ("team_id", "created_at", "updated_at", "active", "date_added") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 7], ["created_at", "2018-04-06 00:58:39.645712"], ["updated_at", "2018-04-06 00:58:39.645712"], ["active", "t"], ["date_added", "2018-04-06 00:58:39.642221"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 120], ["difficulty", 6], ["practice_time", "2018-04-06 08:30:00"], ["created_at", "2018-04-06 00:58:42.690417"], ["updated_at", "2018-04-06 00:58:42.690417"], ["session_load", 720.0]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPractice Load (4.9ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPractice Load (1.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+  [1m[35m (1.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 5]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 0], ["difficulty", 0], ["practice_time", "2018-04-05 11:00:00"], ["created_at", "2018-04-06 00:59:39.818837"], ["updated_at", "2018-04-06 00:59:39.818837"], ["session_load", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 30], ["difficulty", 2], ["practice_time", "2018-04-04 13:00:00"], ["created_at", "2018-04-06 00:59:51.499178"], ["updated_at", "2018-04-06 00:59:51.499178"], ["session_load", 60.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 90], ["difficulty", 4], ["practice_time", "2018-04-03 12:00:00"], ["created_at", "2018-04-06 00:59:51.506376"], ["updated_at", "2018-04-06 00:59:51.506376"], ["session_load", 360.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 180], ["difficulty", 9], ["practice_time", "2018-04-02 19:00:00"], ["created_at", "2018-04-06 00:59:51.513263"], ["updated_at", "2018-04-06 00:59:51.513263"], ["session_load", 1620.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 120], ["difficulty", 7], ["practice_time", "2018-04-01 16:00:00"], ["created_at", "2018-04-06 00:59:51.519240"], ["updated_at", "2018-04-06 00:59:51.519240"], ["session_load", 840.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 120], ["difficulty", 1], ["practice_time", "2018-04-01 06:00:00"], ["created_at", "2018-04-06 00:59:51.525052"], ["updated_at", "2018-04-06 00:59:51.525052"], ["session_load", 120.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 60], ["difficulty", 5], ["practice_time", "2018-03-31 16:30:00"], ["created_at", "2018-04-06 00:59:51.531229"], ["updated_at", "2018-04-06 00:59:51.531229"], ["session_load", 300.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 120], ["difficulty", 8], ["practice_time", "2018-03-30 16:00:00"], ["created_at", "2018-04-06 00:59:51.538191"], ["updated_at", "2018-04-06 00:59:51.538191"], ["session_load", 960.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "practices" WHERE "practices"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 120], ["difficulty", 6], ["practice_time", "2018-04-06 08:30:00"], ["created_at", "2018-04-06 01:01:29.784440"], ["updated_at", "2018-04-06 01:01:29.784440"], ["session_load", 720.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 0], ["difficulty", 0], ["practice_time", "2018-04-05 11:00:00"], ["created_at", "2018-04-06 01:01:29.792350"], ["updated_at", "2018-04-06 01:01:29.792350"], ["session_load", 0.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 30], ["difficulty", 2], ["practice_time", "2018-04-04 13:00:00"], ["created_at", "2018-04-06 01:01:29.798949"], ["updated_at", "2018-04-06 01:01:29.798949"], ["session_load", 60.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 90], ["difficulty", 4], ["practice_time", "2018-04-03 12:00:00"], ["created_at", "2018-04-06 01:01:29.806991"], ["updated_at", "2018-04-06 01:01:29.806991"], ["session_load", 360.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 180], ["difficulty", 9], ["practice_time", "2018-04-02 19:00:00"], ["created_at", "2018-04-06 01:01:29.814975"], ["updated_at", "2018-04-06 01:01:29.814975"], ["session_load", 1620.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 120], ["difficulty", 7], ["practice_time", "2018-04-01 16:00:00"], ["created_at", "2018-04-06 01:01:29.821700"], ["updated_at", "2018-04-06 01:01:29.821700"], ["session_load", 840.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 120], ["difficulty", 1], ["practice_time", "2018-04-01 06:00:00"], ["created_at", "2018-04-06 01:01:29.829364"], ["updated_at", "2018-04-06 01:01:29.829364"], ["session_load", 120.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 60], ["difficulty", 5], ["practice_time", "2018-03-31 16:30:00"], ["created_at", "2018-04-06 01:01:29.836671"], ["updated_at", "2018-04-06 01:01:29.836671"], ["session_load", 300.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "practices" ("team_id", "duration", "difficulty", "practice_time", "created_at", "updated_at", "session_load") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 7], ["duration", 120], ["difficulty", 8], ["practice_time", "2018-03-30 16:00:00"], ["created_at", "2018-04-06 01:01:29.879775"], ["updated_at", "2018-04-06 01:01:29.879775"], ["session_load", 960.0]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT "practices".* FROM "practices"[0m
