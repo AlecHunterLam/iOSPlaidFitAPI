@@ -4,6 +4,11 @@ class User < ApplicationRecord
   # downcase the andrew_id before validation
   before_validation :downcase_andrew_id, :reformat_phone
 
+  # token authentication
+  has_secure_password
+
+
+
 
   # Constants
   ROLES = [['Player', :player], ['Athletic Trainer', :athletic_trainer], ['Coach',:coach], ['Guest', :guest]]
@@ -36,6 +41,14 @@ class User < ApplicationRecord
   validates :email, format: { with: /\A[\w]([^@\s,;]+)@(([\w-]+\.)+(com|edu|org|net|gov|mil|biz|info))\z/i, message: "is not a valid format email" }
   validates :andrew_id, format: { with: /\A[a-z0-9]+\z/, message: "is not a valid format for an Andrew ID" }
   validates_uniqueness_of :andrew_id
+
+  # token authentication
+  validates_uniqueness_of :email, allow_blank: true
+  validates_presence_of :password, on: :create
+  validates_presence_of :password_confirmation, on: :create
+  validates_confirmation_of :password, message: "does not match"
+  validates_length_of :password, minimum: 6, message: "must be at least 6 characters long", allow_blank: true
+
 
   def name
     first_name + " " + last_name
