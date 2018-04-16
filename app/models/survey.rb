@@ -17,7 +17,7 @@ class Survey < ApplicationRecord
     scope :daily_wellness_serializer,                               -> { where("survey_type == 'Daily Wellness'") }
     scope :post_practice_serializer,                               -> { where("survey_type == 'Post-Practice'") }
 
-    scope :daily_wellness,                               -> { where("survey_type == ?", 'Dailt Wellness') }
+    scope :daily_wellness,                               -> { where("survey_type == ?", 'Daily Wellness') }
     scope :post_practice,                                -> { where("survey_type == ?", 'Post-Practice') }
     scope :surveys_for_week,  -> (startWeek,endWeek)        { joins(:practice).where("practice_time BETWEEN ? AND ?",startWeek,endWeek) }
 
