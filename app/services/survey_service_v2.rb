@@ -405,10 +405,33 @@ class SurveyService
 
   # get array of daily loads of every day (no repeats)
   def get_week_daily_loads(weeks_surveys)
-    daily_hash = {"Monday":0, "Tuesday":0, "Wednesday":0, "Thursday":0, "Friday":0, "Saturday":0, "Sunday":0}
+    daily_hash = {monday: 0, tuesday:0, wednesday:0, thursday:0, friday:0, saturday:0, sunday:0}
+
+    # weeks_surveys.each do |survey|
+    #   survey_day_key = get_day_of_week(survey.completed_time)
+    # puts '- - - - - - - - - - - - - - - - - - - - - - - - '
+    # puts daily_hash[:monday]
+    # puts '- - - - - - - - - - - - - - - - - - - - - - - - '
+    #   daily_hash[survey_day_key] += survey.session_load
+    # end
     weeks_surveys.each do |survey|
-      survey_day_key = get_day_of_week(survey.completed_time)
-      daily_hash[survey_day_key] += survey.session_load
+      survey_datetime = survey.practice.practice_time
+      if survey_datetime.monday?
+        daily_hash[:monday] += survey.session_load
+      elsif survey_datetime.tuesday?
+        daily_hash[:tuesday] += survey.session_load
+      elsif survey_datetime.wednesday?
+        daily_hash[:wednesday] += survey.session_load
+      elsif survey_datetime.thursday?
+        daily_hash[:thursday] += survey.session_load
+      elsif survey_datetime.friday?
+        daily_hash[:friday] += survey.session_load
+      elsif survey_datetime.saturday?
+        daily_hash[:saturday] += survey.session_load
+      # elsif current_day.sunday?
+      else
+        daily_hash[:sunday] += survey.session_load
+      end
     end
     return daily_hash.values
   end

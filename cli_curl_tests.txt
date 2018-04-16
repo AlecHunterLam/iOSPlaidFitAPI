@@ -1,1 +1,5 @@
 curl -X POST --data "andrew_id=test&email=test@gmail.com&major=Information Systems&role=Player&password=secret&password_confirmation=secret&year=Sophomore&api_key=23" -H "Accept: application/json" "http://localhost:3000/v1/users"
+
+
+
+User.create(first_name: 'Alec', last_name: 'Lam', andrew_id: 'ahlam', email: 'ahlam@andrew.cmu.edu', major: 'Information Systems', role: 'Player', password: 'secret', password_confirmation: 'secret', year: 'Junior', phone: 1234567890)
