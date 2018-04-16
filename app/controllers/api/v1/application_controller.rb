@@ -61,8 +61,8 @@ module Api::V1
     protected
 
     def authenticate_username_password
-      authenticate_or_request_with_http_basic do |andrew_id, password|
-        user = User.authenticate(andrew_id, password)
+      authenticate_or_request_with_http_basic do |email, password|
+        user = User.authenticate(email, password)
         if user
           render json: user
         end

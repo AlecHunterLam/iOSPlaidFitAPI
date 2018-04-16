@@ -61,15 +61,14 @@ class User < ApplicationRecord
   end
 
   # login by andrew_id
-  def self.authenticate(andrew_id, password)
-    User.by_andrew_id(andrew_id).try(:authenticate, password)
+  def self.authenticate(email, password)
+    find_by_email(email).try(:authenticate, password)
   end
 
   # get a random api key
   def generate_api_key
     begin
       self.api_key = SecureRandom.hex
-      puts "askjbdjksabdjkasbdjkbasjkdbasjkbaskjbdjksabdjkasbdjkbasjkdbasjkbaskjbdjksabdjkasbdjkbasjkdbasjkbaskjbdjksabdjkasbdjkbasjkdbasjkb"
     end while User.exists?(api_key: self.api_key)
   end
 
