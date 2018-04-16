@@ -48,7 +48,10 @@ class User < ApplicationRecord
   validates_presence_of :password_confirmation, on: :create
   validates_confirmation_of :password, message: "does not match"
   validates_length_of :password, minimum: 6, message: "must be at least 6 characters long", allow_blank: true
+  validates_uniqueness_of :api_key
 
+  # Callback for token authentication
+  before_create :generate_api_key
 
   def name
     first_name + " " + last_name
@@ -56,6 +59,13 @@ class User < ApplicationRecord
 
   # Methods
   private
+
+  # get a random api key
+  def generate_api_key
+    begin
+      self.api_key = SecureRandom.hex
+    end while User.exists?(api_key: self.api_key)
+  end
 
   def reformat_phone
     phone = self.phone.to_s  # change to string in case input as all numbers

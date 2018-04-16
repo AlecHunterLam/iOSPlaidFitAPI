@@ -30,9 +30,9 @@
             },
             {
               "paramType": "form",
-              "name": "type",
+              "name": "survey_type",
               "type": "string",
-              "description": "Type",
+              "description": "survey_type",
               "required": true
             },
             {
@@ -111,9 +111,9 @@
             },
             {
               "paramType": "form",
-              "name": "type",
+              "name": "survey_type",
               "type": "string",
-              "description": "Type",
+              "description": "survey_type",
               "required": false
             },
             {
