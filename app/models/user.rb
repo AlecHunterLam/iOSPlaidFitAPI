@@ -32,7 +32,7 @@ class User < ApplicationRecord
   scope :by_major,      ->  (major)        { where("major == ?", major) }
 
   # Validations
-  validates_presence_of :andrew_id, :email, :major, :role, :active
+  validates_presence_of :andrew_id, :email, :major, :role, :active, :year
   # need to know format of andrew id's to write regex for it
   validates_inclusion_of :major, in: MAJORS.map{|key, value| key}, message: "is not a major in the system"
   validates_inclusion_of :role, in: ROLES.map{|key, value| key}, message: "is not a valid role"
@@ -53,19 +53,23 @@ class User < ApplicationRecord
   # Callback for token authentication
   before_create :generate_api_key
 
+
   def name
     first_name + " " + last_name
   end
-
-  # Methods
-  private
 
   # get a random api key
   def generate_api_key
     begin
       self.api_key = SecureRandom.hex
+      puts "askjbdjksabdjkasbdjkbasjkdbasjkbaskjbdjksabdjkasbdjkbasjkdbasjkbaskjbdjksabdjkasbdjkbasjkdbasjkbaskjbdjksabdjkasbdjkbasjkdbasjkb"
     end while User.exists?(api_key: self.api_key)
   end
+
+  # Methods
+  private
+
+
 
   def reformat_phone
     phone = self.phone.to_s  # change to string in case input as all numbers

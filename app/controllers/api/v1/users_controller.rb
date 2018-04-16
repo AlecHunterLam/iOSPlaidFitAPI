@@ -100,7 +100,7 @@ module Api::V1
     # whitelist parameters for a user to input and create/update
     def user_params
       # should only allow role if the current user is an admin. Leaving it like this for now, will come back to this.
-      params.permit(:first_name, :last_name, :andrew_id, :email, :major, :phone, :role, :password, :password_confirmation)
+      params.permit(:first_name, :last_name, :year, :andrew_id, :email, :major, :phone, :role, :password, :password_confirmation)
     end
 
   end
