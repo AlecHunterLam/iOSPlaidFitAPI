@@ -8,6 +8,15 @@
       "path": "/v1/player_calculations.json",
       "operations": [
         {
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            }
+          ],
           "summary": "Fetches all Player Calculations",
           "notes": "This lists all the Player Calculations",
           "nickname": "Api::V1::PlayerCalculations#index",
@@ -19,8 +28,14 @@
       "path": "/v1/player_calculations.json",
       "operations": [
         {
-          "summary": "Creates a new Player Calculation",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "form",
               "name": "user_id",
@@ -36,6 +51,7 @@
               "required": true
             }
           ],
+          "summary": "Creates a new Player Calculation",
           "responseMessages": [
             {
               "code": 406,
@@ -52,9 +68,14 @@
       "path": "/v1/player_calculations/{id}.json",
       "operations": [
         {
-          "summary": "Shows one Player Calculation",
-          "notes": "This lists details of one player calculation",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -63,6 +84,8 @@
               "required": true
             }
           ],
+          "summary": "Shows one Player Calculation",
+          "notes": "This lists details of one player calculation",
           "responseMessages": [
             {
               "code": 404,
@@ -79,8 +102,14 @@
       "path": "/v1/player_calculations/{id}.json",
       "operations": [
         {
-          "summary": "Updates an existing Player Calculation",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -103,6 +132,7 @@
               "required": false
             }
           ],
+          "summary": "Updates an existing Player Calculation",
           "responseMessages": [
             {
               "code": 404,
@@ -124,7 +154,6 @@
       "path": "/v1/player_calculations/{id}.json",
       "operations": [
         {
-          "summary": "Deletes an existing Player Calculation",
           "parameters": [
             {
               "paramType": "path",
@@ -134,6 +163,7 @@
               "required": true
             }
           ],
+          "summary": "Deletes an existing Player Calculation",
           "responseMessages": [
             {
               "code": 404,

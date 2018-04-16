@@ -8,6 +8,15 @@
       "path": "/v1/events.json",
       "operations": [
         {
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            }
+          ],
           "summary": "Fetches all Events",
           "notes": "This lists all of the events",
           "nickname": "Api::V1::Events#index",
@@ -19,8 +28,14 @@
       "path": "/v1/events.json",
       "operations": [
         {
-          "summary": "Creates a new Event",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "form",
               "name": "user_id",
@@ -43,6 +58,7 @@
               "required": true
             }
           ],
+          "summary": "Creates a new Event",
           "responseMessages": [
             {
               "code": 406,
@@ -59,9 +75,14 @@
       "path": "/v1/events/{id}.json",
       "operations": [
         {
-          "summary": "Shows one Event",
-          "notes": "This lists details of one event",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -70,6 +91,8 @@
               "required": true
             }
           ],
+          "summary": "Shows one Event",
+          "notes": "This lists details of one event",
           "responseMessages": [
             {
               "code": 404,
@@ -86,8 +109,14 @@
       "path": "/v1/events/{id}.json",
       "operations": [
         {
-          "summary": "Updates an existing Event",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -117,6 +146,7 @@
               "required": false
             }
           ],
+          "summary": "Updates an existing Event",
           "responseMessages": [
             {
               "code": 404,
@@ -138,7 +168,6 @@
       "path": "/v1/events/{id}.json",
       "operations": [
         {
-          "summary": "Deletes an existing Event",
           "parameters": [
             {
               "paramType": "path",
@@ -148,6 +177,7 @@
               "required": false
             }
           ],
+          "summary": "Deletes an existing Event",
           "responseMessages": [
             {
               "code": 404,

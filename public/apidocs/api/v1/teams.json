@@ -8,6 +8,15 @@
       "path": "/v1/teams.json",
       "operations": [
         {
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            }
+          ],
           "summary": "Fetches all Teams",
           "notes": "This lists all the Teams",
           "nickname": "Api::V1::Teams#index",
@@ -19,8 +28,14 @@
       "path": "/v1/teams.json",
       "operations": [
         {
-          "summary": "Creates a new Team",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "form",
               "name": "sport",
@@ -50,6 +65,7 @@
               "required": true
             }
           ],
+          "summary": "Creates a new Team",
           "responseMessages": [
             {
               "code": 406,
@@ -66,9 +82,14 @@
       "path": "/v1/teams/{id}.json",
       "operations": [
         {
-          "summary": "Shows one Team",
-          "notes": "This lists details of one team",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -77,6 +98,8 @@
               "required": true
             }
           ],
+          "summary": "Shows one Team",
+          "notes": "This lists details of one team",
           "responseMessages": [
             {
               "code": 404,
@@ -93,8 +116,14 @@
       "path": "/v1/teams/{id}.json",
       "operations": [
         {
-          "summary": "Updates an existing Team",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -131,6 +160,7 @@
               "required": false
             }
           ],
+          "summary": "Updates an existing Team",
           "responseMessages": [
             {
               "code": 404,
@@ -152,7 +182,6 @@
       "path": "/v1/teams/{id}.json",
       "operations": [
         {
-          "summary": "Deletes an existing Team",
           "parameters": [
             {
               "paramType": "path",
@@ -162,6 +191,7 @@
               "required": true
             }
           ],
+          "summary": "Deletes an existing Team",
           "responseMessages": [
             {
               "code": 404,

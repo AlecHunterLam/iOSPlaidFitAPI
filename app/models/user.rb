@@ -1,4 +1,6 @@
+
 class User < ApplicationRecord
+  require 'bcrypt'
   # callbacks
 
   # downcase the andrew_id before validation
@@ -56,6 +58,11 @@ class User < ApplicationRecord
 
   def name
     first_name + " " + last_name
+  end
+
+  # login by andrew_id
+  def self.authenticate(andrew_id, password)
+    User.by_andrew_id(andrew_id).try(:authenticate, password)
   end
 
   # get a random api key

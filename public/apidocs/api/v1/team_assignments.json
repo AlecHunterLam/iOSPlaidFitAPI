@@ -8,6 +8,15 @@
       "path": "/v1/team_assignments.json",
       "operations": [
         {
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            }
+          ],
           "summary": "Fetches all Team Assignments",
           "notes": "This lists all the Team Assignments",
           "nickname": "Api::V1::TeamAssignments#index",
@@ -19,8 +28,14 @@
       "path": "/v1/team_assignments.json",
       "operations": [
         {
-          "summary": "Creates a new Team Assignment",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "form",
               "name": "team_id",
@@ -36,6 +51,7 @@
               "required": true
             }
           ],
+          "summary": "Creates a new Team Assignment",
           "responseMessages": [
             {
               "code": 406,
@@ -52,9 +68,14 @@
       "path": "/v1/team_assignments/{id}.json",
       "operations": [
         {
-          "summary": "Shows one Team Assignment",
-          "notes": "This lists details of one team assignment",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -63,6 +84,8 @@
               "required": true
             }
           ],
+          "summary": "Shows one Team Assignment",
+          "notes": "This lists details of one team assignment",
           "responseMessages": [
             {
               "code": 404,
@@ -79,8 +102,14 @@
       "path": "/v1/team_assignments/{id}.json",
       "operations": [
         {
-          "summary": "Updates an existing Team Assignment",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -89,6 +118,7 @@
               "required": true
             }
           ],
+          "summary": "Updates an existing Team Assignment",
           "responseMessages": [
             {
               "code": 404,
@@ -110,7 +140,6 @@
       "path": "/v1/team_assignments/{id}.json",
       "operations": [
         {
-          "summary": "Deletes an existing Team Assignment",
           "parameters": [
             {
               "paramType": "path",
@@ -120,6 +149,7 @@
               "required": true
             }
           ],
+          "summary": "Deletes an existing Team Assignment",
           "responseMessages": [
             {
               "code": 404,

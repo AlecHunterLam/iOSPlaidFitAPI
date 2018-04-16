@@ -1,5 +1,8 @@
 module Api::V1
   class UsersController < ApplicationController
+
+    include ActionController::HttpAuthentication::Basic::ControllerMethods
+    include ActionController::HttpAuthentication::Token::ControllerMethods
     # documentation
 
     swagger_controller :users, "User Management"

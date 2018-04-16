@@ -8,6 +8,15 @@
       "path": "/v1/surveys.json",
       "operations": [
         {
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            }
+          ],
           "summary": "Fetches all Surveys",
           "notes": "This lists all the Surveys",
           "nickname": "Api::V1::Surveys#index",
@@ -19,8 +28,14 @@
       "path": "/v1/surveys.json",
       "operations": [
         {
-          "summary": "Creates a new Survey",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "form",
               "name": "user_id",
@@ -57,6 +72,7 @@
               "required": true
             }
           ],
+          "summary": "Creates a new Survey",
           "responseMessages": [
             {
               "code": 406,
@@ -73,9 +89,14 @@
       "path": "/v1/surveys/{id}.json",
       "operations": [
         {
-          "summary": "Shows one Survey",
-          "notes": "This lists details of one survey",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -84,6 +105,8 @@
               "required": true
             }
           ],
+          "summary": "Shows one Survey",
+          "notes": "This lists details of one survey",
           "responseMessages": [
             {
               "code": 404,
@@ -100,8 +123,14 @@
       "path": "/v1/surveys/{id}.json",
       "operations": [
         {
-          "summary": "Updates an existing Survey",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -138,6 +167,7 @@
               "required": false
             }
           ],
+          "summary": "Updates an existing Survey",
           "responseMessages": [
             {
               "code": 404,
@@ -159,7 +189,6 @@
       "path": "/v1/surveys/{id}.json",
       "operations": [
         {
-          "summary": "Deletes an existing Survey",
           "parameters": [
             {
               "paramType": "path",
@@ -169,6 +198,7 @@
               "required": true
             }
           ],
+          "summary": "Deletes an existing Survey",
           "responseMessages": [
             {
               "code": 404,
