@@ -1,1 +1,1 @@
-curl -X POST --data "andrew_id=test&email=test@gmail.com&year=junior&major=Information Systems&role=Player&password=secret&password_confirmation=secret" -H "Accept: application/json" "http://localhost:3000/v1/users"
+curl -X POST --data "andrew_id=test&email=test@gmail.com&major=Information Systems&role=Player&password=secret&password_confirmation=secret&year=Sophomore&api_key=23" -H "Accept: application/json" "http://localhost:3000/v1/users"
