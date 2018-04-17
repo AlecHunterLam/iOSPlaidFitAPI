@@ -29,6 +29,7 @@ class User < ApplicationRecord
 
   # Scopes
   scope :by_role,       ->  (role)         { where("role == ?", role) }
+  scope :by_team,       ->  (team_id)      { joins(:team_assignments).where("team_assignments.team_id == ?", team_id) }
   scope :by_email,      ->  (email)        { where("email == ?", email) }
   scope :by_andrew_id,  ->  (andrew_id)    { where("andrew_id == ?", andrew_id) }
   scope :by_major,      ->  (major)        { where("major == ?", major) }
