@@ -1198,6 +1198,23 @@ module Contexts
                                         hydration_quality: true
                                        })
         @survey_dw_april_6_sam = survey_dw_april_6_service_sam.get_survey_object
+
+        survey_dw_april_6_service_sam = SurveyService.new({
+            user_id: @sam.id,
+            team_id: @m_soccer.id,
+            survey_type: 'Daily Wellness',
+            # for testing dates and stuff
+            datetime_today: Time.new(2018,4,17,23,59,59,'-04:00'),
+
+            hours_of_sleep: 4,
+            quality_of_sleep: 2,
+            academic_stress: 2,
+            life_stress: 1,
+            soreness: 3,
+            ounces_of_water_consumed: 60,
+            hydration_quality: true
+           })
+@survey_dw_april_6_sam = survey_dw_april_6_service_sam.get_survey_object
   
               # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
   
@@ -1486,6 +1503,22 @@ module Contexts
          })
   @survey_dw_april_6_allie = survey_dw_april_6_service_allie.get_survey_object
   
+  survey_dw_april_6_service_allie2 = SurveyService.new({
+    user_id: @llie.id,
+    team_id: @w_swim.id,
+    survey_type: 'Daily Wellness',
+    # for testing dates and stuff
+    datetime_today: Time.new(2018,4,17,23,59,59,'-04:00'),
+
+    hours_of_sleep: 4,
+    quality_of_sleep: 2,
+    academic_stress: 2,
+    life_stress: 1,
+    soreness: 3,
+    ounces_of_water_consumed: 60,
+    hydration_quality: true
+   })
+@survey_dw_april_6_allie2 = survey_dw_april_6_service_allie2.get_survey_object
   
       end
   
