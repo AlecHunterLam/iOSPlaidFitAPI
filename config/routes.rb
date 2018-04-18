@@ -13,6 +13,10 @@ Rails.application.routes.draw do
       resources :notifications
       resources :earned_badges
       resources :users
+
+      # retrieve token with path
+      get '/token',  to: 'application#token'
+      
     end
   end
 end

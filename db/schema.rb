@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406021333) do
+ActiveRecord::Schema.define(version: 20180416044451) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -162,10 +162,12 @@ ActiveRecord::Schema.define(version: 20180406021333) do
     t.string "major"
     t.string "phone"
     t.string "role"
-    t.boolean "active"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "year"
+    t.string "password_digest"
+    t.string "api_key"
   end
 
 end

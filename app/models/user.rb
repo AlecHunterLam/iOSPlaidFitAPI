@@ -1,8 +1,15 @@
+
 class User < ApplicationRecord
+  require 'bcrypt'
   # callbacks
 
   # downcase the andrew_id before validation
   before_validation :downcase_andrew_id, :reformat_phone
+
+  # token authentication
+  has_secure_password
+
+
 
 
   # Constants
@@ -27,7 +34,7 @@ class User < ApplicationRecord
   scope :by_major,      ->  (major)        { where("major == ?", major) }
 
   # Validations
-  validates_presence_of :andrew_id, :email, :major, :role, :active
+  validates_presence_of :andrew_id, :email, :major, :role, :active, :year
   # need to know format of andrew id's to write regex for it
   validates_inclusion_of :major, in: MAJORS.map{|key, value| key}, message: "is not a major in the system"
   validates_inclusion_of :role, in: ROLES.map{|key, value| key}, message: "is not a valid role"
@@ -37,12 +44,38 @@ class User < ApplicationRecord
   validates :andrew_id, format: { with: /\A[a-z0-9]+\z/, message: "is not a valid format for an Andrew ID" }
   validates_uniqueness_of :andrew_id
 
+  # token authentication
+  validates_uniqueness_of :email, allow_blank: true
+  validates_presence_of :password, on: :create
+  validates_presence_of :password_confirmation, on: :create
+  validates_confirmation_of :password, message: "does not match"
+  validates_length_of :password, minimum: 6, message: "must be at least 6 characters long", allow_blank: true
+  validates_uniqueness_of :api_key
+
+  # Callback for token authentication
+  before_create :generate_api_key
+
+
   def name
     first_name + " " + last_name
   end
 
+  # login by andrew_id
+  def self.authenticate(email, password)
+    find_by_email(email).try(:authenticate, password)
+  end
+
+  # get a random api key
+  def generate_api_key
+    begin
+      self.api_key = SecureRandom.hex
+    end while User.exists?(api_key: self.api_key)
+  end
+
   # Methods
   private
+
+
 
   def reformat_phone
     phone = self.phone.to_s  # change to string in case input as all numbers

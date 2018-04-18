@@ -8,6 +8,15 @@
       "path": "/v1/users.json",
       "operations": [
         {
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            }
+          ],
           "summary": "Fetches all Users",
           "notes": "Lists all of the users",
           "nickname": "Api::V1::Users#index",
@@ -19,9 +28,14 @@
       "path": "/v1/users.json",
       "operations": [
         {
-          "summary": "Creates a new User",
-          "notes": "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'.",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "form",
               "name": "andrew_id",
@@ -70,8 +84,24 @@
               "type": "string",
               "description": "Phone",
               "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "password",
+              "type": "password",
+              "description": "Password",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "password_confirmation",
+              "type": "password",
+              "description": "Password Confirmation",
+              "required": true
             }
           ],
+          "summary": "Creates a new User",
+          "notes": "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'.",
           "responseMessages": [
             {
               "code": 406,
@@ -88,9 +118,14 @@
       "path": "/v1/users/{id}.json",
       "operations": [
         {
-          "summary": "Shows one User",
-          "notes": "This lists details of one user",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -99,6 +134,8 @@
               "required": true
             }
           ],
+          "summary": "Shows one User",
+          "notes": "This lists details of one user",
           "nickname": "Api::V1::Users#show",
           "method": "get"
         }
@@ -108,9 +145,14 @@
       "path": "/v1/users/{id}.json",
       "operations": [
         {
-          "summary": "Updates an existing User",
-          "notes": "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'.",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -168,6 +210,8 @@
               "required": false
             }
           ],
+          "summary": "Updates an existing User",
+          "notes": "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'.",
           "responseMessages": [
             {
               "code": 404,
@@ -189,7 +233,6 @@
       "path": "/v1/users/{id}.json",
       "operations": [
         {
-          "summary": "Deletes an existing User",
           "parameters": [
             {
               "paramType": "path",
@@ -199,6 +242,7 @@
               "required": true
             }
           ],
+          "summary": "Deletes an existing User",
           "responseMessages": [
             {
               "code": 404,

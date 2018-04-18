@@ -8,6 +8,15 @@
       "path": "/v1/notifications.json",
       "operations": [
         {
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            }
+          ],
           "summary": "Fetches all Notifications",
           "notes": "This lists all of the notifications",
           "nickname": "Api::V1::Notifications#index",
@@ -19,8 +28,14 @@
       "path": "/v1/notifications.json",
       "operations": [
         {
-          "summary": "Creates a new Notification",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "form",
               "name": "sender_id",
@@ -50,6 +65,7 @@
               "required": false
             }
           ],
+          "summary": "Creates a new Notification",
           "responseMessages": [
             {
               "code": 406,
@@ -66,9 +82,14 @@
       "path": "/v1/notifications/{id}.json",
       "operations": [
         {
-          "summary": "Shows one Notification",
-          "notes": "This lists details of one notification",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -77,6 +98,8 @@
               "required": true
             }
           ],
+          "summary": "Shows one Notification",
+          "notes": "This lists details of one notification",
           "responseMessages": [
             {
               "code": 404,
@@ -93,8 +116,14 @@
       "path": "/v1/notifications/{id}.json",
       "operations": [
         {
-          "summary": "Updates an existing Notification",
           "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token in the format of: Token token=<token>",
+              "required": true
+            },
             {
               "paramType": "path",
               "name": "id",
@@ -131,6 +160,7 @@
               "required": false
             }
           ],
+          "summary": "Updates an existing Notification",
           "responseMessages": [
             {
               "code": 404,
@@ -152,7 +182,6 @@
       "path": "/v1/notifications/{id}.json",
       "operations": [
         {
-          "summary": "Deletes an existing Notification",
           "parameters": [
             {
               "paramType": "path",
@@ -162,6 +191,7 @@
               "required": true
             }
           ],
+          "summary": "Deletes an existing Notification",
           "responseMessages": [
             {
               "code": 404,

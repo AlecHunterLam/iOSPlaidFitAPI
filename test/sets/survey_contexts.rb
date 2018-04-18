@@ -40,4 +40,4 @@ module Contexts
       @post8.delete
     end
   end
-end 
+end
