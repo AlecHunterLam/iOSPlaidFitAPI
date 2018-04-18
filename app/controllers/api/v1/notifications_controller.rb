@@ -5,6 +5,7 @@ module Api::V1
 
     swagger_api :index do
       summary "Fetches all Notifications"
+      param :query, :for_receiver, :integer, :optional, "Filter on which user the notifications are for"
       notes "This lists all of the notifications"
     end
 
@@ -46,6 +47,9 @@ module Api::V1
     # GET /notifications
     def index
       @notifications = Notification.all
+      if (params[:for_receiver].present?)
+        @notifications = @notifications.for_receiver(params[:for_receiver])
+      end
       render json: @notifications
     end
 

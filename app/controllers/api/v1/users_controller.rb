@@ -9,6 +9,9 @@ module Api::V1
 
     swagger_api :index do
       summary "Fetches all Users"
+      param :query, :role, :string, :optional, "Filter on which role the user is"
+      param :query, :teamID, :integer, :optional, "Filter on which team the user is on"
+      param :query, :andrew_id, :string, :optional, "Select the one user with the given Andrew ID"
       notes "Lists all of the users"
     end
 
@@ -62,6 +65,15 @@ module Api::V1
     # GET /users
     def index
       @users = User.all
+      if (params[:role].present?)
+          @users = @users.by_role(params[:role])
+      end
+      if (params[:teamID].present?)
+          @users = @users.by_team(params[:teamID])
+      end
+      if (params[:andrew_id].present?)
+          @users = @users.by_andrew_id(params[:andrew_id])
+      end
       render json: @users
     end
 
