@@ -29,6 +29,13 @@
               "type": "integer",
               "description": "Filter on which team the user is on",
               "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "andrew_id",
+              "type": "string",
+              "description": "Select the one user with the given Andrew ID",
+              "required": false
             }
           ],
           "summary": "Fetches all Users",
