@@ -15,6 +15,27 @@
               "type": "string",
               "description": "Authentication token in the format of: Token token=<token>",
               "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "role",
+              "type": "string",
+              "description": "Filter on which role the user is",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "teamID",
+              "type": "integer",
+              "description": "Filter on which team the user is on",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "andrew_id",
+              "type": "string",
+              "description": "Select the one user with the given Andrew ID",
+              "required": false
             }
           ],
           "summary": "Fetches all Users",
