@@ -16,3 +16,15 @@ Notification.create(user_id: 5, receiver_id: 3, priority: "High", message: "Comp
 Notification.create(user_id: 5, receiver_id: 2, priority: "Low", message: "Complete your post practice survey", notified_time: Time.now)
 Notification.create(user_id: 5, receiver_id: 6, priority: "Medium", message: "Drink more water", notified_time: Time.now)
 Notification.create(user_id: 5, receiver_id: 2, priority: "High", message: "Get more sleep", notified_time: Time.now)
+
+
+create_table "events", force: :cascade do |t|
+  t.integer "user_id"
+  t.string "description"
+  t.datetime "event_time"
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+
+
+Event.create(user_id: 1, description: "Test today", event_time: Time.now + 100)
