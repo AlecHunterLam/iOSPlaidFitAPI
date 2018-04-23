@@ -6,8 +6,8 @@ class Notification < ApplicationRecord
   belongs_to :user
 
   # Scopes
-  scope :for_receiver,     -> (user) { where(receiver_id: user) }
-  scope :from_sender,      -> (user) { where(sender_id: user) }
+  scope :for_user_sent,     -> (user) { where(user_id: user) }
+  scope :for_user_received,      -> (user) { where(reveiver_id: user) }
   scope :for_priority,     -> (priority) { where(priority: priority) }
   scope :active,           -> { where(active: true) }
   scope :inactive,         -> { where(active: false)}
@@ -17,8 +17,8 @@ class Notification < ApplicationRecord
   # Validations
   validates_presence_of :sender_id, :receiver_id, :message, :active
   validates_timeliness_of :notified_time, on_or_before: Date.current
-  validates_inclusion_of :type, in: PRIORITIES.map{|key, value| value}, message: "is not a valid priority setting"
-  
+  validates_inclusion_of :type, in: PRIORITIES.map{|key, value| key}, message: "is not a valid priority setting"
+
   # Methods
 
 end

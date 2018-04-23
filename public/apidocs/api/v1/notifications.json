@@ -91,15 +91,15 @@
               "required": true
             },
             {
-              "paramType": "path",
-              "name": "id",
+              "paramType": "form",
+              "name": "user_id",
               "type": "integer",
-              "description": "Notification ID",
+              "description": "Sender ID",
               "required": true
             }
           ],
           "summary": "Shows one Notification",
-          "notes": "This lists details of one notification",
+          "notes": "This lists notifications for a specific user",
           "responseMessages": [
             {
               "code": 404,

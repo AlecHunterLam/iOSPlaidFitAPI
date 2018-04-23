@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180416044451) do
+ActiveRecord::Schema.define(version: 20180423011711) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20180416044451) do
   end
 
   create_table "notifications", force: :cascade do |t|
-    t.integer "sender_id"
+    t.integer "user_id"
     t.integer "receiver_id"
     t.string "priority"
     t.string "message"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 20180416044451) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "active"
-    t.integer "user_id"
   end
 
   create_table "player_calculations", force: :cascade do |t|

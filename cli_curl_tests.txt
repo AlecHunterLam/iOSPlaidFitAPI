@@ -3,3 +3,7 @@ curl -X POST --data "andrew_id=test&email=test@gmail.com&major=Information Syste
 
 
 User.create(first_name: 'Alec', last_name: 'Lam', andrew_id: 'ahlam', email: 'ahlam@andrew.cmu.edu', major: 'Information Systems', role: 'Player', password: 'secret', password_confirmation: 'secret', year: 'Junior', phone: 1234567890)
+
+a = User.create( first_name: "Alec", last_name: "ATC", andrew_id: "alec", email: "alec@gmail.com", phone: "1234567890", role: "Athletic Trainer", password: "secret", password_confirmation: "secret")
+
+Notification.create(, :receiver_id, :priority, :message)

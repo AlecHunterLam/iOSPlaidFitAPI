@@ -10,8 +10,8 @@ module Api::V1
 
     swagger_api :show do
       summary "Shows one Notification"
-      param :path, :id, :integer, :required, "Notification ID"
-      notes "This lists details of one notification"
+      param :form, :user_id, :integer, :required, "Sender ID"
+      notes "This lists notifications for a specific user"
       response :not_found
     end
 
@@ -49,9 +49,10 @@ module Api::V1
       render json: @notifications
     end
 
-    # GET /notifications/1
+    # GET /notifications/ => user_id = number
     def show
-      render json: @notification
+      @notifications_for_user = Notification.for_user(params[:user_id])
+      render json: @notifications_for_user
     end
 
     # POST /notifications
@@ -85,6 +86,8 @@ module Api::V1
     def set_notification
       @notification = Notification.find(params[:id])
     end
+
+
 
     def notification_params
       # should sender ID be the current logged in user? (current_user)

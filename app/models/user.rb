@@ -34,15 +34,16 @@ class User < ApplicationRecord
   scope :by_major,      ->  (major)        { where("major == ?", major) }
 
   # Validations
-  validates_presence_of :andrew_id, :email, :major, :role, :active, :year
+  validates_presence_of :andrew_id, :email, :role, :active
+  validate :presence_of_if_player #, message: "Player's must have both a year and major"
   # need to know format of andrew id's to write regex for it
-  validates_inclusion_of :major, in: MAJORS.map{|key, value| key}, message: "is not a major in the system"
+  validates_inclusion_of :major, in: MAJORS.map{|key, value| key}, message: "is not a major in the system", allow_blank: true
   validates_inclusion_of :role, in: ROLES.map{|key, value| key}, message: "is not a valid role"
-  validates_inclusion_of :year, in: CLASSES.map{|key, value| key}, message: "is not a valid year"
+  validates_inclusion_of :year, in: CLASSES.map{|key, value| key}, message: "is not a valid year", allow_blank: true
   validates :phone, format: { with: /\A\(?\d{3}\)?[-. ]?\d{3}[-.]?\d{4}\z/, message: "should be 10 digits (area code needed) and delimited with dashes only", allow_blank: true }
   validates :email, format: { with: /\A[\w]([^@\s,;]+)@(([\w-]+\.)+(com|edu|org|net|gov|mil|biz|info))\z/i, message: "is not a valid format email" }
   validates :andrew_id, format: { with: /\A[a-z0-9]+\z/, message: "is not a valid format for an Andrew ID" }
-  validates_uniqueness_of :andrew_id
+  validates_uniqueness_of :andrew_id #, message: "must be a valid Andrew ID"
 
   # token authentication
   validates_uniqueness_of :email, allow_blank: true
@@ -54,7 +55,6 @@ class User < ApplicationRecord
 
   # Callback for token authentication
   before_create :generate_api_key
-
 
   def name
     first_name + " " + last_name
@@ -75,7 +75,17 @@ class User < ApplicationRecord
   # Methods
   private
 
-
+  def presence_of_if_player
+    if self.role.nil?
+      return false
+    else
+      if self.role == "Player" && (self.year.nil? || self.major.nil?)
+        return false
+      else
+        return true
+      end
+    end
+  end
 
   def reformat_phone
     phone = self.phone.to_s  # change to string in case input as all numbers
