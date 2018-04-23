@@ -5,6 +5,7 @@ module Api::V1
 
     swagger_api :index do
       summary "Fetches all Notifications"
+      param :query, :for_receiver, :integer, :optional, "Filter on which user the notifications are for"
       notes "This lists all of the notifications"
       param :query, :chronological, :boolean, :optional, "Order notifications by time"
     end

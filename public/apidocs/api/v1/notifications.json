@@ -15,6 +15,13 @@
               "type": "string",
               "description": "Authentication token in the format of: Token token=<token>",
               "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "for_receiver",
+              "type": "integer",
+              "description": "Filter on which user the notifications are for",
+              "required": false
             }
           ],
           "summary": "Fetches all Notifications",
