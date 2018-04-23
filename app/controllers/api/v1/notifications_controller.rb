@@ -6,12 +6,15 @@ module Api::V1
     swagger_api :index do
       summary "Fetches all Notifications"
       notes "This lists all of the notifications"
+      param :query, :chronological, :boolean, :optional, "Order notifications by time"
     end
 
     swagger_api :show do
-      summary "Shows one Notification"
+      summary "Shows all Notifications sent or received a specified user"
       param :form, :user_id, :integer, :required, "Sender ID"
       notes "This lists notifications for a specific user"
+      param :query, :chronological, :boolean, :optional, "Order notifications by time"
+      param :sent_from_user, :chronological, :boolean, :optional, "Shows all notifications sent or received from user"
       response :not_found
     end
 
@@ -46,12 +49,22 @@ module Api::V1
     # GET /notifications
     def index
       @notifications = Notification.all
+      if(params[:chronological].present?)
+        @notifications = params[:chronological] == "true" ? @notifications.chronological : @notifications
+      end
+
       render json: @notifications
     end
 
     # GET /notifications/ => user_id = number
     def show
       @notifications_for_user = Notification.for_user(params[:user_id])
+      if(params[:chronological].present?)
+        @notifications_for_user = @notifications_for_user.chronological
+      end
+      if(params[:sent_from_user].present?)
+        @notifications = params[:sent_from_user] == "true" ? @notifications.for_user_sent : @notifications.for_user_received
+      end
       render json: @notifications_for_user
     end
 

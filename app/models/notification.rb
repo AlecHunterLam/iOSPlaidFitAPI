@@ -10,7 +10,8 @@ class Notification < ApplicationRecord
   scope :for_user_received,      -> (user) { where(receiver_id: user) }
   scope :for_priority,     -> (priority) { where(priority: priority) }
   scope :for_time_in_range, -> (startTime, endTime) { where("notified_time BETWEEN startTime AND endTime") }
-  scope :chronological,          -> { order(:notified_time)}
+  scope :chronological,          -> { order(notified_time: :DESC)}
+  scope :reverse_chronological,          -> { order(notified_time: :ASC)}
 
   # Validations
   validates_presence_of :user_id, :receiver_id, :message, :priority
