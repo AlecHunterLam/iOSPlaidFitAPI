@@ -15,7 +15,7 @@ class Notification < ApplicationRecord
 
   # Validations
   validates_presence_of :user_id, :receiver_id, :message, :priority
-  validates_timeliness_of :notified_time, on_or_before: Time.now + 100 # time buffer
+  validates_timeliness_of :notified_time, on_or_before: Date.tomorrow # time buffer
   validates_inclusion_of :priority, in: PRIORITIES.map{|key, value| key}, message: "is not a valid priority setting"
   validate :receiver_id_in_system
 
