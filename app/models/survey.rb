@@ -11,6 +11,8 @@ class Survey < ApplicationRecord
     belongs_to :practice, optional: true
 
     # Scopes
+    scope :surveys_today,  ->                            { where("completed_time BETWEEN ? AND ?",Time.new( Time.now.year, Time.now.month , Time.now.day, 0, 0, 0, "-04:00"),Time.new( Time.now.year, Time.now.month , Time.now.day, 23, 59, 59, "-04:00")) }
+    scope :surveys_yesterday,  ->                            { where("completed_time BETWEEN ? AND ?",Time.new( Time.now.yesterday.year, Time.now.yesterday.month , Time.now.yesterday.day, 0, 0, 0, "-04:00"), Time.new( Time.now.yesterday.year, Time.now.yesterday.month , Time.now.yesterday.day, 23, 59, 59, "-04:00")) }
     scope :surveys_on_date,  -> (startTime,endTime)         { where("completed_time BETWEEN ? AND ?",startTime,endTime) }
     scope :for_user,         -> (user_id)                   { where("user_id == ?", user_id) }
 
