@@ -15,6 +15,13 @@
               "type": "string",
               "description": "Authentication token in the format of: Token token=<token>",
               "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "upcoming",
+              "type": "boolean",
+              "description": "Filters events by upcoming ones",
+              "required": false
             }
           ],
           "summary": "Fetches all Events",
