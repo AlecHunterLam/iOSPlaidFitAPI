@@ -6,4 +6,13 @@ User.create(first_name: 'Alec', last_name: 'Lam', andrew_id: 'ahlam', email: 'ah
 
 a = User.create( first_name: "Alec", last_name: "ATC", andrew_id: "alec", email: "alec@gmail.com", phone: "1234567890", role: "Athletic Trainer", password: "secret", password_confirmation: "secret")
 
-Notification.create(, :receiver_id, :priority, :message)
+Notification.create(user_id: 1, receiver_id: 5, priority: "Medium", message: "I hurt my toe", notified_time: Time.now)
+Notification.create(user_id: 2, receiver_id: 5, priority: "Low", message: "I hurt my face", notified_time: Time.now)
+Notification.create(user_id: 3, receiver_id: 5, priority: "High", message: "I hurt my balls", notified_time: Time.now)
+Notification.create(user_id: 4, receiver_id: 5, priority: "Medium", message: "I hurt my life", notified_time: Time.now)
+Notification.create(user_id: 5, receiver_id: 1, priority: "Low", message: "Come to my office at 4:30", notified_time: Time.now)
+Notification.create(user_id: 5, receiver_id: 2, priority: "Medium", message: "Complete your daily wellness survey", notified_time: Time.now)
+Notification.create(user_id: 5, receiver_id: 3, priority: "High", message: "Complete your post-practice survey", notified_time: Time.now)
+Notification.create(user_id: 5, receiver_id: 2, priority: "Low", message: "Complete your post practice survey", notified_time: Time.now)
+Notification.create(user_id: 5, receiver_id: 6, priority: "Medium", message: "Drink more water", notified_time: Time.now)
+Notification.create(user_id: 5, receiver_id: 2, priority: "High", message: "Get more sleep", notified_time: Time.now)

@@ -17,7 +17,7 @@ module Api::V1
 
     swagger_api :create do
       summary "Creates a new Notification"
-      param :form, :sender_id, :integer, :required, "Sender ID"
+      param :form, :user_id, :integer, :required, "Sender ID"
       param :form, :receiver_id, :integer, :required, "Receiver ID"
       param :form, :message, :string, :required, "Message"
       param :form, :priority, :string, "Priority"
@@ -27,7 +27,7 @@ module Api::V1
     swagger_api :update do
       summary "Updates an existing Notification"
       param :path, :id, :integer, :required, "Notification ID"
-      param :form, :sender_id, :integer, :optional, "Sender ID"
+      param :form, :user_id, :integer, :optional, "Sender ID"
       param :form, :receiver_id, :integer, :optional, "Receiver ID"
       param :form, :message, :string, :optional, "Message"
       param :form, :priority, :string, :optional, "Priority"
@@ -91,7 +91,7 @@ module Api::V1
 
     def notification_params
       # should sender ID be the current logged in user? (current_user)
-      params.permit(:sender_id, :receiver_id, :priority, :message)
+      params.permit(:user_id, :receiver_id, :priority, :message)
     end
 
 
