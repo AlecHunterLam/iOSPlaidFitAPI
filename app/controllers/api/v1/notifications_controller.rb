@@ -25,6 +25,7 @@ module Api::V1
       param :form, :receiver_id, :integer, :required, "Receiver ID"
       param :form, :message, :string, :required, "Message"
       param :form, :priority, :string, "Priority"
+      param :form, :notified_time, :string, "Notified Time"
       response :not_acceptable
     end
 
@@ -53,7 +54,9 @@ module Api::V1
       if(params[:chronological].present?)
         @notifications = params[:chronological] == "true" ? @notifications.chronological : @notifications
       end
-
+      if (params[:for_receiver].present?)
+          @notifications = @notifications.for_user_received(params[:for_receiver])
+      end
       render json: @notifications
     end
 
