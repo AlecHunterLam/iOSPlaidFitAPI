@@ -4,7 +4,7 @@ module Api::V1
 
     attributes :id, :first_name, :last_name, :andrew_id, :email, :major, :phone, :role, :active, :daily_wellness_survey_today_objects,
                :missing_post_boolean, :missing_daily_boolean, :api_key, :post_practice_survey_yesterday_objects,
-               :daily_wellness_survey_weekly_objects, post_practice_survey_weekly_objects #, :missing_both_boolean
+               :daily_wellness_survey_weekly_objects, :post_practice_survey_weekly_objects #, :missing_both_boolean
     has_many :player_calculations
     # has_many :surveys
     has_many :events
