@@ -7,6 +7,7 @@ class Event < ApplicationRecord
   scope :past,          -> { where('event_time <= ?', Time.now) }
   scope :chronological, -> { order(:event_time) }
   scope :for_user,      -> (user_id) { where(user_id: user_id) }
+  # scope :for_team,      -> (team_id) { joins(:user).joins(:team).where(id: team_id)}
 
   # Validations
   validates_presence_of :user_id, :description, :event_time

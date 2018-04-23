@@ -10,13 +10,13 @@ module Api::V1
     has_many :team_assignments
 
     def daily_wellness_survey_objects
-      object.surveys.daily_wellness_serializer.map do |survey|
+      object.surveys.daily_wellness_serializer.surveys_today.map do |survey|
         SurveySerializer.new(survey)
       end
     end
 
     def post_practice_survey_objects
-      object.surveys.post_practice_serializer.map do |survey|
+      object.surveys.post_practice_serializer.surveys_yesterday.map do |survey|
         SurveySerializer.new(survey)
       end
     end
