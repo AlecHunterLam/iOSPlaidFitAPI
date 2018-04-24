@@ -5,6 +5,7 @@ module Api::V1
 
       swagger_api :index do
         summary "Fetches all Events"
+        param :query, :upcoming, :boolean, :optional, "Filters events by upcoming ones"
         notes "This lists all of the events"
       end
 
@@ -46,6 +47,9 @@ module Api::V1
       # GET /events
       def index
           @events = Event.all
+          if (params[:upcoming].present?)
+            @events = params[:upcoming] == "true" ? @events.upcoming : @events
+          end
           render json: @events
       end
 
