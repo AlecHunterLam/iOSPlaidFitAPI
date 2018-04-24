@@ -1,16 +1,22 @@
+require './app/services/risk_service.rb'
+
 module Api::V1
   class UserSerializer < ActiveModel::Serializer
-
-
     attributes :id, :first_name, :last_name, :andrew_id, :email, :major, :phone, :role, :active, :daily_wellness_survey_today_objects,
                :missing_post_boolean, :missing_daily_boolean, :api_key, :post_practice_survey_yesterday_objects,
-               :daily_wellness_survey_weekly_objects, :post_practice_survey_weekly_objects #, :missing_both_boolean
+               :daily_wellness_survey_weekly_objects, :post_practice_survey_weekly_objects, :risk #, :missing_both_boolean
+
     has_many :player_calculations
     # has_many :surveys
     has_many :events
     has_many :earned_badges
     has_many :notifications
     has_many :team_assignments
+
+    def risk
+      risk_service_object = RiskService.new({user_id: object.id})
+      return risk_service_object
+    end
 
     def daily_wellness_survey_today_objects
       object.surveys.daily_wellness_serializer.surveys_today.map do |survey|
