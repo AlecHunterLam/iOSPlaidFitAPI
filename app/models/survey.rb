@@ -21,7 +21,7 @@ class Survey < ApplicationRecord
 
     scope :daily_wellness,                               -> { where("survey_type == ?", 'Daily Wellness') }
     scope :post_practice,                                -> { where("survey_type == ?", 'Post-Practice') }
-    scope :surveys_for_week,  -> (startWeek,endWeek)        { joins(:practice).where("practice_time BETWEEN ? AND ?",startWeek,endWeek) }
+    scope :surveys_for_week,  -> (startWeek,endWeek)        { where("completed_time BETWEEN ? AND ?",startWeek,endWeek) }
 
     # Validations
     validates_presence_of :survey_type, :completed_time
