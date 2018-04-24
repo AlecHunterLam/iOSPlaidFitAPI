@@ -9,6 +9,7 @@ module Contexts
         @m_soccer = Team.create(sport: "Soccer", gender: "Men", season: "Fall", active: true)
         # swim team
         @w_swim = Team.create(sport: "Swimming & Diving", gender: "Women", season: "Winter", active: true)
+        @m_swim = Team.create(sport: "Swimming & Diving", gender: "Men", season: "Winter", active: true)
   
         # players
         @alec = User.create(first_name: "Alec", last_name: "Lam", andrew_id: "ahlam", email: "ahlam@andrew.cmu.edu", major: "Information Systems", phone: "1111111111", role: "Player", active: true, year: "Junior", password: 'secret', password_confirmation: 'secret')
@@ -25,7 +26,8 @@ module Contexts
         @greg_soccer = TeamAssignment.create(team: @m_soccer, user: @greg, active: true, date_added: Time.now)
         @zack_soccer = TeamAssignment.create(team: @m_soccer, user: @zack, active: true, date_added: Time.now)
         @sam_soccer = TeamAssignment.create(team: @m_soccer, user: @sam, active: true, date_added: Time.now)
-        @coach_swim = TeamAssignment.create(team: @w_swim, user: @coach, active: true, date_added: Time.now)
+        @coach_swim = TeamAssignment.create(team: @m_swim, user: @coach, active: true, date_added: Time.now)
+        @coach_swim2 = TeamAssignment.create(team: @w_swim, user: @coach, active: true, date_added: Time.now)
         @coach_soccer = TeamAssignment.create(team: @m_soccer, user: @soccer_coach, active: true, date_added: Time.now)
         @llie_swim = TeamAssignment.create(team: @w_swim, user: @llie, active: true, date_added: Time.now)
   
