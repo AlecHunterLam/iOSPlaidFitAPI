@@ -1,3 +1,5 @@
+require './app/services/survey_service_v2.rb'
+
 module Api::V1
     class SurveysController < ApplicationController
 
@@ -58,12 +60,16 @@ module Api::V1
 
         # POST /surveys
         def create
-            @survey = Survey.new(survey_params)
-            if @survey.save
-                render json: @survey, status: :created, location: [:v1, @survey]
-            else
-                render json: @survey.errors, status: :unprocessable_entity
-            end
+          if survey_params[:datetime_today].nil?
+            survey_params[:datetime_today] = Time.now
+          end
+          survey_service_object = Survey.new(survey_params)
+          @survey = survey_service_object.get_survey_object
+          if @survey.save
+              render json: @survey, status: :created, location: [:v1, @survey]
+          else
+              render json: @survey.errors, status: :unprocessable_entity
+          end
         end
 
         # PATCH/PUT /surveys/1
@@ -89,7 +95,15 @@ module Api::V1
 
         # Only allow a trusted parameter "white list" through.
         def survey_params
-            params.permit(:survey_type, :user_id, :response, :completed, :season)
+            params.permit(:user_id, :team_id, :practice_id, :survey_type,
+                          :datetime_today, :player_rpe_rating,
+                          :player_personal_performance,
+                          :participated_in_full_practice,
+                          :minutes_participated,
+                          :participated_in_full_practice, :completed, :season,
+                          :hours_of_sleep, :quality_of_sleep, :academic_stress,
+                          :life_stress, :soreness, :ounces_of_water_consumed,
+                          :hydration_quality)
         end
 
     end

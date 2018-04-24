@@ -1,7 +1,6 @@
 module Api::V1
   class ApplicationController < ActionController::API
 
-
     swagger_controller :application, "Application Management"
 
     swagger_api :token do |api|

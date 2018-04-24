@@ -22,6 +22,13 @@
               "type": "integer",
               "description": "Filter on which user the notifications are for",
               "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "chronological",
+              "type": "boolean",
+              "description": "Order notifications by time",
+              "required": false
             }
           ],
           "summary": "Fetches all Notifications",
@@ -45,7 +52,7 @@
             },
             {
               "paramType": "form",
-              "name": "sender_id",
+              "name": "user_id",
               "type": "integer",
               "description": "Sender ID",
               "required": true
@@ -67,6 +74,13 @@
             {
               "paramType": "form",
               "name": "priority",
+              "type": "string",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "notified_time",
               "type": "string",
               "description": null,
               "required": false
@@ -98,15 +112,29 @@
               "required": true
             },
             {
-              "paramType": "path",
-              "name": "id",
+              "paramType": "form",
+              "name": "user_id",
               "type": "integer",
-              "description": "Notification ID",
+              "description": "Sender ID",
               "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "chronological",
+              "type": "boolean",
+              "description": "Order notifications by time",
+              "required": false
+            },
+            {
+              "paramType": "sent_from_user",
+              "name": "chronological",
+              "type": "boolean",
+              "description": "Shows all notifications sent or received from user",
+              "required": false
             }
           ],
-          "summary": "Shows one Notification",
-          "notes": "This lists details of one notification",
+          "summary": "Shows all Notifications sent or received a specified user",
+          "notes": "This lists notifications for a specific user",
           "responseMessages": [
             {
               "code": 404,
@@ -140,7 +168,7 @@
             },
             {
               "paramType": "form",
-              "name": "sender_id",
+              "name": "user_id",
               "type": "integer",
               "description": "Sender ID",
               "required": false

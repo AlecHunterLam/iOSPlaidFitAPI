@@ -53,6 +53,8 @@ GEM
     crass (1.0.3)
     descriptive_statistics (2.5.1)
     erubi (1.7.0)
+    faker (1.8.7)
+      i18n (>= 0.7)
     ffi (1.9.18)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -146,6 +148,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   descriptive_statistics
+  faker
   hirb
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)

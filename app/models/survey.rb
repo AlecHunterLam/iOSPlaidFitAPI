@@ -11,6 +11,8 @@ class Survey < ApplicationRecord
     belongs_to :practice, optional: true
 
     # Scopes
+    scope :surveys_today,  ->                            { where("completed_time BETWEEN ? AND ?",Time.new( Time.now.year, Time.now.month , Time.now.day, 0, 0, 0, "-04:00"),Time.new( Time.now.year, Time.now.month , Time.now.day, 23, 59, 59, "-04:00")) }
+    scope :surveys_yesterday,  ->                            { where("completed_time BETWEEN ? AND ?",Time.new( Time.now.yesterday.year, Time.now.yesterday.month , Time.now.yesterday.day, 0, 0, 0, "-04:00"), Time.new( Time.now.yesterday.year, Time.now.yesterday.month , Time.now.yesterday.day, 23, 59, 59, "-04:00")) }
     scope :surveys_on_date,  -> (startTime,endTime)         { where("completed_time BETWEEN ? AND ?",startTime,endTime) }
     scope :for_user,         -> (user_id)                   { where("user_id == ?", user_id) }
 
@@ -19,7 +21,8 @@ class Survey < ApplicationRecord
 
     scope :daily_wellness,                               -> { where("survey_type == ?", 'Daily Wellness') }
     scope :post_practice,                                -> { where("survey_type == ?", 'Post-Practice') }
-    scope :surveys_for_week,  -> (startWeek,endWeek)        { joins(:practice).where("practice_time BETWEEN ? AND ?",startWeek,endWeek) }
+    scope :surveys_for_week,  -> (startWeek,endWeek)        { where("completed_time BETWEEN ? AND ?",startWeek,endWeek) }
+    scope :chronological,                                -> { order(:completed_time)}
 
     # Validations
     validates_presence_of :survey_type, :completed_time

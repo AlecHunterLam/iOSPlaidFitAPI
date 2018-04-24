@@ -7,28 +7,32 @@ module Api::V1
       summary "Fetches all Notifications"
       param :query, :for_receiver, :integer, :optional, "Filter on which user the notifications are for"
       notes "This lists all of the notifications"
+      param :query, :chronological, :boolean, :optional, "Order notifications by time"
     end
 
     swagger_api :show do
-      summary "Shows one Notification"
-      param :path, :id, :integer, :required, "Notification ID"
-      notes "This lists details of one notification"
+      summary "Shows all Notifications sent or received a specified user"
+      param :form, :user_id, :integer, :required, "Sender ID"
+      notes "This lists notifications for a specific user"
+      param :query, :chronological, :boolean, :optional, "Order notifications by time"
+      param :sent_from_user, :chronological, :boolean, :optional, "Shows all notifications sent or received from user"
       response :not_found
     end
 
     swagger_api :create do
       summary "Creates a new Notification"
-      param :form, :sender_id, :integer, :required, "Sender ID"
+      param :form, :user_id, :integer, :required, "Sender ID"
       param :form, :receiver_id, :integer, :required, "Receiver ID"
       param :form, :message, :string, :required, "Message"
       param :form, :priority, :string, "Priority"
+      param :form, :notified_time, :string, "Notified Time"
       response :not_acceptable
     end
 
     swagger_api :update do
       summary "Updates an existing Notification"
       param :path, :id, :integer, :required, "Notification ID"
-      param :form, :sender_id, :integer, :optional, "Sender ID"
+      param :form, :user_id, :integer, :optional, "Sender ID"
       param :form, :receiver_id, :integer, :optional, "Receiver ID"
       param :form, :message, :string, :optional, "Message"
       param :form, :priority, :string, :optional, "Priority"
@@ -47,15 +51,25 @@ module Api::V1
     # GET /notifications
     def index
       @notifications = Notification.all
+      if(params[:chronological].present?)
+        @notifications = params[:chronological] == "true" ? @notifications.chronological : @notifications
+      end
       if (params[:for_receiver].present?)
-        @notifications = @notifications.for_receiver(params[:for_receiver])
+          @notifications = @notifications.for_user_received(params[:for_receiver])
       end
       render json: @notifications
     end
 
-    # GET /notifications/1
+    # GET /notifications/ => user_id = number
     def show
-      render json: @notification
+      @notifications_for_user = Notification.for_user(params[:user_id])
+      if(params[:chronological].present?)
+        @notifications_for_user = @notifications_for_user.chronological
+      end
+      if(params[:sent_from_user].present?)
+        @notifications = params[:sent_from_user] == "true" ? @notifications.for_user_sent : @notifications.for_user_received
+      end
+      render json: @notifications_for_user
     end
 
     # POST /notifications
@@ -90,9 +104,11 @@ module Api::V1
       @notification = Notification.find(params[:id])
     end
 
+
+
     def notification_params
       # should sender ID be the current logged in user? (current_user)
-      params.permit(:sender_id, :receiver_id, :priority, :message)
+      params.permit(:user_id, :receiver_id, :priority, :message)
     end
 
 
