@@ -1,4 +1,4 @@
-require '../../../services/survey_service_v2'
+require './app/services/survey_service_v2.rb'
 
 module Api::V1
     class SurveysController < ApplicationController
