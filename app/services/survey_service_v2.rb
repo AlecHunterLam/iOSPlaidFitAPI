@@ -314,7 +314,7 @@ class SurveyService
     last_week_start = @start_of_today.ago(86400 * 13)
     last_weeks_weekly_load = calculate_weekly_load_with_dates(last_week_start, last_week_end)
 
-    # divide by zero possibility => must check what to do with this edge case
+    # divide by zero possibility => must check what to do with this edge case, set to 1
     if last_weeks_weekly_load == 0
       percent_change = 100
     else

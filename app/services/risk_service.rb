@@ -12,9 +12,21 @@ class SurveyService
     if !(@most_recent_post.nil?)
       @at_risk_boolean = calculate_risk
     end
+
   end
 
+
   def calculate_risk
+    # Comments = At Risk Criteria
+
+    # weekly load increase by 25%
+    if @most_recent_post.week_to_week_weekly_load_percent_change >= 25
+      return true
+    elsif
+      @most_recent_post.
+    end
+
+    return false
 
   end
 
