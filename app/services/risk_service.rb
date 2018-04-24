@@ -1,6 +1,4 @@
-require 'descriptive_statistics'
-
-class SurveyService
+class RiskService
   def initialize(params)
     @user_id = params[:user_id]
     @team_id = User.find(@user_id).teams
