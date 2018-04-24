@@ -96,7 +96,7 @@ module Contexts
       end
 
       def create_events
-        (0..9).each do |i|
+        (0..8).each do |i|
             Event.create(user_id: 2, description: "test event number " + i.to_s, event_time: Time.new(2018, 4, 24 + i, 23, 59, 59, '-04:00'))
         end
       end 
@@ -117,14 +117,19 @@ module Contexts
         create_notifications
       end
 
+      def delete_stuff
+        Survey.destroy_all
+        TeamAssignment.destroy_all
+        Practice.destroy_all
+        User.destroy_all
+        Team.destroy_all
+        Event.destroy_all
+        Notification.destroy_all
+      end 
+
     end
   end
-  
-#   Survey.destroy_all
-#   TeamAssignment.destroy_all
-#   Practice.destroy_all
-#   User.destroy_all
-#   Team.destroy_all
+
   
   
 #   load './app/services/survey_service_v2.rb'
