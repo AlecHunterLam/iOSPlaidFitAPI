@@ -46,6 +46,7 @@ module Api::V1
       param :form, :first_name, :string, :optional,"First Name"
       param :form, :last_name, :string, :optional,"Last Name"
       param :form, :phone, :string, :optional,"Phone"
+      param :form, :active, :boolean, :optional,"Active"
       notes "Role must be 'Player', 'Athletic Trainer', 'Coach', or 'Guest'. Major for now is only 'Information Systems', 'Computer Science', or 'Other'."
       response :not_found
       response :not_acceptable
@@ -115,7 +116,7 @@ module Api::V1
     # whitelist parameters for a user to input and create/update
     def user_params
       # should only allow role if the current user is an admin. Leaving it like this for now, will come back to this.
-      params.permit(:first_name, :last_name, :year, :andrew_id, :email, :major, :phone, :role, :password, :password_confirmation)
+      params.permit(:first_name, :last_name, :year, :andrew_id, :email, :major, :phone, :role, :password, :password_confirmation, :active)
     end
 
   end

@@ -28,6 +28,7 @@ class User < ApplicationRecord
   has_many :notifications
 
   # Scopes
+  scope :active,        ->                 { where("active == ?", true) }
   scope :by_role,       ->  (role)         { where("role == ?", role) }
   scope :by_team,       ->  (team_id)      { joins(:team_assignments).where("team_assignments.team_id == ?", team_id) }
   scope :by_email,      ->  (email)        { where("email == ?", email) }

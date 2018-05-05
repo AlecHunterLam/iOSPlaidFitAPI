@@ -229,6 +229,13 @@
               "type": "string",
               "description": "Phone",
               "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "active",
+              "type": "boolean",
+              "description": "Active",
+              "required": false
             }
           ],
           "summary": "Updates an existing User",
