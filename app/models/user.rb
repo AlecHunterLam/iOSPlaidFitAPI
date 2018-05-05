@@ -28,15 +28,16 @@ class User < ApplicationRecord
   has_many :notifications
 
   # Scopes
-  scope :active,        ->                 { where("active == ?", true) }
+  scope :active,        ->                 { where(active: true) }
   scope :by_role,       ->  (role)         { where("role == ?", role) }
   scope :by_team,       ->  (team_id)      { joins(:team_assignments).where("team_assignments.team_id == ?", team_id) }
-  scope :by_email,      ->  (email)        { where("email == ?", email) }
+  scope :by_year,       ->  (year)         { where("year == ?", year) }
   scope :by_andrew_id,  ->  (andrew_id)    { where("andrew_id == ?", andrew_id) }
   scope :by_major,      ->  (major)        { where("major == ?", major) }
 
   # Validations
-  validates_presence_of :andrew_id, :email, :role, :active
+  validates_presence_of :andrew_id, :email, :role
+  validates :active, :inclusion => { :in => [true, false] }
   validate :presence_of_if_player #, message: "Player's must have both a year and major"
   # need to know format of andrew id's to write regex for it
   validates_inclusion_of :major, in: MAJORS.map{|key, value| key}, message: "is not a major in the system", allow_blank: true

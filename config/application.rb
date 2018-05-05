@@ -36,7 +36,7 @@ module PlaidFitAPI
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
-        resource '*', :headers => :any, :methods => [:get, :post, :put]
+        resource '*', :headers => :any, :methods => [:get, :post, :put, :patch, :delete]
       end
     end
     config.middleware.use Rack::Attack
