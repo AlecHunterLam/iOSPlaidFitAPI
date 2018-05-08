@@ -53,7 +53,7 @@ module Contexts
             (0..6).each do |i|  
                 duration = Faker::Number.between(0, 180)
                 difficulty = Faker::Number.between(1, 10)
-                practice_time = Time.new(2018, 4, 24 - i, Faker::Number.between(10, 18), [0, 30].sample, 0, '-04:00')
+                practice_time = Time.new(2018, 4, 30 - i, Faker::Number.between(10, 18), [0, 30].sample, 0, '-04:00')
                 practice = Practice.create(team: team, duration: duration, difficulty: difficulty, practice_time: practice_time)
                 practices.push(practice)
             end
@@ -64,7 +64,7 @@ module Contexts
       def create_daily_wellness_surveys(users)
         users.each do |user|
             (0..6).each do |i|
-                survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, survey_type: 'Daily Wellness', datetime_today: Time.new(2018, 4, 24 - i, 23, 59, 59, '-04:00'),
+                survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, survey_type: 'Daily Wellness', datetime_today: Time.new(2018, 4, 30 - i, 23, 59, 59, '-04:00'),
                                                     hours_of_sleep: Faker::Number.between(0, 12), quality_of_sleep: Faker::Number.between(1, 10), academic_stress: Faker::Number.between(1, 5), 
                                                     life_stress: Faker::Number.between(1, 5), soreness: Faker::Number.between(1, 10),ounces_of_water_consumed: Faker::Number.between(1, 128), hydration_quality: [true, false].sample})
                 survey_service.get_survey_object
@@ -77,7 +77,7 @@ module Contexts
             (0..6).each do |i|
                 player_rpe_rating = Faker::Number.between(0, 10)
                 player_personal_performance = Faker::Number.between(1, 10)
-                datetime_today = Time.new(2018, 4, 24 - i, 23, 59, 59, '-04:00')
+                datetime_today = Time.new(2018, 4, 30 - i, 23, 59, 59, '-04:00')
                 # pracitce_id = 1
                 # practice_duration = 100
                 # practices.each do |practice|
@@ -97,13 +97,14 @@ module Contexts
 
       def create_events
         (0..8).each do |i|
-            Event.create(user_id: 2, description: "test event number " + i.to_s, event_time: Time.new(2018, 4, 24 + i, 23, 59, 59, '-04:00'))
+            Event.create(user_id: 2, description: "test event number " + i.to_s, event_time: Time.new(2018, 5, 1 + i, 16, 30, 00, '-04:00'))
+            # Event.create(user_id: 63, description: "qapla", event_time: Time.new(2018, 5, 2, 10, 10, 00, '-04:00'))
         end
       end 
 
       def create_notifications
         (0..5).each do |i|
-            Notification.create(user_id: i + 10, receiver_id: 2, priority: "Low", message: "test notification " + i.to_s, notified_time: Time.new(2018, 4, 24 - i, 23, 59, 59, '-04:00'))
+            Notification.create(user_id: i + 10, receiver_id: 2, priority: "Low", message: "test notification " + i.to_s, notified_time: Time.new(2018, 4, 30 - i, 23, 59, 59, '-04:00'))
         end
     end
 

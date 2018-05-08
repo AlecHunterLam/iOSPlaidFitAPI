@@ -83,7 +83,7 @@ module Api::V1
 
         # Only allow a trusted parameter "white list" through.
         def team_assignment_params
-            params.permit(:team_id, :user_id)
+            params.permit(:team_id, :user_id, :active, :date_added)
         end
 
     end
