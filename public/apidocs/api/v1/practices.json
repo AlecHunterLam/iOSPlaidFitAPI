@@ -48,14 +48,14 @@
               "name": "duration",
               "type": "integer",
               "description": "Duration",
-              "required": true
+              "required": false
             },
             {
               "paramType": "form",
               "name": "difficulty",
               "type": "integer",
               "description": "Difficulty",
-              "required": true
+              "required": false
             },
             {
               "paramType": "form",
@@ -63,6 +63,20 @@
               "type": "datetime",
               "description": "Date",
               "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "recurring_weekly",
+              "type": "boolean",
+              "description": "whether you want to repeat this over more than one weeks",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "num_weeks",
+              "type": "int",
+              "description": "weeks to repeat for",
+              "required": false
             }
           ],
           "summary": "Creates a new Practice",
