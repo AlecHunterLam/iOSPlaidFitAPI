@@ -55,7 +55,6 @@ module Api::V1
 
         # POST /team_calculations
         def create
-            byebug
             @team_calculation = TeamCalculation.new(team_calculation_params)
 
             # set the current season

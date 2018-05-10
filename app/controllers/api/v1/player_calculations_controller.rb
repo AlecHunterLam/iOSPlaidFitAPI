@@ -1,3 +1,5 @@
+require './app/services/player_calculation_service_v1.rb'
+
 module Api::V1
     class PlayerCalculationsController < ApplicationController
 
@@ -53,6 +55,14 @@ module Api::V1
         # POST /player_calculations
         def create
             @player_calculation = PlayerCalculation.new(player_calculation_params)
+
+            # set the current season
+            @player = User.find(@player_calculation.user_id)
+
+            @player_calculation.season = get_current_season
+
+            @player_calculation = @player_calculation.get_player_calculation_object
+
             if @player_calculation.save
                 render json: @player_calculation, status: :created, location: [:v1, @player_calculation]
             else
@@ -86,5 +96,27 @@ module Api::V1
             params.permit(:user_id, :week_of)
         end
 
+    end
+
+
+    private
+    def get_current_season
+      current_month = Time.now.month
+      current_year = Time.now.year
+      current_year = current_year.to_s
+      # Fall Season
+      if 8 <= current_month && current_month <= 12
+        current_seasons = ("Fall-" + current_year)
+      end
+      if 11 <= current_month || current_month <= 3
+        current_seasons = ("Winter-" + current_year)
+      end
+      if 2 <= current_month && current_month <= 6
+        current_seasons = ("Spring-" + current_year)
+      end
+      if current_seasons == []
+        current_seasons = ("Other-" + current_year)
+      end
+      return current_seasons
     end
 end
