@@ -85,7 +85,7 @@ module Api::V1
         # callback to update the season ranks
         # added to system after save, now need to set thte relative rank of the calculation for that week
         def set_relative_rank
-          ranked_week_calculations_for_season = PlayerCalculation.for_user(@player_calculation.user_id).for_season(@player_calculation.season).rank_by_weekly_load
+          ranked_week_calculations_for_season = PlayerCalculation.for_user(@player_calculation.user_id).rank_by_weekly_load # .for_season(@player_calculation.season)
           i = ranked_week_calculations_for_season.length
           ranked_week_calculations_for_season.each do |calc|
             calc.update(season_rank: i)
