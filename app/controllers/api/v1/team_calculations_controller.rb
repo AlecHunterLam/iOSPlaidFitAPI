@@ -57,8 +57,8 @@ module Api::V1
         def create
             @team_calculation = get_team_calculation_object(team_id: team_calculation_params[:team_id], week_of: team_calculation_params[:week_of])
 
-            if @team_calculation.save
-                set_relative_rank
+            if @team_calculation.save!
+                set_relative_rank_team
                 render json: @team_calculation, status: :created, location: [:v1, @team_calculation]
             else
                 render json: @team_calculation.errors, status: :unprocessable_entity
@@ -81,11 +81,11 @@ module Api::V1
 
         private
 
-        def set_relative_rank
+        def set_relative_rank_team
           ranked_week_calculations_for_season = TeamCalculation.for_team(@team_calculation.team_id).rank_by_weekly_load #.for_season(@team_calculation.season)
           i = ranked_week_calculations_for_season.length
           ranked_week_calculations_for_season.each do |calc|
-            calc.update(season_rank: i)
+            calc.update(season_rank: 1)
             calc.save!
             i = i - 1
           end
