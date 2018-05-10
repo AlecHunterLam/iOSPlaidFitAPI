@@ -7,6 +7,8 @@ class TeamCalculation < ApplicationRecord
     belongs_to :team
 
     # Scopes
+    scope :for_team,   -> (team_id) { where(team_id: team_id) }
+    scope :for_season,   -> (season) { where(season: season) }
 
     # Validations
     validates_presence_of :team_id, :week_of

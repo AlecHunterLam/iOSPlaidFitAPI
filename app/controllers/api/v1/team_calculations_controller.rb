@@ -52,7 +52,14 @@ module Api::V1
 
         # POST /team_calculations
         def create
+            byebug
             @team_calculation = TeamCalculation.new(team_calculation_params)
+
+            # set the current season
+            @team = Team.find(@team_calculation.team_id)
+
+            @team_calculation.season = @team.season.to_s + "-" + (Time.now.year).to_s
+
             if @team_calculation.save
                 render json: @team_calculation, status: :created, location: [:v1, @team_calculation]
             else
