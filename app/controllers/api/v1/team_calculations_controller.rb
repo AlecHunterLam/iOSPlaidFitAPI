@@ -44,7 +44,7 @@ module Api::V1
 
         # GET /team_calculations
         def index
-            @team_calculations = TeamCalculation.all
+            @team_calculations = TeamCalculation.all.chronological
             render json: @team_calculations
         end
 

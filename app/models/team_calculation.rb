@@ -10,6 +10,7 @@ class TeamCalculation < ApplicationRecord
     scope :for_team,   -> (team_id) { where(team_id: team_id) }
     scope :for_season,   -> (season) { where(season: season) }
     scope :rank_by_weekly_load, -> { order(weekly_load: :ASC ) }
+    scope :chronological, -> {order(week_of: :ASC)}
 
     # Validations
     validates_presence_of :team_id, :week_of
