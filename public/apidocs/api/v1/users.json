@@ -36,6 +36,20 @@
               "type": "string",
               "description": "Select the one user with the given Andrew ID",
               "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "year",
+              "type": "string",
+              "description": "Filter on which year the user is",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "major",
+              "type": "string",
+              "description": "Filter on which major the user is",
+              "required": false
             }
           ],
           "summary": "Fetches all Users",
@@ -183,6 +197,13 @@
             },
             {
               "paramType": "form",
+              "name": "active",
+              "type": "boolean",
+              "description": "Active",
+              "required": false
+            },
+            {
+              "paramType": "form",
               "name": "andrew_id",
               "type": "string",
               "description": "Andrew ID",
@@ -232,9 +253,23 @@
             },
             {
               "paramType": "form",
-              "name": "active",
-              "type": "boolean",
-              "description": "Active",
+              "name": "year",
+              "type": "string",
+              "description": "Year",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "password",
+              "type": "string",
+              "description": "Password",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "password_confirmation",
+              "type": "string",
+              "description": "Password Confirmation",
               "required": false
             }
           ],

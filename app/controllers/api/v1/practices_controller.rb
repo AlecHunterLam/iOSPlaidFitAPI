@@ -56,11 +56,60 @@ module Api::V1
 
         # POST /practices
         def create
-            @practice = Practice.new(practice_params)
-            if @practice.save
-                render json: @practice, status: :created, location: [:v1, @practice]
+            weeks_repeated = practice_params[:num_weeks]
+            recurring_weekly = practice_params[:recurring_weekly]
+
+            # default the practice duration to be 2 hours, difficulty 5
+            if practice_params[:practice_time].nil?
+              practice_params[:practice_time] = 120
+            end
+            if practice_params[:difficulty].nil?
+              practice_params[:difficulty] = 5
+            end
+
+
+            if (weeks_repeated && (weeks_repeated.is_a? Integer))
+              if weeks_repeated < 1
+                render json: { errors: "invalid number of repeated weeks" }, status: :unprocessable_entity
+                return
+              end
+              week_offset = 86400
+
+              repeat_count = 0
+              all_practices = []
+              loop do
+                practice_datetime = practice_params[:practice_time]
+                if practice_datetime.nil?
+                  render json: { errors: "invalid number of repeated weeks" }, status: :unprocessable_entity
+                end
+
+                practice_time_mult = practice_params[:practice_time] + ( repeat_count * week_offset )
+
+                current_practice = Practice.new(team_id: practice_params[:team_id], duration: practice_params[:duration], difficulty: practice_params[:difficulty], practice_time: practice_time_mult)
+                if current_practice.valid?
+                  all_practices << current_practice
+                else
+                  render json: (current_practice.save).errors, status: :unprocessable_entity
+                end
+
+                repeat_count += 1
+                # control structure
+                if repeat_count == weeks_repeated
+                  break
+                end
+              end
+
+              # delay saving all of them, so we dont add some and not all
+              all_practices.each{|p| p.save!}
+              render json: all_practices, status: :created, location: [:v1, all_practices]
+
             else
-                render json: @practice.errors, status: :unprocessable_entity
+              @practice = Practice.new(practice_params)
+              if @practice.save
+                  render json: @practice, status: :created, location: [:v1, @practice]
+              else
+                  render json: @practice.errors, status: :unprocessable_entity
+              end
             end
         end
 
@@ -87,7 +136,7 @@ module Api::V1
 
         # Only allow a trusted parameter "white list" through.
         def practice_params
-            params.permit(:team_id, :duration, :difficulty, :practice_time)
+            params.permit(:team_id, :duration, :difficulty, :practice_time, :recurring_weekly, :num_weeks);
         end
 
     end
