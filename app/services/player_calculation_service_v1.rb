@@ -62,20 +62,20 @@ class SurveyService
     @player_calculation.week_to_week_weekly_load_percent_change = latest_survey.week_to_week_weekly_load_percent_change
     @player_calculation.monotony = latest_survey.monotony
 
-    # daily loads
+    player_performance_list = []
+    practice_difficulty_average_list = []
     all_player_post.each do |s|
-      sleep_quality_list << s.quality_of_sleep
-      sleep_amount_list << s.hours_of_sleep
-      hydration_quality_list << s.hydration_quality
-      hydration_amount_list << s.ounces_of_water_consumed
-      academic_stress_list << s.academic_stress
-      life_stress_list << s.life_stress
+      player_performance_list << s.player_personal_performance
+      practice_difficulty_average_list << s.player_rpe_rating
+
     end
 
+    @player_calculation.practice_difficulty_average = latest_survey.practice_difficulty_average_list
+    @player_calculation.personal_performance_average = latest_survey.player_performance_list
 
     # daily_loads = []
     # weekly_load = 0
 
-
+    return @player_calculation
   end
 end
