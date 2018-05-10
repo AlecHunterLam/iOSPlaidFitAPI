@@ -65,7 +65,7 @@ module Api::V1
             # default the practice duration to be 2 hours, difficulty 5
 
             # to_i returns 0 for strings like ""
-            if practice_params[:duration] != "0" || practice_duration == 0
+            if practice_params[:duration] != "0" && practice_duration == 0
               practice_duration = 120
             end
             # check raw, check conversion
@@ -79,7 +79,7 @@ module Api::V1
             puts '2-' + (recurring_weekly && (weeks_repeated.is_a? Integer)).to_s
             puts '3-' + ((weeks_repeated.is_a? Integer)).to_s
 
-            if (recurring_weekly && (weeks_repeated.is_a? Integer))
+            if (recurring_weekly == 'true' && weeks_repeated >= 1)
               if weeks_repeated < 1
                 render json: { errors: "invalid number of repeated weeks" }, status: :unprocessable_entity
                 return
