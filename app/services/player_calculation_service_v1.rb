@@ -1,7 +1,5 @@
 require 'descriptive_statistics'
 
-SECONDS_IN_ONE_DAY = 86400
-
 class SurveyService
   def initialize(partial_calculation_object)
     @player_calculation = partial_calculation_object
