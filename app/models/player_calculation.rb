@@ -1,7 +1,7 @@
 class PlayerCalculation < ApplicationRecord
   # Constants
   # SEASONS = [['Fall', :fall], ['Winter', :winter], ['Spring', :spring]]
-  after_save :set_relative_rank
+  # after_validation :set_relative_rank
 
   # Relationships
   belongs_to :user
@@ -39,7 +39,7 @@ class PlayerCalculation < ApplicationRecord
     ranked_week_calculations_for_season = PlayerCalculation.for_user(self.user_id).for_season(self.season).rank_by_weekly_load
     i = ranked_week_calculations_for_season.length
     ranked_week_calculations_for_season.each do |calc|
-      calc.season_rank = i
+      calc.update(season_rank: i)
       calc.save!
       i = i - 1
     end

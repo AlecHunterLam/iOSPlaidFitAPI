@@ -1,20 +1,30 @@
 require 'descriptive_statistics'
 
-class SurveyService
+class PlayerCalculationService
   def initialize(partial_calculation_object)
-    @player_calculation = partial_calculation_object
+    @season = get_current_season
+    @week_of = partial_calculation_object[:week_of]
+    @user_id = partial_calculation_object[:user_id]
   end
 
+  # service wont work
+  def get_player_calculation(partial_calculation_object)
+    @season = get_current_season
+    @week_of = partial_calculation_object[:week_of]
+    @user_id = partial_calculation_object[:user_id]
 
-  def get_player_calculation_object
+    @player_calculation = PlayerCalculation.new
+    @player_calculation.week_of = @week_of
+    @player_calculation.user_id = @user_id
+    @player_calculation.season = @season
     # must start on a monday
-    if !(Player.find(@player_calculation.user_id).nil?)
+    if (User.find(@user_id).nil?)
       return nil
     end
 
     # get start of week/end of week
-    start_week = DateTime.new(@player_calculation.week_of.year, @player_calculation.week_of.month, @v.week_of.day, 0,0,0, @player_calculation.strftime( "%z" ));
-    end_week = DateTime.new(@player_calculation.week_of.year, @player_calculation.week_of.month, @v.week_of.day, 23,59,59, a.strftime( "%z" )) + 6;
+    start_week = DateTime.new(@player_calculation.week_of.year, @player_calculation.week_of.month, @player_calculation.week_of.day, 0,0,0, @player_calculation.week_of.strftime( "%z" ));
+    end_week = DateTime.new(@player_calculation.week_of.year, @player_calculation.week_of.month, @player_calculation.week_of.day, 23,59,59,  @player_calculation.week_of.strftime( "%z" )) + 6;
 
     all_player_post = Survey.for_user(@player_calculation.user_id).post_practice.surveys_for_week(start_week, end_week)
     all_player_wellness = Survey.for_user(@player_calculation.user_id).daily_wellness.surveys_for_week(start_week, end_week)
@@ -33,7 +43,7 @@ class SurveyService
     all_player_wellness.each do |s|
       sleep_quality_list << s.quality_of_sleep
       sleep_amount_list << s.hours_of_sleep
-      hydration_quality_list << s.hydration_quality
+      hydration_quality_list << 1 ? s.hydration_quality : hydration_quality_list << 0
       hydration_amount_list << s.ounces_of_water_consumed
       academic_stress_list << s.academic_stress
       life_stress_list << s.life_stress
@@ -68,9 +78,30 @@ class SurveyService
 
     end
 
-    @player_calculation.practice_difficulty_average = latest_survey.practice_difficulty_average_list
-    @player_calculation.personal_performance_average = latest_survey.player_performance_list
+    @player_calculation.practice_difficulty_average = practice_difficulty_average_list.mean
+    @player_calculation.personal_performance_average = player_performance_list.mean
 
     return @player_calculation
   end
+
+  def get_current_season
+    current_month = Time.now.month
+    current_year = Time.now.year
+    current_year = current_year.to_s
+    # Fall Season
+    if 8 <= current_month && current_month <= 12
+      current_seasons = ("Fall-" + current_year)
+    end
+    if 11 <= current_month || current_month <= 3
+      current_seasons = ("Winter-" + current_year)
+    end
+    if 2 <= current_month && current_month <= 6
+      current_seasons = ("Spring-" + current_year)
+    end
+    if current_seasons == []
+      current_seasons = ("Other-" + current_year)
+    end
+    return current_seasons
+  end
+
 end
