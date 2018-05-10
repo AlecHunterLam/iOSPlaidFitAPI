@@ -147,6 +147,13 @@
             },
             {
               "paramType": "form",
+              "name": "team_id",
+              "type": "integer",
+              "description": "Team ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
               "name": "duration",
               "type": "integer",
               "description": "Duration",
