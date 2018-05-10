@@ -73,9 +73,6 @@ class SurveyService
     @player_calculation.practice_difficulty_average = latest_survey.practice_difficulty_average_list
     @player_calculation.personal_performance_average = latest_survey.player_performance_list
 
-    # daily_loads = []
-    # weekly_load = 0
-
     return @player_calculation
   end
 end

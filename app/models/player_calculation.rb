@@ -1,11 +1,15 @@
 class PlayerCalculation < ApplicationRecord
   # Constants
   # SEASONS = [['Fall', :fall], ['Winter', :winter], ['Spring', :spring]]
+  after_save :set_relative_rank
 
   # Relationships
   belongs_to :user
 
-  # Scopesg
+  # Scopes
+  scope :for_user,   -> (user_id) { where(user_id: user_id) }
+  scope :for_season,   -> (season) { where(season: season) }
+  scope :rank_by_weekly_load,   ->{ order(:weekly_load) }
 
   # Validations
   validates_presence_of :user_id, :week_of, :season
@@ -28,6 +32,18 @@ class PlayerCalculation < ApplicationRecord
     # correct day, assuming input week is a Time object
     # http://ruby-doc.org/core-2.2.0/Time.html#method-i-sunday-3F
     return input_week_of.monday?
+  end
+
+  # added to system after save, now need to set thte relative rank of the calculation for that week
+  def set_relative_rank
+    ranked_week_calculations_for_season = PlayerCalculation.for_user(self.user_id).for_season(self.season).rank_by_weekly_load
+    i = ranked_week_calculations_for_season.length
+    ranked_week_calculations_for_season.each do |calc|
+      calc.season_rank = i
+      calc.save!
+      i = i - 1
+    end
+    return
   end
 
 end
