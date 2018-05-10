@@ -22,10 +22,59 @@ class SurveyService
     all_player_wellness = Survey.for_user(@player_calculation.user_id).daily_wellness.surveys_for_week(start_week, end_week)
 
     # set daily wellness fields
-    all_player_wellness.each do |s|
 
+    sleep_quality_list = []
+    sleep_amount_list =[]
+    hydration_quality_list = []
+    hydration_amount_list = []
+    academic_stress_list = []
+    life_stress_list = []
+
+
+    # wellness
+    all_player_wellness.each do |s|
+      sleep_quality_list << s.quality_of_sleep
+      sleep_amount_list << s.hours_of_sleep
+      hydration_quality_list << s.hydration_quality
+      hydration_amount_list << s.ounces_of_water_consumed
+      academic_stress_list << s.academic_stress
+      life_stress_list << s.life_stress
     end
 
+    @player_calculation.sleep_quality_average = sleep_quality_list.mean
+    @player_calculation.sleep_amount_average = sleep_amount_list.mean
+    @player_calculation.hydration_quality_average = hydration_quality_list.mean
+    @player_calculation.hydration_amount_average = hydration_amount_list.mean
+    @player_calculation.academic_stress_average = academic_stress_list.mean
+    @player_calculation.life_stress_average = life_stress_list.mean
+
+    # post practice
+    daily_load_list = []
+
+    latest_survey = all_player_post.chronological.first
+    if latest_survey.nil?
+      return nil
+    end
+
+    # set params from latest post practice survey
+    @player_calculation.weekly_load = latest_survey.weekly_load
+    @player_calculation.weekly_strain = latest_survey.weekly_strain
+    @player_calculation.week_to_week_weekly_load_percent_change = latest_survey.week_to_week_weekly_load_percent_change
+    @player_calculation.monotony = latest_survey.monotony
+
+    # daily loads
+    all_player_post.each do |s|
+      sleep_quality_list << s.quality_of_sleep
+      sleep_amount_list << s.hours_of_sleep
+      hydration_quality_list << s.hydration_quality
+      hydration_amount_list << s.ounces_of_water_consumed
+      academic_stress_list << s.academic_stress
+      life_stress_list << s.life_stress
+    end
+
+
+    # daily_loads = []
+    # weekly_load = 0
 
 
   end
