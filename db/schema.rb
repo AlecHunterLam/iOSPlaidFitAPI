@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180423021231) do
+ActiveRecord::Schema.define(version: 20180510060713) do
 
   create_table "badges", force: :cascade do |t|
     t.string "badge_name"
@@ -48,10 +48,7 @@ ActiveRecord::Schema.define(version: 20180423021231) do
 
   create_table "player_calculations", force: :cascade do |t|
     t.integer "user_id"
-    t.float "sleep_average"
-    t.float "hydration_average"
-    t.float "soreness_average"
-    t.float "load_average"
+    t.float "daily_load_average"
     t.string "season"
     t.integer "season_rank"
     t.datetime "created_at", null: false
@@ -67,6 +64,8 @@ ActiveRecord::Schema.define(version: 20180423021231) do
     t.datetime "week_of"
     t.float "monotony"
     t.float "week_to_week_weekly_load_percent_change"
+    t.float "sleep_amount_average"
+    t.float "hydration_amount_average"
   end
 
   create_table "practices", force: :cascade do |t|
@@ -128,10 +127,7 @@ ActiveRecord::Schema.define(version: 20180423021231) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "weekly_load"
-    t.float "sleep_average"
-    t.float "hydration_average"
-    t.float "soreness_average"
-    t.float "load_average"
+    t.float "daily_load_average"
     t.float "weekly_strain"
     t.integer "season_rank"
     t.float "life_stress_average"
@@ -141,6 +137,8 @@ ActiveRecord::Schema.define(version: 20180423021231) do
     t.float "practice_difficulty_average"
     t.float "team_monotony"
     t.float "week_to_week_weekly_load_percent_change"
+    t.float "sleep_amount_average"
+    t.float "hydration_amount_average"
   end
 
   create_table "teams", force: :cascade do |t|
