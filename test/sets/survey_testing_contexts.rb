@@ -111,7 +111,7 @@ module Contexts
 
       def create_events
         (0..8).each do |i|
-            Event.create(user_id: Faker::Number.between(4, 60), description: "test event number " + i.to_s, event_time: Time.new(2018, 5, 10 + i, 16, 30, 00, '-04:00'))
+            Event.create(user_id: Faker::Number.between(4, 30), description: "test event number " + i.to_s, event_time: Time.new(2018, 5, 10 + i, 16, 30, 00, '-04:00'))
             # Event.create(user_id: 63, description: "qapla", event_time: Time.new(2018, 5, 2, 10, 10, 00, '-04:00'))
         end
       end 
