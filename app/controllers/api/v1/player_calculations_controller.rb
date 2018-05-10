@@ -129,14 +129,12 @@ module Api::V1
           all_player_wellness = Survey.for_user(@player_calculation.user_id).daily_wellness.surveys_for_week(start_week, end_week)
 
           # set daily wellness fields
-
           sleep_quality_list = []
           sleep_amount_list =[]
           hydration_quality_list = []
           hydration_amount_list = []
           academic_stress_list = []
           life_stress_list = []
-
 
           # wellness
           all_player_wellness.each do |s|

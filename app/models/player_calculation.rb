@@ -2,6 +2,7 @@ class PlayerCalculation < ApplicationRecord
   # Constants
   # SEASONS = [['Fall', :fall], ['Winter', :winter], ['Spring', :spring]]
   # after_validation :set_relative_rank
+  before_save :sanitize_date_time
 
   # Relationships
   belongs_to :user
@@ -9,7 +10,8 @@ class PlayerCalculation < ApplicationRecord
   # Scopes
   scope :for_user,   -> (user_id) { where(user_id: user_id) }
   scope :for_season,   -> (season) { where(season: season) }
-  scope :rank_by_weekly_load,   ->{ order(:weekly_load) }
+  scope :for_week,    -> (monday) { where(week_of: monday) }
+  scope :rank_by_weekly_load,   ->{ order(weekly_load: :ASC) }
 
   # Validations
   validates_presence_of :user_id, :week_of, :season
@@ -44,6 +46,10 @@ class PlayerCalculation < ApplicationRecord
       i = i - 1
     end
     return
+  end
+
+  def sanitize_date_time
+    self.week_of = DateTime.new(self.week_of.year, self.week_of.month, self.week_of.day, 0,0,0, self.week_of.strftime( "%z" ));
   end
 
 end
