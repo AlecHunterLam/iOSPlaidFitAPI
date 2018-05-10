@@ -29,7 +29,7 @@ module Api::V1
         swagger_api :update do
             summary "Updates an existing Practice"
             param :path, :id, :integer, :required, "Practice ID"
-            param :path, :team_id, :integer, :required, "Team ID"
+            param :form, :team_id, :integer, :required, "Team ID"
             param :form, :duration, :integer, :optional, "Duration"
             param :form, :difficulty, :integer, :optional, "Difficulty"
             param :form, :practice_time, :datetime, :optional, "Date"
@@ -127,7 +127,7 @@ module Api::V1
 
         # PATCH/PUT /practices/1
         def update
-            if @practice.update(team_id: practice_params[:team_id], duration: practice_duration, difficulty: practice_difficulty,  practice_time: practice_params[:practice_time])
+            if @practice.update(team_id: practice_params[:team_id], duration: practice_params[:duration], difficulty: practice_params[:difficulty],  practice_time: practice_params[:practice_time])
                 render json: @practice
             else
                 render json: @practice.errors, status: :unprocessable_entity
