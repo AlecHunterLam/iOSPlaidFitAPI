@@ -1,3 +1,6 @@
+require './app/services/team_calculation_service_v1.rb'
+
+
 module Api::V1
     class TeamCalculationsController < ApplicationController
 
@@ -53,6 +56,14 @@ module Api::V1
         # POST /team_calculations
         def create
             @team_calculation = TeamCalculation.new(team_calculation_params)
+
+            # set the current season
+            @team = Team.find(@team_calculation.team_id)
+
+            @team_calculation.season = @team.season.to_s + "-" + (Time.now.year).to_s
+
+            @team_calculation = @team_calculation.get_team_calculation_object
+
             if @team_calculation.save
                 render json: @team_calculation, status: :created, location: [:v1, @team_calculation]
             else
