@@ -45,6 +45,9 @@ module Api::V1
         # GET /team_calculations
         def index
             @team_calculations = TeamCalculation.all.chronological
+            if (params[:for_team].present?)
+                @team_calculations = @team_calculations.for_team(params[:for_team])
+            end
             render json: @team_calculations
         end
 

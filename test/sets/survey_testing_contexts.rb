@@ -164,7 +164,7 @@ module Contexts
         create_post_practice_surveys(users, practices)
         create_events
         create_notifications
-        # create_calculations(users, teams)
+        create_calculations(users, teams)
       end
 
       def delete_stuff
