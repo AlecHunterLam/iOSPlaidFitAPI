@@ -8,6 +8,8 @@ module Api::V1
 
         swagger_api :index do
             summary "Fetches all Team Calculations"
+            param :query, :for_team, :integer, :option, "Filters by team"
+            param :query, :for_season, :integer, :option, "Filters by season"
             notes "This lists all the Team Calculations"
         end
 
@@ -44,7 +46,13 @@ module Api::V1
 
         # GET /team_calculations
         def index
-            @team_calculations = TeamCalculation.all
+            @team_calculations = TeamCalculation.all.chronological
+            if (params[:for_team].present?)
+                @team_calculations = @team_calculations.for_team(params[:for_team])
+            end
+            if (params[:for_season].present?)
+                @team_calculations = @team_calculations.for_season(params[:for_season])
+            end
             render json: @team_calculations
         end
 
