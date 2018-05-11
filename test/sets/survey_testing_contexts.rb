@@ -51,14 +51,14 @@ module Contexts
         practices = []
         teams.each do |team|
             # create practices for past two weeks
-            (0..9).each do |i|  
+            (0..10).each do |i|  
                 duration = Faker::Number.between(0, 180)
                 difficulty = Faker::Number.between(1, 10)
-                practice_time = Time.new(2018, 5, 10 - i, Faker::Number.between(10, 18), [0, 30].sample, 0, '-04:00')
+                practice_time = Time.new(2018, 5, 11 - i, Faker::Number.between(10, 18), [0, 30].sample, 0, '-04:00')
                 practice = Practice.create(team: team, duration: duration, difficulty: difficulty, practice_time: practice_time)
                 practices.push(practice)
             end
-            (0..15).each do |i|  
+            (0..29).each do |i|  
                 duration = Faker::Number.between(0, 180)
                 difficulty = Faker::Number.between(1, 10)
                 practice_time = Time.new(2018, 4, 30 - i, Faker::Number.between(10, 18), [0, 30].sample, 0, '-04:00')
@@ -71,13 +71,13 @@ module Contexts
 
       def create_daily_wellness_surveys(users)
         users.each do |user|
-            (0..6).each do |i|
-                survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, survey_type: 'Daily Wellness', datetime_today: Time.new(2018, 5, 10 - i, 23, 59, 59, '-04:00'),
+            (0..10).each do |i|
+                survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, survey_type: 'Daily Wellness', datetime_today: Time.new(2018, 5, 11 - i, 23, 59, 59, '-04:00'),
                                                     hours_of_sleep: Faker::Number.between(0, 12), quality_of_sleep: Faker::Number.between(1, 10), academic_stress: Faker::Number.between(1, 5), 
                                                     life_stress: Faker::Number.between(1, 5), soreness: Faker::Number.between(1, 10),ounces_of_water_consumed: Faker::Number.between(1, 128), hydration_quality: [true, false].sample})
                 survey_service.get_survey_object
             end
-            (0..15).each do |i|
+            (0..29).each do |i|
                 survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, survey_type: 'Daily Wellness', datetime_today: Time.new(2018, 4, 30 - i, 23, 59, 59, '-04:00'),
                                                     hours_of_sleep: Faker::Number.between(0, 12), quality_of_sleep: Faker::Number.between(1, 10), academic_stress: Faker::Number.between(1, 5), 
                                                     life_stress: Faker::Number.between(1, 5), soreness: Faker::Number.between(1, 10),ounces_of_water_consumed: Faker::Number.between(1, 128), hydration_quality: [true, false].sample})
@@ -88,16 +88,16 @@ module Contexts
       
       def create_post_practice_surveys(users, practices)
         users.each do |user|
-            (0..6).each do |i|
+            (0..10).each do |i|
                 player_rpe_rating = Faker::Number.between(0, 10)
                 player_personal_performance = Faker::Number.between(1, 10)
-                datetime_today = Time.new(2018, 5, 10 - i, 23, 59, 59, '-04:00')
+                datetime_today = Time.new(2018, 5, 11 - i, 23, 59, 59, '-04:00')
                 survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, practice_id: 1, survey_type: 'Post-Practice', datetime_today: datetime_today,
                                                    player_rpe_rating: player_rpe_rating, player_personal_performance: player_personal_performance, participated_in_full_practice: [true, false].sample,
                                                    minutes_participated: Faker::Number.between(0, 100)})
                 survey_service.get_survey_object
             end
-            (0..15).each do |i|
+            (0..29).each do |i|
                 player_rpe_rating = Faker::Number.between(0, 10)
                 player_personal_performance = Faker::Number.between(1, 10)
                 datetime_today = Time.new(2018, 4, 30 - i, 23, 59, 59, '-04:00')
