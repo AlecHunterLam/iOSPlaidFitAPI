@@ -7,6 +7,7 @@ module Contexts
 # create_stuff
 
       require 'faker'
+      require 'date'
 
       def create_teams_coaches_trainers
         # soccer team
@@ -51,17 +52,14 @@ module Contexts
         practices = []
         teams.each do |team|
             # create practices for past two weeks
-            (0..10).each do |i|  
+            (0..13).each do |i|  
+                curr_day = Time.now - i.days
                 duration = Faker::Number.between(0, 180)
                 difficulty = Faker::Number.between(1, 10)
-                practice_time = Time.new(2018, 5, 11 - i, Faker::Number.between(10, 18), [0, 30].sample, 0, '-04:00')
-                practice = Practice.create(team: team, duration: duration, difficulty: difficulty, practice_time: practice_time)
-                practices.push(practice)
-            end
-            (0..29).each do |i|  
-                duration = Faker::Number.between(0, 180)
-                difficulty = Faker::Number.between(1, 10)
-                practice_time = Time.new(2018, 4, 30 - i, Faker::Number.between(10, 18), [0, 30].sample, 0, '-04:00')
+                year = curr_day.year
+                month = curr_day.month
+                day = curr_day.day
+                practice_time = Time.new(year, month, day, Faker::Number.between(10, 18), [0, 30].sample, 0, '-04:00')
                 practice = Practice.create(team: team, duration: duration, difficulty: difficulty, practice_time: practice_time)
                 practices.push(practice)
             end
@@ -71,14 +69,12 @@ module Contexts
 
       def create_daily_wellness_surveys(users)
         users.each do |user|
-            (0..10).each do |i|
-                survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, survey_type: 'Daily Wellness', datetime_today: Time.new(2018, 5, 11 - i, 23, 59, 59, '-04:00'),
-                                                    hours_of_sleep: Faker::Number.between(0, 12), quality_of_sleep: Faker::Number.between(1, 10), academic_stress: Faker::Number.between(1, 5), 
-                                                    life_stress: Faker::Number.between(1, 5), soreness: Faker::Number.between(1, 10),ounces_of_water_consumed: Faker::Number.between(1, 128), hydration_quality: [true, false].sample})
-                survey_service.get_survey_object
-            end
-            (0..29).each do |i|
-                survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, survey_type: 'Daily Wellness', datetime_today: Time.new(2018, 4, 30 - i, 23, 59, 59, '-04:00'),
+            (0..13).each do |i|
+                curr_day = Time.now - i.days
+                year = curr_day.year
+                month = curr_day.month
+                day = curr_day.day
+                survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, survey_type: 'Daily Wellness', datetime_today: Time.new(year, month, day, 23, 59, 59, '-04:00'),
                                                     hours_of_sleep: Faker::Number.between(0, 12), quality_of_sleep: Faker::Number.between(1, 10), academic_stress: Faker::Number.between(1, 5), 
                                                     life_stress: Faker::Number.between(1, 5), soreness: Faker::Number.between(1, 10),ounces_of_water_consumed: Faker::Number.between(1, 128), hydration_quality: [true, false].sample})
                 survey_service.get_survey_object
@@ -88,20 +84,14 @@ module Contexts
       
       def create_post_practice_surveys(users, practices)
         users.each do |user|
-            (0..10).each do |i|
+            (0..13).each do |i|
                 player_rpe_rating = Faker::Number.between(0, 10)
                 player_personal_performance = Faker::Number.between(1, 10)
-                datetime_today = Time.new(2018, 5, 11 - i, 23, 59, 59, '-04:00')
-                survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, practice_id: 1, survey_type: 'Post-Practice', datetime_today: datetime_today,
-                                                   player_rpe_rating: player_rpe_rating, player_personal_performance: player_personal_performance, participated_in_full_practice: [true, false].sample,
-                                                   minutes_participated: Faker::Number.between(0, 100)})
-                survey_service.get_survey_object
-            end
-            (0..29).each do |i|
-                player_rpe_rating = Faker::Number.between(0, 10)
-                player_personal_performance = Faker::Number.between(1, 10)
-                datetime_today = Time.new(2018, 4, 30 - i, 23, 59, 59, '-04:00')
-                survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, practice_id: 1, survey_type: 'Post-Practice', datetime_today: datetime_today,
+                curr_day = Time.now - i.days
+                year = curr_day.year
+                month = curr_day.month
+                day = curr_day.day
+                survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, practice_id: 1, survey_type: 'Post-Practice', datetime_today: Time.new(year, month, day, 23, 59, 59, '-04:00'),
                                                    player_rpe_rating: player_rpe_rating, player_personal_performance: player_personal_performance, participated_in_full_practice: [true, false].sample,
                                                    minutes_participated: Faker::Number.between(0, 100)})
                 survey_service.get_survey_object
@@ -111,45 +101,75 @@ module Contexts
 
       def create_events
         (0..8).each do |i|
-            Event.create(user_id: Faker::Number.between(4, 30), description: "test event number " + i.to_s, event_time: Time.new(2018, 5, 11 + i, 16, 30, 00, '-04:00'))
-            # Event.create(user_id: 63, description: "qapla", event_time: Time.new(2018, 5, 2, 10, 10, 00, '-04:00'))
+            curr_day = Time.now + (i + 1).days
+            year = curr_day.year
+            month = curr_day.month
+            day = curr_day.day
+            Event.create(user_id: Faker::Number.between(4, 30), description: "test event number " + i.to_s, event_time: Time.new(year, month, day, 16, 30, 00, '-04:00'))
         end
       end 
 
       def create_notifications
         (0..5).each do |i|
-            Notification.create(user_id: i + 10, receiver_id: 1, priority: "Low", message: "test notification " + i.to_s, notified_time: Time.new(2018, 5, 11 - i, 23, 59, 59, '-04:00'))
+            curr_day = Time.now - i.days
+            year = curr_day.year
+            month = curr_day.month
+            day = curr_day.day
+            Notification.create(user_id: i + 10, receiver_id: 1, priority: "Low", message: "test notification " + i.to_s, notified_time: Time.new(year, month, day, 23, 59, 59, '-04:00'))
         end
     end
 
       def create_calculations(users, teams)
         users.each do |user|
             if (user.role == "Player") 
-                a = get_player_calculation(user_id: user.id, week_of: Time.new(2018, 4, 30, 0, 0, 0, '-04:00'))
+                most_recent_monday = Date.commercial(Date.today.year, Date.today.cwday.modulo(4)+Date.today.cweek, 1)
+                year = most_recent_monday.year
+                month = most_recent_monday.month
+                day = most_recent_monday.day
+                a = get_player_calculation(user_id: user.id, week_of: Time.new(year, month, day, 0, 0, 0, '-04:00'))
                 a.save!
                 set_relative_rank(a)
                 a.save!
-                b = get_player_calculation(user_id: user.id, week_of: Time.new(2018, 4, 23, 0, 0, 0, '-04:00'))
+                last_monday = Date.commercial((Date.today-1.week).year, (Date.today-1.week).cwday.modulo(4)+(Date.today-1.week).cweek, 1)
+                year = last_monday.year
+                month = last_monday.month
+                day = last_monday.day
+                b = get_player_calculation(user_id: user.id, week_of: Time.new(year, month, day, 0, 0, 0, '-04:00'))
                 b.save!
                 set_relative_rank(b)
                 b.save!
-                c = get_player_calculation(user_id: user.id, week_of: Time.new(2018, 4, 16, 0, 0, 0, '-04:00'))
+                last_last_monday = Date.commercial((Date.today-2.week).year, (Date.today-2.week).cwday.modulo(4)+(Date.today-2.week).cweek, 1)
+                year = last_last_monday.year
+                month = last_last_monday.month
+                day = last_last_monday.day
+                c = get_player_calculation(user_id: user.id, week_of: Time.new(year, month, day, 0, 0, 0, '-04:00'))
                 c.save!
                 set_relative_rank(c)
                 c.save!
             end
         end
         teams.each do |team|
-            a = get_team_calculation_object(team_id: team.id, week_of: Time.new(2018, 4, 30, 0, 0, 0, '-04:00'))
-            #a = get_team_calculation_object(team_id: 3, week_of: Time.new(2018, 4, 30, 0, 0, 0, '-04:00'))
+            most_recent_monday = Date.commercial(Date.today.year, Date.today.cwday.modulo(4)+Date.today.cweek, 1)
+            year = most_recent_monday.year
+            month = most_recent_monday.month
+            day = most_recent_monday.day
+            a = get_team_calculation_object(team_id: team.id, week_of: Time.new(year, month, day, 0, 0, 0, '-04:00'))
             a.save!
             set_relative_rank_t(a)
             a.save!
-            b = get_team_calculation_object(team_id: team.id, week_of: Time.new(2018, 4, 23, 0, 0, 0, '-04:00'))
+            last_monday = Date.commercial((Date.today-1.week).year, (Date.today-1.week).cwday.modulo(4)+(Date.today-1.week).cweek, 1)
+            year = last_monday.year
+            month = last_monday.month
+            day = last_monday.day
+            b = get_team_calculation_object(team_id: team.id, week_of: Time.new(year, month, day, 0, 0, 0, '-04:00'))
             b.save!
             set_relative_rank_t(b)
             b.save!
-            c = get_team_calculation_object(team_id: team.id, week_of: Time.new(2018, 4, 16, 0, 0, 0, '-04:00'))
+            last_last_monday = Date.commercial((Date.today-2.week).year, (Date.today-2.week).cwday.modulo(4)+(Date.today-2.week).cweek, 1)
+            year = last_last_monday.year
+            month = last_last_monday.month
+            day = last_last_monday.day
+            c = get_team_calculation_object(team_id: team.id, week_of: Time.new(year, month, day, 0, 0, 0, '-04:00'))
             c.save!
             set_relative_rank_t(c)
             c.save!
@@ -367,10 +387,3 @@ module Contexts
 
     end
   end
-
-  
-  
-#   load './app/services/survey_service_v2.rb'
-  
-  # get_survey_object
-  
