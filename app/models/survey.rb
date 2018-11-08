@@ -25,11 +25,11 @@ class Survey < ApplicationRecord
     scope :chronological,                                -> { order(:completed_time)}
 
     # Validations
-    validates_presence_of :survey_type, :completed_time
+    validates_presence_of :survey_type #, :completed_time
     validates_presence_of :season, message: "is not a valid season for this survey"
     # check this validation below
     validates_inclusion_of :survey_type, in: SURVEY_TYPES.map{|key, value| key}, message: "is not a valid survey type"
-    validates_date :completed_time, on_or_before: Time.now
+    # validates_date :completed_time, on_or_before: Time.now
 
     validate :validate_season
 

@@ -63,7 +63,7 @@ module Api::V1
           if survey_params[:datetime_today].nil?
             survey_params[:datetime_today] = Time.now
           end
-          survey_service_object = Survey.new(survey_params)
+          survey_service_object = SurveyService.new(survey_params)
           @survey = survey_service_object.get_survey_object
           if @survey.save
               render json: @survey, status: :created, location: [:v1, @survey]

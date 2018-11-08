@@ -70,7 +70,7 @@ module Contexts
       def create_daily_wellness_surveys(users)
         users.each do |user|
             (0..13).each do |i|
-                curr_day = Time.now - i.days
+                curr_day = Time.now - (i + 1).days
                 year = curr_day.year
                 month = curr_day.month
                 day = curr_day.day
@@ -87,13 +87,14 @@ module Contexts
             (0..13).each do |i|
                 player_rpe_rating = Faker::Number.between(0, 10)
                 player_personal_performance = Faker::Number.between(1, 10)
-                curr_day = Time.now - i.days
+                curr_day = Time.now - (i + 1).days
                 year = curr_day.year
                 month = curr_day.month
                 day = curr_day.day
                 survey_service = SurveyService.new({user_id: user.id, team_id: user.team_assignments.first.team_id, practice_id: 1, survey_type: 'Post-Practice', datetime_today: Time.new(year, month, day, 23, 59, 59, '-04:00'),
                                                    player_rpe_rating: player_rpe_rating, player_personal_performance: player_personal_performance, participated_in_full_practice: [true, false].sample,
                                                    minutes_participated: Faker::Number.between(0, 100)})
+#    survey_service = Survey.new({user_id: 4, practice_id: 1, survey_type: 'Post-Practice', player_rpe_rating: 1, player_personal_performance: 2, participated_in_full_practice: true,minutes_participated: 40})
                 survey_service.get_survey_object
             end
         end
@@ -129,7 +130,7 @@ module Contexts
                 a = get_player_calculation(user_id: user.id, week_of: Time.new(year, month, day, 0, 0, 0, '-04:00'))
                 a.save!
                 set_relative_rank(a)
-                a.save!
+                # a.save!
                 last_monday = Date.commercial((Date.today-1.week).year, (Date.today-1.week).cwday.modulo(4)+(Date.today-1.week).cweek, 1)
                 year = last_monday.year
                 month = last_monday.month
@@ -137,7 +138,7 @@ module Contexts
                 b = get_player_calculation(user_id: user.id, week_of: Time.new(year, month, day, 0, 0, 0, '-04:00'))
                 b.save!
                 set_relative_rank(b)
-                b.save!
+                # b.save!
                 last_last_monday = Date.commercial((Date.today-2.week).year, (Date.today-2.week).cwday.modulo(4)+(Date.today-2.week).cweek, 1)
                 year = last_last_monday.year
                 month = last_last_monday.month
@@ -145,7 +146,7 @@ module Contexts
                 c = get_player_calculation(user_id: user.id, week_of: Time.new(year, month, day, 0, 0, 0, '-04:00'))
                 c.save!
                 set_relative_rank(c)
-                c.save!
+                # c.save!
             end
         end
         teams.each do |team|
