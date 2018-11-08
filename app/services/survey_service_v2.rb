@@ -11,13 +11,15 @@ class SurveyService
     @practice_id = params[:practice_id]
 
     @survey_type = params[:survey_type]
-    @completed_time =  Time.now # ==> FOR TESTING REASONS, SUPPLY THE CURRENT DATE
+    # @completed_time = params[:datetime_today].ago(1000) #Time.now # ==> FOR TESTING REASONS, SUPPLY THE CURRENT DATE
+    @completed_time = Time.now
 
     # set user object
     @user = User.find(@user_id)
     @team = Team.find(@team_id)
     # date fields for further calculation
-    @current_datetime = Time.now # ==> FOR TESTING REASONS, SUPPLY THE CURRENT DATE
+    # @current_datetime = params[:datetime_today] #Time.now # ==> FOR TESTING REASONS, SUPPLY THE CURRENT DATE
+    @current_datetime = Time.now
     @current_day = @current_datetime.day
     @current_month = @current_datetime.month
     @current_year = @current_datetime.year
@@ -38,10 +40,16 @@ class SurveyService
     # if a post-practice, set appropriate fields to nil, and set data fields
     # elsif (@survey_type == 'Post-Practice')
     else
-
+        print("post practice survey stuff")
+        print(params)
       if Practice.find(@practice_id).nil? || !validate_fields_for_calculations(params)
+        print("sadness. it's nil :(")
         return nil
       end
+    #   if Practice.find(@practice_id).nil?
+    #     print("sadness. it's nil :(")
+    #     return nil
+    #   end
       set_post_practice_survey(params)
 
     end
@@ -123,19 +131,19 @@ class SurveyService
     @practice = Practice.find(@practice_id)
 
     # set proper fields
-    @player_rpe_rating = params[:player_rpe_rating]
-    @player_personal_performance = params[:player_personal_performance]
-    @participated_in_full_practice = params[:participated_in_full_practice]
+    @player_rpe_rating = params[:player_rpe_rating].to_i
+    @player_personal_performance = params[:player_personal_performance].to_i
+    @participated_in_full_practice = params[:participated_in_full_practice] == "true" ? true : false
 
     if @participated_in_full_practice == true
-      @minutes_participated = @practice.duration
+      @minutes_participated = @practice.duration.to_i
     else
-      @minutes_participated = params[:minutes_participated]
+      @minutes_participated = params[:minutes_participated].to_i
     end
 
     @session_load = set_player_session_load
     @expected_session_load = set_expected_session_load
-    @daily_load = set_daily_load
+    @daily_load = set_daily_load.to_i
     @weekly_load = set_weekly_load
     @acute_load = set_acute_load
     @chronic_load = set_chronic_load
@@ -329,10 +337,10 @@ class SurveyService
 
   # validate fields for post practice calcualtions
   def validate_fields_for_calculations(params)
-    rpe = params[:player_rpe_rating]
-    performance = params[:player_personal_performance]
+    rpe = params[:player_rpe_rating].to_i
+    performance = params[:player_personal_performance].to_i
     full_practice = params[:participated_in_full_practice]
-    minutes = params[:minutes_participated]
+    minutes = params[:minutes_participated].to_i
     # nill checks
     if rpe.nil? || performance.nil? || full_practice.nil?
       puts 1
@@ -344,14 +352,16 @@ class SurveyService
 
     # type checks
     elsif (!validate_integer_type(rpe) || !validate_integer_type(performance) || !validate_boolean_type(full_practice))
-      puts 2
+      puts "here"
 
       return false
     # practice + minutes check
     elsif (full_practice == false && minutes.nil?)
+        puts 3
       return false
     # pass preliminary checks
     else
+        puts 4
       return true
     end
 
@@ -359,6 +369,13 @@ class SurveyService
 
   # validate whether a provided field is a boolean type
   def validate_boolean_type(field)
+    puts field
+    puts field.class
+    if field == "1"
+        field = true
+    elsif field == "0"
+        field = false
+    end
     if field.is_a?(TrueClass) || field.is_a?(FalseClass)
       return true
     else
