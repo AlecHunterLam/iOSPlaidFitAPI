@@ -77,7 +77,7 @@ module Api::V1
       start_of_today = Time.new(today_year, today_month, today_day, 0, 0, 0, "-04:00")
       end_of_today = Time.new(today_year, today_month, today_day, 23, 59, 59, "-04:00")
 
-      if Survey.for_user(object.id).post_practice_serializer.surveys_on_date(start_of_today,end_of_today).empty?
+      if Survey.for_user(object.id).post_practice.surveys_today.empty?
         return true
       else
         return false
@@ -93,7 +93,7 @@ module Api::V1
       start_of_today = Time.new(today_year, today_month, today_day, 0, 0, 0, "-04:00")
       end_of_today = Time.new(today_year, today_month, today_day, 23, 59, 59, "-04:00")
 
-      if Survey.for_user(object.id).daily_wellness_serializer.surveys_on_date(start_of_today,end_of_today).empty?
+      if Survey.for_user(object.id).daily_wellness.surveys_today.empty?
         return true
       else
         return false
