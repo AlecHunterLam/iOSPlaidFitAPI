@@ -6,7 +6,7 @@ server 'plaidfit.online', :web, :app, :db, primary: true
 set :application, 'iOSPlaidFitApi'
 set :user, 'wcalat'
 set :group, 'admin'
-set :deploy_to, "/home/#{user}/apps/#{application}"
+set :deploy_to, "/home/#{user}/deploy/apps/#{application}"
 
 set :scm, 'git'
 set :git_enable_submodules, 1
