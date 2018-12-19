@@ -3002,3 +3002,582 @@ Tasks: TOP => db:migrate
  DEBUG [5b6bf551] 	
 (See full trace by running task with --trace)
  DEBUG [5b6bf551] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 14:26:36 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ebfc3043] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [ebfc3043] Command: ~/.rvm/bin/rvm version
+ DEBUG [32d1460c] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [32d1460c] 	
+ DEBUG [32d1460c] Finished in 2.798 seconds with exit status 0 (successful).
+ DEBUG [55623edb] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [55623edb] Command: ~/.rvm/bin/rvm current
+ DEBUG [c873c20f] 	system
+ DEBUG [c873c20f] 	
+ DEBUG [c873c20f] Finished in 0.691 seconds with exit status 0 (successful).
+ DEBUG [66b20146] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [66b20146] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [bd684c32] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [bd684c32] 	
+ DEBUG [bd684c32] Finished in 1.007 seconds with exit status 0 (successful).
+  INFO [631aea4d] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [631aea4d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [282cbe40] Finished in 0.410 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [828e26bb] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [828e26bb] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [24bc438d] Finished in 0.309 seconds with exit status 0 (successful).
+  INFO [4c23f017] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [4c23f017] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [fcf932a2] 	078c8b7e09bbbcae4835a991e82db0f3391cf1a5
+ DEBUG [fcf932a2] 		HEAD
+  INFO [fcf932a2] Finished in 1.879 seconds with exit status 0 (successful).
+  INFO [6c62d668] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [6c62d668] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+  INFO [f311196f] Finished in 0.267 seconds with exit status 0 (successful).
+ DEBUG [2d6f6e2f] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ] on plaidfit.online
+ DEBUG [2d6f6e2f] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ]
+ DEBUG [5de3d992] Finished in 0.431 seconds with exit status 0 (successful).
+ DEBUG [4461f710] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ] on plaidfit.online
+ DEBUG [4461f710] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ]
+ DEBUG [bf7a7585] Finished in 0.317 seconds with exit status 1 (failed).
+ DEBUG [82f0ce0c] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ] on plaidfit.online
+ DEBUG [82f0ce0c] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ]
+ DEBUG [ee6d4383] Finished in 0.325 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/wcalat/apps/iOSPlaidFitAPI/repo
+ DEBUG [359af8d6] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [359af8d6] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [f930b55e] Finished in 0.310 seconds with exit status 0 (successful).
+  INFO [55ec913a] Running /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git on plaidfit.online
+ DEBUG [55ec913a] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git )
+  INFO [515b0ee3] Finished in 0.311 seconds with exit status 0 (successful).
+  INFO [6b884e87] Running /usr/bin/env git remote update --prune on plaidfit.online
+ DEBUG [6b884e87] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8738b5b1] 	Fetching origin
+ DEBUG [8738b5b1] 	
+ DEBUG [8738b5b1] 	remote: Enumerating objects: 18, done.[K
+ DEBUG [8738b5b1] 	
+ DEBUG [8738b5b1] 	remote: Counting objects:   5% (1/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  11% (2/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  16% (3/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  22% (4/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  27% (5/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  33% (6/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  38% (7/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  44% (8/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  50% (9/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  55% (10/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  61% (11/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  66% (12/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  72% (13/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  77% (14/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  83% (15/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  88% (16/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects:  94% (17/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects: 100% (18/18)   [K
+ DEBUG [8738b5b1] 	remote: Counting objects: 100% (18/18), done.
+ DEBUG [8738b5b1] 	
+ DEBUG [8738b5b1] 	remote: Compressing objects:  33% (1/3)   [K
+ DEBUG [8738b5b1] 	remote: Compressing objects:  66% (2/3)   [K
+ DEBUG [8738b5b1] 	remote: Compressing objects: 100% (3/3)   [K
+ DEBUG [8738b5b1] 	remote: Compressing objects: 100% (3/3), done.[K
+ DEBUG [8738b5b1] 	
+ DEBUG [8738b5b1] 	remote: Total 11 (delta 8), reused 11 (delta 8), pack-reused 0[K
+ DEBUG [8738b5b1] 	
+ DEBUG [8738b5b1] 	Unpacking objects:   9% (1/11)   
+ DEBUG [8738b5b1] 	Unpacking objects:  18% (2/11)   
+ DEBUG [8738b5b1] 	Unpacking objects:  27% (3/11)   
+ DEBUG [8738b5b1] 	Unpacking objects:  36% (4/11)   
+ DEBUG [8738b5b1] 	Unpacking objects:  45% (5/11)   
+ DEBUG [8738b5b1] 	Unpacking objects:  54% (6/11)   
+ DEBUG [8738b5b1] 	Unpacking objects:  63% (7/11)   
+ DEBUG [8738b5b1] 	Unpacking objects:  72% (8/11)   
+ DEBUG [8738b5b1] 	Unpacking objects:  81% (9/11)   
+ DEBUG [8738b5b1] 	Unpacking objects:  90% (10/11)   
+ DEBUG [8738b5b1] 	Unpacking objects: 100% (11/11)   
+ DEBUG [8738b5b1] 	Unpacking objects: 100% (11/11), done.
+ DEBUG [8738b5b1] 	
+ DEBUG [8738b5b1] 	From github.com:wchu248/iOSPlaidFitAPI
+ DEBUG [8738b5b1] 	
+ DEBUG [8738b5b1] 	   e3d9650..078c8b7  master     -> master
+ DEBUG [8738b5b1] 	
+  INFO [8738b5b1] Finished in 4.787 seconds with exit status 0 (successful).
+ DEBUG [8f207c74] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [8f207c74] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [23f6286b] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [2e7e73b3] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645 on plaidfit.online
+ DEBUG [2e7e73b3] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645 )
+  INFO [e27c4956] Finished in 0.309 seconds with exit status 0 (successful).
+  INFO [843b107b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645 on plaidfit.online
+ DEBUG [843b107b] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645 )
+  INFO [8cfe0304] Finished in 0.339 seconds with exit status 0 (successful).
+ DEBUG [6ea9aa22] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [6ea9aa22] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [e1274002] Finished in 0.306 seconds with exit status 0 (successful).
+ DEBUG [8137c837] Running /usr/bin/env git rev-list --max-count=1 master on plaidfit.online
+ DEBUG [8137c837] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cc44d500] 	078c8b7e09bbbcae4835a991e82db0f3391cf1a5
+ DEBUG [cc44d500] 	
+ DEBUG [cc44d500] Finished in 0.310 seconds with exit status 0 (successful).
+ DEBUG [ec85a6f2] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645'" 1>&2; false; fi on plaidfit.online
+ DEBUG [ec85a6f2] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645'" 1>&2; false; fi
+ DEBUG [dc9832df] Finished in 0.316 seconds with exit status 0 (successful).
+  INFO [04ee7545] Running /usr/bin/env echo "078c8b7e09bbbcae4835a991e82db0f3391cf1a5" > REVISION on plaidfit.online
+ DEBUG [04ee7545] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645 && /usr/bin/env echo "078c8b7e09bbbcae4835a991e82db0f3391cf1a5" > REVISION
+  INFO [1e65a2e2] Finished in 0.312 seconds with exit status 0 (successful).
+ DEBUG [a751f42c] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645'" 1>&2; false; fi on plaidfit.online
+ DEBUG [a751f42c] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645'" 1>&2; false; fi
+ DEBUG [f7725bea] Finished in 0.311 seconds with exit status 0 (successful).
+ DEBUG [33051573] Running ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle on plaidfit.online
+ DEBUG [33051573] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645 && ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle
+ DEBUG [9fe667b1] 	[33mYour Gemfile lists the gem byebug (>= 0) more than once.
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	You should probably keep only one of them.
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[33mYour Gemfile lists the gem pg (= 0.20) more than once.
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	You should probably keep only one of them.
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31mThe following gems are missing[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * sshkit (1.18.0)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * airbrussh (1.3.1)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * capistrano-bundler (1.4.0)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * ffi (1.9.18)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * rb-fsevent (0.10.2)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * rb-inotify (0.9.10)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * ruby_dep (1.3.1)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * listen (3.1.5)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * spring (2.0.2)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [9fe667b1] 	
+ DEBUG [9fe667b1] Finished in 1.299 seconds with exit status 1 (failed).
+  INFO [25902f9b] Running ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet on plaidfit.online
+ DEBUG [25902f9b] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645 && ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet
+ DEBUG [9d40b443] 	[33mWarning, new version of rvm available '1.29.6', you are using older version '1.29.7'.
+ DEBUG [9d40b443] 	
+ DEBUG [9d40b443] 	You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+ DEBUG [9d40b443] 	
+ DEBUG [9d40b443] 	You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc[0m
+ DEBUG [9d40b443] 	
+ DEBUG [9d40b443] 	[0m
+  INFO [9d40b443] Finished in 1.538 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [07e736fa] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645'" 1>&2; false; fi on plaidfit.online
+ DEBUG [07e736fa] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645'" 1>&2; false; fi
+ DEBUG [7bb5940b] Finished in 0.308 seconds with exit status 0 (successful).
+  INFO [b2d4a3f9] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on plaidfit.online
+ DEBUG [b2d4a3f9] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [196616af] 	== 20180331172315 RenameUseridInSurveysToPlayerId: migrating ==================
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180331172315 RenameUseridInSurveysToPlayerId: migrated (0.0000s) =========
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180331180721 AddBadgeDescriptionToBadges: migrating ======================
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:badges, :badge_description, :string)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0014s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180331180721 AddBadgeDescriptionToBadges: migrated (0.0018s) =============
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180331220916 AddDateAddedToTeamAssignments: migrating ====================
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:team_assignments, :date_added, :datetime)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0007s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180331220916 AddDateAddedToTeamAssignments: migrated (0.0010s) ===========
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180331221734 AddUsersClassToUserForStudents: migrating ===================
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:users, :year, :string)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0006s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180331221734 AddUsersClassToUserForStudents: migrated (0.0008s) ==========
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180402024151 AddSurveyFieldsInsteadOfJsonResponse: migrating =============
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- remove_column(:surveys, :response)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0011s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- rename_column(:surveys, :type, :survey_type)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0035s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :hours_of_sleep, :float)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0015s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :quality_of_sleep, :integer)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0005s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :academic_stress, :integer)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0004s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :life_stress, :integer)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0004s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :soreness, :integer)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0005s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :ounces_of_water_consumed, :float)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0004s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :hydration_quality, :boolean)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0005s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :player_rpe_rating, :integer)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0009s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :player_personal_performance, :integer)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0004s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :participated_in_full_practice, :boolean)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0004s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :minutes_participated, :integer)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0005s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180402024151 AddSurveyFieldsInsteadOfJsonResponse: migrated (0.0139s) ====
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180402041228 ChangeCompletedInSurveysToCompletedTime: migrating ==========
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- rename_column(:surveys, :completed, :completed_time)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0019s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180402041228 ChangeCompletedInSurveysToCompletedTime: migrated (0.0021s) =
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180402054006 AddExpectedSessionLoadForPracticeInSurveys: migrating =======
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :expected_session_load, :float)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0006s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180402054006 AddExpectedSessionLoadForPracticeInSurveys: migrated (0.0008s) 
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180402071836 AddPracticeIdToSurveys: migrating ===========================
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- add_column(:surveys, :practice_id, :integer)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	   -> 0.0005s
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180402071836 AddPracticeIdToSurveys: migrated (0.0007s) ==================
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	== 20180402213559 RenamePlayerIdToUserIdInEvents: migrating ===================
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	-- rename_column(:events, :user_id, :user_id)
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	rake aborted!
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	StandardError: An error has occurred, this and all later migrations canceled:
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	PG::DuplicateColumn: ERROR:  column "user_id" of relation "events" already exists
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	: ALTER TABLE "events" RENAME COLUMN "user_id" TO "user_id"
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:476:in `rename_column'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bun
+ DEBUG [196616af] 	dle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:849:in `block in method_missing'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `block in say_with_time'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `say_with_time'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:838:in `method_missing'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645/db/migrate/20180402213559_rename_player_id_to_user_id_in_events.rb:3:in `change'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:792:in `exec_migration'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:775:in `block in migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:774:in `migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:953:in `migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/sh
+ DEBUG [196616af] 	ared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `ddl_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `each'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `block in migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1317:in `with_advisory_lock'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1007:in `up'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:985:in `migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPl
+ DEBUG [196616af] 	aidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/usr/local/bin/bundle:23:in `load'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/usr/local/bin/bundle:23:in `<main>'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	Caused by:
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	ActiveRecord::StatementInvalid: PG::DuplicateColumn: ERROR:  column "user_id" of relation "events" already exists
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	: ALTER TABLE "events" RENAME COLUMN "user_id" TO "user_id"
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:476:in `rename_column'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bun
+ DEBUG [196616af] 	dle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:849:in `block in method_missing'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `block in say_with_time'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `say_with_time'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:838:in `method_missing'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645/db/migrate/20180402213559_rename_player_id_to_user_id_in_events.rb:3:in `change'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:792:in `exec_migration'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:775:in `block in migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:774:in `migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:953:in `migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/sh
+ DEBUG [196616af] 	ared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `ddl_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `each'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `block in migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1317:in `with_advisory_lock'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1007:in `up'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:985:in `migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPl
+ DEBUG [196616af] 	aidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/usr/local/bin/bundle:23:in `load'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/usr/local/bin/bundle:23:in `<main>'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	Caused by:
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	PG::DuplicateColumn: ERROR:  column "user_id" of relation "events" already exists
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [196616af] 	
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [196616af] 	
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [196616af] 	
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:476:in `rename_column'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:849:in `block in method_missing'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `block in say_with_time'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `say_with_time'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:838:in `method_missing'
+/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219192645/db/migrate/20180402213559_rename_player_id_to_user_id_in_events.rb:3:in `change'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:775:in `block in migrate'
+ DEBUG [196616af] 	
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:774:in `migrate'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:953:in `migrate'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `ddl_transaction'
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `each'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `block in migrate'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1317:in `with_advisory_lock'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `migrate'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1007:in `up'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:985:in `migrate'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+ DEBUG [196616af] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/usr/local/bin/bundle:23:in `load'
+/usr/local/bin/bundle:23:in `<main>'
+Tasks: TOP => db:migrate
+ DEBUG [196616af] 	
+(See full trace by running task with --trace)
+ DEBUG [196616af] 	
