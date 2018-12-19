@@ -139,3 +139,42 @@
  DEBUG [4777f080] Command: ~/.rvm/bin/rvm version
  DEBUG [b06acf89] 	bash: /home/wcalat/.rvm/bin/rvm: No such file or directory
  DEBUG [b06acf89] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 13:30:50 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ba9087b8] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [ba9087b8] Command: [ -d ~/.rvm ]
+ DEBUG [2f5e5503] Finished in 2.061 seconds with exit status 1 (failed).
+ DEBUG [c1c06c11] Running [ -d /usr/local/rvm ] on plaidfit.online
+ DEBUG [c1c06c11] Command: [ -d /usr/local/rvm ]
+ DEBUG [838021d3] Finished in 0.335 seconds with exit status 1 (failed).
+ DEBUG [d5ebd770] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [d5ebd770] Command: ~/.rvm/bin/rvm version
+ DEBUG [4ca1f8c0] 	bash: /home/wcalat/.rvm/bin/rvm: No such file or directory
+ DEBUG [4ca1f8c0] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 13:36:26 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [dfa2f2f0] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [dfa2f2f0] Command: [ -d ~/.rvm ]
+ DEBUG [baee3a0f] Finished in 1.914 seconds with exit status 1 (failed).
+ DEBUG [955f5fed] Running [ -d /usr/local/rvm ] on plaidfit.online
+ DEBUG [955f5fed] Command: [ -d /usr/local/rvm ]
+ DEBUG [19a82490] Finished in 0.320 seconds with exit status 1 (failed).
+ DEBUG [830df2cc] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [830df2cc] Command: ~/.rvm/bin/rvm version
+ DEBUG [25bbb892] 	bash: /home/wcalat/.rvm/bin/rvm: No such file or directory
+ DEBUG [25bbb892] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 13:37:11 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [861bdb4a] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [861bdb4a] Command: [ -d ~/.rvm ]
+ DEBUG [4183b851] Finished in 1.934 seconds with exit status 1 (failed).
+ DEBUG [41727785] Running [ -d /usr/local/rvm ] on plaidfit.online
+ DEBUG [41727785] Command: [ -d /usr/local/rvm ]
+ DEBUG [216feb53] Finished in 0.309 seconds with exit status 1 (failed).
+ DEBUG [7ac10bf1] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [7ac10bf1] Command: ~/.rvm/bin/rvm version
+ DEBUG [087abbe6] 	bash: /home/wcalat/.rvm/bin/rvm: No such file or directory
+ DEBUG [087abbe6] 	
