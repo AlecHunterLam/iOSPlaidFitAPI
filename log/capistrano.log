@@ -178,3 +178,155 @@
  DEBUG [7ac10bf1] Command: ~/.rvm/bin/rvm version
  DEBUG [087abbe6] 	bash: /home/wcalat/.rvm/bin/rvm: No such file or directory
  DEBUG [087abbe6] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 13:37:37 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [59f5825c] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [59f5825c] Command: [ -d ~/.rvm ]
+ DEBUG [ed6c48a6] Finished in 1.990 seconds with exit status 1 (failed).
+ DEBUG [2ce8681e] Running [ -d /usr/local/rvm ] on plaidfit.online
+ DEBUG [2ce8681e] Command: [ -d /usr/local/rvm ]
+ DEBUG [7d3f100c] Finished in 0.358 seconds with exit status 1 (failed).
+ DEBUG [d5849d68] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [d5849d68] Command: ~/.rvm/bin/rvm version
+ DEBUG [85cb8459] 	bash: /home/wcalat/.rvm/bin/rvm: No such file or directory
+ DEBUG [85cb8459] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 13:37:54 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [499915ae] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [499915ae] Command: [ -d ~/.rvm ]
+ DEBUG [1f32e380] Finished in 28.193 seconds with exit status 1 (failed).
+ DEBUG [76077948] Running [ -d /usr/local/rvm ] on plaidfit.online
+ DEBUG [76077948] Command: [ -d /usr/local/rvm ]
+ DEBUG [91470465] Finished in 3.046 seconds with exit status 1 (failed).
+ DEBUG [72fac18d] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [72fac18d] Command: ~/.rvm/bin/rvm version
+ DEBUG [f7bd2ba7] 	bash: /home/wcalat/.rvm/bin/rvm: No such file or directory
+ DEBUG [f7bd2ba7] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 13:45:04 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2e134561] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [2e134561] Command: ~/.rvm/bin/rvm version
+ DEBUG [58d540f2] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [58d540f2] 	
+ DEBUG [58d540f2] Finished in 2.277 seconds with exit status 0 (successful).
+ DEBUG [29926db0] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [29926db0] Command: ~/.rvm/bin/rvm current
+ DEBUG [9683a525] 	system
+ DEBUG [9683a525] 	
+ DEBUG [9683a525] Finished in 0.583 seconds with exit status 0 (successful).
+ DEBUG [1dfa29e9] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [1dfa29e9] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [1394143e] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [1394143e] 	
+ DEBUG [1394143e] Finished in 1.016 seconds with exit status 0 (successful).
+  INFO [b0ac6ddc] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [b0ac6ddc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2abbac21] Finished in 0.236 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [343dd1c0] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [343dd1c0] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [7bc96f7a] Finished in 0.339 seconds with exit status 0 (successful).
+  INFO [cd59cf4d] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [cd59cf4d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [e44616ae] 	Warning: Permanently added 'github.com,140.82.118.4' (RSA) to the list of known hosts.
+ DEBUG [e44616ae] 	
+ DEBUG [e44616ae] 	0cdfd246eb0236d1e5d1f4a242f80ee921a66ff2	HEAD
+  INFO [e44616ae] Finished in 4.162 seconds with exit status 0 (successful).
+  INFO [1d1131e6] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [1d1131e6] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+ DEBUG [3a8c9caa] 	mkdir: 
+ DEBUG [3a8c9caa] 	cannot create directory ‘/home/wcalat/apps/iOSPlaidFitAPI/shared’
+ DEBUG [3a8c9caa] 	: Permission denied
+ DEBUG [3a8c9caa] 	
+ DEBUG [3a8c9caa] 	mkdir: 
+ DEBUG [3a8c9caa] 	cannot create directory ‘/home/wcalat/apps/iOSPlaidFitAPI/releases’
+ DEBUG [3a8c9caa] 	: Permission denied
+ DEBUG [3a8c9caa] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 13:45:30 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [619a32a1] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [619a32a1] Command: ~/.rvm/bin/rvm version
+ DEBUG [adf14891] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [adf14891] 	
+ DEBUG [adf14891] Finished in 2.199 seconds with exit status 0 (successful).
+ DEBUG [416a7192] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [416a7192] Command: ~/.rvm/bin/rvm current
+ DEBUG [1e05fe2c] 	system
+ DEBUG [1e05fe2c] 	
+ DEBUG [1e05fe2c] Finished in 0.771 seconds with exit status 0 (successful).
+ DEBUG [c507f26d] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [c507f26d] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [0c4b26ff] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [0c4b26ff] 	
+ DEBUG [0c4b26ff] Finished in 0.824 seconds with exit status 0 (successful).
+  INFO [e5491bbe] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [e5491bbe] Command: /usr/bin/env mkdir -p /tmp
+  INFO [14bec4d5] Finished in 0.387 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [029fe088] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [029fe088] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [e6f5f7af] Finished in 0.343 seconds with exit status 0 (successful).
+  INFO [77cdc10d] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [77cdc10d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [c9a8f47c] 	Warning: Permanently added the RSA host key for IP address '140.82.118.3' to the list of known hosts.
+ DEBUG [c9a8f47c] 	
+ DEBUG [c9a8f47c] 	0cdfd246eb0236d1e5d1f4a242f80ee921a66ff2
+ DEBUG [c9a8f47c] 		
+ DEBUG [c9a8f47c] 	HEAD
+  INFO [c9a8f47c] Finished in 1.939 seconds with exit status 0 (successful).
+  INFO [f44859c9] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [f44859c9] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+ DEBUG [215f6b94] 	mkdir: 
+ DEBUG [215f6b94] 	cannot create directory ‘/home/wcalat/apps/iOSPlaidFitAPI/shared’
+ DEBUG [215f6b94] 	: Permission denied
+ DEBUG [215f6b94] 	
+ DEBUG [215f6b94] 	mkdir: 
+ DEBUG [215f6b94] 	cannot create directory ‘/home/wcalat/apps/iOSPlaidFitAPI/releases’
+ DEBUG [215f6b94] 	: Permission denied
+ DEBUG [215f6b94] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 13:46:51 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [be955ac0] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [be955ac0] Command: ~/.rvm/bin/rvm version
+ DEBUG [0f6ce180] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [0f6ce180] 	
+ DEBUG [0f6ce180] Finished in 2.330 seconds with exit status 0 (successful).
+ DEBUG [684ad4bc] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [684ad4bc] Command: ~/.rvm/bin/rvm current
+ DEBUG [7ab628d1] 	system
+ DEBUG [7ab628d1] 	
+ DEBUG [7ab628d1] Finished in 0.614 seconds with exit status 0 (successful).
+ DEBUG [07417448] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [07417448] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [3ad309ad] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [3ad309ad] 	
+ DEBUG [3ad309ad] Finished in 0.819 seconds with exit status 0 (successful).
+  INFO [63e4fa8d] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [63e4fa8d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1d0f2f95] Finished in 0.299 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [c3dd0958] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [c3dd0958] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [d65f457f] Finished in 0.309 seconds with exit status 0 (successful).
+  INFO [898da2b6] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [898da2b6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [b1d05dbb] 	0cdfd246eb0236d1e5d1f4a242f80ee921a66ff2	HEAD
+  INFO [b1d05dbb] Finished in 1.954 seconds with exit status 0 (successful).
+  INFO [3acba99a] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [3acba99a] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+ DEBUG [a4a01ee4] 	mkdir: 
+ DEBUG [a4a01ee4] 	cannot create directory ‘/home/wcalat/apps/iOSPlaidFitAPI/shared’
+ DEBUG [a4a01ee4] 	: Permission denied
+ DEBUG [a4a01ee4] 	
+ DEBUG [a4a01ee4] 	mkdir: 
+ DEBUG [a4a01ee4] 	cannot create directory ‘/home/wcalat/apps/iOSPlaidFitAPI/releases’
+ DEBUG [a4a01ee4] 	: Permission denied
+ DEBUG [a4a01ee4] 	
