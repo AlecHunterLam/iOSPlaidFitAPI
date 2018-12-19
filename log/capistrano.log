@@ -330,3 +330,1227 @@
  DEBUG [a4a01ee4] 	cannot create directory ‘/home/wcalat/apps/iOSPlaidFitAPI/releases’
  DEBUG [a4a01ee4] 	: Permission denied
  DEBUG [a4a01ee4] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 13:47:22 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e54055f0] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [e54055f0] Command: ~/.rvm/bin/rvm version
+ DEBUG [1877701f] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [1877701f] 	
+ DEBUG [1877701f] Finished in 2.416 seconds with exit status 0 (successful).
+ DEBUG [907e40b9] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [907e40b9] Command: ~/.rvm/bin/rvm current
+ DEBUG [8c6195b5] 	system
+ DEBUG [8c6195b5] 	
+ DEBUG [8c6195b5] Finished in 0.615 seconds with exit status 0 (successful).
+ DEBUG [6fa18005] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [6fa18005] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [361143ed] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [361143ed] 	
+ DEBUG [361143ed] Finished in 0.805 seconds with exit status 0 (successful).
+  INFO [cabb056c] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [cabb056c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [fd477a24] Finished in 0.324 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [9cec3044] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [9cec3044] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [453cd4e7] Finished in 0.345 seconds with exit status 0 (successful).
+  INFO [9eca6950] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [9eca6950] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [afbd3822] 	46c0fff5a2c489ab2710df0b27b957785975b5c9
+ DEBUG [afbd3822] 		HEAD
+  INFO [afbd3822] Finished in 1.831 seconds with exit status 0 (successful).
+  INFO [58922804] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [58922804] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+ DEBUG [27b40e7b] 	mkdir: 
+ DEBUG [27b40e7b] 	cannot create directory ‘/home/wcalat/apps/iOSPlaidFitAPI/shared’
+ DEBUG [27b40e7b] 	: Permission denied
+ DEBUG [27b40e7b] 	
+ DEBUG [27b40e7b] 	mkdir: 
+ DEBUG [27b40e7b] 	cannot create directory ‘/home/wcalat/apps/iOSPlaidFitAPI/releases’
+ DEBUG [27b40e7b] 	: Permission denied
+ DEBUG [27b40e7b] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 13:58:09 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3001eab1] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [3001eab1] Command: ~/.rvm/bin/rvm version
+ DEBUG [6c241169] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [6c241169] 	
+ DEBUG [6c241169] Finished in 2.219 seconds with exit status 0 (successful).
+ DEBUG [52ff5469] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [52ff5469] Command: ~/.rvm/bin/rvm current
+ DEBUG [a7a0baa0] 	system
+ DEBUG [a7a0baa0] 	
+ DEBUG [a7a0baa0] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [96a37f02] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [96a37f02] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [506225bb] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [506225bb] 	
+ DEBUG [506225bb] Finished in 0.924 seconds with exit status 0 (successful).
+  INFO [59e10dd2] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [59e10dd2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3132a834] Finished in 0.240 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [b2cf6b66] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [b2cf6b66] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [2f345fe4] Finished in 0.309 seconds with exit status 0 (successful).
+  INFO [e396a04c] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [e396a04c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [f9a9e680] 	46c0fff5a2c489ab2710df0b27b957785975b5c9
+ DEBUG [f9a9e680] 		HEAD
+  INFO [f9a9e680] Finished in 1.854 seconds with exit status 0 (successful).
+  INFO [88db8f08] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [88db8f08] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+  INFO [5f4eaa1a] Finished in 0.272 seconds with exit status 0 (successful).
+  INFO [209038c5] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared/public/assets on plaidfit.online
+ DEBUG [209038c5] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared/public/assets
+  INFO [c3c5374c] Finished in 0.313 seconds with exit status 0 (successful).
+ DEBUG [761a7adf] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ] on plaidfit.online
+ DEBUG [761a7adf] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ]
+ DEBUG [452c67e0] Finished in 0.310 seconds with exit status 1 (failed).
+  WARN puma.rb NOT FOUND!
+ DEBUG Uploading /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb 0.0%
+  INFO Uploading /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb 100.0%
+  INFO puma.rb generated
+ DEBUG [6bd2deab] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ] on plaidfit.online
+ DEBUG [6bd2deab] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ]
+ DEBUG [5d68b98a] Finished in 0.313 seconds with exit status 1 (failed).
+ DEBUG [e366df65] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ] on plaidfit.online
+ DEBUG [e366df65] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ]
+ DEBUG [b0b19bcc] Finished in 0.307 seconds with exit status 1 (failed).
+ DEBUG [317bcffa] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI'" 1>&2; false; fi on plaidfit.online
+ DEBUG [317bcffa] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI'" 1>&2; false; fi
+ DEBUG [904a1cc5] Finished in 0.312 seconds with exit status 0 (successful).
+  INFO [835bd4a1] Running /usr/bin/env git clone --mirror git@github.com:wchu248/iOSPlaidFitAPI.git /home/wcalat/apps/iOSPlaidFitAPI/repo on plaidfit.online
+ DEBUG [835bd4a1] Command: cd /home/wcalat/apps/iOSPlaidFitAPI && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git clone --mirror git@github.com:wchu248/iOSPlaidFitAPI.git /home/wcalat/apps/iOSPlaidFitAPI/repo )
+ DEBUG [cb8d1cc0] 	Cloning into bare repository '/home/wcalat/apps/iOSPlaidFitAPI/repo'...
+ DEBUG [cb8d1cc0] 	
+ DEBUG [cb8d1cc0] 	remote: Enumerating objects: 2514, done.[K
+ DEBUG [cb8d1cc0] 	
+ DEBUG [cb8d1cc0] 	remote: Counting objects:   0% (1/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:   1% (26/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:   2% (51/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:   3% (76/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:   4% (101/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:   5% (126/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:   6% (151/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:   7% (176/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:   8% (202/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:   9% (227/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  10% (252/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  11% (277/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  12% (302/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  13% (327/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  14% (352/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  15% (378/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  16% (403/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  17% (428/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  18% (453/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  19% (478/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  20% (503/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  21% (528/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  22% (554/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  23% (579/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  24% (604/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  25% (629/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  26% (654/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  27% (679/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  28% (704/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  29% (730/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  30% (755/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  31% (780/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  32% (805/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  33% (830/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  34% (855/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  35% (880/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  36% (906/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  37% (931/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  38% (956/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  39% (981/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  40% (1006/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  41% (1031/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  42% (1056/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  43% (1082/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  44% (1107/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  45% (1132/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  46% (1157/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  47% (1182/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  48% (1207/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  49% (1232/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  50% (1257/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  51% (1283/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  52% (1308/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  53% (1333/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  54% (1358/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  55% (1383/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  56% (1408/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  57% (1433/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  58% (1459/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  59% (1484/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  60% (1509/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  61% (1534/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  62% (1559/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  63% (1584/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  64% (1609/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  65% (1635/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  66% (1660/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  67% (1685/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  68% (1710/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  69% (1735/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  70% (1760/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  71% (1785/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  72% (1811/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  73% (1836/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  74% (1861/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  75% (1886/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  76% (1911/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  77% (1936/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  78% (1961/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  79% (1987/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  80% (2012/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  81% (2037/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  82% (2062/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  83% (2087/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  84% (2112/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  85% (2137/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  86% (2163/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  87% (2188/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  88% (2213/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  89% (2238/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  90% (2263/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  91% (2288/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  92% (2313/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  93% (2339/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  94% (2364/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  95% (2389/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  96% (2414/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  97% (2439/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  98% (2464/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects:  99% (2489/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects: 100% (2514/2514)   [K
+ DEBUG [cb8d1cc0] 	remote: Counting objects: 100% (2514/2514), done.[K
+ DEBUG [cb8d1cc0] 	
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:   0% (1/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:   1% (9/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:   2% (17/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:   3% (25/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:   4% (34/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:   5% (42/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:   6% (50/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:   7% (59/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:   8% (67/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:   9% (75/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  10% (83/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  11% (92/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  12% (100/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  13% (108/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  14% (117/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  15% (125/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  16% (133/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  17% (141/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  18% (150/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  19% (158/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  20% (166/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  21% (175/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  22% (183/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  23% (191/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  24% (199/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  25% (208/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  26% (216/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  27% (224/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  28% (233/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  29% (241/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  30% (249/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  31% (257/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  32% (266/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  33% (274/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  34% (282/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  35% (291/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  36% (299/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  37% (307/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  38% (316/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  39% (324/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  40% (332/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  41% (340/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  42% (349/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  43% (357/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  44% (365/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  45% (374/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  46% (382/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  47% (390/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  48% (398/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  49% (407/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  50% (415/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  51% (423/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  52% (432/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  53% (440/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  54% (448/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  55% (456/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  56% (465/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  57% (473/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  58% (481/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  59% (490/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  60% (498/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  61% (506/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  62% (514/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  63% (523/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  64% (531/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  65% (539/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  66% (548/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  67% (556/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  68% (564/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  69% (573/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  70% (581/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  71% (589/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  72% (597/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  73% (606/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  74% (614/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  75% (622/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  76% (631/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  77% (639/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  78% (647/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  79% (655/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  80% (664/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  81% (672/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  82% (680/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  83% (689/829)   [Kremote: Compressing objects:  84% (697/829)   [Kremote: Compressing objects:  85% (705/829)   [Kremote: Compressing objects:  86% (713/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  87% (722/829)   [Kremote: Compressing objects:  88% (730/829)   [Kremote: Compressing objects:  89% (738/829)   [Kremote: Compressing objects:  90% (747/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  91% (755/829)   [Kremote: Compressing objects:  92% (763/829)   [Kremote: Compressing objects:  93% (771/829)   [Kremote: Compressing objects:  94% (780/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  95% (788/829)   [Kremote: Compressing objects:  96% (796/829)   [Kremote: Compressing objects:  97% (805/829)   [K
+ DEBUG [cb8d1cc0] 	remote: Compressing objects:  98% (813/829)   [Kremote: Compressing objects:  99% (821/829)   [Kremote: Compressing objects: 100% (829/829)   [Kremote: Compressing objects: 100% (829/829), done.[K
+ DEBUG [cb8d1cc0] 	
+ DEBUG [cb8d1cc0] 	Receiving objects:   0% (1/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:   1% (26/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:   2% (51/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:   3% (76/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:   4% (101/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:   5% (126/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:   6% (151/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:   7% (176/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:   8% (202/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:   9% (227/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  10% (252/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  11% (277/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  12% (302/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  13% (327/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  14% (352/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  15% (378/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  16% (403/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  17% (428/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  18% (453/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  19% (478/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  20% (503/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  21% (528/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  22% (554/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  23% (579/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  24% (604/2514)   
+ DEBUG [cb8d1cc0] 	Receiving objects:  24% (608/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  25% (629/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  26% (654/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  27% (679/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  28% (704/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  29% (730/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  30% (755/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  31% (780/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  32% (805/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  33% (830/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  34% (855/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  35% (880/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  36% (906/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  37% (931/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  38% (956/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  39% (981/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  40% (1006/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  41% (1031/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  42% (1056/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  43% (1082/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  44% (1107/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  45% (1132/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  46% (1157/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  47% (1182/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  48% (1207/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  49% (1232/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  50% (1257/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  51% (1283/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  52% (1308/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  53% (1333/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  54% (1358/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  55% (1383/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  56% (1408/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  57% (1433/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  58% (1459/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  59% (1484/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  60% (1509/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  61% (1534/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  62% (1559/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  63% (1584/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  64% (1609/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  65% (1635/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  66% (1660/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  67% (1685/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  68% (1710/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  69% (1735/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  70% (1760/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  71% (1785/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  72% (1811/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  73% (1836/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  74% (1861/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  75% (1886/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	remote: Total 2514 (delta 1524), reused 2472 (delta 1485), pack-reused 0[K
+ DEBUG [cb8d1cc0] 	
+ DEBUG [cb8d1cc0] 	Receiving objects:  76% (1911/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  77% (1936/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  78% (1961/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  79% (1987/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  80% (2012/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  81% (2037/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  82% (2062/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  83% (2087/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  84% (2112/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  85% (2137/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  86% (2163/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  87% (2188/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  88% (2213/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  89% (2238/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  90% (2263/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  91% (2288/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  92% (2313/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  93% (2339/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  94% (2364/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  95% (2389/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  96% (2414/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  97% (2439/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  98% (2464/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects:  99% (2489/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects: 100% (2514/2514), 2.01 MiB | 2.00 MiB/s   
+ DEBUG [cb8d1cc0] 	Receiving objects: 100% (2514/2514), 4.69 MiB | 3.93 MiB/s, done.
+ DEBUG [cb8d1cc0] 	
+ DEBUG [cb8d1cc0] 	Resolving deltas:   0% (0/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:   6% (94/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:   7% (115/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:   8% (127/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  10% (154/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  12% (189/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  13% (205/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  15% (232/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  16% (247/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  20% (314/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  21% (323/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  22% (341/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  23% (359/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  24% (366/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  25% (387/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  26% (402/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  27% (412/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  28% (430/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  29% (452/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  30% (469/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  31% (483/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  32% (490/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  34% (521/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  35% (534/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  36% (555/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  37% (564/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  40% (611/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  41% (625/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  43% (666/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  45% (689/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  49% (757/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  50% (775/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  51% (780/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  54% (829/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  57% (880/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  58% (884/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  59% (900/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  61% (935/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  62% (950/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  63% (963/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  64% (985/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  65% (992/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  66% (1006/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  67% (1028/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  69% (1063/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  70% (1076/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  71% (1083/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  72% (1101/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  73% (1115/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  75% (1150/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  76% (1161/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  77% (1174/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  78% (1192/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  83% (1275/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  84% (1292/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  85% (1296/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  86% (1315/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  87% (1336/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  89% (1363/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  91% (1389/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  92% (1415/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  94% (1441/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  97% (1484/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  98% (1501/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas:  99% (1511/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas: 100% (1524/1524)   
+ DEBUG [cb8d1cc0] 	Resolving deltas: 100% (1524/1524), done.
+ DEBUG [cb8d1cc0] 	
+  INFO [cb8d1cc0] Finished in 10.399 seconds with exit status 0 (successful).
+ DEBUG [82bb0ebd] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [82bb0ebd] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [f76b4a12] Finished in 0.271 seconds with exit status 0 (successful).
+  INFO [ee27147d] Running /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git on plaidfit.online
+ DEBUG [ee27147d] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git )
+  INFO [e10c7fc4] Finished in 0.315 seconds with exit status 0 (successful).
+  INFO [20b67343] Running /usr/bin/env git remote update --prune on plaidfit.online
+ DEBUG [20b67343] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [bc5c03fe] 	Fetching origin
+ DEBUG [bc5c03fe] 	
+  INFO [bc5c03fe] Finished in 1.640 seconds with exit status 0 (successful).
+ DEBUG [881d480b] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [881d480b] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [a32406ea] Finished in 0.290 seconds with exit status 0 (successful).
+  INFO [4d277751] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818 on plaidfit.online
+ DEBUG [4d277751] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818 )
+  INFO [3cb382db] Finished in 0.334 seconds with exit status 0 (successful).
+  INFO [bf74ff63] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818 on plaidfit.online
+ DEBUG [bf74ff63] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818 )
+  INFO [98aede65] Finished in 1.319 seconds with exit status 0 (successful).
+ DEBUG [6e1fb32c] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [6e1fb32c] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [c08cda7e] Finished in 0.381 seconds with exit status 0 (successful).
+ DEBUG [d5b1442d] Running /usr/bin/env git rev-list --max-count=1 master on plaidfit.online
+ DEBUG [d5b1442d] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cf7f98ae] 	46c0fff5a2c489ab2710df0b27b957785975b5c9
+ DEBUG [cf7f98ae] 	
+ DEBUG [cf7f98ae] Finished in 0.328 seconds with exit status 0 (successful).
+ DEBUG [c11dc6a2] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818'" 1>&2; false; fi on plaidfit.online
+ DEBUG [c11dc6a2] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818'" 1>&2; false; fi
+ DEBUG [4df9bd57] Finished in 0.306 seconds with exit status 0 (successful).
+  INFO [031bb961] Running /usr/bin/env echo "46c0fff5a2c489ab2710df0b27b957785975b5c9" > REVISION on plaidfit.online
+ DEBUG [031bb961] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818 && /usr/bin/env echo "46c0fff5a2c489ab2710df0b27b957785975b5c9" > REVISION
+  INFO [c2ae1eed] Finished in 0.308 seconds with exit status 0 (successful).
+  INFO [9104fe99] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818/public on plaidfit.online
+ DEBUG [9104fe99] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818/public
+  INFO [9a6aec58] Finished in 0.311 seconds with exit status 0 (successful).
+ DEBUG [860c1391] Running [ -L /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818/public/assets ] on plaidfit.online
+ DEBUG [860c1391] Command: [ -L /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818/public/assets ]
+ DEBUG [a3310344] Finished in 0.308 seconds with exit status 1 (failed).
+ DEBUG [2414b4d0] Running [ -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818/public/assets ] on plaidfit.online
+ DEBUG [2414b4d0] Command: [ -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818/public/assets ]
+ DEBUG [f0c9e1da] Finished in 0.317 seconds with exit status 1 (failed).
+  INFO [108761b2] Running /usr/bin/env ln -s /home/wcalat/apps/iOSPlaidFitAPI/shared/public/assets /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818/public/assets on plaidfit.online
+ DEBUG [108761b2] Command: /usr/bin/env ln -s /home/wcalat/apps/iOSPlaidFitAPI/shared/public/assets /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818/public/assets
+  INFO [e65c3de7] Finished in 0.340 seconds with exit status 0 (successful).
+ DEBUG [6bd256d3] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818'" 1>&2; false; fi on plaidfit.online
+ DEBUG [6bd256d3] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818'" 1>&2; false; fi
+ DEBUG [5bd6ba7e] Finished in 0.310 seconds with exit status 0 (successful).
+ DEBUG [e30def0c] Running ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle on plaidfit.online
+ DEBUG [e30def0c] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818 && ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle
+ DEBUG [4efe4ad7] 	[33mYour Gemfile lists the gem byebug (>= 0) more than once.
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	You should probably keep only one of them.
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[33mYour Gemfile lists the gem pg (= 0.20) more than once.
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	You should probably keep only one of them.
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31mThe following gems are missing[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * rake (12.3.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * concurrent-ruby (1.0.5)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * i18n (0.9.3)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * minitest (5.11.3)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * thread_safe (0.3.6)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * tzinfo (1.2.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * activesupport (5.1.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * builder (3.2.3)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * erubi (1.7.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * mini_portile2 (2.3.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * nokogiri (1.8.2)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * rails-dom-testing (2.0.3)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * crass (1.0.3)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * loofah (2.1.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * rails-html-sanitizer (1.0.3)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * actionview (5.1.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * rack (2.0.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * rack-test (0.8.2)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * actionpack (5.1.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * nio4r (2.2.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * websocket-extensions (0.1.3)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * websocket-driver (0.6.5)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * actioncable (5.1.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * globalid (0.4.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * activejob (5.1.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * mini_mime (1.0.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * mail (2.7.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * actionmailer (5.1.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * activemodel (5.1.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * case_transform (0.2)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * jsonapi-renderer (0.2.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * active_model_serializers (0.10.7)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * arel (8.0.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * activerecord (5.1.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * sshkit (1.18.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * airbrussh (1.3.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * bcrypt (3.1.11)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * byebug (10.0.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * capistrano-bundler (1.4.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * puma (3.11.2)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * descriptive_statistics (2.5.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * faker (1.8.7)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * ffi (1.9.18)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * hirb (0.7.3)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * rb-fsevent (0.10.2)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * rb-inotify (0.9.10)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * ruby_dep (1.3.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * listen (3.1.5)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * method_source (0.9.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * pg (0.20.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * rack-attack (5.0.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * rack-cors (1.0.2)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * thor (0.20.0)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * railties (5.1.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * sprockets (3.7.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * sprockets-rails (3.2.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * rails (5.1.4)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * spring (2.0.2)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * swagger-docs (0.2.9)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * timeliness (0.3.8)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[31m * validates_timeliness (4.0.2)[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [4efe4ad7] 	
+ DEBUG [4efe4ad7] Finished in 1.282 seconds with exit status 1 (failed).
+  INFO [63834b6a] Running ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet on plaidfit.online
+ DEBUG [63834b6a] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818 && ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet
+ DEBUG [379b5e07] 	[33mWarning, new version of rvm available '1.29.6', you are using older version '1.29.7'.
+ DEBUG [379b5e07] 	
+ DEBUG [379b5e07] 	You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+ DEBUG [379b5e07] 	
+ DEBUG [379b5e07] 	You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc[0m
+ DEBUG [379b5e07] 	
+ DEBUG [379b5e07] 	[0m
+  INFO [379b5e07] Finished in 104.144 seconds with exit status 0 (successful).
+ DEBUG [9cc4c018] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818'" 1>&2; false; fi on plaidfit.online
+ DEBUG [9cc4c018] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818'" 1>&2; false; fi
+ DEBUG [ae6850bd] Finished in 0.318 seconds with exit status 0 (successful).
+  INFO [18f03e50] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on plaidfit.online
+ DEBUG [18f03e50] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219185818 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [040ffb39] 	rake aborted!
+ DEBUG [040ffb39] 	
+ DEBUG [040ffb39] 	Don't know how to build task 'assets:precompile' (see --tasks)
+ DEBUG [040ffb39] 	
+ DEBUG [040ffb39] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [040ffb39] 	
+ DEBUG [040ffb39] 	/usr/local/bin/bundle:23:in `load'
+ DEBUG [040ffb39] 	
+ DEBUG [040ffb39] 	/usr/local/bin/bundle:23:in `<main>'
+ DEBUG [040ffb39] 	
+ DEBUG [040ffb39] 	(See full trace by running task with --trace)
+ DEBUG [040ffb39] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 14:01:18 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [883259b3] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [883259b3] Command: ~/.rvm/bin/rvm version
+ DEBUG [40ce58a8] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [40ce58a8] 	
+ DEBUG [40ce58a8] Finished in 2.408 seconds with exit status 0 (successful).
+ DEBUG [d30fd2e8] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [d30fd2e8] Command: ~/.rvm/bin/rvm current
+ DEBUG [f2c8b0bb] 	system
+ DEBUG [f2c8b0bb] 	
+ DEBUG [f2c8b0bb] Finished in 0.611 seconds with exit status 0 (successful).
+ DEBUG [ae1284f0] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [ae1284f0] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [c459ebc8] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [c459ebc8] 	
+ DEBUG [c459ebc8] Finished in 0.862 seconds with exit status 0 (successful).
+  INFO [5768d07d] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [5768d07d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ab40c9de] Finished in 0.327 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [a960ad73] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [a960ad73] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [735b3449] Finished in 0.338 seconds with exit status 0 (successful).
+  INFO [11691b23] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [11691b23] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [1bd806e1] 	46c0fff5a2c489ab2710df0b27b957785975b5c9
+ DEBUG [1bd806e1] 		HEAD
+  INFO [1bd806e1] Finished in 2.047 seconds with exit status 0 (successful).
+  INFO [ea6255f5] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [ea6255f5] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+  INFO [10a19f8a] Finished in 0.321 seconds with exit status 0 (successful).
+ DEBUG [26bc316c] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ] on plaidfit.online
+ DEBUG [26bc316c] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ]
+ DEBUG [dd7830fb] Finished in 0.330 seconds with exit status 0 (successful).
+ DEBUG [9f7dff4e] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ] on plaidfit.online
+ DEBUG [9f7dff4e] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ]
+ DEBUG [753dcbba] Finished in 0.334 seconds with exit status 1 (failed).
+ DEBUG [225abec8] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ] on plaidfit.online
+ DEBUG [225abec8] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ]
+ DEBUG [03528ccb] Finished in 0.337 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/wcalat/apps/iOSPlaidFitAPI/repo
+ DEBUG [bd95d3b2] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [bd95d3b2] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [cdb34ea2] Finished in 0.337 seconds with exit status 0 (successful).
+  INFO [4fd45707] Running /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git on plaidfit.online
+ DEBUG [4fd45707] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git )
+  INFO [66d2da69] Finished in 0.371 seconds with exit status 0 (successful).
+  INFO [d69c9bfd] Running /usr/bin/env git remote update --prune on plaidfit.online
+ DEBUG [d69c9bfd] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [4ead50d5] 	Fetching origin
+ DEBUG [4ead50d5] 	
+  INFO [4ead50d5] Finished in 1.892 seconds with exit status 0 (successful).
+ DEBUG [f30e0161] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [f30e0161] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [2d1bea02] Finished in 0.290 seconds with exit status 0 (successful).
+  INFO [812d04f2] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126 on plaidfit.online
+ DEBUG [812d04f2] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126 )
+  INFO [8f7948b7] Finished in 0.335 seconds with exit status 0 (successful).
+  INFO [9c2c7a6d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126 on plaidfit.online
+ DEBUG [9c2c7a6d] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126 )
+  INFO [e2a76eb4] Finished in 1.115 seconds with exit status 0 (successful).
+ DEBUG [40e37180] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [40e37180] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [8d5cfbf1] Finished in 0.356 seconds with exit status 0 (successful).
+ DEBUG [82a32680] Running /usr/bin/env git rev-list --max-count=1 master on plaidfit.online
+ DEBUG [82a32680] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ef34070e] 	46c0fff5a2c489ab2710df0b27b957785975b5c9
+ DEBUG [ef34070e] 	
+ DEBUG [ef34070e] Finished in 0.331 seconds with exit status 0 (successful).
+ DEBUG [3c175435] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126'" 1>&2; false; fi on plaidfit.online
+ DEBUG [3c175435] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126'" 1>&2; false; fi
+ DEBUG [ae566646] Finished in 0.334 seconds with exit status 0 (successful).
+  INFO [8b07dcd2] Running /usr/bin/env echo "46c0fff5a2c489ab2710df0b27b957785975b5c9" > REVISION on plaidfit.online
+ DEBUG [8b07dcd2] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126 && /usr/bin/env echo "46c0fff5a2c489ab2710df0b27b957785975b5c9" > REVISION
+  INFO [c2a77a1b] Finished in 0.331 seconds with exit status 0 (successful).
+ DEBUG [578910bf] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126'" 1>&2; false; fi on plaidfit.online
+ DEBUG [578910bf] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126'" 1>&2; false; fi
+ DEBUG [e4492968] Finished in 0.333 seconds with exit status 0 (successful).
+ DEBUG [20419de5] Running ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle on plaidfit.online
+ DEBUG [20419de5] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126 && ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle
+ DEBUG [39ab3f39] 	[33mYour Gemfile lists the gem byebug (>= 0) more than once.
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	You should probably keep only one of them.
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[33mYour Gemfile lists the gem pg (= 0.20) more than once.
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	You should probably keep only one of them.
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31mThe following gems are missing[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * sshkit (1.18.0)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * airbrussh (1.3.1)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * capistrano-bundler (1.4.0)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * ffi (1.9.18)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * rb-fsevent (0.10.2)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * rb-inotify (0.9.10)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * ruby_dep (1.3.1)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * listen (3.1.5)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * spring (2.0.2)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [39ab3f39] 	
+ DEBUG [39ab3f39] Finished in 1.269 seconds with exit status 1 (failed).
+  INFO [5a3371ec] Running ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet on plaidfit.online
+ DEBUG [5a3371ec] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126 && ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet
+ DEBUG [6bb4da35] 	[33mWarning, new version of rvm available '1.29.6', you are using older version '1.29.7'.
+ DEBUG [6bb4da35] 	
+ DEBUG [6bb4da35] 	You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+ DEBUG [6bb4da35] 	
+ DEBUG [6bb4da35] 	You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc[0m
+ DEBUG [6bb4da35] 	
+ DEBUG [6bb4da35] 	[0m
+  INFO [6bb4da35] Finished in 1.951 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [ddd44480] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126'" 1>&2; false; fi on plaidfit.online
+ DEBUG [ddd44480] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126'" 1>&2; false; fi
+ DEBUG [cfc13c06] Finished in 0.353 seconds with exit status 0 (successful).
+  INFO [da51356c] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on plaidfit.online
+ DEBUG [da51356c] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [f29f850a] 	rake aborted!
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	ActiveRecord::AdapterNotSpecified: 'production' database is not configured. Available: ["development", "test"]
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/connection_specification.rb:246:in `resolve_symbol_connection'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/connection_specification.rb:227:in `resolve_connection'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/connection_specification.rb:141:in `resolve'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_handling.rb:55:in `establish_connection'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/railtie.rb:124:in `block (2 levels) in <class:Railtie>'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69:in `instance_eval'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69:in `block in execute_hook'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:60:in `with_execution_control'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:65:in `execute_hook'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:50:in `block in run_load_hooks'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:49:in `each'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:49:in `run_load_hooks'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/base.rb:326:in `<module:ActiveRecord>'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/
+ DEBUG [f29f850a] 	gems/activerecord-5.1.4/lib/active_record/base.rb:25:in `<top (required)>'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/validates_timeliness-4.0.2/lib/validates_timeliness/orm/active_record.rb:96:in `<top (required)>'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/validates_timeliness-4.0.2/lib/validates_timeliness.rb:59:in `block in load_orms'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/validates_timeliness-4.0.2/lib/validates_timeliness.rb:59:in `each'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/validates_timeliness-4.0.2/lib/validates_timeliness.rb:59:in `load_orms'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/validates_timeliness-4.0.2/lib/validates_timeliness.rb:55:in `setup'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126/config/initializers/validates_timeliness.rb:1:in `<top (required)>'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFit
+ DEBUG [f29f850a] 	API/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:286:in `load'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:286:in `block in load'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:286:in `load'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/engine.rb:655:in `block in load_config_initializer'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:168:in `instrument'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/engine.rb:654:in `load_config_initializer'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/engine.rb:612:in `block (2 levels) in <class:Engine>'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/engine.rb:611:in `each'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/engine.rb:611:in `block in <class:Engine>'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:30:in `instance_exec'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:30:in `run'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:59:in `block in run_initializers'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:48:in `each'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:48:in `tsort_each_child'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.r
+ DEBUG [f29f850a] 	b:58:in `run_initializers'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:353:in `initialize!'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190126/config/environment.rb:5:in `<top (required)>'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:329:in `require'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:329:in `require_environment!'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:445:in `block in run_tasks_blocks'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/usr/local/bin/bundle:23:in `load'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	/usr/local/bin/bundle:23:in `<main>'
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	Tasks: TOP => db:migrate => environment
+ DEBUG [f29f850a] 	
+ DEBUG [f29f850a] 	(See full trace by running task with --trace)
+ DEBUG [f29f850a] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 14:02:34 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3607a319] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [3607a319] Command: ~/.rvm/bin/rvm version
+ DEBUG [71c1f4bd] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [71c1f4bd] 	
+ DEBUG [71c1f4bd] Finished in 2.249 seconds with exit status 0 (successful).
+ DEBUG [b16400b6] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [b16400b6] Command: ~/.rvm/bin/rvm current
+ DEBUG [bcac7811] 	system
+ DEBUG [bcac7811] 	
+ DEBUG [bcac7811] Finished in 0.639 seconds with exit status 0 (successful).
+ DEBUG [08e64f80] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [08e64f80] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [6a70aeb0] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [6a70aeb0] 	
+ DEBUG [6a70aeb0] Finished in 1.023 seconds with exit status 0 (successful).
+  INFO [3d48afe2] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [3d48afe2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1e6ad6f3] Finished in 0.259 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [3f440860] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [3f440860] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [878b470e] Finished in 0.344 seconds with exit status 0 (successful).
+  INFO [9e0b3328] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [9e0b3328] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [c40efae1] 	46c0fff5a2c489ab2710df0b27b957785975b5c9
+ DEBUG [c40efae1] 		HEAD
+  INFO [c40efae1] Finished in 1.813 seconds with exit status 0 (successful).
+  INFO [edb273b6] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [edb273b6] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+  INFO [b7873dd9] Finished in 0.299 seconds with exit status 0 (successful).
+ DEBUG [b0b0b152] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ] on plaidfit.online
+ DEBUG [b0b0b152] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ]
+ DEBUG [7d2d162d] Finished in 0.362 seconds with exit status 0 (successful).
+ DEBUG [d7f0999e] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ] on plaidfit.online
+ DEBUG [d7f0999e] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ]
+ DEBUG [2f6fbc2e] Finished in 0.375 seconds with exit status 1 (failed).
+ DEBUG [68f483a0] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ] on plaidfit.online
+ DEBUG [68f483a0] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ]
+ DEBUG [4fa9f494] Finished in 0.343 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/wcalat/apps/iOSPlaidFitAPI/repo
+ DEBUG [6845fb27] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [6845fb27] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [51761c22] Finished in 0.357 seconds with exit status 0 (successful).
+  INFO [0b78d682] Running /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git on plaidfit.online
+ DEBUG [0b78d682] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git )
+  INFO [52f517b7] Finished in 0.343 seconds with exit status 0 (successful).
+  INFO [13741813] Running /usr/bin/env git remote update --prune on plaidfit.online
+ DEBUG [13741813] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [239701f3] 	Fetching origin
+ DEBUG [239701f3] 	
+  INFO [239701f3] Finished in 1.960 seconds with exit status 0 (successful).
+ DEBUG [30ea7450] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [30ea7450] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [5f49a4ec] Finished in 0.776 seconds with exit status 0 (successful).
+  INFO [7ce58092] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242 on plaidfit.online
+ DEBUG [7ce58092] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242 )
+  INFO [fe14593c] Finished in 0.528 seconds with exit status 0 (successful).
+  INFO [dfab4c85] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242 on plaidfit.online
+ DEBUG [dfab4c85] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242 )
+  INFO [9a0d5c59] Finished in 1.242 seconds with exit status 0 (successful).
+ DEBUG [ffdb7b35] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [ffdb7b35] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [43db8dbe] Finished in 0.480 seconds with exit status 0 (successful).
+ DEBUG [26ba4f6c] Running /usr/bin/env git rev-list --max-count=1 master on plaidfit.online
+ DEBUG [26ba4f6c] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [5e09700e] 	46c0fff5a2c489ab2710df0b27b957785975b5c9
+ DEBUG [5e09700e] 	
+ DEBUG [5e09700e] Finished in 0.542 seconds with exit status 0 (successful).
+ DEBUG [9478baa1] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242'" 1>&2; false; fi on plaidfit.online
+ DEBUG [9478baa1] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242'" 1>&2; false; fi
+ DEBUG [3709f302] Finished in 0.503 seconds with exit status 0 (successful).
+  INFO [4522beff] Running /usr/bin/env echo "46c0fff5a2c489ab2710df0b27b957785975b5c9" > REVISION on plaidfit.online
+ DEBUG [4522beff] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242 && /usr/bin/env echo "46c0fff5a2c489ab2710df0b27b957785975b5c9" > REVISION
+  INFO [960c1322] Finished in 0.352 seconds with exit status 0 (successful).
+ DEBUG [900563d9] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242'" 1>&2; false; fi on plaidfit.online
+ DEBUG [900563d9] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242'" 1>&2; false; fi
+ DEBUG [0cbc2f82] Finished in 0.341 seconds with exit status 0 (successful).
+ DEBUG [a9d95240] Running ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle on plaidfit.online
+ DEBUG [a9d95240] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242 && ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle
+ DEBUG [fc61998d] 	[33mYour Gemfile lists the gem byebug (>= 0) more than once.
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	You should probably keep only one of them.
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[33mYour Gemfile lists the gem pg (= 0.20) more than once.
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	You should probably keep only one of them.
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31mThe following gems are missing[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * sshkit (1.18.0)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * airbrussh (1.3.1)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * capistrano-bundler (1.4.0)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * ffi (1.9.18)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * rb-fsevent (0.10.2)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * rb-inotify (0.9.10)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * ruby_dep (1.3.1)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * listen (3.1.5)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * spring (2.0.2)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [fc61998d] 	
+ DEBUG [fc61998d] Finished in 1.150 seconds with exit status 1 (failed).
+  INFO [09e8a469] Running ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet on plaidfit.online
+ DEBUG [09e8a469] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242 && ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet
+ DEBUG [153c3ac1] 	[33mWarning, new version of rvm available '1.29.6', you are using older version '1.29.7'.
+ DEBUG [153c3ac1] 	
+ DEBUG [153c3ac1] 	You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+ DEBUG [153c3ac1] 	
+ DEBUG [153c3ac1] 	You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc[0m
+ DEBUG [153c3ac1] 	
+ DEBUG [153c3ac1] 	[0m
+  INFO [153c3ac1] Finished in 1.537 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [c7080f79] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242'" 1>&2; false; fi on plaidfit.online
+ DEBUG [c7080f79] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242'" 1>&2; false; fi
+ DEBUG [acc64bd6] Finished in 0.348 seconds with exit status 0 (successful).
+  INFO [1c96c2ab] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on plaidfit.online
+ DEBUG [1c96c2ab] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [ee607af7] 	rake aborted!
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	ActiveRecord::AdapterNotSpecified: 'production' database is not configured. Available: ["development", "test"]
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/connection_specification.rb:246:in `resolve_symbol_connection'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/connection_specification.rb:227:in `resolve_connection'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/connection_specification.rb:141:in `resolve'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/connection_handling.rb:55:in `establish_connection'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/railtie.rb:124:in `block (2 levels) in <class:Railtie>'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69:in `instance_eval'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69:in `block in execute_hook'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:60:in `with_execution_control'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:65:in `execute_hook'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:50:in `block in run_load_hooks'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:49:in `each'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:49:in `run_load_hooks'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activerecord-5.1.4/lib/active_record/base.rb:326:in `<module:ActiveRecord>'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/
+ DEBUG [ee607af7] 	gems/activerecord-5.1.4/lib/active_record/base.rb:25:in `<top (required)>'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/validates_timeliness-4.0.2/lib/validates_timeliness/orm/active_record.rb:96:in `<top (required)>'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/validates_timeliness-4.0.2/lib/validates_timeliness.rb:59:in `block in load_orms'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/validates_timeliness-4.0.2/lib/validates_timeliness.rb:59:in `each'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/validates_timeliness-4.0.2/lib/validates_timeliness.rb:59:in `load_orms'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/validates_timeliness-4.0.2/lib/validates_timeliness.rb:55:in `setup'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242/config/initializers/validates_timeliness.rb:1:in `<top (required)>'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFit
+ DEBUG [ee607af7] 	API/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:286:in `load'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:286:in `block in load'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:286:in `load'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/engine.rb:655:in `block in load_config_initializer'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:168:in `instrument'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/engine.rb:654:in `load_config_initializer'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/engine.rb:612:in `block (2 levels) in <class:Engine>'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/engine.rb:611:in `each'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/engine.rb:611:in `block in <class:Engine>'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:30:in `instance_exec'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:30:in `run'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:59:in `block in run_initializers'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:48:in `each'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:48:in `tsort_each_child'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.r
+ DEBUG [ee607af7] 	b:58:in `run_initializers'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:353:in `initialize!'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/releases/20181219190242/config/environment.rb:5:in `<top (required)>'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:329:in `require'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:329:in `require_environment!'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:445:in `block in run_tasks_blocks'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/home/wcalat/apps/iOSPlaidFitAPI/shared/bundle/ruby/2.4.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/usr/local/bin/bundle:23:in `load'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	/usr/local/bin/bundle:23:in `<main>'
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	Tasks: TOP => db:migrate => environment
+ DEBUG [ee607af7] 	
+ DEBUG [ee607af7] 	(See full trace by running task with --trace)
+ DEBUG [ee607af7] 	

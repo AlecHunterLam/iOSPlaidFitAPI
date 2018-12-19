@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: plaidfit_api
+  database: plaidfit_dev_api
   pool: 5
   timeout: 5000
 
@@ -45,6 +45,13 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: plaidfit_api
+  database: plaidfit_test_api
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: plaidfit_prod_api
   pool: 5
   timeout: 5000
