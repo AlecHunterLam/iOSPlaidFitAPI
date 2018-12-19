@@ -1,0 +1,46 @@
+# Logfile created on 2018-12-18 23:36:54 -0500 by logger.rb/47272
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-18 23:36:54 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [05a91bc3] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [05a91bc3] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-18 23:40:26 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4c33e0bb] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [4c33e0bb] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-18 23:40:55 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [15ef5c60] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [15ef5c60] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-18 23:41:17 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [129c5034] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [129c5034] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-18 23:43:22 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a5b329d2] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [a5b329d2] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-18 23:59:06 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9ba44617] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [9ba44617] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 00:20:00 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a4a8f96d] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [a4a8f96d] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 01:52:56 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f6785dcc] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [f6785dcc] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-19 01:54:31 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bf209880] Running [ -d ~/.rvm ] on plaidfit.online
+ DEBUG [bf209880] Command: [ -d ~/.rvm ]

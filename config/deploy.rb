@@ -1,15 +1,16 @@
 # Change these
-server 'plaidfit.online', port: 8080, roles: [:web, :app, :db], primary: true
+server 'plaidfit.online', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:wchu248/iOSPlaidFitAPI.git'
 set :application,     'iOSPlaidFitAPI'
 set :user,            'wcalat'
+set :password,        'chulamthu'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
 # Don't change these unless you know what you're doing
 set :pty,             true
-set :use_sudo,        false
+set :use_sudo,        true
 set :stage,           :production
 set :deploy_via,      :remote_cache
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
