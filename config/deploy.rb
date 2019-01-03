@@ -81,7 +81,13 @@ namespace :deploy do
   # after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
+  after  :finishing,    setup_users
   # after  :finishing, invoke!("puma:restart")
+end
+
+def setup_users
+  User.create(first_name: "Alec", last_name: "Lam", andrew_id: "ahlam", email: "ahlam@andrew.cmu.edu", major: "Information Systems", phone: "2012493799", role: "Player", active: true, year: "Senior")
+  User.create(first_name: "Winston", last_name: "Chut", andrew_id: "wpchu", email: "wpchu@andrew.cmu.edu", major: "Information Systems", phone: "9088388767", role: "Player", active: true, year: "Senior")
 end
 
 # ps aux | grep puma    # Get puma pid

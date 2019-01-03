@@ -7300,3 +7300,650 @@ Tasks: TOP => db:migrate
   INFO [87a7d423] Running /usr/bin/env echo "Branch master (at 5e88415951c8fb4dcba0178667187cb6782295e2) deployed as release 20190103182123 by aleclamusr" >> /home/wcalat/apps/iOSPlaidFitAPI/revisions.log on plaidfit.online
  DEBUG [87a7d423] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases && /usr/bin/env echo "Branch master (at 5e88415951c8fb4dcba0178667187cb6782295e2) deployed as release 20190103182123 by aleclamusr" >> /home/wcalat/apps/iOSPlaidFitAPI/revisions.log
   INFO [0df6d46e] Finished in 0.316 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-03 13:31:39 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [029e246b] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [029e246b] Command: ~/.rvm/bin/rvm version
+ DEBUG [2d4bf09a] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [2d4bf09a] 	
+ DEBUG [2d4bf09a] Finished in 2.909 seconds with exit status 0 (successful).
+ DEBUG [dee1c657] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [dee1c657] Command: ~/.rvm/bin/rvm current
+ DEBUG [2cfa39dd] 	system
+ DEBUG [2cfa39dd] 	
+ DEBUG [2cfa39dd] Finished in 0.814 seconds with exit status 0 (successful).
+ DEBUG [ad822cd2] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [ad822cd2] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [fc407739] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [fc407739] 	
+ DEBUG [fc407739] Finished in 1.206 seconds with exit status 0 (successful).
+  INFO [ec6c83cb] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [ec6c83cb] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5c8f08bf] Finished in 0.315 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [4ddc3634] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [4ddc3634] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [35242720] Finished in 0.312 seconds with exit status 0 (successful).
+  INFO [24bf57d9] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [24bf57d9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [d4c1bf3b] 	4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e
+ DEBUG [d4c1bf3b] 		HEAD
+  INFO [d4c1bf3b] Finished in 1.848 seconds with exit status 0 (successful).
+  INFO [97987227] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [97987227] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+  INFO [2d2a4bb8] Finished in 0.261 seconds with exit status 0 (successful).
+ DEBUG [be44e4d0] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ] on plaidfit.online
+ DEBUG [be44e4d0] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ]
+ DEBUG [d42b8dc2] Finished in 0.307 seconds with exit status 0 (successful).
+ DEBUG [b8ba93b9] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ] on plaidfit.online
+ DEBUG [b8ba93b9] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ]
+ DEBUG [8400ec02] Finished in 0.306 seconds with exit status 0 (successful).
+ DEBUG [70a05a2d] Running /usr/bin/env cat /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION 2>/dev/null on plaidfit.online
+ DEBUG [70a05a2d] Command: /usr/bin/env cat /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION 2>/dev/null
+ DEBUG [94184648] 	5e88415951c8fb4dcba0178667187cb6782295e2
+ DEBUG [94184648] 	
+ DEBUG [94184648] Finished in 0.317 seconds with exit status 0 (successful).
+ DEBUG [fcfb8752] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ] on plaidfit.online
+ DEBUG [fcfb8752] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ]
+ DEBUG [831a846a] Finished in 0.310 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/wcalat/apps/iOSPlaidFitAPI/repo
+ DEBUG [07572fde] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [07572fde] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [ed1ab763] Finished in 0.316 seconds with exit status 0 (successful).
+  INFO [6aac694f] Running /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git on plaidfit.online
+ DEBUG [6aac694f] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git )
+  INFO [86ded552] Finished in 0.313 seconds with exit status 0 (successful).
+  INFO [aaa7f173] Running /usr/bin/env git remote update --prune on plaidfit.online
+ DEBUG [aaa7f173] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e640815d] 	Fetching origin
+ DEBUG [e640815d] 	
+ DEBUG [e640815d] 	remote: Enumerating objects: 7, done.[K
+ DEBUG [e640815d] 	
+ DEBUG [e640815d] 	remote: Counting objects:  14% (1/7)   [K
+ DEBUG [e640815d] 	remote: Counting objects:  28% (2/7)   [K
+ DEBUG [e640815d] 	remote: Counting objects:  42% (3/7)   [K
+ DEBUG [e640815d] 	remote: Counting objects:  57% (4/7)   [K
+ DEBUG [e640815d] 	remote: Counting objects:  71% (5/7)   [K
+ DEBUG [e640815d] 	remote: Counting objects:  85% (6/7)   [K
+ DEBUG [e640815d] 	remote: Counting objects: 100% (7/7)   [K
+ DEBUG [e640815d] 	remote: Counting objects: 100% (7/7), done.[K
+ DEBUG [e640815d] 	
+ DEBUG [e640815d] 	remote: Compressing objects: 100% (1/1)   [K
+ DEBUG [e640815d] 	remote: Compressing objects: 100% (1/1), done.[K
+ DEBUG [e640815d] 	
+ DEBUG [e640815d] 	remote: Total 4 (delta 3), reused 4 (delta 3), pack-reused 0[K
+ DEBUG [e640815d] 	
+ DEBUG [e640815d] 	Unpacking objects:  25% (1/4)   
+ DEBUG [e640815d] 	Unpacking objects:  50% (2/4)   
+ DEBUG [e640815d] 	Unpacking objects:  75% (3/4)   
+ DEBUG [e640815d] 	Unpacking objects: 100% (4/4)   
+ DEBUG [e640815d] 	Unpacking objects: 100% (4/4), done.
+ DEBUG [e640815d] 	
+ DEBUG [e640815d] 	From github.com:wchu248/iOSPlaidFitAPI
+ DEBUG [e640815d] 	
+ DEBUG [e640815d] 	   5e88415..4bc8cfe  master     -> master
+ DEBUG [e640815d] 	
+  INFO [e640815d] Finished in 2.002 seconds with exit status 0 (successful).
+ DEBUG [245dbffd] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [245dbffd] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [043d7c10] Finished in 0.253 seconds with exit status 0 (successful).
+  INFO [82d86414] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148 on plaidfit.online
+ DEBUG [82d86414] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148 )
+  INFO [0901551e] Finished in 0.312 seconds with exit status 0 (successful).
+  INFO [f681be33] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148 on plaidfit.online
+ DEBUG [f681be33] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148 )
+  INFO [eaa60c16] Finished in 0.354 seconds with exit status 0 (successful).
+ DEBUG [98d5d3b1] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [98d5d3b1] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [1c28d7d0] Finished in 0.314 seconds with exit status 0 (successful).
+ DEBUG [2dbc1a62] Running /usr/bin/env git rev-list --max-count=1 master on plaidfit.online
+ DEBUG [2dbc1a62] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a5bd5c20] 	4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e
+ DEBUG [a5bd5c20] 	
+ DEBUG [a5bd5c20] Finished in 0.333 seconds with exit status 0 (successful).
+ DEBUG [1634921f] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148'" 1>&2; false; fi on plaidfit.online
+ DEBUG [1634921f] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148'" 1>&2; false; fi
+ DEBUG [687add77] Finished in 0.308 seconds with exit status 0 (successful).
+  INFO [be710aa2] Running /usr/bin/env echo "4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e" > REVISION on plaidfit.online
+ DEBUG [be710aa2] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148 && /usr/bin/env echo "4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e" > REVISION
+  INFO [420b38ae] Finished in 0.307 seconds with exit status 0 (successful).
+ DEBUG [f80cefe2] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148'" 1>&2; false; fi on plaidfit.online
+ DEBUG [f80cefe2] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148'" 1>&2; false; fi
+ DEBUG [ba1fff57] Finished in 0.311 seconds with exit status 0 (successful).
+ DEBUG [2782e948] Running ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle on plaidfit.online
+ DEBUG [2782e948] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148 && ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle
+ DEBUG [36f6a3e1] 	[33mYour Gemfile lists the gem byebug (>= 0) more than once.
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	You should probably keep only one of them.
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[33mYour Gemfile lists the gem pg (= 0.20) more than once.
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	You should probably keep only one of them.
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31mThe following gems are missing[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * sshkit (1.18.0)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * airbrussh (1.3.1)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * capistrano-bundler (1.4.0)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * ffi (1.9.18)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * rb-fsevent (0.10.2)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * rb-inotify (0.9.10)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * ruby_dep (1.3.1)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * listen (3.1.5)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * spring (2.0.2)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [36f6a3e1] 	
+ DEBUG [36f6a3e1] Finished in 1.258 seconds with exit status 1 (failed).
+  INFO [a3668439] Running ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet on plaidfit.online
+ DEBUG [a3668439] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148 && ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet
+ DEBUG [8a5b3e9d] 	[33mWarning, new version of rvm available '1.29.6', you are using older version '1.29.7'.
+ DEBUG [8a5b3e9d] 	
+ DEBUG [8a5b3e9d] 	You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+ DEBUG [8a5b3e9d] 	
+ DEBUG [8a5b3e9d] 	You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc[0m
+ DEBUG [8a5b3e9d] 	
+ DEBUG [8a5b3e9d] 	[0m
+  INFO [8a5b3e9d] Finished in 1.795 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [e37f2460] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148'" 1>&2; false; fi on plaidfit.online
+ DEBUG [e37f2460] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148'" 1>&2; false; fi
+ DEBUG [625e877f] Finished in 0.329 seconds with exit status 0 (successful).
+  INFO [59c1fd98] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on plaidfit.online
+ DEBUG [59c1fd98] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+  INFO [eceda330] Finished in 3.806 seconds with exit status 0 (successful).
+  INFO [16d94e53] Running /usr/bin/env ln -s /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148 /home/wcalat/apps/iOSPlaidFitAPI/releases/current on plaidfit.online
+ DEBUG [16d94e53] Command: /usr/bin/env ln -s /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148 /home/wcalat/apps/iOSPlaidFitAPI/releases/current
+  INFO [9d842e57] Finished in 0.312 seconds with exit status 0 (successful).
+  INFO [03de7312] Running /usr/bin/env mv /home/wcalat/apps/iOSPlaidFitAPI/releases/current /home/wcalat/apps/iOSPlaidFitAPI on plaidfit.online
+ DEBUG [03de7312] Command: /usr/bin/env mv /home/wcalat/apps/iOSPlaidFitAPI/releases/current /home/wcalat/apps/iOSPlaidFitAPI
+  INFO [2794278f] Finished in 0.322 seconds with exit status 0 (successful).
+ DEBUG [61f965b8] Running /usr/bin/env ls -x /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [61f965b8] Command: /usr/bin/env ls -x /home/wcalat/apps/iOSPlaidFitAPI/releases
+ DEBUG [734fff19] 	20190103174533
+ DEBUG [734fff19] 		
+ DEBUG [734fff19] 	20190103180809
+ DEBUG [734fff19] 		
+ DEBUG [734fff19] 	20190103180953
+ DEBUG [734fff19] 		
+ DEBUG [734fff19] 	20190103181019
+ DEBUG [734fff19] 		
+ DEBUG [734fff19] 	20190103182123
+ DEBUG [734fff19] 	
+ DEBUG [734fff19] 	20190103183148
+ DEBUG [734fff19] 	
+ DEBUG [734fff19] Finished in 0.391 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on plaidfit.online
+ DEBUG [37fce932] Running [ -d /home/wcalat/apps/iOSPlaidFitAPI/current ] on plaidfit.online
+ DEBUG [37fce932] Command: [ -d /home/wcalat/apps/iOSPlaidFitAPI/current ]
+ DEBUG [7f0a746d] Finished in 0.316 seconds with exit status 0 (successful).
+ DEBUG [31b14672] Running /usr/bin/env readlink /home/wcalat/apps/iOSPlaidFitAPI/current on plaidfit.online
+ DEBUG [31b14672] Command: /usr/bin/env readlink /home/wcalat/apps/iOSPlaidFitAPI/current
+ DEBUG [04a1a92e] 	/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103183148
+ DEBUG [04a1a92e] 	
+ DEBUG [04a1a92e] Finished in 0.315 seconds with exit status 0 (successful).
+  INFO [11be8d65] Running /usr/bin/env rm -rf /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103174533 on plaidfit.online
+ DEBUG [11be8d65] Command: /usr/bin/env rm -rf /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103174533
+  INFO [58e75cd1] Finished in 0.337 seconds with exit status 0 (successful).
+ DEBUG [42bf8470] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/current; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/current'" 1>&2; false; fi on plaidfit.online
+ DEBUG [42bf8470] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/current; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/current'" 1>&2; false; fi
+ DEBUG [2c7e0302] Finished in 0.306 seconds with exit status 0 (successful).
+ DEBUG [edab8e3e] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ] on plaidfit.online
+ DEBUG [edab8e3e] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ]
+ DEBUG [171a8805] Finished in 0.305 seconds with exit status 0 (successful).
+ DEBUG [fee2312c] Running /usr/bin/env kill -0 $( cat /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ) on plaidfit.online
+ DEBUG [fee2312c] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ) )
+ DEBUG [889bcd51] Finished in 0.329 seconds with exit status 0 (successful).
+  INFO [c15b7617] Running bundle exec pumactl -S /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.state -F /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb restart on plaidfit.online
+ DEBUG [c15b7617] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/current && ( export RACK_ENV="production" ; bundle exec pumactl -S /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.state -F /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb restart )
+ DEBUG [50122663] 	Command restart sent success
+ DEBUG [50122663] 	
+  INFO [50122663] Finished in 1.121 seconds with exit status 0 (successful).
+ DEBUG [cae377b7] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases'" 1>&2; false; fi on plaidfit.online
+ DEBUG [cae377b7] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases'" 1>&2; false; fi
+ DEBUG [a4af507a] Finished in 0.317 seconds with exit status 0 (successful).
+  INFO [e198c62c] Running /usr/bin/env echo "Branch master (at 4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e) deployed as release 20190103183148 by aleclamusr" >> /home/wcalat/apps/iOSPlaidFitAPI/revisions.log on plaidfit.online
+ DEBUG [e198c62c] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases && /usr/bin/env echo "Branch master (at 4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e) deployed as release 20190103183148 by aleclamusr" >> /home/wcalat/apps/iOSPlaidFitAPI/revisions.log
+  INFO [caa424e2] Finished in 0.333 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-03 13:49:44 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d1652c6b] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [d1652c6b] Command: ~/.rvm/bin/rvm version
+ DEBUG [7c496b3e] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [7c496b3e] 	
+ DEBUG [7c496b3e] Finished in 3.597 seconds with exit status 0 (successful).
+ DEBUG [e811a9a5] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [e811a9a5] Command: ~/.rvm/bin/rvm current
+ DEBUG [b898ed44] 	system
+ DEBUG [b898ed44] 	
+ DEBUG [b898ed44] Finished in 0.957 seconds with exit status 0 (successful).
+ DEBUG [cf02bdfb] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [cf02bdfb] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [545caf86] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [545caf86] 	
+ DEBUG [545caf86] Finished in 1.424 seconds with exit status 0 (successful).
+  INFO [da17710a] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [da17710a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [dfae51db] Finished in 0.686 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [d7fad821] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [d7fad821] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [e0ac225c] Finished in 0.769 seconds with exit status 0 (successful).
+  INFO [84e2f4a3] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [84e2f4a3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [4f68906b] 	4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e
+ DEBUG [4f68906b] 		HEAD
+  INFO [4f68906b] Finished in 2.450 seconds with exit status 0 (successful).
+  INFO [ca97fa32] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [ca97fa32] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+  INFO [f7169c46] Finished in 0.583 seconds with exit status 0 (successful).
+ DEBUG [445ae2f2] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ] on plaidfit.online
+ DEBUG [445ae2f2] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ]
+ DEBUG [24b4d95e] Finished in 0.614 seconds with exit status 0 (successful).
+ DEBUG [e989762b] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ] on plaidfit.online
+ DEBUG [e989762b] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ]
+ DEBUG [3af10fef] Finished in 0.645 seconds with exit status 0 (successful).
+ DEBUG [a59b635f] Running /usr/bin/env cat /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION 2>/dev/null on plaidfit.online
+ DEBUG [a59b635f] Command: /usr/bin/env cat /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION 2>/dev/null
+ DEBUG [748d76f2] 	4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e
+ DEBUG [748d76f2] 	
+ DEBUG [748d76f2] Finished in 0.816 seconds with exit status 0 (successful).
+ DEBUG [d0c76e5e] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ] on plaidfit.online
+ DEBUG [d0c76e5e] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ]
+ DEBUG [3f49d383] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/wcalat/apps/iOSPlaidFitAPI/repo
+ DEBUG [22cda911] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [22cda911] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [9143d29b] Finished in 0.708 seconds with exit status 0 (successful).
+  INFO [e7f41eac] Running /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git on plaidfit.online
+ DEBUG [e7f41eac] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git )
+  INFO [f1e58643] Finished in 0.622 seconds with exit status 0 (successful).
+  INFO [f2fd2caf] Running /usr/bin/env git remote update --prune on plaidfit.online
+ DEBUG [f2fd2caf] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [08519c12] 	Fetching origin
+ DEBUG [08519c12] 	
+  INFO [08519c12] Finished in 5.365 seconds with exit status 0 (successful).
+ DEBUG [4c4ffcb2] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [4c4ffcb2] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [4afff4b3] Finished in 0.271 seconds with exit status 0 (successful).
+  INFO [26e36325] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958 on plaidfit.online
+ DEBUG [26e36325] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958 )
+  INFO [751fe4a1] Finished in 0.341 seconds with exit status 0 (successful).
+  INFO [ec38786a] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958 on plaidfit.online
+ DEBUG [ec38786a] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958 )
+  INFO [9dac9d60] Finished in 0.364 seconds with exit status 0 (successful).
+ DEBUG [bed02b49] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [bed02b49] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [c803539a] Finished in 0.316 seconds with exit status 0 (successful).
+ DEBUG [e1c6adce] Running /usr/bin/env git rev-list --max-count=1 master on plaidfit.online
+ DEBUG [e1c6adce] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [dfe2fbad] 	4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e
+ DEBUG [dfe2fbad] 	
+ DEBUG [dfe2fbad] Finished in 0.318 seconds with exit status 0 (successful).
+ DEBUG [e202a952] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958'" 1>&2; false; fi on plaidfit.online
+ DEBUG [e202a952] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958'" 1>&2; false; fi
+ DEBUG [3dadf6d9] Finished in 0.316 seconds with exit status 0 (successful).
+  INFO [3295c74d] Running /usr/bin/env echo "4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e" > REVISION on plaidfit.online
+ DEBUG [3295c74d] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958 && /usr/bin/env echo "4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e" > REVISION
+  INFO [697c016b] Finished in 0.319 seconds with exit status 0 (successful).
+ DEBUG [3fe966a1] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958'" 1>&2; false; fi on plaidfit.online
+ DEBUG [3fe966a1] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958'" 1>&2; false; fi
+ DEBUG [61645fa3] Finished in 0.316 seconds with exit status 0 (successful).
+ DEBUG [32cef570] Running ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle on plaidfit.online
+ DEBUG [32cef570] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958 && ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle
+ DEBUG [e92b3ebc] 	[33mYour Gemfile lists the gem byebug (>= 0) more than once.
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	You should probably keep only one of them.
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[33mYour Gemfile lists the gem pg (= 0.20) more than once.
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	You should probably keep only one of them.
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31mThe following gems are missing[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * sshkit (1.18.0)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * airbrussh (1.3.1)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * capistrano-bundler (1.4.0)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * ffi (1.9.18)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * rb-fsevent (0.10.2)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * rb-inotify (0.9.10)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * ruby_dep (1.3.1)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * listen (3.1.5)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * spring (2.0.2)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [e92b3ebc] 	
+ DEBUG [e92b3ebc] Finished in 1.368 seconds with exit status 1 (failed).
+  INFO [40428f14] Running ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet on plaidfit.online
+ DEBUG [40428f14] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958 && ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet
+ DEBUG [f640035d] 	[33mWarning, new version of rvm available '1.29.6', you are using older version '1.29.7'.
+ DEBUG [f640035d] 	
+ DEBUG [f640035d] 	You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+ DEBUG [f640035d] 	
+ DEBUG [f640035d] 	You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc[0m
+ DEBUG [f640035d] 	
+ DEBUG [f640035d] 	[0m
+  INFO [f640035d] Finished in 1.835 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [92cae097] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958'" 1>&2; false; fi on plaidfit.online
+ DEBUG [92cae097] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958'" 1>&2; false; fi
+ DEBUG [8fbd015b] Finished in 0.317 seconds with exit status 0 (successful).
+  INFO [8d67d435] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on plaidfit.online
+ DEBUG [8d67d435] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+  INFO [3b9215c9] Finished in 3.901 seconds with exit status 0 (successful).
+  INFO [1c3253ee] Running /usr/bin/env ln -s /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958 /home/wcalat/apps/iOSPlaidFitAPI/releases/current on plaidfit.online
+ DEBUG [1c3253ee] Command: /usr/bin/env ln -s /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958 /home/wcalat/apps/iOSPlaidFitAPI/releases/current
+  INFO [917e60df] Finished in 0.319 seconds with exit status 0 (successful).
+  INFO [00e08a1a] Running /usr/bin/env mv /home/wcalat/apps/iOSPlaidFitAPI/releases/current /home/wcalat/apps/iOSPlaidFitAPI on plaidfit.online
+ DEBUG [00e08a1a] Command: /usr/bin/env mv /home/wcalat/apps/iOSPlaidFitAPI/releases/current /home/wcalat/apps/iOSPlaidFitAPI
+  INFO [a06dea3c] Finished in 0.330 seconds with exit status 0 (successful).
+ DEBUG [3d7e09fb] Running /usr/bin/env ls -x /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [3d7e09fb] Command: /usr/bin/env ls -x /home/wcalat/apps/iOSPlaidFitAPI/releases
+ DEBUG [be2ea9c3] 	20190103180809
+ DEBUG [be2ea9c3] 		
+ DEBUG [be2ea9c3] 	20190103180953
+ DEBUG [be2ea9c3] 		
+ DEBUG [be2ea9c3] 	20190103181019
+ DEBUG [be2ea9c3] 		
+ DEBUG [be2ea9c3] 	20190103182123
+ DEBUG [be2ea9c3] 		
+ DEBUG [be2ea9c3] 	20190103183148
+ DEBUG [be2ea9c3] 	
+ DEBUG [be2ea9c3] 	20190103184958
+ DEBUG [be2ea9c3] 	
+ DEBUG [be2ea9c3] Finished in 0.404 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on plaidfit.online
+ DEBUG [ebc92248] Running [ -d /home/wcalat/apps/iOSPlaidFitAPI/current ] on plaidfit.online
+ DEBUG [ebc92248] Command: [ -d /home/wcalat/apps/iOSPlaidFitAPI/current ]
+ DEBUG [0c28a67c] Finished in 0.314 seconds with exit status 0 (successful).
+ DEBUG [a73e803a] Running /usr/bin/env readlink /home/wcalat/apps/iOSPlaidFitAPI/current on plaidfit.online
+ DEBUG [a73e803a] Command: /usr/bin/env readlink /home/wcalat/apps/iOSPlaidFitAPI/current
+ DEBUG [95e57a78] 	/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103184958
+ DEBUG [95e57a78] 	
+ DEBUG [95e57a78] Finished in 0.316 seconds with exit status 0 (successful).
+  INFO [a9a84331] Running /usr/bin/env rm -rf /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103180809 on plaidfit.online
+ DEBUG [a9a84331] Command: /usr/bin/env rm -rf /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103180809
+  INFO [46c40e58] Finished in 0.324 seconds with exit status 0 (successful).
+ DEBUG [2c13c995] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/current; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/current'" 1>&2; false; fi on plaidfit.online
+ DEBUG [2c13c995] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/current; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/current'" 1>&2; false; fi
+ DEBUG [242caa3f] Finished in 0.311 seconds with exit status 0 (successful).
+ DEBUG [68a1d7bd] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ] on plaidfit.online
+ DEBUG [68a1d7bd] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ]
+ DEBUG [8ed98c40] Finished in 0.314 seconds with exit status 0 (successful).
+ DEBUG [ee0c5605] Running /usr/bin/env kill -0 $( cat /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ) on plaidfit.online
+ DEBUG [ee0c5605] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ) )
+ DEBUG [1211e46a] Finished in 0.319 seconds with exit status 0 (successful).
+  INFO [21dfde4c] Running bundle exec pumactl -S /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.state -F /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb restart on plaidfit.online
+ DEBUG [21dfde4c] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/current && ( export RACK_ENV="production" ; bundle exec pumactl -S /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.state -F /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb restart )
+ DEBUG [eb4d038e] 	Command restart sent success
+ DEBUG [eb4d038e] 	
+  INFO [eb4d038e] Finished in 1.062 seconds with exit status 0 (successful).
+ DEBUG [da067a51] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases'" 1>&2; false; fi on plaidfit.online
+ DEBUG [da067a51] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases'" 1>&2; false; fi
+ DEBUG [a319e3e2] Finished in 0.242 seconds with exit status 0 (successful).
+  INFO [63334d7d] Running /usr/bin/env echo "Branch master (at 4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e) deployed as release 20190103184958 by aleclamusr" >> /home/wcalat/apps/iOSPlaidFitAPI/revisions.log on plaidfit.online
+ DEBUG [63334d7d] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases && /usr/bin/env echo "Branch master (at 4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e) deployed as release 20190103184958 by aleclamusr" >> /home/wcalat/apps/iOSPlaidFitAPI/revisions.log
+  INFO [e079d69a] Finished in 0.332 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-03 13:53:06 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [876cdb7d] Running ~/.rvm/bin/rvm version on plaidfit.online
+ DEBUG [876cdb7d] Command: ~/.rvm/bin/rvm version
+ DEBUG [b588c2a3] 	rvm 1.29.7 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [b588c2a3] 	
+ DEBUG [b588c2a3] Finished in 2.589 seconds with exit status 0 (successful).
+ DEBUG [bd7faf18] Running ~/.rvm/bin/rvm current on plaidfit.online
+ DEBUG [bd7faf18] Command: ~/.rvm/bin/rvm current
+ DEBUG [b0c0a220] 	system
+ DEBUG [b0c0a220] 	
+ DEBUG [b0c0a220] Finished in 0.660 seconds with exit status 0 (successful).
+ DEBUG [f8011f8d] Running ~/.rvm/bin/rvm default do ruby --version on plaidfit.online
+ DEBUG [f8011f8d] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [09c276bd] 	ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-linux]
+ DEBUG [09c276bd] 	
+ DEBUG [09c276bd] Finished in 1.182 seconds with exit status 0 (successful).
+  INFO [3e04da27] Running /usr/bin/env mkdir -p /tmp on plaidfit.online
+ DEBUG [3e04da27] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6e42597b] Finished in 0.263 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 0.0%
+  INFO Uploading /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh 100.0%
+  INFO [2e78988e] Running /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh on plaidfit.online
+ DEBUG [2e78988e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh
+  INFO [48d9b7a7] Finished in 0.341 seconds with exit status 0 (successful).
+  INFO [0b95bb19] Running /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD on plaidfit.online
+ DEBUG [0b95bb19] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git ls-remote git@github.com:wchu248/iOSPlaidFitAPI.git HEAD )
+ DEBUG [6e9ddf29] 	4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e
+ DEBUG [6e9ddf29] 		HEAD
+  INFO [6e9ddf29] Finished in 1.679 seconds with exit status 0 (successful).
+  INFO [1e61d053] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [1e61d053] Command: /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/shared /home/wcalat/apps/iOSPlaidFitAPI/releases
+  INFO [48bca435] Finished in 0.297 seconds with exit status 0 (successful).
+ DEBUG [8e8c4950] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ] on plaidfit.online
+ DEBUG [8e8c4950] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb ]
+ DEBUG [1236a503] Finished in 0.341 seconds with exit status 0 (successful).
+ DEBUG [92e670bd] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ] on plaidfit.online
+ DEBUG [92e670bd] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION ]
+ DEBUG [357b6b34] Finished in 0.334 seconds with exit status 0 (successful).
+ DEBUG [c2bad8d1] Running /usr/bin/env cat /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION 2>/dev/null on plaidfit.online
+ DEBUG [c2bad8d1] Command: /usr/bin/env cat /home/wcalat/apps/iOSPlaidFitAPI/current/REVISION 2>/dev/null
+ DEBUG [1947c545] 	4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e
+ DEBUG [1947c545] 	
+ DEBUG [1947c545] Finished in 0.340 seconds with exit status 0 (successful).
+ DEBUG [dc410d36] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ] on plaidfit.online
+ DEBUG [dc410d36] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/repo/HEAD ]
+ DEBUG [e0d5b30d] Finished in 0.336 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/wcalat/apps/iOSPlaidFitAPI/repo
+ DEBUG [c0bac120] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [c0bac120] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [6d9ffed5] Finished in 0.339 seconds with exit status 0 (successful).
+  INFO [1b4a08c1] Running /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git on plaidfit.online
+ DEBUG [1b4a08c1] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote set-url origin git@github.com:wchu248/iOSPlaidFitAPI.git )
+  INFO [9e3cd71e] Finished in 0.343 seconds with exit status 0 (successful).
+  INFO [606a0026] Running /usr/bin/env git remote update --prune on plaidfit.online
+ DEBUG [606a0026] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [636d3783] 	Fetching origin
+ DEBUG [636d3783] 	
+  INFO [636d3783] Finished in 1.874 seconds with exit status 0 (successful).
+ DEBUG [0288f3d8] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [0288f3d8] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [cc4809fc] Finished in 0.297 seconds with exit status 0 (successful).
+  INFO [b5fe531f] Running /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314 on plaidfit.online
+ DEBUG [b5fe531f] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env mkdir -p /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314 )
+  INFO [c043a0d7] Finished in 0.339 seconds with exit status 0 (successful).
+  INFO [31785276] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314 on plaidfit.online
+ DEBUG [31785276] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314 )
+  INFO [5f4d9f00] Finished in 0.377 seconds with exit status 0 (successful).
+ DEBUG [a7c10cb7] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi on plaidfit.online
+ DEBUG [a7c10cb7] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/repo; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/repo'" 1>&2; false; fi
+ DEBUG [468b5634] Finished in 0.336 seconds with exit status 0 (successful).
+ DEBUG [13c42d25] Running /usr/bin/env git rev-list --max-count=1 master on plaidfit.online
+ DEBUG [13c42d25] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-iOSPlaidFitAPI-production-aleclamusr.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b93b6d71] 	4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e
+ DEBUG [b93b6d71] 	
+ DEBUG [b93b6d71] Finished in 0.345 seconds with exit status 0 (successful).
+ DEBUG [799c42f2] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314'" 1>&2; false; fi on plaidfit.online
+ DEBUG [799c42f2] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314'" 1>&2; false; fi
+ DEBUG [ee0fe2f5] Finished in 0.340 seconds with exit status 0 (successful).
+  INFO [8d9ca0f5] Running /usr/bin/env echo "4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e" > REVISION on plaidfit.online
+ DEBUG [8d9ca0f5] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314 && /usr/bin/env echo "4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e" > REVISION
+  INFO [ff58e2ba] Finished in 0.345 seconds with exit status 0 (successful).
+ DEBUG [c6b78357] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314'" 1>&2; false; fi on plaidfit.online
+ DEBUG [c6b78357] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314'" 1>&2; false; fi
+ DEBUG [3cb6eb60] Finished in 0.335 seconds with exit status 0 (successful).
+ DEBUG [57ee6562] Running ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle on plaidfit.online
+ DEBUG [57ee6562] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314 && ~/.rvm/bin/rvm default do bundle check --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle
+ DEBUG [980b6d3b] 	[33mYour Gemfile lists the gem byebug (>= 0) more than once.
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	You should probably keep only one of them.
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[33mYour Gemfile lists the gem pg (= 0.20) more than once.
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	You should probably keep only one of them.
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31mThe following gems are missing[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * sshkit (1.18.0)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * airbrussh (1.3.1)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * capistrano-bundler (1.4.0)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * ffi (1.9.18)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * rb-fsevent (0.10.2)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * rb-inotify (0.9.10)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * ruby_dep (1.3.1)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * listen (3.1.5)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * spring (2.0.2)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [980b6d3b] 	
+ DEBUG [980b6d3b] Finished in 1.350 seconds with exit status 1 (failed).
+  INFO [50bbc816] Running ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet on plaidfit.online
+ DEBUG [50bbc816] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314 && ~/.rvm/bin/rvm default do bundle install --path /home/wcalat/apps/iOSPlaidFitAPI/shared/bundle --without development test --deployment --quiet
+ DEBUG [9fac8d0e] 	[33mWarning, new version of rvm available '1.29.6', you are using older version '1.29.7'.
+ DEBUG [9fac8d0e] 	
+ DEBUG [9fac8d0e] 	You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+ DEBUG [9fac8d0e] 	
+ DEBUG [9fac8d0e] 	You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc[0m
+ DEBUG [9fac8d0e] 	
+ DEBUG [9fac8d0e] 	[0m
+  INFO [9fac8d0e] Finished in 1.687 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [a115f9a7] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314'" 1>&2; false; fi on plaidfit.online
+ DEBUG [a115f9a7] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314'" 1>&2; false; fi
+ DEBUG [495efe73] Finished in 0.341 seconds with exit status 0 (successful).
+  INFO [e2468251] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on plaidfit.online
+ DEBUG [e2468251] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+  INFO [75007ac7] Finished in 3.398 seconds with exit status 0 (successful).
+  INFO [f0f6bada] Running /usr/bin/env ln -s /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314 /home/wcalat/apps/iOSPlaidFitAPI/releases/current on plaidfit.online
+ DEBUG [f0f6bada] Command: /usr/bin/env ln -s /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314 /home/wcalat/apps/iOSPlaidFitAPI/releases/current
+  INFO [8727aa54] Finished in 0.352 seconds with exit status 0 (successful).
+  INFO [b48864a2] Running /usr/bin/env mv /home/wcalat/apps/iOSPlaidFitAPI/releases/current /home/wcalat/apps/iOSPlaidFitAPI on plaidfit.online
+ DEBUG [b48864a2] Command: /usr/bin/env mv /home/wcalat/apps/iOSPlaidFitAPI/releases/current /home/wcalat/apps/iOSPlaidFitAPI
+  INFO [0f98e270] Finished in 0.348 seconds with exit status 0 (successful).
+ DEBUG [e65f4245] Running /usr/bin/env ls -x /home/wcalat/apps/iOSPlaidFitAPI/releases on plaidfit.online
+ DEBUG [e65f4245] Command: /usr/bin/env ls -x /home/wcalat/apps/iOSPlaidFitAPI/releases
+ DEBUG [471e8fe8] 	20190103180953
+ DEBUG [471e8fe8] 		
+ DEBUG [471e8fe8] 	20190103181019
+ DEBUG [471e8fe8] 		
+ DEBUG [471e8fe8] 	20190103182123
+ DEBUG [471e8fe8] 		
+ DEBUG [471e8fe8] 	20190103183148
+ DEBUG [471e8fe8] 		
+ DEBUG [471e8fe8] 	20190103184958
+ DEBUG [471e8fe8] 	
+ DEBUG [471e8fe8] 	20190103185314
+ DEBUG [471e8fe8] 	
+ DEBUG [471e8fe8] Finished in 0.430 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on plaidfit.online
+ DEBUG [fa9a0b5c] Running [ -d /home/wcalat/apps/iOSPlaidFitAPI/current ] on plaidfit.online
+ DEBUG [fa9a0b5c] Command: [ -d /home/wcalat/apps/iOSPlaidFitAPI/current ]
+ DEBUG [dc6249b1] Finished in 0.342 seconds with exit status 0 (successful).
+ DEBUG [2284e00d] Running /usr/bin/env readlink /home/wcalat/apps/iOSPlaidFitAPI/current on plaidfit.online
+ DEBUG [2284e00d] Command: /usr/bin/env readlink /home/wcalat/apps/iOSPlaidFitAPI/current
+ DEBUG [9caa8659] 	/home/wcalat/apps/iOSPlaidFitAPI/releases/20190103185314
+ DEBUG [9caa8659] 	
+ DEBUG [9caa8659] Finished in 0.347 seconds with exit status 0 (successful).
+  INFO [5f5e6dd3] Running /usr/bin/env rm -rf /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103180953 on plaidfit.online
+ DEBUG [5f5e6dd3] Command: /usr/bin/env rm -rf /home/wcalat/apps/iOSPlaidFitAPI/releases/20190103180953
+  INFO [5aa10da3] Finished in 0.348 seconds with exit status 0 (successful).
+ DEBUG [4431ad3d] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/current; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/current'" 1>&2; false; fi on plaidfit.online
+ DEBUG [4431ad3d] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/current; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/current'" 1>&2; false; fi
+ DEBUG [017a28e9] Finished in 0.335 seconds with exit status 0 (successful).
+ DEBUG [abd93f20] Running [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ] on plaidfit.online
+ DEBUG [abd93f20] Command: [ -f /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ]
+ DEBUG [0f6e9313] Finished in 0.338 seconds with exit status 0 (successful).
+ DEBUG [8d0cda1d] Running /usr/bin/env kill -0 $( cat /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ) on plaidfit.online
+ DEBUG [8d0cda1d] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.pid ) )
+ DEBUG [73566837] Finished in 0.347 seconds with exit status 0 (successful).
+  INFO [8a0e53e7] Running bundle exec pumactl -S /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.state -F /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb restart on plaidfit.online
+ DEBUG [8a0e53e7] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/current && ( export RACK_ENV="production" ; bundle exec pumactl -S /home/wcalat/apps/iOSPlaidFitAPI/shared/tmp/pids/puma.state -F /home/wcalat/apps/iOSPlaidFitAPI/shared/puma.rb restart )
+ DEBUG [b1d3f391] 	Command restart sent success
+ DEBUG [b1d3f391] 	
+  INFO [b1d3f391] Finished in 0.911 seconds with exit status 0 (successful).
+ DEBUG [09846513] Running if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases'" 1>&2; false; fi on plaidfit.online
+ DEBUG [09846513] Command: if test ! -d /home/wcalat/apps/iOSPlaidFitAPI/releases; then echo "Directory does not exist '/home/wcalat/apps/iOSPlaidFitAPI/releases'" 1>&2; false; fi
+ DEBUG [9740fe7a] Finished in 0.340 seconds with exit status 0 (successful).
+  INFO [1f97dae7] Running /usr/bin/env echo "Branch master (at 4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e) deployed as release 20190103185314 by aleclamusr" >> /home/wcalat/apps/iOSPlaidFitAPI/revisions.log on plaidfit.online
+ DEBUG [1f97dae7] Command: cd /home/wcalat/apps/iOSPlaidFitAPI/releases && /usr/bin/env echo "Branch master (at 4bc8cfe9e28fe1bcaa30a64574faafc426e7f12e) deployed as release 20190103185314 by aleclamusr" >> /home/wcalat/apps/iOSPlaidFitAPI/revisions.log
+  INFO [585599d1] Finished in 0.350 seconds with exit status 0 (successful).
