@@ -15,6 +15,20 @@
               "type": "string",
               "description": "Authentication token in the format of: Token token=<token>",
               "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "for_team",
+              "type": "integer",
+              "description": "Filters by team",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "for_season",
+              "type": "integer",
+              "description": "Filters by season",
+              "required": false
             }
           ],
           "summary": "Fetches all Team Calculations",
